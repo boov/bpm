@@ -1,0 +1,34 @@
+---
+import { twMerge, twSort } from "@bpm/custom-merge";
+
+interface Props {
+  label: string;
+  class?: string;
+  id?: string;
+  name?: string;
+  variant?: "outline" | "solid";
+  palette?: "action" | "bold" | "negative" | "positive" | "neutral" | "brand";
+}
+
+const { class: classes, label, id, name = id, variant = "outline", palette = "brand", ...props } = Astro.props;
+
+const baseStyles = twSort("font-title inline-block appearance-none rounded-sm px-3 py-1.5 text-xs leading-tight font-extrabold whitespace-nowrap uppercase");
+
+const variantStyles = {
+  outline: twSort("border-2 border-current"),
+  solid: twSort("")
+};
+
+const paletteStyles = {
+  action: twSort("text-theme-action"),
+  bold: twSort("text-theme-foreground-bold"),
+  negative: twSort("text-negative"),
+  positive: twSort("text-positive"),
+  neutral: twSort("text-neutral"),
+  brand: twSort("text-theme-brand")
+};
+
+const finalStyles = twMerge(baseStyles, variantStyles[variant], paletteStyles[palette], classes);
+---
+
+<div class={finalStyles} {...props} set:text={label} />

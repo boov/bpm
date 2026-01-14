@@ -1,0 +1,6 @@
+{
+  "name": "@bpm/design-system",
+  "private": true,
+  "main": "design-system.ts",
+  "type": "module"
+}

@@ -1,0 +1,407 @@
+@import "tailwindcss";
+
+@import "./fonts.css" layer(base);
+@import "./prose.css" layer(components);
+
+@config "../../../tailwind.config.js";
+
+:root {
+  --shadow-color: hsl(0deg 0% 0% / 0.075);
+}
+
+@theme {
+  --color-*: initial;
+
+  --color-theme-foreground: unset;
+  --color-theme-foreground-bold: unset;
+  --color-theme-foreground-light: unset;
+
+  --color-theme-background: unset;
+  --color-theme-background-highlight: unset;
+  --color-theme-background-lowlight: unset;
+
+  --color-theme-border: unset;
+  --color-theme-border-bold: unset;
+  --color-theme-border-light: unset;
+
+  --color-theme-brand: hsl(16deg 100% 74%);
+  --color-theme-brand-highlight: hsl(16deg 100% 69%);
+  --color-theme-brand-lowlight: hsl(16deg 100% 79%);
+
+  --color-theme-action: hsl(16deg 80% 64%);
+  --color-theme-action-hover: hsl(16deg 80% 62%);
+  --color-theme-action-focus: hsl(16deg 80% 60%);
+
+  --color-white: white;
+  --color-black: black;
+
+  --color-positive: var(--color-positive-500);
+  --color-positive-50: hsl(83deg 67% 95%);
+  --color-positive-100: hsl(83deg 67% 90%);
+  --color-positive-150: hsl(83deg 67% 85%);
+  --color-positive-200: hsl(83deg 67% 80%);
+  --color-positive-250: hsl(83deg 67% 75%);
+  --color-positive-300: hsl(83deg 67% 70%);
+  --color-positive-350: hsl(83deg 67% 65%);
+  --color-positive-400: hsl(83deg 67% 60%);
+  --color-positive-450: hsl(83deg 67% 55%);
+  --color-positive-500: hsl(83deg 67% 50%);
+  --color-positive-550: hsl(83deg 67% 45%);
+  --color-positive-600: hsl(83deg 67% 40%);
+  --color-positive-650: hsl(83deg 67% 35%);
+  --color-positive-700: hsl(83deg 67% 30%);
+  --color-positive-750: hsl(83deg 67% 25%);
+  --color-positive-800: hsl(83deg 67% 20%);
+  --color-positive-850: hsl(83deg 67% 15%);
+  --color-positive-900: hsl(83deg 67% 10%);
+  --color-positive-950: hsl(83deg 67% 5%);
+
+  --color-neutral: var(--color-neutral-500);
+  --color-neutral-50: hsl(37deg 83% 95%);
+  --color-neutral-100: hsl(37deg 83% 90%);
+  --color-neutral-150: hsl(37deg 83% 85%);
+  --color-neutral-200: hsl(37deg 83% 80%);
+  --color-neutral-250: hsl(37deg 83% 75%);
+  --color-neutral-300: hsl(37deg 83% 70%);
+  --color-neutral-350: hsl(37deg 83% 65%);
+  --color-neutral-400: hsl(37deg 83% 60%);
+  --color-neutral-450: hsl(37deg 83% 55%);
+  --color-neutral-500: hsl(37deg 83% 50%);
+  --color-neutral-550: hsl(37deg 83% 45%);
+  --color-neutral-600: hsl(37deg 83% 40%);
+  --color-neutral-650: hsl(37deg 83% 35%);
+  --color-neutral-700: hsl(37deg 83% 30%);
+  --color-neutral-750: hsl(37deg 83% 25%);
+  --color-neutral-800: hsl(37deg 83% 20%);
+  --color-neutral-850: hsl(37deg 83% 15%);
+  --color-neutral-900: hsl(37deg 83% 10%);
+  --color-neutral-950: hsl(37deg 83% 5%);
+
+  --color-negative: var(--color-negative-500);
+  --color-negative-50: hsl(8deg 75% 95%);
+  --color-negative-100: hsl(8deg 75% 90%);
+  --color-negative-150: hsl(8deg 75% 85%);
+  --color-negative-200: hsl(8deg 75% 80%);
+  --color-negative-250: hsl(8deg 75% 75%);
+  --color-negative-300: hsl(8deg 75% 70%);
+  --color-negative-350: hsl(8deg 75% 65%);
+  --color-negative-400: hsl(8deg 75% 60%);
+  --color-negative-450: hsl(8deg 75% 55%);
+  --color-negative-500: hsl(8deg 75% 50%);
+  --color-negative-550: hsl(8deg 75% 45%);
+  --color-negative-600: hsl(8deg 75% 40%);
+  --color-negative-650: hsl(8deg 75% 35%);
+  --color-negative-700: hsl(8deg 75% 30%);
+  --color-negative-750: hsl(8deg 75% 25%);
+  --color-negative-800: hsl(8deg 75% 20%);
+  --color-negative-850: hsl(8deg 75% 15%);
+  --color-negative-900: hsl(8deg 75% 10%);
+  --color-negative-950: hsl(8deg 75% 5%);
+
+  --container-*: initial;
+
+  --font-*: initial;
+  --font-symbols: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-copy: ui-sans-serif, system-ui, sans-serif, var(--font-symbols);
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-title: ui-sans-serif, system-ui, sans-serif, var(--font-symbols);
+
+  --breakpoint-site: 120rem;
+
+  --tracking-tighter: -0.035em;
+  --tracking-tight: -0.0175em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.066em;
+  --tracking-wider: 0.15em;
+  --tracking-widest: 0.225em;
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+  --leading-loose: 1.9;
+
+  --perspective-*: initial;
+
+  --font-weight-*: initial;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 550;
+  --font-weight-extrabold: 600;
+
+  --shadow-xs: 0 1px 2px 0 var(--shadow-color);
+  --shadow-sm: 0 1px 3px 0 var(--shadow-color), 0 1px 2px -1px var(--shadow-color);
+  --shadow-md: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -2px var(--shadow-color);
+  --shadow-lg: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -4px var(--shadow-color);
+  --shadow-xl: 0 20px 25px -5px var(--shadow-color), 0 8px 10px -6px var(--shadow-color);
+  --shadow-2xl: 0 25px 50px -12px var(--shadow-color);
+  --shadow-glow: 0 0 100px var(--shadow-color), 0 0 25px var(--shadow-color);
+
+  --inset-shadow-2xs: inset 0 1px var(--shadow-color);
+  --inset-shadow-xs: inset 0 1px 1px var(--shadow-color);
+  --inset-shadow-sm: inset 0 2px 4px var(--shadow-color);
+  --inset-shadow-px: inset 0 0 0 1px var(--shadow-color);
+
+  --aspect-portrait: 9 / 16;
+  --aspect-square: 1 / 1;
+  --aspect-superwide: 32 / 9;
+  --aspect-ultrawide: 21 / 9;
+  --aspect-ultratall: 9 / 21;
+  --aspect-paper-portrait: 210 / 297;
+  --aspect-paper-landscape: 297 / 210;
+}
+
+@utility theme-light {
+  --color-theme-foreground: hsl(16deg 10% 45%);
+  --color-theme-foreground-bold: hsl(16deg 10% 20%);
+  --color-theme-foreground-light: hsl(16deg 10% 60%);
+
+  --color-theme-background: hsl(16deg 30% 96%);
+  --color-theme-background-highlight: hsl(16deg 30% 100%);
+  --color-theme-background-lowlight: hsl(16deg 30% 94%);
+
+  --color-theme-border: hsl(0deg 0% 0% / 0.1);
+  --color-theme-border-bold: hsl(0deg 0% 0% / 0.2);
+  --color-theme-border-light: hsl(0deg 0% 0% / 0.05);
+}
+
+@utility theme-dark {
+  --color-theme-foreground: hsl(16deg 15% 70%);
+  --color-theme-foreground-bold: hsl(16deg 15% 100%);
+  --color-theme-foreground-light: hsl(16deg 15% 40%);
+
+  --color-theme-background: hsl(16deg 100% 11%);
+  --color-theme-background-highlight: hsl(16deg 100% 16%);
+  --color-theme-background-lowlight: hsl(16deg 100% 6%);
+
+  --color-theme-border: hsl(0deg 0% 100% / 0.08);
+  --color-theme-border-bold: hsl(0deg 0% 100% / 0.16);
+  --color-theme-border-light: hsl(0deg 0% 100% / 0.04);
+}
+
+@utility heading {
+  @apply font-title text-theme-foreground-bold clear-both font-bold tracking-tighter text-balance wrap-break-word;
+}
+
+@utility subheading {
+  @apply font-title text-theme-foreground-bold text-sm sm:text-base clear-both font-extrabold tracking-widest text-balance wrap-break-word uppercase;
+}
+
+@utility label {
+  @apply font-title text-theme-foreground-bold block text-base font-bold;
+}
+
+@utility button {
+  @apply font-title inline-flex appearance-none items-center justify-between gap-2.5 cursor-pointer rounded leading-tight font-extrabold whitespace-nowrap transition focus:outline-hidden disabled:cursor-not-allowed disabled:opacity-50;
+
+  span {
+    @apply font-title text-base;
+  }
+
+  svg {
+    @apply size-[1em] stroke-[2.5];
+  }
+}
+
+@utility link {
+  @apply text-theme-action;
+  @apply hover:text-theme-action-hover;
+  @apply focus:text-theme-action-focus;
+  @apply focus-visible:text-theme-action-focus;
+  @apply active:text-theme-action-focus;
+}
+
+@layer base {
+  :root {
+    @apply theme-light;
+  }
+
+  ::selection {
+    @apply bg-theme-brand-highlight/20;
+  }
+
+  [x-cloak] {
+    @apply hidden!;
+  }
+
+  html {
+    @apply font-copy bg-theme-background text-theme-foreground h-full cursor-default scroll-smooth leading-relaxed font-normal tracking-tight antialiased;
+    @apply text-[87.5%] sm:text-[93.75%] md:text-[100%];
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+
+    * {
+      &,
+      &:after,
+      &:before {
+        box-sizing: inherit;
+
+        @media (prefers-reduced-motion: reduce) {
+          animation-delay: -1ms !important;
+          animation-duration: 1ms !important;
+          animation-iteration-count: 1 !important;
+          background-attachment: initial !important;
+          scroll-behavior: auto !important;
+          transition-delay: 0s !important;
+          transition-duration: 0s !important;
+        }
+      }
+    }
+  }
+
+  body {
+    @apply m-0 min-h-full overflow-x-hidden overflow-y-scroll text-base;
+
+    * {
+      font: inherit;
+      letter-spacing: inherit;
+      line-height: inherit;
+      word-spacing: inherit;
+    }
+
+    &.development:after {
+      @apply bg-theme-background-highlight text-theme-foreground fixed bottom-4 left-4 z-50 block rounded-md p-2 text-xs leading-none font-bold uppercase shadow-xl;
+      @apply site:content-['site'] content-['min'] sm:content-['sm'] md:content-['md'] lg:content-['lg'] xl:content-['xl'] 2xl:content-['2xl'];
+    }
+  }
+
+  a {
+    @apply link;
+    @apply rounded-xs no-underline transition;
+    @apply hover:no-underline;
+    @apply focus:no-underline;
+    @apply focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current;
+    @apply active:no-underline;
+  }
+
+  p,
+  ol,
+  ul,
+  li,
+  dl,
+  dt,
+  dd {
+    @apply text-theme-foreground;
+  }
+
+  audio {
+    @apply w-full max-w-full rounded-sm;
+
+    &:not([controls]) {
+      @apply hidden h-0;
+    }
+  }
+
+  iframe {
+    @apply block h-auto max-w-full border-none;
+  }
+
+  img {
+    @apply text-theme-foreground block h-auto max-w-full object-cover object-center text-xs select-none;
+  }
+
+  abbr[title] {
+    @apply underline decoration-dotted;
+  }
+
+  b,
+  strong {
+    @apply font-bold;
+  }
+
+  i,
+  em {
+    @apply italic;
+  }
+
+  small {
+    @apply text-[80%];
+  }
+
+  label {
+    @apply label;
+  }
+
+  mark {
+    @apply bg-neutral rounded-xs px-[0.3em] py-[0.2em];
+  }
+
+  hr {
+    @apply bg-theme-border h-px max-w-28 rounded-full border-none;
+  }
+
+  video {
+    @apply block h-auto w-full max-w-full rounded-sm select-none;
+  }
+
+  sup {
+    @apply text-[60%];
+  }
+
+  table {
+    @apply w-full max-w-full border-collapse border-spacing-0 overflow-hidden indent-0 text-sm;
+
+    &:has(> thead) {
+      @apply rounded-t-xl;
+    }
+
+    &:has(> tfoot) {
+      @apply rounded-b-xl;
+    }
+
+    td,
+    th {
+      @apply p-2.5 text-left leading-tight sm:p-3 md:p-3.5 lg:p-4;
+    }
+
+    th {
+      @apply text-theme-foreground-bold text-left font-bold whitespace-nowrap;
+    }
+
+    thead,
+    tfoot {
+      td,
+      th {
+        @apply border-theme-border bg-theme-background-lowlight text-theme-foreground-bold font-bold;
+      }
+    }
+
+    tbody {
+      td,
+      th {
+        @apply border-theme-border border-y;
+      }
+    }
+
+    tfoot {
+      td,
+      th {
+        @apply border-t-2;
+      }
+    }
+  }
+}
+
+#p_site {
+  @apply bg-theme-background;
+}
+
+#p_header-group {
+}
+
+#p_main-group {
+}
+
+#p_footer-group {
+}
+
+#p_cta {
+  @apply theme-dark;
+}
+
+#p_footer {
+}
+
+#p_trim {
+}

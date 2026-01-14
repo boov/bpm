@@ -1,0 +1,6 @@
+{
+  "name": "@bpm/data",
+  "private": true,
+  "main": "data.ts",
+  "type": "module"
+}

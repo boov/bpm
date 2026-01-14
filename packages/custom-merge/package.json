@@ -1,0 +1,6 @@
+{
+  "name": "@bpm/custom-merge",
+  "private": true,
+  "main": "custom-merge.ts",
+  "type": "module"
+}

@@ -1,0 +1,39 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import twMerge from "@bpm/custom-merge";
+
+interface Props extends HTMLAttributes<"textarea"> {
+  options: {
+    value: string;
+    label: string;
+  }[];
+}
+
+const { class: classes, id, name = id, options = [], ...props } = Astro.props;
+---
+
+<select
+  id={id}
+  name={name || id}
+  class={twMerge(
+    "w-full appearance-none rounded-md px-6 py-5 text-left transition",
+    "bg-theme-background-highlight text-theme-foreground placeholder:text-theme-foreground-light/50",
+    "outline-theme-border-light outline outline-1",
+    "hover:ring-theme-brand/10 hover:ring-4",
+    "focus:outline-theme-border-bold focus:ring-theme-brand/20 focus:ring-4",
+    "invalid:focus:ring-negative/20",
+    classes
+  )}
+  {...props}
+>
+  {options.map(option => <option value={option.value}>{option.label}</option>)}
+</select>
+
+<style>
+  select {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjODA4MDgwIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBvbHlsaW5lIHBvaW50cz0iNiA5IDEyIDE1IDE4IDkiPjwvcG9seWxpbmU+PC9zdmc+);
+    background-position: calc(100% - 1.5rem);
+    background-repeat: no-repeat;
+    background-size: 1em;
+  }
+</style>

@@ -1,0 +1,37 @@
+{
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "overrides": [
+    {
+      "files": [
+        "*.md",
+        "*.mdx"
+      ],
+      "options": {
+        "parser": "mdx",
+        "printWidth": 9001,
+        "proseWrap": "never"
+      }
+    },
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ],
+  "plugins": [
+    "prettier-plugin-astro",
+    "prettier-plugin-tailwindcss"
+  ],
+  "printWidth": 180,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "tailwindFunctions": [
+    "twMerge",
+    "twSort"
+  ],
+  "trailingComma": "none",
+  "useTabs": false
+}

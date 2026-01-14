@@ -1,0 +1,29 @@
+---
+import type { HTMLTag, Polymorphic } from "astro/types";
+import twMerge from "@bpm/custom-merge";
+
+type Props<Tag extends HTMLTag> = Polymorphic<{
+  as: Tag;
+  class?: string;
+  flourish?: boolean;
+}>;
+
+const { class: classes, as: Tag = "p", flourish } = Astro.props;
+---
+
+{
+  flourish ? (
+    <div class="flex items-center gap-[0.75em]">
+      <svg width="1.8em" viewBox="0 0 34 9">
+        <path class="fill-theme-brand" d="M28 8.5a4 4 0 1 1 0-8 4 4 0 0 1 0 8m-12 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8m-11.999 0a4 4 0 1 1-.002-8 4 4 0 0 1 .002 8" />
+      </svg>
+      <Tag class={twMerge("subheading", classes)}>
+        <slot />
+      </Tag>
+    </div>
+  ) : (
+    <Tag class={twMerge("subheading", classes)}>
+      <slot />
+    </Tag>
+  )
+}

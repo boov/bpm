@@ -1,0 +1,9 @@
+---
+import twMerge from "@bpm/custom-merge";
+
+const { class: classes, ...props } = Astro.props;
+---
+
+<section class={twMerge("relative py-14 sm:py-18 md:py-22 lg:py-24", classes)} {...props}>
+  <slot />
+</section>

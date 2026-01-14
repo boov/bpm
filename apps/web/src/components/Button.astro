@@ -1,0 +1,21 @@
+---
+import ButtonOutline from "@components/Button-Outline.astro";
+import ButtonSolid from "@components/Button-Solid.astro";
+import ButtonText from "@components/Button-Text.astro";
+import type { ButtonProps as Props } from "@types";
+
+const { variant = "solid", type = "anchor", ...props } = Astro.props;
+
+const buttonComponents = {
+  outline: ButtonOutline,
+  solid: ButtonSolid,
+  text: ButtonText
+} as const satisfies Record<NonNullable<Props["variant"]>, any>;
+
+const ButtonComponent = buttonComponents[variant];
+---
+
+<ButtonComponent type={type} {...props}>
+  <slot name="prefix" slot="prefix" />
+  <slot name="suffix" slot="suffix" />
+</ButtonComponent>

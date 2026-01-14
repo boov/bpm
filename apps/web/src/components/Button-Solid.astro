@@ -1,0 +1,33 @@
+---
+import type { ButtonProps as Props } from "@types";
+import { twMerge, twSort } from "@bpm/custom-merge";
+
+const { class: classes, label, id, name = id, type, palette = "action", ...props } = Astro.props;
+
+const baseStyles = twSort("button px-7 py-4 text-sm active:ring-4");
+
+const paletteStyles = {
+  action: twSort("bg-theme-action ring-theme-action-focus/50 hover:bg-theme-action-hover active:bg-theme-action-focus text-white hover:text-white"),
+  bold: twSort(
+    "bg-theme-foreground-bold text-theme-foreground-bold ring-theme-foreground-light/50 hover:bg-theme-foreground hover:text-theme-background active:bg-theme-foreground-light"
+  )
+};
+
+const finalStyles = twMerge(baseStyles, paletteStyles[palette], classes);
+---
+
+{
+  type == "anchor" ? (
+    <a class={finalStyles} {...props}>
+      <slot name="prefix" />
+      <span class="font-title">{label}</span>
+      <slot name="suffix" />
+    </a>
+  ) : (
+    <button class={finalStyles} name={name || id} id={id} type={type} {...props}>
+      <slot name="prefix" />
+      <span class="font-title">{label}</span>
+      <slot name="suffix" />
+    </button>
+  )
+}

@@ -1,0 +1,22 @@
+---
+import twMerge from "@bpm/custom-merge";
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"textarea"> {}
+
+const { class: classes, id, name = id, ...props } = Astro.props;
+---
+
+<textarea
+  name={name || id}
+  id={id}
+  class={twMerge(
+    "block w-full appearance-none rounded-md px-6 py-5 text-left transition",
+    "bg-theme-background-highlight text-theme-foreground placeholder:text-theme-foreground-light/50",
+    "outline-theme-border-light outline outline-1",
+    "hover:ring-theme-brand/10 hover:ring-4",
+    "focus:outline-theme-border-bold focus:ring-theme-brand/20 focus:ring-4",
+    "invalid:focus:ring-negative/20",
+    classes
+  )}
+  {...props}></textarea>

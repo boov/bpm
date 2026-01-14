@@ -1,0 +1,6 @@
+{
+  "name": "@bpm/tailwind-base",
+  "private": true,
+  "main": "tailwind.base.ts",
+  "type": "module"
+}

@@ -1,0 +1,22 @@
+---
+import type { HTMLTag, Polymorphic } from "astro/types";
+import twMerge, { twSort } from "@bpm/custom-merge";
+
+type Weight = "default" | "bolder" | "lighter";
+
+type Props<Tag extends HTMLTag> = Polymorphic<{
+  as: Tag;
+  class?: string;
+  weight?: Weight;
+}>;
+
+const { as: Tag = "h2", class: classes, weight = "default", ...props } = Astro.props;
+
+const weightStyles = {
+  lighter: twSort("font-normal"),
+  default: twSort("font-bold"),
+  bolder: twSort("font-extrabold")
+};
+---
+
+<Tag class={twMerge("heading", weightStyles[weight], classes)} {...props}><slot /></Tag>

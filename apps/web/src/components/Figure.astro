@@ -1,0 +1,14 @@
+---
+interface Props {
+  src?: string;
+  alt?: string;
+  caption?: string;
+}
+
+const { src = "", alt = "", caption = "", ...props } = Astro.props;
+---
+
+<figure class="my-12 sm:my-16 lg:-mr-16 xl:-mr-40" {...props}>
+  <img src={src} alt={alt} class:list={[caption ? "rounded-t-lg lg:rounded-br-lg" : "rounded-lg"]} />
+  {caption && <figcaption class="bg-foreground-50 m-0 rounded-b-lg p-5 text-sm lg:mr-16 xl:mr-40 dark:bg-white/10">{caption}</figcaption>}
+</figure>

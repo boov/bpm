@@ -1,0 +1,103 @@
+.prose {
+  :where(figure) {
+    @apply mb-[1em];
+  }
+
+  > * {
+    @apply mb-[1em];
+  }
+
+  > *:first-child {
+    @apply mt-0;
+  }
+
+  > *:last-child {
+    @apply mb-0;
+  }
+
+  :where(p,ol,ul,dl,figure) + :where(h2,h3,h4,h5,h6) {
+    @apply mt-10;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-title text-theme-foreground-bold clear-both font-bold tracking-tighter text-balance break-words;
+  }
+
+  h1 {
+    @apply text-h3;
+
+    &:after {
+      @apply text-h6 text-negative bg-negative/10 border-negative block rounded-lg border border-dashed p-4 text-center uppercase content-['Do_not_use_H1_tags_within_page_content'];
+    }
+  }
+
+  h2 {
+    @apply text-h4;
+  }
+
+  h3 {
+    @apply text-h5;
+  }
+
+  h4 {
+    @apply text-h6;
+  }
+
+  h5 {
+    @apply text-h7;
+  }
+
+  h6 {
+    @apply text-h7;
+  }
+
+  ol {
+    @apply list-decimal pl-6;
+  }
+
+  ul {
+    @apply list-disc pl-6;
+  }
+
+  ol,
+  ul {
+    li {
+      &::marker {
+        @apply text-theme-brand;
+      }
+
+      + li {
+        @apply mb-1;
+      }
+
+      strong {
+        @apply text-theme-foreground-bold;
+      }
+    }
+  }
+
+  a {
+    &:not(:where(:is(h2, h3, h4) *)) {
+      font-weight: var(--font-weight-semibold);
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+  }
+
+  strong {
+    @apply font-bold;
+  }
+
+  :where(h2, h3, h4) code {
+    @apply font-bold;
+  }
+
+  hr {
+    @apply mb-10;
+  }
+}

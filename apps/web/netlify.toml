@@ -1,0 +1,27 @@
+[build]
+publish = "apps/web/dist"
+command = "npm run build"
+
+[[plugins]]
+package = "@netlify/plugin-lighthouse"
+
+[[plugins.inputs.audits]]
+path = "/"
+
+[[plugins.inputs.audits]]
+path = "/services"
+
+[[plugins.inputs.audits]]
+path = "/services/budgeting"
+
+[[plugins.inputs.audits]]
+path = "/about"
+
+[[plugins.inputs.audits]]
+path = "/faqs"
+
+[[plugins.inputs.audits]]
+path = "/contact"
+
+[[plugins.inputs.audits]]
+path = "/privacy-policy"

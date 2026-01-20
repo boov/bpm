@@ -9,34 +9,31 @@ import logoMark from "@assets/images/logo-mark.svg?raw";
 ---
 
 <div class="relative">
-  <div class="xl:container-14c">
-    <div id="p_hero" class="xl:scoop theme-dark relative z-20 flex items-center overflow-hidden py-14 lg:py-20 xl:rounded-3xl xl:p-24 2xl:p-28">
+  <div class="container-14c px-[3vw]">
+    <div
+      id="p_hero"
+      class="scoop theme-dark relative z-20 flex items-center overflow-hidden rounded-xl p-10 sm:rounded-2xl sm:p-12 md:rounded-3xl md:p-14 lg:p-20 xl:p-24 2xl:p-28"
+    >
       <div class="relative z-30">
-        <div class="max-xl:container">
-          <div class="flex flex-col gap-12">
-            <div class="max-w-8c flex flex-col gap-4">
-              <div class="flex items-center gap-5">
-                <p class="subheading text-theme-action">Belgarum Property Management</p>
-                <div class="bg-theme-action hidden h-0.5 w-20 rounded sm:block sm:w-24"></div>
-              </div>
-              <Heading as="h1" class="text-h2 sm:text-h1 md:text-h0">Property management experts since 1989</Heading>
-              <p class="text-theme-foreground max-w-2xl text-lg sm:text-xl md:text-2xl">
-                Trusted property management for landlords and developers. We handle maintenance, legal work, and tenant queries with precision and care.
-              </p>
-            </div>
-            <div class="flex flex-row flex-wrap gap-3 sm:gap-5">
-              <Button label="Our services" href="/services" class="grow text-base sm:grow-0">
-                <ArrowRight slot="suffix" />
-              </Button>
-              <Button label="Enquire online" href="/contact" variant="outline" palette="bold" class="grow text-base sm:grow-0">
-                <Mail slot="suffix" />
-              </Button>
-            </div>
+        <div class="flex flex-col gap-10 sm:gap-12">
+          <div class="max-w-8c flex flex-col gap-4">
+            <Heading as="h1" class="text-h2 sm:text-h1 md:text-h0">Property management experts since 1989</Heading>
+            <p class="text-theme-foreground max-w-2xl text-lg sm:text-xl md:text-2xl">
+              Trusted property management for landlords and developers. We handle maintenance, legal work, and tenant queries with precision and care.
+            </p>
+          </div>
+          <div class="flex flex-row flex-wrap gap-3 sm:gap-5">
+            <Button label="Our services" href="/services" class="grow text-base sm:grow-0">
+              <ArrowRight slot="suffix" />
+            </Button>
+            <Button label="Enquire online" href="/contact" variant="outline" palette="bold" class="grow text-base sm:grow-0">
+              <Mail slot="suffix" />
+            </Button>
           </div>
         </div>
       </div>
       <div
-        class="text-theme-brand pointer-events-none absolute right-0 bottom-0 z-20 hidden w-90 translate-1/6 -scale-x-100 lg:block xl:w-120"
+        class="text-theme-foreground lg:text-theme-brand pointer-events-none absolute right-0 bottom-0 z-20 w-90 translate-1/6 -scale-x-100 opacity-20 lg:opacity-100 xl:w-120"
         aria-hidden="true"
         set:html={logoMark}
       />

@@ -1,0 +1,30 @@
+---
+import Heading from "@components/Heading.astro";
+
+const clientTypes = ["Resident management companies", "'Right to Manage' companies", "New build developers", "Private landlords"];
+---
+
+<div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-20 xl:gap-28">
+  <Heading as="h2" class="text-h3 sm:text-h2 lg:text-h1 uppercase lg:max-w-1/3 lg:min-w-85">For Corporate & Individual Landlords</Heading>
+  <div class="flex flex-1 flex-col gap-5">
+    <p class="sm:text-lg">
+      BPM Ltd provides services for property owners, landlords and developers. We provide a one stop shop service for corporate and individual landlords. Property management can be
+      a frustrating and complex business. All day to day matters regarding maintenance, tenant queries or vandalism are all dealt with for you, by us.
+    </p>
+    <p>
+      BPM Ltd have been in the property management business since 1989 and currently manage a wide portfolio of over 150 developments with varied Leasehold and Freehold tenures for
+      various clients. This is all BPM Ltd provide no estate agency or Lettings practice just pure Management of Residential apartment developments and estate areas.
+    </p>
+    <Heading as="h3" class="text-h5">Our valued clients include:</Heading>
+    <ul class="flex flex-col gap-2.5">
+      {
+        clientTypes.map(client => (
+          <li class="flex items-center gap-4">
+            <span class="bg-theme-brand size-1.5 shrink-0 rounded-full" aria-hidden="true" />
+            <span class="label">{client}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

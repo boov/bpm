@@ -18,13 +18,13 @@ const finalStyles = twMerge(baseStyles, paletteStyles[palette], classes);
   type == "anchor" ? (
     <a class={finalStyles} {...props}>
       <slot name="prefix" />
-      <span class="font-title">{label}</span>
+      <span class="font-title" set:text={label} />
       <slot name="suffix" />
     </a>
   ) : (
     <button class={finalStyles} name={name || id} id={id} type={type} {...props}>
       <slot name="prefix" />
-      <span class="font-title">{label}</span>
+      <span class="font-title" set:text={label} />
       <slot name="suffix" />
     </button>
   )

@@ -19,7 +19,7 @@ export default {
           h7: 0
         },
         1.25,
-        [1.05, 1.45]
+        [1.05, 1.2]
       ),
       ...magicTypography(
         {

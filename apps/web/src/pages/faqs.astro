@@ -1,0 +1,23 @@
+---
+import Default from "@layouts/Default.astro";
+import Heading from "@components/Heading.astro";
+import QuestionGroup from "@components/collection/question/QuestionGroup.astro";
+import Section from "@components/Section.astro";
+import { getQuestionsByGroup } from "@helpers";
+
+const questionGroups = await getQuestionsByGroup();
+
+const title = "Frequently asked questions";
+const description = "";
+---
+
+<Default title={title} description={description}>
+  <Section>
+    <div class="container-8c">
+      <div class="flex flex-col gap-12 md:gap-16">
+        <Heading as="h1" class="text-h3 sm:text-h2 md:text-h1" set:text={title} />
+        {questionGroups.map(([groupName, questions]) => <QuestionGroup title={groupName} questions={questions} />)}
+      </div>
+    </div>
+  </Section>
+</Default>

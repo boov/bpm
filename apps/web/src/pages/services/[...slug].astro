@@ -1,0 +1,68 @@
+---
+import About from "@components/collection/service/About.astro";
+import Default from "@layouts/Default.astro";
+import Features from "@components/collection/service/Features.astro";
+import Heading from "@components/Heading.astro";
+import Section from "@components/Section.astro";
+import Why from "@components/collection/service/Why.astro";
+import logoMark from "@assets/images/logo-mark.svg?raw";
+import { Image } from "astro:assets";
+import { getServices } from "@helpers";
+
+export async function getStaticPaths() {
+  const services = await getServices();
+
+  return services.map(service => ({
+    params: { slug: service.id },
+    props: { service }
+  }));
+}
+
+const { service } = Astro.props;
+---
+
+<Default title={service.data.title} description={service.data.description}>
+  <Section>
+    <div class="flex flex-col gap-14 sm:gap-16 md:gap-18 lg:gap-20 xl:gap-24">
+      <div class="container">
+        <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between lg:gap-20 xl:gap-40">
+          <div class="lg:max-w-6c flex flex-col gap-2 md:gap-3">
+            <div class="flex items-center gap-5">
+              <p class="subheading text-theme-action">Our services</p>
+              <div class="bg-theme-action h-0.5 w-20 rounded sm:w-24"></div>
+            </div>
+            <Heading as="h1" class="text-h2 sm:text-h1 md:text-h0">{service.data.title}</Heading>
+          </div>
+          <p class="text-lg sm:text-balance lg:max-w-[50ch] lg:flex-1 xl:text-xl">{service.data.description}</p>
+        </div>
+      </div>
+      <div class="container-14c">
+        <div class="theme-dark scoop relative overflow-hidden rounded-xl xl:rounded-3xl">
+          <Image src={service.data.image} alt={`${service.data.title} featured image`} width={1536} height={658} class="aspect-ultrawide w-full object-cover" />
+          <div
+            class="text-theme-foreground-bold pointer-events-none absolute right-0 bottom-0 z-20 hidden w-90 translate-1/6 -scale-x-100 opacity-40 lg:block xl:w-120"
+            aria-hidden="true"
+            set:html={logoMark}
+          />
+        </div>
+      </div>
+      <div class="container">
+        <div class="flex flex-col gap-5 lg:flex-row lg:items-start lg:gap-20 xl:gap-40">
+          <Heading as="h2" class="text-h4 sm:text-h3 xl:text-h2 lg:w-80 lg:shrink-0 xl:w-96" set:text={service.data.content.heading} />
+          <div class="flex flex-1 flex-col gap-5">
+            {service.data.content.paragraphs.map((paragraph, index) => <p class={index === 0 ? "text-lg" : ""}>{paragraph}</p>)}
+          </div>
+        </div>
+      </div>
+      <div class="container-14c">
+        <Features />
+      </div>
+      <div class="container">
+        <About />
+      </div>
+      <div class="container">
+        <Why />
+      </div>
+    </div>
+  </Section>
+</Default>

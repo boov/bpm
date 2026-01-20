@@ -2,6 +2,7 @@ import { z } from "astro:content";
 
 const data = [
   {
+    headshot: "https://dummyimage.com/200x200/ede2de/7e6d67",
     name: "John Doe",
     role: "Director",
     contact: {
@@ -10,6 +11,7 @@ const data = [
     }
   },
   {
+    headshot: "https://dummyimage.com/200x200/ede2de/7e6d67",
     name: "Matthew Booth",
     role: "IT & Systems",
     contact: {

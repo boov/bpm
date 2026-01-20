@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "dev:web": "npm run dev --workspace=@bpm/web",
+    "dev:web": "npm run netlify:dev --workspace=@bpm/web",
     "build": "npm run build --workspaces --if-present",
     "prettier": "npm run prettier --workspaces --if-present",
     "prettier:fix": "npm run prettier:fix --workspaces --if-present"
@@ -20,22 +20,22 @@
   ],
   "dependencies": {
     "@alpinejs/collapse": "^3.15.4",
-    "@astrojs/sitemap": "^3.6.1",
-    "@lucide/astro": "^0.562.0",
-    "@netlify/plugin-lighthouse": "^6.0.4",
+    "@astrojs/sitemap": "^3.7.0",
     "@bpm/custom-merge": "workspace:*",
     "@bpm/design-system": "workspace:*",
+    "@fontsource/hanken-grotesk": "^5.2.8",
+    "@lucide/astro": "^0.562.0",
+    "@netlify/plugin-lighthouse": "^6.0.4",
     "@tailwindcss/vite": "^4.1.18",
     "alpinejs": "^3.15.4",
-    "astro": "5.16.9",
+    "astro": "5.16.11",
     "astro-compress": "^2.3.9",
     "astro-meta-tags": "^0.4.0",
     "astro-page-insight": "^0.10.2",
     "lodash": "^4.17.21",
-    "prettier": "^3.7.4",
+    "prettier": "^3.8.0",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "tailwind-merge": "^3.4.0",
-    "tailwindcss": "^4.1.18"
+    "tailwind-merge": "^3.4.0"
   }
 }

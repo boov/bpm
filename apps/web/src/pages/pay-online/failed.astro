@@ -1,0 +1,38 @@
+---
+import Button from "@components/Button.astro";
+import Heading from "@components/Heading.astro";
+import Section from "@components/Section.astro";
+import Trim from "@components/global/Trim.astro";
+import Default from "@layouts/Default.astro";
+import CircleX from "@lucide/astro/icons/circle-x";
+import RefreshCw from "@lucide/astro/icons/refresh-cw";
+import Phone from "@lucide/astro/icons/phone";
+
+const title = "Payment unsuccessful";
+const description = "Your payment could not be processed. Please try again or contact us for assistance.";
+---
+
+<Default title={title} description={description} allowIndexing={false}>
+  <Section>
+    <div class="container-6c">
+      <div class="flex flex-col items-center gap-6 text-center">
+        <CircleX class="text-negative size-16" />
+        <Heading as="h1" class="text-h2" set:text={title} />
+        <p class="text-lg" set:text={description} />
+        <div class="flex flex-col gap-4 sm:flex-row">
+          <Button label="Try again" href="/pay-online/" variant="solid">
+            <RefreshCw slot="suffix" />
+          </Button>
+          <Button label="Contact us" href="/contact/" variant="outline">
+            <Phone slot="suffix" />
+          </Button>
+        </div>
+      </div>
+    </div>
+  </Section>
+  <Fragment slot="footer">
+    <footer id="p_footer-group">
+      <Trim />
+    </footer>
+  </Fragment>
+</Default>

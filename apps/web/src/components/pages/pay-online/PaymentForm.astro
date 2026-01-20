@@ -1,0 +1,25 @@
+---
+import Input from "@components/Input.astro";
+import Button from "@components/Button.astro";
+import ArrowRight from "@lucide/astro/icons/arrow-right";
+---
+
+<div x-data="paymentForm()" class="flex flex-col gap-6 md:gap-8">
+  <form class="flex flex-col gap-6 md:gap-8" method="get" action="https://buy.stripe.com/test_7sY4gBddRbov0mMf229EI00" target="_blank">
+    <input type="hidden" name="__prefilled_amount" x-bind:value="formatAmount" />
+    <div class="grid gap-1">
+      <label for="amount">How much would you like to pay?</label>
+      <div class="relative">
+        <span class="text-theme-foreground-light pointer-events-none absolute top-1/2 left-6 -translate-y-1/2 text-3xl md:text-5xl">&pound;</span>
+        <Input id="amount" name="" x-model="amount" class="pl-12 text-3xl md:text-5xl" inputmode="decimal" type="number" step="0.01" min="1" required />
+      </div>
+    </div>
+    <div class="grid gap-1">
+      <label for="prefilled_email">Email address</label>
+      <Input id="prefilled_email" x-model="email" type="email" inputmode="email" placeholder="your@email.com" required />
+    </div>
+    <Button label="Continue to Stripe" type="submit" class="mt-2 px-7 py-5 text-base sm:self-start" target="_blank">
+      <ArrowRight slot="suffix" />
+    </Button>
+  </form>
+</div>

@@ -1,0 +1,44 @@
+---
+import Section from "@components/Section.astro";
+import Default from "@layouts/Default.astro";
+import Heading from "@components/Heading.astro";
+import PersonnelGrid from "@components/collection/personnel/PersonnelGrid.astro";
+import Gallery from "@components/pages/about/Gallery.astro";
+import Intro from "@components/pages/about/Intro.astro";
+import Timeline from "@components/pages/about/Timeline.astro";
+
+const title = "Our property management story";
+const description =
+  "We began with a simple truth. Property management is not about buildings. It is about people. In 2010, a small group of professionals looked at the industry and saw opportunity where others saw complexity.";
+---
+
+<Default title={title} description={description}>
+  <Section>
+    <div class="flex flex-col gap-16 sm:gap-20 md:gap-24 lg:gap-28">
+      <div class="container">
+        <Intro />
+      </div>
+      <div class="container">
+        <Timeline />
+      </div>
+      <div class="container">
+        <div class="flex flex-col gap-12 md:gap-16 lg:gap-20">
+          <div class="flex flex-col gap-2.5 text-center">
+            <Heading as="h2" class="text-h3 lg:text-h2">The office</Heading>
+            <p class="text-xl">A glimpse into the environment where we collaborate and innovate.</p>
+          </div>
+          <Gallery />
+        </div>
+      </div>
+      <div class="container">
+        <div class="flex flex-col gap-12 md:gap-16 lg:gap-20">
+          <div class="flex flex-col gap-2.5 text-center">
+            <Heading as="h2" class="text-h3 lg:text-h2">Meet the team</Heading>
+            <p class="text-xl">Dedicated professionals committed to delivering exceptional property management solutions.</p>
+          </div>
+          <PersonnelGrid />
+        </div>
+      </div>
+    </div>
+  </Section>
+</Default>

@@ -1,0 +1,49 @@
+---
+import Button from "@components/Button.astro";
+import Heading from "@components/Heading.astro";
+import ArrowRight from "@lucide/astro/icons/arrow-right";
+import Mail from "@lucide/astro/icons/mail";
+import { Image } from "astro:assets";
+import heroBackground from "@assets/images/hero-background.jpeg";
+import logoMark from "@assets/images/logo-mark.svg?raw";
+---
+
+<div class="relative">
+  <div class="xl:container-14c">
+    <div id="p_hero" class="xl:scoop theme-dark relative z-20 flex items-center overflow-hidden py-14 lg:py-20 xl:rounded-3xl xl:p-24 2xl:p-28">
+      <div class="relative z-30">
+        <div class="max-xl:container">
+          <div class="flex flex-col gap-12">
+            <div class="max-w-8c flex flex-col gap-4">
+              <div class="flex items-center gap-5">
+                <p class="subheading text-theme-action">Belgarum Property Management</p>
+                <div class="bg-theme-action hidden h-0.5 w-20 rounded sm:block sm:w-24"></div>
+              </div>
+              <Heading as="h1" class="text-h2 sm:text-h1 md:text-h0">Property management experts since 1989</Heading>
+              <p class="text-theme-foreground max-w-2xl text-lg sm:text-xl md:text-2xl">
+                Trusted property management for landlords and developers. We handle maintenance, legal work, and tenant queries with precision and care.
+              </p>
+            </div>
+            <div class="flex flex-row flex-wrap gap-3 sm:gap-5">
+              <Button label="Our services" href="/services" class="grow text-base sm:grow-0">
+                <ArrowRight slot="suffix" />
+              </Button>
+              <Button label="Enquire online" href="/contact" variant="outline" palette="bold" class="grow text-base sm:grow-0">
+                <Mail slot="suffix" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="text-theme-brand pointer-events-none absolute right-0 bottom-0 z-20 hidden w-90 translate-1/6 -scale-x-100 lg:block xl:w-120"
+        aria-hidden="true"
+        set:html={logoMark}
+      />
+      <div class="bg-theme-background-lowlight pointer-events-none absolute inset-0 z-10" aria-hidden="true">
+        <Image src={heroBackground} alt="" width={2000} height={850} class="absolute inset-0 size-full object-cover opacity-65 mix-blend-overlay" />
+      </div>
+    </div>
+  </div>
+  <div class="bg-theme-background theme-light absolute top-4/5 right-0 bottom-0 left-0 z-10"></div>
+</div>

@@ -1,0 +1,54 @@
+---
+import Heading from "@components/Heading.astro";
+
+const milestones = [
+  {
+    title: "1989 - Dolore fugiat enim minim",
+    description: "Small team emerges with bold vision, challenging traditional property management approaches in the market"
+  },
+  {
+    title: "1995 - Veniam dolor Lorem amet ut reprehenderit",
+    description: "First major portfolio acquisition, establishing credibility and demonstrating our commitment to excellence"
+  },
+  {
+    title: "2005 - In consectetur adipisicing id excepteur",
+    description: "Breakthrough year of strategic expansion, establishing regional presence and proving our adaptive business model"
+  },
+  {
+    title: "2012 - Reprehenderit ex commodo elit amet",
+    description: "Digital transformation accelerates, implementing cutting-edge technology to streamline complex property management processes"
+  },
+  {
+    title: "2018 - Ea ad duis Lorem sunt officia",
+    description: "National recognition achieved, solidifying our reputation as innovative leaders in property management solutions"
+  },
+  {
+    title: "2024 - Esse ullamco Lorem et aliquip officia",
+    description: "Continued growth with over 150 developments under management, serving diverse clients across the property sector"
+  }
+];
+---
+
+<div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-20 xl:gap-28">
+  <div class="flex shrink-0 flex-col gap-2 md:gap-3 lg:w-80 xl:w-96">
+    <Heading as="h2" class="text-h3 lg:text-h2">Charting our path in property management</Heading>
+  </div>
+  <div class="flex flex-1 flex-col gap-8">
+    {
+      milestones.map((milestone, index) => (
+        <div class="flex gap-6 sm:gap-8">
+          <div class="flex flex-col items-center gap-2.5">
+            <div class="flex items-center py-3">
+              <div class="bg-theme-brand size-2 rounded-full" />
+            </div>
+            {index < milestones.length - 1 && <div class="bg-theme-border w-0.5 flex-1 rounded-full" />}
+          </div>
+          <div class="flex flex-1 flex-col gap-2.5 pb-4">
+            <p class="text-theme-foreground-bold text-xl font-bold" set:text={milestone.title} />
+            <p class="md:text-lg" set:text={milestone.description} />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

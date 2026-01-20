@@ -1,0 +1,31 @@
+---
+import Heading from "@components/Heading.astro";
+import Section from "@components/Section.astro";
+import ContactForm from "@components/pages/contact/ContactForm.astro";
+import Trim from "@components/global/Trim.astro";
+import Default from "@layouts/Default.astro";
+import FooterBorder from "@components/global/FooterBorder.astro";
+import Footer from "@components/global/Footer.astro";
+---
+
+<Default title="Let's Work Together" description="">
+  <Section>
+    <div class="container-6c">
+      <div class="flex flex-col gap-10 sm:gap-12 md:gap-14 lg:gap-16">
+        <div class="flex items-center justify-center gap-5">
+          <div class="bg-theme-action h-0.5 grow rounded"></div>
+          <Heading as="h2" class="text-h2 sm:text-h1 md:text-h0 text-balance">Get in touch</Heading>
+          <div class="bg-theme-action h-0.5 grow rounded"></div>
+        </div>
+        <ContactForm />
+      </div>
+    </div>
+  </Section>
+  <Fragment slot="footer">
+    <footer id="p_footer-group">
+      <Footer />
+      <FooterBorder />
+      <Trim />
+    </footer>
+  </Fragment>
+</Default>

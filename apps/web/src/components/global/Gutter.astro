@@ -1,0 +1,112 @@
+---
+import ArrowRight from "@lucide/astro/icons/arrow-right";
+import ChevronDown from "@lucide/astro/icons/chevron-down";
+import Button from "@components/Button.astro";
+import X from "@lucide/astro/icons/x";
+import { getServices } from "@helpers";
+import CreditCard from "@lucide/astro/icons/credit-card";
+
+type NavLink = {
+  label: string;
+  href: string;
+  children?: NavLink[];
+};
+
+const services = await getServices();
+
+const links: NavLink[] = [
+  { label: "Home", href: "/" },
+  {
+    label: "Our Services",
+    href: "/services",
+    children: services.map(s => ({ label: s.data.title, href: `/services/${s.id}` }))
+  },
+  { label: "About Us", href: "/about" },
+  { label: "FAQs", href: "/faqs" }
+];
+---
+
+<div
+  id="p_gutter"
+  class="theme-dark bg-theme-background-lowlight/95 text-foreground fixed top-0 bottom-full left-0 z-50 flex w-full overflow-y-auto opacity-0 transition-all"
+  x-data="{ open: false }"
+  x-on:toggle-gutter.window="open = !open"
+  x-bind:class="{ 'bottom-0! opacity-100!': open }"
+>
+  <div class="flex flex-1 py-8 sm:py-10 md:py-12 lg:py-14">
+    <div class="container" x-data>
+      <div class="flex h-full flex-col gap-10">
+        <div class="flex justify-end">
+          <button
+            aria-label="Open mobile navigation"
+            class="focus:ring-theme-brand bg-theme-background-highlight relative h-full rounded-md p-3 focus:ring-2 focus:outline-hidden"
+            title="Open mobile navigation"
+            type="button"
+            x-on:click="$dispatch('toggle-gutter')"
+          >
+            <span class="sr-only">Close mobile navigation</span>
+            <X stroke-width={1.75} size={20} class="text-theme-foreground-bold" />
+          </button>
+        </div>
+        <div class="flex flex-1 flex-col justify-center gap-10">
+          <div class="shrink gap-10 lg:flex">
+            <nav class="w-full" aria-label="Mobile navigation">
+              <ul class="grid gap-4 text-xl">
+                {
+                  links.map(link =>
+                    link.children ? (
+                      <li x-data="{ expanded: false }">
+                        <button type="button" class="group flex w-full items-center gap-2 text-left" x-on:click="expanded = !expanded" x-bind:tabindex="!open && '-1'">
+                          <span class="text-theme-foreground-bold hover:text-theme-action transition-colors">{link.label}</span>
+                          <ChevronDown class="text-theme-action transition-transform" stroke-width={2} size="0.6666em" x-bind:class="{ 'rotate-180': expanded }" />
+                        </button>
+                        <ul class="ml-2 grid gap-1.5 overflow-hidden pt-4 text-base" x-show="expanded" x-collapse x-cloak>
+                          {link.children.map(child => (
+                            <li class="before:bg-theme-brand flex items-center gap-2 before:size-1 before:rounded-full">
+                              <a href={child.href} class="text-theme-foreground hover:text-theme-action transition-colors" x-bind:tabindex="!open && '-1'">
+                                {child.label}
+                              </a>
+                            </li>
+                          ))}
+                          <li class="before:bg-theme-brand flex items-center gap-2 before:size-1 before:rounded-full">
+                            <a href={link.href} class="text-theme-foreground hover:text-theme-action transition-colors" x-bind:tabindex="!open && '-1'">
+                              All {link.label}
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    ) : (
+                      <li>
+                        <a href={link.href} class="group flex items-baseline gap-2 transition-all hover:gap-4" x-bind:tabindex="!open && '-1'">
+                          <span class:list={[link.href === "/contact" ? "text-theme-action" : "text-theme-foreground-bold", "hover:text-theme-action transition-colors"]}>
+                            {link.label}
+                          </span>
+                          <ArrowRight class="text-theme-action opacity-0 transition-opacity group-hover:opacity-100" stroke-width={2} size="0.6666em" />
+                        </a>
+                      </li>
+                    )
+                  )
+                }
+              </ul>
+            </nav>
+          </div>
+          <hr />
+          <div class="flex flex-col gap-5 lg:gap-8">
+            <div class="flex flex-col whitespace-nowrap">
+              <p class="label text-sm">Give us a call</p>
+              <a class="label link leading-snug" href="tel:+441772439195">01772 439 195</a>
+            </div>
+            <div class="flex flex-row flex-wrap gap-3 sm:gap-5">
+              <Button label="Enquire online" href="/contact" class="grow text-base sm:grow-0">
+                <ArrowRight slot="suffix" />
+              </Button>
+              <Button label="Pay bill" href="/pay-online" variant="outline" class="grow text-base sm:grow-0">
+                <CreditCard slot="suffix" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

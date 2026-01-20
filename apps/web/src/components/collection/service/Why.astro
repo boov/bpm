@@ -1,0 +1,39 @@
+---
+import Heading from "@components/Heading.astro";
+import Star from "@lucide/astro/icons/star";
+
+const why = [
+  {
+    title: "Transparent contracts",
+    description: "Clear agreements with no hidden costs or complicated clauses."
+  },
+  {
+    title: "Dedicated property managers",
+    description: "One point of contact who understands your unique property requirements."
+  },
+  {
+    title: "Proactive management",
+    description: "Anticipating potential issues before they become costly problems."
+  }
+];
+---
+
+<div class="flex flex-col gap-10 lg:gap-20">
+  <div class="flex flex-col items-center gap-2.5 text-center">
+    <Heading as="h2" class="text-h3 sm:text-h2">Why choose Belgarum Property Management?</Heading>
+    <p class="lg:text-xl">We deliver unmatched property management through dedicated expertise and personalised service.</p>
+  </div>
+  <div class="lg:divide-theme-border lg:border-x-theme-border flex flex-col gap-10 lg:flex-row lg:gap-0 lg:divide-x-2 lg:border-x-2">
+    {
+      why.map(feature => (
+        <div class="flex flex-1 flex-col items-center gap-3 text-center lg:gap-6 lg:px-10">
+          <Star class="text-theme-action size-12" />
+          <div class="flex flex-col gap-2.5">
+            <Heading as="h3" class="text-h5 sm:text-h4" set:text={feature.title} />
+            <p set:text={feature.description} />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

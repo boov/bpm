@@ -1,9 +1,14 @@
 @import "tailwindcss";
 
-@import "./fonts.css" layer(base);
+@import "@fontsource/hanken-grotesk/latin-300.css";
+@import "@fontsource/hanken-grotesk/latin-400.css";
+@import "@fontsource/hanken-grotesk/latin-600.css";
+
 @import "./prose.css" layer(components);
 
 @config "../../../tailwind.config.js";
+
+@custom-variant dark (&:where(.theme-dark, .theme-dark *));
 
 :root {
   --shadow-color: hsl(0deg 0% 0% / 0.075);
@@ -24,13 +29,13 @@
   --color-theme-border-bold: unset;
   --color-theme-border-light: unset;
 
-  --color-theme-brand: hsl(16deg 100% 74%);
-  --color-theme-brand-highlight: hsl(16deg 100% 69%);
-  --color-theme-brand-lowlight: hsl(16deg 100% 79%);
+  --color-theme-brand: hsl(16deg 83% 66%);
+  --color-theme-brand-highlight: hsl(16deg 83% 76%);
+  --color-theme-brand-lowlight: hsl(16deg 83% 56%);
 
-  --color-theme-action: hsl(16deg 80% 64%);
-  --color-theme-action-hover: hsl(16deg 80% 62%);
-  --color-theme-action-focus: hsl(16deg 80% 60%);
+  --color-theme-action: var(--color-theme-brand);
+  --color-theme-action-hover: var(--color-theme-brand);
+  --color-theme-action-focus: var(--color-theme-brand);
 
   --color-white: white;
   --color-black: black;
@@ -102,9 +107,9 @@
 
   --font-*: initial;
   --font-symbols: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-copy: ui-sans-serif, system-ui, sans-serif, var(--font-symbols);
+  --font-copy: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif, var(--font-symbols);
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --font-title: ui-sans-serif, system-ui, sans-serif, var(--font-symbols);
+  --font-title: "FreightDispCmp Pro", ui-sans-serif, system-ui, sans-serif, var(--font-symbols);
 
   --breakpoint-site: 120rem;
 
@@ -126,8 +131,7 @@
   --font-weight-*: initial;
   --font-weight-light: 300;
   --font-weight-normal: 400;
-  --font-weight-bold: 550;
-  --font-weight-extrabold: 600;
+  --font-weight-bold: 600;
 
   --shadow-xs: 0 1px 2px 0 var(--shadow-color);
   --shadow-sm: 0 1px 3px 0 var(--shadow-color), 0 1px 2px -1px var(--shadow-color);
@@ -152,13 +156,13 @@
 }
 
 @utility theme-light {
-  --color-theme-foreground: hsl(16deg 10% 45%);
-  --color-theme-foreground-bold: hsl(16deg 10% 20%);
-  --color-theme-foreground-light: hsl(16deg 10% 60%);
+  --color-theme-foreground: hsl(16deg 5% 25%);
+  --color-theme-foreground-bold: hsl(16deg 5% 15%);
+  --color-theme-foreground-light: hsl(16deg 5% 45%);
 
-  --color-theme-background: hsl(16deg 30% 96%);
+  --color-theme-background: hsl(16deg 30% 95%);
   --color-theme-background-highlight: hsl(16deg 30% 100%);
-  --color-theme-background-lowlight: hsl(16deg 30% 94%);
+  --color-theme-background-lowlight: hsl(16deg 30% 93%);
 
   --color-theme-border: hsl(0deg 0% 0% / 0.1);
   --color-theme-border-bold: hsl(0deg 0% 0% / 0.2);
@@ -166,40 +170,45 @@
 }
 
 @utility theme-dark {
-  --color-theme-foreground: hsl(16deg 15% 70%);
-  --color-theme-foreground-bold: hsl(16deg 15% 100%);
-  --color-theme-foreground-light: hsl(16deg 15% 40%);
+  --color-theme-foreground: hsl(16deg 5% 70%);
+  --color-theme-foreground-bold: hsl(16deg 5% 100%);
+  --color-theme-foreground-light: hsl(16deg 5% 40%);
 
-  --color-theme-background: hsl(16deg 100% 11%);
-  --color-theme-background-highlight: hsl(16deg 100% 16%);
-  --color-theme-background-lowlight: hsl(16deg 100% 6%);
+  --color-theme-background: hsl(220deg 2% 24%);
+  --color-theme-background-highlight: hsl(220deg 2% 30%);
+  --color-theme-background-lowlight: hsl(220deg 2% 18%);
 
-  --color-theme-border: hsl(0deg 0% 100% / 0.08);
-  --color-theme-border-bold: hsl(0deg 0% 100% / 0.16);
-  --color-theme-border-light: hsl(0deg 0% 100% / 0.04);
+  --color-theme-border: hsl(0deg 0% 100% / 0.1);
+  --color-theme-border-bold: hsl(0deg 0% 100% / 0.2);
+  --color-theme-border-light: hsl(0deg 0% 100% / 0.05);
 }
 
 @utility heading {
-  @apply font-title text-theme-foreground-bold clear-both font-bold tracking-tighter text-balance wrap-break-word;
+  @apply font-title text-theme-foreground-bold clear-both font-bold tracking-tighter text-balance wrap-break-word uppercase;
 }
 
 @utility subheading {
-  @apply font-title text-theme-foreground-bold text-sm sm:text-base clear-both font-extrabold tracking-widest text-balance wrap-break-word uppercase;
+  @apply text-theme-foreground-bold clear-both text-sm font-bold tracking-widest text-balance wrap-break-word uppercase sm:text-base;
 }
 
 @utility label {
-  @apply font-title text-theme-foreground-bold block text-base font-bold;
+  @apply text-theme-foreground-bold block text-base font-bold;
+}
+
+@utility scoop {
+  corner-shape: scoop;
 }
 
 @utility button {
-  @apply font-title inline-flex appearance-none items-center justify-between gap-2.5 cursor-pointer rounded leading-tight font-extrabold whitespace-nowrap transition focus:outline-hidden disabled:cursor-not-allowed disabled:opacity-50;
+  @apply font-copy inline-flex cursor-pointer appearance-none items-center justify-between gap-2.5 rounded-lg leading-tight font-bold whitespace-nowrap transition focus:outline-hidden disabled:cursor-not-allowed disabled:opacity-50;
 
   span {
-    @apply font-title text-base;
+    @apply font-copy;
+    font-size: inherit;
   }
 
   svg {
-    @apply size-[1em] stroke-[2.5];
+    @apply size-[1.2em] stroke-[2.5];
   }
 }
 
@@ -282,7 +291,7 @@
   dl,
   dt,
   dd {
-    @apply text-theme-foreground;
+    @apply text-theme-foreground text-pretty;
   }
 
   audio {
@@ -397,7 +406,6 @@
 }
 
 #p_cta {
-  @apply theme-dark;
 }
 
 #p_footer {

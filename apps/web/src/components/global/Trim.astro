@@ -1,0 +1,27 @@
+---
+const links = [
+  { label: "Home", href: "/" },
+  { label: "Pay online", href: "/pay-online" },
+  { label: "Privacy policy", href: "/privacy-policy" },
+  { label: "Contact", href: "/contact" }
+];
+---
+
+<div id="p_trim" class="py-8 sm:py-10 md:py-12">
+  <div class="container">
+    <div class="flex flex-col gap-1 text-xs md:flex-row md:items-center md:justify-between">
+      <p>&copy; {new Date().getFullYear()} &ndash; Belgarum Property Management &ndash; Registered in England and Wales: #07115618</p>
+      <ul class="flex flex-wrap items-center gap-x-3 gap-y-1 md:justify-center lg:gap-x-4">
+        {
+          links.map(link => (
+            <li>
+              <a href={link.href} class="text-theme-foreground hover:text-theme-action whitespace-nowrap">
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>

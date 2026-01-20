@@ -1,0 +1,42 @@
+---
+import Heading from "@components/Heading.astro";
+import Section from "@components/Section.astro";
+import PaymentForm from "@components/pages/pay-online/PaymentForm.astro";
+import Trim from "@components/global/Trim.astro";
+import Default from "@layouts/Default.astro";
+---
+
+<Default title="Pay Online" description="Pay your invoice securely using your debit or credit card.">
+  <Section>
+    <div class="container-6c">
+      <div class="flex flex-col gap-10 sm:gap-12 md:gap-14 lg:gap-16">
+        <div class="flex flex-col gap-8">
+          <div class="flex items-center justify-center gap-5">
+            <Heading as="h2" class="text-h2 sm:text-h1 text-balance">Pay bill Online</Heading>
+            <div class="bg-theme-action h-0.5 grow rounded"></div>
+            <div class="flex flex-col text-xs">
+              <p>Powered by</p>
+              <svg width="61" height="25" viewBox="0 0 61 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M60.634 14.28H52.4397C52.6328 16.21 54.0663 16.83 55.693 16.83C57.3603 16.83 58.7023 16.46 59.8105 15.88V19.2C58.4042 19.9959 56.7951 20.3777 55.1745 20.3C51.0977 20.3 48.2307 17.8 48.2307 12.82C48.2307 8.63 50.6605 5.3 54.6357 5.3C58.621 5.3 60.695 8.58 60.695 12.8C60.695 13.2 60.6543 14.06 60.634 14.28ZM54.6153 8.66C53.5682 8.66 52.4092 9.39 52.4092 11.24H56.73C56.73 9.39 55.6422 8.66 54.6153 8.66ZM41.6325 20.3C40.1685 20.3 39.2738 19.7 38.6842 19.26L38.6638 23.89L34.4752 24.76V5.57H38.2978L38.3792 6.59C39.2658 5.76279 40.441 5.30115 41.663 5.3C44.6113 5.3 47.3767 7.9 47.3767 12.7C47.3767 17.93 44.6317 20.3 41.6325 20.3ZM40.6667 8.95C39.7008 8.95 39.101 9.29 38.6638 9.76L38.6842 15.88C39.0908 16.32 39.6805 16.66 40.6667 16.66C42.212 16.66 43.249 15.01 43.249 12.79C43.249 10.64 42.1917 8.95 40.6667 8.95ZM28.7107 5.57H32.9095V20.01H28.7107V5.57ZM28.7107 0.87L32.9095 0V3.36L28.7107 4.24V0.88V0.87ZM24.3187 10.22V20.01H20.13V5.57H23.8917L24.0137 6.79C25.0303 5.02 27.1348 5.38 27.694 5.57V9.36C27.1653 9.19 25.3658 8.93 24.3187 10.22ZM15.6262 14.94C15.6262 17.37 18.2695 16.62 18.7982 16.4V19.76C18.239 20.06 17.2325 20.3 15.86 20.3C15.288 20.3164 14.7185 20.2182 14.1863 20.0113C13.6541 19.8044 13.1702 19.4932 12.7641 19.0966C12.358 18.7 12.0382 18.2262 11.8241 17.7042C11.6101 17.1822 11.5062 16.6228 11.5188 16.06L11.529 2.89L15.616 2.03V5.57H18.8083V9.1H15.6262V14.95V14.94ZM10.6343 15.64C10.6343 18.61 8.28584 20.3 4.80883 20.3C3.24857 20.2988 1.7052 19.9823 0.2745 19.37V15.44C1.6775 16.19 3.42617 16.75 4.80883 16.75C5.74417 16.75 6.36434 16.51 6.36434 15.75C6.36434 13.77 0 14.51 0 9.95C0 7.04 2.318 5.3 5.71367 5.3C7.09633 5.3 8.479 5.5 9.87184 6.05V9.93C8.58469 9.26369 7.15769 8.9008 5.7035 8.87C4.82917 8.87 4.2395 9.12 4.2395 9.77C4.2395 11.62 10.6343 10.74 10.6343 15.65V15.64Z"
+                  fill="#0A2540"></path>
+              </svg>
+            </div>
+          </div>
+          <p>
+            Pay your invoice securely using your debit or credit card. Simply enter the payment amount and reference number from your invoice, then provide your card details.
+            You'll receive a confirmation email once your payment has been processed.
+          </p>
+        </div>
+        <PaymentForm />
+      </div>
+    </div>
+  </Section>
+  <Fragment slot="footer">
+    <footer id="p_footer-group">
+      <Trim />
+    </footer>
+  </Fragment>
+</Default>

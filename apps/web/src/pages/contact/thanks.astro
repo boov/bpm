@@ -1,0 +1,41 @@
+---
+import Button from "@components/Button.astro";
+import Heading from "@components/Heading.astro";
+import SocialLinks from "@components/SocialLinks.astro";
+import Section from "@components/Section.astro";
+import Trim from "@components/global/Trim.astro";
+import Default from "@layouts/Default.astro";
+import MailCheck from "@lucide/astro/icons/mail-check";
+import ArrowLeft from "@lucide/astro/icons/arrow-left";
+
+const title = "Thank you for reaching out";
+const description = "We have received your message and will respond to your enquiry as soon as possible. Our team is reviewing the details you've shared.";
+---
+
+<Default title={title} description={description} allowIndexing={false}>
+  <Section>
+    <div class="container">
+      <div class="flex flex-col items-center gap-16 lg:gap-24">
+        <div class="flex flex-col items-center gap-8 text-center lg:gap-10">
+          <MailCheck class="text-positive-500 size-14 stroke-[1.5] lg:size-18" />
+          <div class="flex flex-col items-center gap-4">
+            <Heading as="h1" class="text-h3 md:text-h2 lg:text-h1">{title}</Heading>
+            <p class="max-w-[60ch] text-lg" set:text={description} />
+          </div>
+          <Button label="Head back home" href="/" variant="text">
+            <ArrowLeft slot="prefix" />
+          </Button>
+        </div>
+        <div class="bg-theme-background-lowlight flex flex-col items-center gap-4 rounded-2xl p-8 sm:flex-row sm:gap-12 lg:gap-20 lg:p-10">
+          <Heading as="p" class="text-h5 lg:text-h4">Find us elsewhere</Heading>
+          <SocialLinks />
+        </div>
+      </div>
+    </div>
+  </Section>
+  <Fragment slot="footer">
+    <footer id="p_footer-group">
+      <Trim />
+    </footer>
+  </Fragment>
+</Default>

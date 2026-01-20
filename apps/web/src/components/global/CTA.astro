@@ -1,0 +1,37 @@
+---
+import Heading from "@components/Heading.astro";
+import Button from "@components/Button.astro";
+import ArrowRight from "@lucide/astro/icons/arrow-right";
+import logoMark from "@assets/images/logo-mark.svg?raw";
+---
+
+<div class="relative">
+  <div class="container-14c">
+    <div id="p_cta" class="theme-dark scoop relative z-20 flex overflow-hidden rounded-lg shadow-2xl sm:rounded-2xl md:rounded-3xl">
+      <div class="bg-theme-background-lowlight site:px-28 site:py-24 relative flex-1 overflow-hidden p-10 sm:p-12 md:p-16 lg:p-20">
+        <div class="relative z-20 flex flex-col gap-6">
+          <div class="flex flex-col">
+            <p class="subheading text-theme-action">Get in touch</p>
+            <Heading as="h2" class="text-h3 sm:text-h2">Discover how we can help you</Heading>
+          </div>
+          <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-8">
+            <Button label="Enquire online" href="/contact">
+              <ArrowRight slot="suffix" />
+            </Button>
+            <div class="flex flex-col whitespace-nowrap max-sm:hidden">
+              <p class="label text-sm">Give us a call</p>
+              <a class="label link leading-snug" href="tel:+441772439195">01772 439 195</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-theme-foreground pointer-events-none absolute right-0 bottom-0 z-10 w-60 translate-1/6 -scale-x-100 opacity-20 lg:block xl:w-72"
+          aria-hidden="true"
+          set:html={logoMark}
+        />
+      </div>
+      <div class="bg-theme-action w-6 shrink-0 sm:w-12 md:w-16 lg:w-20"></div>
+    </div>
+  </div>
+  <div class="bg-theme-background theme-light absolute top-0 right-0 bottom-4/5 left-0 z-10"></div>
+</div>

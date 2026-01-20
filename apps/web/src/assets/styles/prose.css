@@ -15,7 +15,7 @@
     @apply mb-0;
   }
 
-  :where(p,ol,ul,dl,figure) + :where(h2,h3,h4,h5,h6) {
+  :where(p, ol, ul, dl, figure) + :where(h2, h3, h4, h5, h6) {
     @apply mt-10;
   }
 
@@ -25,7 +25,7 @@
   h4,
   h5,
   h6 {
-    @apply font-title text-theme-foreground-bold clear-both font-bold tracking-tighter text-balance break-words;
+    @apply heading;
   }
 
   h1 {

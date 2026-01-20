@@ -7,15 +7,14 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: import.meta.env.DEV ? "http://localhost:8080" : "https://www.belgarum-property.co.uk",
+  site: import.meta.env.DEV ? "http://localhost:4321" : "https://www.belgarum-property.co.uk",
   image: {
-    domains: ["picsum.photos"]
+    domains: ["picsum.photos", "dummyimage.com"]
   },
   prefetch: {
     prefetchAll: true
   },
   redirects: {},
-  server: { port: 8080 },
   integrations: [
     compress({
       CSS: false,

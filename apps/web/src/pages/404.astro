@@ -1,0 +1,36 @@
+---
+import ArrowLeft from "@lucide/astro/icons/arrow-left";
+import Button from "@components/Button.astro";
+import Default from "@layouts/Default.astro";
+import Footer from "@components/global/Footer.astro";
+import FooterBorder from "@components/global/FooterBorder.astro";
+import Heading from "@components/Heading.astro";
+import OctagonAlert from "@lucide/astro/icons/octagon-alert";
+import Section from "@components/Section.astro";
+import Trim from "@components/global/Trim.astro";
+
+const title = "Resource not found";
+const description = "The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.";
+---
+
+<Default title={title} description={description} allowIndexing={false}>
+  <Section class="xl:py-24 2xl:py-28">
+    <div class="container-6c">
+      <div class="flex flex-col items-center gap-4 text-center sm:gap-6">
+        <OctagonAlert class="text-negative size-18 stroke-1" />
+        <Heading as="h1" class="text-h3 lg:text-h2" set:text={title} />
+        <p class="text-lg md:text-balance" set:text={description} />
+        <Button label="Head back home" href="/" variant="text">
+          <ArrowLeft slot="prefix" />
+        </Button>
+      </div>
+    </div>
+  </Section>
+  <Fragment slot="footer">
+    <footer id="p_footer-group">
+      <Footer />
+      <FooterBorder />
+      <Trim />
+    </footer>
+  </Fragment>
+</Default>

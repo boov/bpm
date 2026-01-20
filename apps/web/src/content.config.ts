@@ -1,6 +1,6 @@
 import { defineCollection, z } from "astro:content";
-import { personnel as personnelContent, testimonials as testimonialsContent, questions as questionsContent } from "@bpm/data";
-import { file, glob } from "astro/loaders";
+import { personnel as personnelContent, questions as questionsContent, testimonials as testimonialsContent } from "@bpm/data";
+import { glob } from "astro/loaders";
 
 const statusSchema = z.enum(["draft", "published"]).default("published");
 
@@ -32,7 +32,13 @@ const services = defineCollection({
       order: z.number().optional().default(0),
       title: z.string(),
       description: z.string(),
-      cover: image()
+      image: image(),
+      content: z
+        .object({
+          heading: z.string(),
+          paragraphs: z.array(z.string())
+        })
+        .default({ heading: "", paragraphs: [] })
     })
 });
 

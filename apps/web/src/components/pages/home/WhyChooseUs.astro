@@ -1,0 +1,61 @@
+---
+import Button from "@components/Button.astro";
+import Heading from "@components/Heading.astro";
+import ArrowRight from "@lucide/astro/icons/arrow-right";
+import ScrollText from "@lucide/astro/icons/scroll-text";
+import Building from "@lucide/astro/icons/building";
+import Star from "@lucide/astro/icons/star";
+import ShieldCheck from "@lucide/astro/icons/shield-check";
+
+const features = [
+  {
+    icon: ScrollText,
+    title: "Transparent contracts",
+    description: "Every contract tells a clear story of responsibility and expectation."
+  },
+  {
+    icon: Building,
+    title: "Dedicated managers",
+    description: "Your property deserves focused, intelligent management."
+  },
+  {
+    icon: Star,
+    title: "Full management coverage",
+    description: "We fight for your interests with professional determination."
+  },
+  {
+    icon: ShieldCheck,
+    title: "Uncompromising property protection",
+    description: "Safeguarding your assets with strategic oversight."
+  }
+];
+---
+
+<div class="flex flex-col gap-16 lg:flex-row lg:items-start lg:gap-20 xl:gap-28">
+  <div class="flex flex-col items-start gap-6 lg:max-w-2/5">
+    <div class="flex flex-col gap-2">
+      <div class="flex items-center gap-5">
+        <p class="subheading text-theme-action">Why choose us?</p>
+        <div class="bg-theme-action h-0.5 w-20 rounded sm:w-24"></div>
+      </div>
+      <Heading as="h2" class="text-h4 sm:text-h3">Property management built on precision and trust</Heading>
+    </div>
+    <p>We deliver clear, actionable management strategies that protect your property investment. Our approach cuts through complexity with direct, no-nonsense solutions.</p>
+    <Button label="Our Services" href="/services" variant="outline">
+      <ArrowRight slot="suffix" />
+    </Button>
+  </div>
+  <div class="grid flex-1 grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2 lg:gap-x-12 lg:gap-y-16">
+    {
+      features.map(feature => (
+        <div class="flex flex-col gap-6">
+          <feature.icon class="text-theme-action size-12" aria-hidden="true" />
+          <div class="flex flex-col gap-3">
+            <Heading as="h3" class="text-h5 sm:text-h4" set:text={feature.title} />
+            <p set:text={feature.description} />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

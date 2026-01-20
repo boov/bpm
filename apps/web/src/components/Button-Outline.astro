@@ -4,7 +4,7 @@ import { twMerge, twSort } from "@bpm/custom-merge";
 
 const { class: classes, label, id, name = id, type, palette = "action", ...props } = Astro.props;
 
-const baseStyles = twSort("button border-2 px-7 py-4 text-sm active:ring-2");
+const baseStyles = twSort("button border-2 px-6 py-4 text-sm active:ring-2");
 
 const paletteStyles = {
   action: twSort("text-theme-action hover:bg-theme-action/10 hover:text-theme-action border-current active:ring-current"),
@@ -18,13 +18,13 @@ const finalStyles = twMerge(baseStyles, paletteStyles[palette], classes);
   type == "anchor" ? (
     <a class={finalStyles} {...props}>
       <slot name="prefix" />
-      <span class="font-title">{label}</span>
+      <span class="font-title" set:text={label} />
       <slot name="suffix" />
     </a>
   ) : (
     <button class={finalStyles} name={name || id} id={id} type={type} {...props}>
       <slot name="prefix" />
-      <span class="font-title">{label}</span>
+      <span class="font-title" set:text={label} />
       <slot name="suffix" />
     </button>
   )

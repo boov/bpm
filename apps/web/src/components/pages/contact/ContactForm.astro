@@ -1,0 +1,264 @@
+---
+import Button from "@components/Button.astro";
+import Input from "@components/Input.astro";
+import Select from "@components/Select.astro";
+import Textarea from "@components/Textarea.astro";
+import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
+---
+
+<form action="/contact/submitting" netlify method="POST" name="contact_form" x-data="{ enquiryTextLength: 0, enquiryType: '' }">
+  <div class="flex flex-col gap-6 md:gap-8">
+    <div class="grid gap-1">
+      <label for="name">Your name</label>
+      <Input id="name" minlength="2" required />
+    </div>
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div class="grid gap-1">
+        <label for="email_address">Email address</label>
+        <Input id="email_address" type="email" inputmode="email" minlength="5" required />
+      </div>
+      <div class="grid gap-1">
+        <label for="phone_number">Phone number <span class="text-theme-foreground-light font-copy ml-2 text-xs font-normal">optional</span></label>
+        <Input id="phone_number" type="tel" inputmode="tel" minlength="10" maxlength="14" />
+      </div>
+    </div>
+    <div class="grid gap-1">
+      <label for="enquiry_type">Enquiry type</label>
+      <Select
+        id="enquiry_type"
+        x-model="enquiryType"
+        options={[
+          { value: "", label: "—" },
+          { value: "general", label: "General enquiry" },
+          { value: "repairs", label: "Repairs & Maintenance" },
+          { value: "accounting", label: "Year-end Accounting" },
+          { value: "legal", label: "Property Sales Legal Support" },
+          { value: "fire-safety", label: "Fire Safety Guidance" },
+          { value: "site-visit", label: "Site Visit Request" }
+        ]}
+        required
+      />
+    </div>
+    <template x-if="enquiryType">
+      <div class="flex flex-col gap-6 md:gap-8">
+        <!-- Property Address (shown for all except general) -->
+        <template x-if="enquiryType !== 'general'">
+          <div class="grid gap-1">
+            <label for="property_address">Property address</label>
+            <Input id="property_address" placeholder="Enter the full property address" required />
+          </div>
+        </template>
+
+        <!-- Repairs & Maintenance fields -->
+        <template x-if="enquiryType === 'repairs'">
+          <div class="flex flex-col gap-6 md:gap-8">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <div class="grid gap-1">
+                <label for="repair_urgency">Urgency level</label>
+                <Select
+                  id="repair_urgency"
+                  options={[
+                    { value: "", label: "—" },
+                    { value: "emergency", label: "Emergency (within 24 hours)" },
+                    { value: "urgent", label: "Urgent (within 48 hours)" },
+                    { value: "routine", label: "Routine (within 2 weeks)" },
+                    { value: "planned", label: "Planned maintenance" }
+                  ]}
+                  required
+                />
+              </div>
+              <div class="grid gap-1">
+                <label for="repair_area">Affected area</label>
+                <Select
+                  id="repair_area"
+                  options={[
+                    { value: "", label: "—" },
+                    { value: "plumbing", label: "Plumbing" },
+                    { value: "electrical", label: "Electrical" },
+                    { value: "heating", label: "Heating / Boiler" },
+                    { value: "structural", label: "Structural" },
+                    { value: "exterior", label: "Exterior / Roof" },
+                    { value: "communal", label: "Communal areas" },
+                    { value: "other", label: "Other" }
+                  ]}
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </template>
+
+        <!-- Year-end Accounting fields -->
+        <template x-if="enquiryType === 'accounting'">
+          <div class="flex flex-col gap-6 md:gap-8">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <div class="grid gap-1">
+                <label for="financial_year">Financial year</label>
+                <Select
+                  id="financial_year"
+                  options={[
+                    { value: "", label: "—" },
+                    { value: "2024-2025", label: "2024/2025" },
+                    { value: "2025-2026", label: "2025/2026" },
+                    { value: "2026-2027", label: "2026/2027" }
+                  ]}
+                  required
+                />
+              </div>
+              <div class="grid gap-1">
+                <label for="accounting_query">Query type</label>
+                <Select
+                  id="accounting_query"
+                  options={[
+                    { value: "", label: "—" },
+                    { value: "service-charge", label: "Service charge accounts" },
+                    { value: "budget", label: "Budget preparation" },
+                    { value: "arrears", label: "Arrears / debt recovery" },
+                    { value: "reserve-fund", label: "Reserve fund queries" },
+                    { value: "audit", label: "Audit requirements" },
+                    { value: "other", label: "Other" }
+                  ]}
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </template>
+
+        <!-- Property Sales Legal Support fields -->
+        <template x-if="enquiryType === 'legal'">
+          <div class="flex flex-col gap-6 md:gap-8">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <div class="grid gap-1">
+                <label for="sale_stage">Sale stage</label>
+                <Select
+                  id="sale_stage"
+                  options={[
+                    { value: "", label: "—" },
+                    { value: "pre-sale", label: "Preparing to sell" },
+                    { value: "on-market", label: "Property on market" },
+                    { value: "offer-accepted", label: "Offer accepted" },
+                    { value: "conveyancing", label: "Conveyancing in progress" },
+                    { value: "completion", label: "Near completion" }
+                  ]}
+                  required
+                />
+              </div>
+              <div class="grid gap-1">
+                <label for="legal_pack">Management pack required?</label>
+                <Select
+                  id="legal_pack"
+                  options={[
+                    { value: "", label: "—" },
+                    { value: "yes", label: "Yes, I need a management pack" },
+                    { value: "no", label: "No, just a query" },
+                    { value: "unsure", label: "Not sure yet" }
+                  ]}
+                  required
+                />
+              </div>
+            </div>
+            <div class="grid gap-1">
+              <label for="solicitor_details">Solicitor details <span class="text-theme-foreground-light font-copy ml-2 text-xs font-normal">optional</span></label>
+              <Input id="solicitor_details" placeholder="Solicitor name and firm (if known)" />
+            </div>
+          </div>
+        </template>
+
+        <!-- Fire Safety Guidance fields -->
+        <template x-if="enquiryType === 'fire-safety'">
+          <div class="flex flex-col gap-6 md:gap-8">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <div class="grid gap-1">
+                <label for="building_height">Building height</label>
+                <Select
+                  id="building_height"
+                  options={[
+                    { value: "", label: "—" },
+                    { value: "under-11m", label: "Under 11 metres" },
+                    { value: "11-18m", label: "11 to 18 metres" },
+                    { value: "over-18m", label: "Over 18 metres" },
+                    { value: "unsure", label: "Not sure" }
+                  ]}
+                  required
+                />
+              </div>
+              <div class="grid gap-1">
+                <label for="fire_query_type">Guidance needed</label>
+                <Select
+                  id="fire_query_type"
+                  options={[
+                    { value: "", label: "—" },
+                    { value: "fra", label: "Fire risk assessment" },
+                    { value: "remediation", label: "Remediation works" },
+                    { value: "ews1", label: "EWS1 form queries" },
+                    { value: "compliance", label: "Compliance advice" },
+                    { value: "alarm-systems", label: "Alarm / detection systems" },
+                    { value: "other", label: "Other" }
+                  ]}
+                  required
+                />
+              </div>
+            </div>
+            <div class="grid gap-1">
+              <label for="unit_count">Number of units in building</label>
+              <Input id="unit_count" type="number" inputmode="numeric" min="1" placeholder="e.g. 24" required />
+            </div>
+          </div>
+        </template>
+
+        <!-- Site Visit Request fields -->
+        <template x-if="enquiryType === 'site-visit'">
+          <div class="flex flex-col gap-6 md:gap-8">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <div class="grid gap-1">
+                <label for="visit_reason">Reason for visit</label>
+                <Select
+                  id="visit_reason"
+                  options={[
+                    { value: "", label: "—" },
+                    { value: "inspection", label: "Routine inspection" },
+                    { value: "contractor", label: "Contractor supervision" },
+                    { value: "meeting", label: "Residents meeting" },
+                    { value: "issue", label: "Investigate an issue" },
+                    { value: "agm", label: "AGM attendance" },
+                    { value: "other", label: "Other" }
+                  ]}
+                  required
+                />
+              </div>
+              <div class="grid gap-1">
+                <label for="preferred_date">Preferred date</label>
+                <Input id="preferred_date" type="date" required />
+              </div>
+            </div>
+            <div class="grid gap-1">
+              <label for="access_arrangements">Access arrangements <span class="text-theme-foreground-light font-copy ml-2 text-xs font-normal">optional</span></label>
+              <Input id="access_arrangements" placeholder="Key holder details, access codes, etc." />
+            </div>
+          </div>
+        </template>
+
+        <!-- Enquiry text (shown for all types) -->
+        <div class="grid gap-1">
+          <label for="enquiry_text" x-text="enquiryType === 'general' ? 'Your enquiry' : 'Additional details'"></label>
+          <Textarea
+            id="enquiry_text"
+            x-on:focus="enquiryTextLength = $event.target.value.length;"
+            x-on:keyup="enquiryTextLength = $event.target.value.length;"
+            rows="4"
+            minlength="200"
+            x-bind:placeholder="enquiryType === 'repairs' ? 'Please describe the issue in detail, including when it started and any immediate risks...' : enquiryType === 'general' ? 'How can we help you today?' : 'Please provide any additional information that may help us assist you...'"
+            required
+          />
+          <p class="text-theme-foreground-light text-sm whitespace-nowrap">
+            <span x-bind:class="enquiryTextLength < 200 ? 'text-negative' : 'text-theme-brand'" x-text="enquiryTextLength"></span> of 200 minimum
+          </p>
+        </div>
+      </div>
+    </template>
+    <Button label="Submit enquiry" type="submit" class="mt-2 px-7 py-5 text-base sm:self-start">
+      <CircleCheckBig slot="suffix" />
+    </Button>
+  </div>
+</form>

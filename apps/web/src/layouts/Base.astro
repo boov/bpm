@@ -1,0 +1,108 @@
+---
+import "/src/assets/styles/main.css";
+import GTM from "@components/global/GTM.astro";
+import Gutter from "@components/global/Gutter.astro";
+import Schema from "@components/global/Schema.astro";
+import { ClientRouter } from "astro:transitions";
+
+export interface Props {
+  title: string;
+  description: string;
+  canonicalURL?: string;
+  robots?: string;
+  allowIndexing?: boolean;
+  socialImageURL?: string;
+  pageType?: "article" | "website";
+}
+
+const schemaLogo = new URL("/images/schema_logo.png", Astro.site).href;
+
+const {
+  title,
+  description,
+  canonicalURL = Astro.url.toString(),
+  allowIndexing = true,
+  socialImageURL = new URL("/images/social_share.png", Astro.site).href,
+  pageType = "website"
+} = Astro.props;
+
+const google = {
+  siteVerification: import.meta.env.GOOGLE_SITE_VERIFICATION,
+  tagManagerContainer: import.meta.env.GOOGLE_TAG_MANAGER_CONTAINER
+};
+
+const isHomePage = Astro.url.pathname === "/";
+const hasDarkHeader = isHomePage;
+
+const brand = "Belgarum Property Management";
+const strapline = "Specialist CDM, BSA Principal Designer, and Health and Safety support for the construction industry.";
+
+const appTitle = `${brand} - ${strapline}`;
+const pageTitle = isHomePage ? appTitle : `${title} - ${brand}`;
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <title>{pageTitle}</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="author" content="Matt Booth - https://www.boov.co.uk" />
+    <meta name="description" content={description} />
+    {google.siteVerification && <meta name="google-site-verification" content={google.siteVerification} />}
+    <meta name="robots" content={allowIndexing ? "index, follow" : "noindex, nofollow"} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:url" content={canonicalURL} />
+
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImageURL} />
+    <meta property="og:site_name" content={appTitle} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:type" content={pageType} />
+    <meta property="og:url" content={canonicalURL} />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple_touch_icon.png" />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="stylesheet" href="https://use.typekit.net/glq6gsv.css" />
+
+    {google.tagManagerContainer && <GTM container={google.tagManagerContainer} />}
+
+    <Schema data={{ appTitle, schemaImage: socialImageURL, schemaLogo }} />
+
+    <ClientRouter />
+
+    <slot name="head" />
+  </head>
+  <body class:list={[import.meta.env.DEV && "development", hasDarkHeader ? "theme-dark" : "theme-light"]}>
+    {
+      google.tagManagerContainer && (
+        <noscript>
+          <iframe src={`https://www.googletagmanager.com/ns.html?id=${google.tagManagerContainer}`} height="0" width="0" style="display: none; visibility: hidden" />
+        </noscript>
+      )
+    }
+
+    <script>
+      import Alpine from "alpinejs";
+      import collapse from "@alpinejs/collapse";
+      import paymentForm from "@assets/scripts/payment-form";
+
+      Alpine.data("paymentForm", paymentForm);
+      Alpine.plugin(collapse);
+      Alpine.start();
+    </script>
+
+    <slot />
+    <Gutter />
+    <slot name="foot" />
+  </body>
+</html>

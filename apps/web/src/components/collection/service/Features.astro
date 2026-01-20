@@ -1,0 +1,43 @@
+---
+import Heading from "@components/Heading.astro";
+import Star from "@lucide/astro/icons/star";
+
+const features = [
+  {
+    icon: Star,
+    title: "Expert advice",
+    description:
+      "BPM Ltd employs experienced property managers who understand current leasehold legislation, ensuring all legal requirements are met and clearly explaining your rights and responsibilities under your lease."
+  },
+  {
+    icon: Star,
+    title: "Dedicated managers",
+    description:
+      "When we take over your property, you get a dedicated property manager available during normal office hours, Monday to Friday, with the skills and experience to manage your property effectively and keep residents happy."
+  },
+  {
+    icon: Star,
+    title: "Property inspections",
+    description:
+      "We carry out regular inspections and encourage residents to report any issues we might not see; for larger developments we provide regular management reports and handle all day-to-day communal matters, including contractors, insurance and compliance."
+  },
+  {
+    icon: Star,
+    title: "Help when you need it",
+    description:
+      "Leasehold flats come with legally binding covenants covering payments, behaviour and use of the property; BPM Ltd acts as the management body that enforces these obligations, ensuring service charges are collected, common areas are maintained and the block runs smoothly."
+  }
+];
+---
+
+<div class="grid grid-cols-1 gap-1.5 overflow-hidden rounded-xl sm:grid-cols-2 xl:grid-cols-4">
+  {
+    features.map(feature => (
+      <div class="bg-theme-background-highlight flex flex-col gap-3 p-8 sm:gap-6 sm:p-10">
+        <feature.icon class="text-theme-action size-8 sm:size-12" aria-hidden="true" />
+        <Heading as="h3" class="text-h5 sm:text-h4" set:text={feature.title} />
+        <p class="text-sm" set:text={feature.description} />
+      </div>
+    ))
+  }
+</div>

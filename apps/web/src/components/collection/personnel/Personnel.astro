@@ -1,0 +1,29 @@
+---
+import Heading from "@components/Heading.astro";
+import { Image } from "astro:assets";
+import UserRound from "@lucide/astro/icons/user-round";
+
+const { data: person } = Astro.props;
+const { name, role, headshot } = person.data;
+---
+
+<article class="flex flex-col items-center gap-4">
+  <div class="bg-theme-background-highlight aspect-square w-32 overflow-hidden rounded-full">
+    {
+      headshot ? (
+        <Image class="size-full object-cover" src={headshot} alt={`${name} headshot`} loading="lazy" decoding="async" width={200} height={200} />
+      ) : (
+        <div class="flex size-full items-center justify-center">
+          <UserRound class="stroke-theme-foreground-light size-10 stroke-1" />
+        </div>
+      )
+    }
+  </div>
+  <div class="flex flex-col gap-4 text-center text-sm">
+    <div class="flex flex-col">
+      <Heading as="h3" class="text-h6 sm:text-h5 xl:text-h4">{name}</Heading>
+      <p class="label text-theme-brand">{role}</p>
+    </div>
+    <p class="text-theme-foreground-light sm:text-balance">Veteran property management expert with over 20 years of strategic leadership and industry insight.</p>
+  </div>
+</article>

@@ -1,0 +1,10 @@
+---
+import Personnel from "@components/collection/personnel/Personnel.astro";
+import { getPersonnel } from "@helpers";
+
+const personnel = await getPersonnel();
+---
+
+<div class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-y-20 lg:grid-cols-4">
+  {personnel.map(person => <Personnel data={person} />)}
+</div>

@@ -1,0 +1,10 @@
+---
+import Service from "@components/collection/service/Service.astro";
+import { getServices } from "@helpers";
+
+const services = await getServices();
+---
+
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
+  {services.map(service => <Service data={service} />)}
+</div>

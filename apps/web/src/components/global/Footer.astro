@@ -1,0 +1,54 @@
+---
+import Heading from "@components/Heading.astro";
+import SocialLinks from "@components/SocialLinks.astro";
+import { getServices } from "@helpers";
+
+const services = await getServices();
+---
+
+<div class="p_footer py-14 sm:py-16 md:py-20">
+  <div class="container">
+    <div class="flex flex-col flex-wrap justify-between gap-10 text-sm sm:gap-12 md:gap-14 lg:flex-row xl:flex-nowrap xl:items-start">
+      <div class="xl:w-4c w-full">
+        <div class="flex flex-col items-start gap-5">
+          <div class="flex flex-col items-start gap-2.5">
+            <Heading as="h2" class="text-h5">Belgarum Property Management</Heading>
+            <p class="md:text-balance">
+              BPM Ltd offers comprehensive services for property owners, landlords, and developers, providing a one-stop solution for all corporate and individual landlord needs.
+            </p>
+          </div>
+          <SocialLinks />
+        </div>
+      </div>
+      <div class="lg:shrink">
+        <div class="flex flex-col items-start gap-2.5">
+          <Heading as="h2" class="text-h5">Our Services</Heading>
+          <ul class="grid grid-cols-1 items-start gap-x-10 gap-y-1 sm:grid-cols-2">
+            {
+              services.map(service => (
+                <li class="before:bg-theme-brand flex items-center gap-2 before:block before:h-3 before:w-1 before:rounded-full">
+                  <a href={`/services/${service.id}`} class="text-theme-foreground hover:text-theme-foreground-bold">
+                    {service.data.title}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+      <div class="shrink">
+        <div class="flex flex-col items-start gap-2.5">
+          <Heading as="h2" class="text-h5">Contact Details</Heading>
+          <dl class="grid grid-cols-[max-content_1fr] gap-x-5 gap-y-1">
+            <dt><strong class="label text-sm">Phone</strong></dt>
+            <dd><a href="tel:+8002980069">0800 298 0069</a></dd>
+            <dt><strong class="label text-sm">Email</strong></dt>
+            <dd><a href="mailto:management@bpmanagement.org">management@bpmanagement.org</a></dd>
+            <dt><strong class="label text-sm">Post</strong></dt>
+            <dd class="lg:max-w-[28ch]">Old Manor Nursery, Kilham Lane, Winchester, Hampshire, SO22 5QD</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

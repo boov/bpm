@@ -56,9 +56,9 @@ export const getPersonnel = async () => await getCollection("personnel");
 export const getQuestions = async () => (await getCollection("questions")).sort((a, b) => a.data.title.localeCompare(b.data.title));
 
 export const getQuestionsByGroup = async () => {
-  const posts = await getQuestions();
+  const questions = await getQuestions();
   return Object.entries(
-    posts.reduce((acc: { [key: string]: any[] }, post) => {
+    questions.reduce((acc: { [key: string]: any[] }, post) => {
       const group = post.data.group;
       if (!acc[group]) {
         acc[group] = [];
@@ -66,7 +66,7 @@ export const getQuestionsByGroup = async () => {
       acc[group].push(post);
       return acc;
     }, {})
-  ).sort((a, b) => Number(b[0]) - Number(a[0]));
+  ).sort((a, b) => b[1].length - a[1].length);
 };
 
 export const getServices = async () =>

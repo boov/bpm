@@ -1,0 +1,47 @@
+---
+import Heading from "@components/Heading.astro";
+import { Image } from "astro:assets";
+
+const bulletPoints = [
+  "Your property is being effectively and professionally managed.",
+  "You are meeting your legal obligations under lease agreements.",
+  "You are kept informed of any issues which may affect you as the freeholder.",
+  "You are keeping your residents happy.",
+  "Ensuring an effective relationship and a profitable tenancy."
+];
+---
+
+<div class="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-20">
+  <div class="flex flex-1 flex-col gap-5 md:gap-8">
+    <div class="flex flex-col gap-2 md:gap-3">
+      <div class="flex items-center gap-5">
+        <p class="subheading text-theme-action">About us</p>
+        <div class="bg-theme-action h-0.5 w-20 rounded sm:w-24"></div>
+      </div>
+      <Heading as="h2" class="text-h4 sm:text-h3 xl:text-h2">Our property management story</Heading>
+    </div>
+    <div class="flex flex-col gap-3">
+      <p class="text-lg">
+        We began with a simple truth. Property management is not about buildings. It is about people. In 2010, a small group of professionals looked at the industry and saw
+        opportunity where others saw complexity.
+      </p>
+      <p>
+        Our founders understood that every property tells a story. Some are quiet residential blocks. Others are bustling commercial estates. Each requires a unique approach, a
+        nuanced understanding of space and human interaction.
+      </p>
+    </div>
+    <ul class="flex flex-col gap-2.5">
+      {
+        bulletPoints.map(point => (
+          <li class="flex items-center gap-4">
+            <div class="bg-theme-action size-1.5 shrink-0 rounded-full" />
+            <p class="label" set:text={point} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="flex-1 rounded-xl">
+    <Image src="https://dummyimage.com/616x410/ede2de/7e6d67" alt="" width={616} height={410} class="rounded-lg" />
+  </div>
+</div>

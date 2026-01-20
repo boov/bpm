@@ -3,12 +3,16 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "netlify:dev": "netlify dev --no-open",
+    "netlify:build": "netlify build",
+    "netlify:deploy": "netlify deploy --prod",
+    "netlify:env:import": "netlify env:import .env.prod",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "astro:update": "npmx @astrojs/upgrade",
-    "prettier": "prettier --check --no-error-on-unmatched-pattern src/**/*.{astro,css,json,md,mdx,ts,js,cjs,mjs}",
-    "prettier:fix": "prettier --write --no-error-on-unmatched-pattern src/**/*.{astro,css,json,md,mdx,ts,js,cjs,mjs}"
+    "prettier": "prettier --check --no-error-on-unmatched-pattern {src,netlify}/**/**/**/**/*.{astro,css,json,md,mdx,ts,js}",
+    "prettier:fix": "prettier --write --no-error-on-unmatched-pattern {src,netlify}/**/**/**/**/*.{astro,css,json,md,mdx,ts,js}"
   }
 }

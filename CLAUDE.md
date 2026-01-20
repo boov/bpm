@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Development
 
 ```bash
-npm run dev:web          # Start Astro dev server (http://localhost:8080)
+npm run dev:web          # Start Netlify dev server for web workspace (http://localhost:8888/)
 ```
 
 ### Build & Quality
@@ -44,7 +44,7 @@ This is an npm workspaces monorepo:
 
 The site uses Astro's Content Collections API with custom loaders (apps/web/src/content.config.ts):
 
-- **Collections**: `personnel`, `services`, `questions`, `testimonials` 
+- **Collections**: `personnel`, `services`, `questions`, `testimonials`
 - **Data Sources**:
   - JSON files in `src/content/` (services)
   - Shared workspace package `@bpm/data` (personnel, questions, testimonials)
@@ -70,6 +70,7 @@ const services = defineCollection({
 ### Custom Design System
 
 Located in `packages/design-system/`, this Tailwind plugin exports:
+
 - `designSystem` - Main plugin with container and grid utilities
 - `magicTypography()` - Exponential typography scale generator
 
@@ -79,10 +80,10 @@ The `magicTypography()` function generates fluid typography scales using exponen
 
 ```typescript
 // Headings: h0-h7 with 1.25 ratio, line-heights 1.05-1.45
-magicTypography({h0: 7, h1: 6, h2: 5, ...}, 1.25, [1.05, 1.45])
+magicTypography({ h0: 7, h1: 6, h2: 5, ... }, 1.25, [1.05, 1.45])
 
 // Text sizes: 9xl-xs with 1.15 ratio, line-heights 1.1-1.65
-magicTypography({"9xl": 10, ..., base: 0, sm: -1, xs: -2}, 1.15, [1.1, 1.65])
+magicTypography({ "9xl": 10, ..., base: 0, sm: -1, xs: -2 }, 1.15, [1.1, 1.65])
 ```
 
 - Exponent values convert to rem via `ratio^exponent`
@@ -118,11 +119,21 @@ Configured in `tsconfig.base.json`:
 
 ```json
 {
-  "@helpers": ["src/assets/scripts/helpers.ts"],
-  "@types": ["src/types.ts"],
-  "@assets/*": ["src/assets/*"],
-  "@components/*": ["src/components/*"],
-  "@layouts/*": ["src/layouts/*"]
+  "@helpers": [
+    "src/assets/scripts/helpers.ts"
+  ],
+  "@types": [
+    "src/types.ts"
+  ],
+  "@assets/*": [
+    "src/assets/*"
+  ],
+  "@components/*": [
+    "src/components/*"
+  ],
+  "@layouts/*": [
+    "src/layouts/*"
+  ]
 }
 ```
 
@@ -138,7 +149,7 @@ Use these aliases in imports rather than relative paths.
 
 **Astro Configuration** (apps/web/astro.config.mjs):
 
-- Dev server: port 8080 (not default 4321)
+- Dev server: port 4321
 - Site URL: `https://www.belgarum-property.co.uk`
 - Integrations: compress (HTML/JS/Images), sitemap, meta-tags, page-insight
 - Prefetching: enabled for all links
@@ -155,9 +166,18 @@ Use these aliases in imports rather than relative paths.
 - Tailwind v4 with native Vite support (`@tailwindcss/vite`)
 - Base preset in `packages/tailwind-base/`
 
+**AlpineJS**
+
+- AlpineJS is used for client-side interactivity and state management (`alpinejs`)
+
+**Lucide Icons**:
+
+- All icons are sourced from Lucide Icons, using their astro package (`@lucide/astro`)
+- To import a specific icon: `import IconName from "@lucide/astro/icons/icon-name";`
+
 ## Important Notes
 
-- **Port**: Dev server runs on port 8080, not Astro's default 4321
+- **Port**: Dev server runs on port 4321
 - **Typography**: Use `magicTypography()` for consistent scaling when adding new size scales
 - **Spacing**: Prefer column-based units (`5c`) over arbitrary values for grid-aligned spacing
 - **Content**: Add new collections to `content.config.ts` with proper Zod schemas and loaders

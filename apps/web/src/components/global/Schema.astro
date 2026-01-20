@@ -1,0 +1,39 @@
+---
+interface Props {
+  data: {
+    appTitle: string;
+    schemaImage: string;
+    schemaLogo?: string;
+  };
+}
+
+const { ...props } = Astro.props;
+const { appTitle, schemaImage, schemaLogo } = props.data;
+const siteURL = Astro.site?.href;
+
+let schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "#localbusiness",
+      name: appTitle,
+      url: siteURL,
+      image: schemaImage,
+      logo: schemaLogo || schemaImage,
+      telephone: "+447890123456",
+      email: "hello@example.com",
+      openingHours: "Mo-Fr 09:00-18:00",
+      priceRange: "Varies"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "#website",
+      name: appTitle,
+      url: siteURL
+    }
+  ]
+});
+---
+
+<script type="application/ld+json" set:html={schema} />

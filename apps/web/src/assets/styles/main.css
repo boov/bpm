@@ -109,7 +109,7 @@
   --font-symbols: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-copy: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif, var(--font-symbols);
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --font-title: "FreightDispCmp Pro", ui-sans-serif, system-ui, sans-serif, var(--font-symbols);
+  --font-title: "freightdispcmp-pro", ui-sans-serif, system-ui, sans-serif, var(--font-symbols);
 
   --breakpoint-site: 120rem;
 

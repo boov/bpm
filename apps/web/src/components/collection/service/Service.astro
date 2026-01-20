@@ -12,11 +12,11 @@ const href = `/services/${service.id}`;
   <a href={href} class="bg-theme-background-lowlight block aspect-video w-full overflow-hidden">
     <Image src={service.data.image} alt={`${service.data.title} cover image`} width={400} height={225} class="size-full object-cover transition-transform" />
   </a>
-  <div class="bg-theme-background-highlight flex flex-1 flex-col items-start gap-1 p-6 sm:py-7 md:p-8">
+  <div class="bg-theme-background-highlight flex flex-1 flex-col items-start gap-2 p-6 sm:py-7 md:p-8">
     <Heading as="h3" class="text-h5 sm:text-h4">
       <a href={href} class="text-theme-foreground-bold hover:text-theme-foreground-bold" set:text={service.data.title} />
     </Heading>
-    <Button type="anchor" variant="text" label="Find out more">
+    <Button type="anchor" href={href} variant="text" label="Find out more">
       <ArrowRight slot="suffix" />
     </Button>
   </div>

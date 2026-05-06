@@ -7,15 +7,26 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Development
 
 ```bash
-npm run dev:web          # Start Netlify dev server for web workspace (http://localhost:8888/)
+npm run dev              # Start Astro dev server for the active app (default: web) on http://localhost:4321/
+npm run preview          # Build then serve the production output locally
 ```
 
-### Build & Quality
+`dev`, `build`, and `preview` proxy to the workspace named in `.active-app` (falling back to `web` when the file is absent), e.g. `npm run dev --workspace=@bpm/$(cat .active-app)`.
+
+### Build
 
 ```bash
-npm run build            # Build all workspaces for production
-npm run prettier         # Check code formatting
-npm run prettier:fix     # Auto-fix formatting issues
+npm run build            # Build only the active app
+npm run build:all        # Build every workspace that defines a build script
+npm run clean            # Remove apps/*/dist, apps/*/.astro, apps/*/.netlify, .eslintcache
+```
+
+### Quality
+
+```bash
+npm run prettier         # Format the repo in place (prettier -lw .)
+npm run eslint           # Lint with --cache --fix
+npm run format           # Run prettier then eslint (preferred pre-commit gate)
 ```
 
 ### Workspace-Specific Commands
@@ -62,7 +73,10 @@ const services = defineCollection({
       order: z.number().optional().default(0),
       title: z.string(),
       description: z.string(),
-      cover: image()
+      image: image(),
+      content: z
+        .object({ heading: z.string(), paragraphs: z.array(z.string()) })
+        .default({ heading: "", paragraphs: [] })
     })
 });
 ```
@@ -79,8 +93,8 @@ Located in `packages/design-system/`, this Tailwind plugin exports:
 The `magicTypography()` function generates fluid typography scales using exponential ratios:
 
 ```typescript
-// Headings: h0-h7 with 1.25 ratio, line-heights 1.05-1.45
-magicTypography({ h0: 7, h1: 6, h2: 5, ... }, 1.25, [1.05, 1.45])
+// Headings: h0-h7 with 1.25 ratio, line-heights 1.05-1.2
+magicTypography({ h0: 7, h1: 6, h2: 5, ... }, 1.25, [1.05, 1.2])
 
 // Text sizes: 9xl-xs with 1.15 ratio, line-heights 1.1-1.65
 magicTypography({ "9xl": 10, ..., base: 0, sm: -1, xs: -2 }, 1.15, [1.1, 1.65])
@@ -131,8 +145,10 @@ Use these aliases in imports rather than relative paths.
 ### Component Organization
 
 - **Base components**: `src/components/` (Button, Input, Heading, Section, etc.)
-- **Domain components**: `src/components/collection/` (feature-specific)
-- **Layouts**: `src/layouts/` (page templates)
+- **Global components**: `src/components/global/` (Footer, CTA, Banner, Schema, GTM, etc.) used across pages
+- **Page components**: `src/components/pages/<page>/` (per-route building blocks: `home`, `about`, `contact`, `pay-online`)
+- **Collection components**: `src/components/collection/{personnel,question,service}/` rendering content collection entries
+- **Layouts**: `src/layouts/` (`Base`, `Default`, `Text`)
 
 ### Build & Deployment
 
@@ -164,10 +180,16 @@ Use these aliases in imports rather than relative paths.
 - All icons are sourced from Lucide Icons, using their astro package (`@lucide/astro`)
 - To import a specific icon: `import IconName from "@lucide/astro/icons/icon-name";`
 
+### Linting & Formatting
+
+- **Prettier** (`.prettierrc.json`): `printWidth: 180`, double quotes, no trailing commas, no semicolons override; uses `prettier-plugin-astro` and `prettier-plugin-tailwindcss` (the Tailwind plugin sorts classes inside `twMerge` and `twSort` helpers).
+- **ESLint** (flat config in `eslint.config.js`): TypeScript + Astro rules plus `simple-import-sort` for `imports`/`exports`. Ignores `dist`, `.astro`, and `*.d.ts`. Run `npm run format` for the combined Prettier + ESLint pass.
+
 ## Important Notes
 
-- **Port**: Dev server runs on port 4321
-- **Typography**: Use `magicTypography()` for consistent scaling when adding new size scales
-- **Spacing**: Prefer column-based units (`5c`) over arbitrary values for grid-aligned spacing
-- **Content**: Add new collections to `content.config.ts` with proper Zod schemas and loaders
-- **Node Version**: Project requires Node.js 22+ (enforced in package.json engines and .nvmrc)
+- **Active app**: Root `dev`/`build`/`preview` scripts read `.active-app` (defaults to `web`); to target another app either edit that file or pass `--workspace=@bpm/<name>` explicitly.
+- **Port**: Astro dev server runs on port 4321 (Netlify's `netlify dev` is not wired into npm scripts; use `npx netlify dev` from `apps/web/` if you specifically need its port 8888 proxy).
+- **Typography**: Use `magicTypography()` for consistent scaling when adding new size scales.
+- **Spacing**: Prefer column-based units (`5c`) over arbitrary values for grid-aligned spacing.
+- **Content**: Add new collections to `content.config.ts` with proper Zod schemas and loaders.
+- **Node Version**: Project requires Node.js 22+ (enforced in `package.json` engines and `.nvmrc`).

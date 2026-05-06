@@ -15,7 +15,7 @@ const twMerge = extendTailwindMerge({
   }
 });
 
-const twSort = (value: any) => value;
+const twSort = <T>(value: T): T => value;
 
 export default twMerge;
 

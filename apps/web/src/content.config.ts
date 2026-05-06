@@ -1,6 +1,6 @@
-import { defineCollection, z } from "astro:content";
 import { personnel as personnelContent, questions as questionsContent, testimonials as testimonialsContent } from "@bpm/data";
 import { glob } from "astro/loaders";
+import { defineCollection, z } from "astro:content";
 
 const statusSchema = z.enum(["draft", "published"]).default("published");
 

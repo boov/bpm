@@ -1,8 +1,8 @@
 ---
-import Heading from "@components/Heading.astro";
 import Button from "@components/Button.astro";
-import { Image } from "astro:assets";
+import Heading from "@components/Heading.astro";
 import ArrowRight from "@lucide/astro/icons/arrow-right";
+import { Image } from "astro:assets";
 
 const { data: service } = Astro.props;
 const href = `/services/${service.id}`;

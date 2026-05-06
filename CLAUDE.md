@@ -103,7 +103,6 @@ Uses column-based units instead of arbitrary values:
 Custom `container` component with automatic padding:
 
 ```html
-
 <div class="container-12c">
   <!-- Max width of 12 columns + responsive padding -->
 </div>
@@ -119,21 +118,11 @@ Configured in `tsconfig.base.json`:
 
 ```json
 {
-  "@helpers": [
-    "src/assets/scripts/helpers.ts"
-  ],
-  "@types": [
-    "src/types.ts"
-  ],
-  "@assets/*": [
-    "src/assets/*"
-  ],
-  "@components/*": [
-    "src/components/*"
-  ],
-  "@layouts/*": [
-    "src/layouts/*"
-  ]
+  "@helpers": ["src/assets/scripts/helpers.ts"],
+  "@types": ["src/types.ts"],
+  "@assets/*": ["src/assets/*"],
+  "@components/*": ["src/components/*"],
+  "@layouts/*": ["src/layouts/*"]
 }
 ```
 

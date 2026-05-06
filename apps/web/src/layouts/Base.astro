@@ -1,5 +1,6 @@
 ---
 import "/src/assets/styles/main.css";
+
 import GTM from "@components/global/GTM.astro";
 import Gutter from "@components/global/Gutter.astro";
 import Schema from "@components/global/Schema.astro";
@@ -92,9 +93,9 @@ const pageTitle = isHomePage ? appTitle : `${title} - ${brand}`;
     }
 
     <script>
-      import Alpine from "alpinejs";
       import collapse from "@alpinejs/collapse";
       import paymentForm from "@assets/scripts/payment-form";
+      import Alpine from "alpinejs";
 
       Alpine.data("paymentForm", paymentForm);
       Alpine.plugin(collapse);

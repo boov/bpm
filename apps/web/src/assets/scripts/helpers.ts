@@ -37,12 +37,12 @@ export const getDateParts = (date: Date): [string, string, string] => {
 };
 
 export const broadDateFormat = (date: Date): string => {
-  const [day, month, year] = getDateParts(date);
+  const [, month, year] = getDateParts(date);
   return `${month} ${year}`;
 };
 
 export const shortDateFormat = (date: Date): string => {
-  const [day, month, year] = getDateParts(date);
+  const [day, month] = getDateParts(date);
   return `${day}${dayOrdinal(Number(day))} ${month}`;
 };
 
@@ -57,8 +57,9 @@ export const getQuestions = async () => (await getCollection("questions")).sort(
 
 export const getQuestionsByGroup = async () => {
   const questions = await getQuestions();
+  type QuestionEntry = (typeof questions)[number];
   return Object.entries(
-    questions.reduce((acc: { [key: string]: any[] }, post) => {
+    questions.reduce((acc: { [key: string]: QuestionEntry[] }, post) => {
       const group = post.data.group;
       if (!acc[group]) {
         acc[group] = [];

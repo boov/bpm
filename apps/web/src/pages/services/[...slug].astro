@@ -1,13 +1,13 @@
 ---
+import logoMark from "@assets/images/logo-mark.svg?raw";
 import About from "@components/collection/service/About.astro";
-import Default from "@layouts/Default.astro";
 import Features from "@components/collection/service/Features.astro";
+import Why from "@components/collection/service/Why.astro";
 import Heading from "@components/Heading.astro";
 import Section from "@components/Section.astro";
-import Why from "@components/collection/service/Why.astro";
-import logoMark from "@assets/images/logo-mark.svg?raw";
-import { Image } from "astro:assets";
 import { getServices } from "@helpers";
+import Default from "@layouts/Default.astro";
+import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
   const services = await getServices();

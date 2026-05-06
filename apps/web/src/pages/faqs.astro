@@ -1,9 +1,9 @@
 ---
-import Default from "@layouts/Default.astro";
-import Heading from "@components/Heading.astro";
 import QuestionGroup from "@components/collection/question/QuestionGroup.astro";
+import Heading from "@components/Heading.astro";
 import Section from "@components/Section.astro";
 import { getQuestionsByGroup } from "@helpers";
+import Default from "@layouts/Default.astro";
 
 const questionGroups = await getQuestionsByGroup();
 

@@ -60,7 +60,7 @@ const designSystem = plugin.withOptions(
   (options: Options) => {
     options = merge(defaults, options);
 
-    return ({ addVariant, matchComponents, theme }) => {
+    return ({ matchComponents, theme }) => {
       matchComponents(
         {
           container: value => ({

@@ -38,7 +38,17 @@ import { Image } from "astro:assets";
         set:html={logoMark}
       />
       <div class="bg-theme-background-lowlight pointer-events-none absolute inset-0 z-10" aria-hidden="true">
-        <Image src={heroBackground} alt="" width={2000} height={850} class="absolute inset-0 size-full object-cover opacity-65 mix-blend-overlay" />
+        <Image
+          src={heroBackground}
+          alt=""
+          width={2000}
+          height={850}
+          widths={[640, 1024, 1600, 2000]}
+          sizes="(min-width: 1280px) 1600px, (min-width: 640px) 100vw, 100vw"
+          loading="eager"
+          fetchpriority="high"
+          class="absolute inset-0 size-full object-cover opacity-65 mix-blend-overlay"
+        />
       </div>
     </div>
   </div>

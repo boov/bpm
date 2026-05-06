@@ -31,4 +31,4 @@ I may update this privacy policy from time to time. Any changes will be reflecte
 
 ## 6. Get in touch
 
-If you have any questions about this privacy policy or how I handle your data, feel free to send an email to [hello@example.com](mailto:hello@example.com).
+If you have any questions about this privacy policy or how I handle your data, feel free to send an email to [management@bpmanagement.org](mailto:management@bpmanagement.org).

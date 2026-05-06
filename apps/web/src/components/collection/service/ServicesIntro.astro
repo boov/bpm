@@ -1,5 +1,11 @@
 ---
 import Heading from "@components/Heading.astro";
+
+interface Props {
+  as?: "h1" | "h2";
+}
+
+const { as = "h2" } = Astro.props;
 ---
 
 <div class="flex flex-col items-center gap-6 md:gap-10">
@@ -9,7 +15,7 @@ import Heading from "@components/Heading.astro";
       <p class="subheading text-theme-action whitespace-nowrap">Our services</p>
       <div class="bg-theme-action h-[2px] w-full rounded sm:max-w-24"></div>
     </div>
-    <Heading as="h2" class="text-h3 sm:text-h2 md:text-h1 text-center">New estate area management and strategic development</Heading>
+    <Heading as={as} class="text-h3 sm:text-h2 md:text-h1 text-center">New estate area management and strategic development</Heading>
   </div>
   <p class="text-center text-lg sm:text-xl">Tailored management strategies for every property challenge</p>
 </div>

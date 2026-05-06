@@ -51,7 +51,7 @@ export const longDateFormat = (date: Date): string => {
   return `${day}${dayOrdinal(Number(day))} ${month} ${year}`;
 };
 
-export const getPersonnel = async () => await getCollection("personnel");
+export const getPersonnel = async () => (await getCollection("personnel")).filter(person => person.data.status === "published");
 
 export const getQuestions = async () => (await getCollection("questions")).sort((a, b) => a.data.title.localeCompare(b.data.title));
 
@@ -71,9 +71,6 @@ export const getQuestionsByGroup = async () => {
 };
 
 export const getServices = async () =>
-  (await getCollection("services"))
-    .filter(service => service.data.status === "published")
-    .sort((a, b) => a.data.order.valueOf() - b.data.order.valueOf())
-    .sort((a, b) => a.data.title.localeCompare(b.data.title));
+  (await getCollection("services")).filter(service => service.data.status === "published").sort((a, b) => a.data.order.valueOf() - b.data.order.valueOf());
 
-export const getTestimonials = async () => await getCollection("testimonials");
+export const getTestimonials = async () => (await getCollection("testimonials")).filter(testimonial => testimonial.data.status === "published");

@@ -74,9 +74,7 @@ const services = defineCollection({
       title: z.string(),
       description: z.string(),
       image: image(),
-      content: z
-        .object({ heading: z.string(), paragraphs: z.array(z.string()) })
-        .default({ heading: "", paragraphs: [] })
+      content: z.object({ heading: z.string(), paragraphs: z.array(z.string()) }).default({ heading: "", paragraphs: [] })
     })
 });
 ```

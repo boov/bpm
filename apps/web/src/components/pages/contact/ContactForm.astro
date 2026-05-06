@@ -6,7 +6,35 @@ import Textarea from "@components/Textarea.astro";
 import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
 ---
 
-<form action="/contact/submitting" netlify method="POST" name="contact_form" x-data="{ enquiryTextLength: 0, enquiryType: '' }">
+<form name="contact_form" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input name="form-name" value="contact_form" />
+  <input name="bot-field" />
+  <input name="name" />
+  <input name="email_address" />
+  <input name="phone_number" />
+  <input name="enquiry_type" />
+  <input name="property_address" />
+  <input name="repair_urgency" />
+  <input name="repair_area" />
+  <input name="financial_year" />
+  <input name="accounting_query" />
+  <input name="sale_stage" />
+  <input name="legal_pack" />
+  <input name="solicitor_details" />
+  <input name="building_height" />
+  <input name="fire_query_type" />
+  <input name="unit_count" />
+  <input name="visit_reason" />
+  <input name="preferred_date" />
+  <input name="access_arrangements" />
+  <textarea name="enquiry_text"></textarea>
+</form>
+
+<form action="/contact/submitting" netlify netlify-honeypot="bot-field" method="POST" name="contact_form" x-data="{ enquiryTextLength: 0, enquiryType: '' }">
+  <input type="hidden" name="form-name" value="contact_form" />
+  <p class="hidden">
+    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+  </p>
   <div class="flex flex-col gap-6 md:gap-8">
     <div class="grid gap-1">
       <label for="name">Your name</label>

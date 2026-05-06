@@ -2,11 +2,18 @@
 import Button from "@components/Button.astro";
 import Input from "@components/Input.astro";
 import ArrowRight from "@lucide/astro/icons/arrow-right";
+
+const TEST_PAYMENT_URL = "https://buy.stripe.com/test_7sY4gBddRbov0mMf229EI00";
+const stripePaymentUrl = import.meta.env.STRIPE_PAYMENT_URL ?? TEST_PAYMENT_URL;
+
+if (!import.meta.env.STRIPE_PAYMENT_URL) {
+  console.warn("STRIPE_PAYMENT_URL is not set; falling back to the Stripe test link. See apps/web/.env.example.");
+}
 ---
 
 <div x-data="paymentForm()" class="flex flex-col gap-6 md:gap-8">
-  <form class="flex flex-col gap-6 md:gap-8" method="get" action="https://buy.stripe.com/test_7sY4gBddRbov0mMf229EI00" target="_blank">
-    <input type="hidden" name="__prefilled_amount" x-bind:value="formatAmount" />
+  <form class="flex flex-col gap-6 md:gap-8" method="get" action={stripePaymentUrl} target="_blank">
+    <input type="hidden" name="__prefilled_amount" x-bind:value="formatAmount()" />
     <div class="grid gap-1">
       <label for="amount">How much would you like to pay?</label>
       <div class="relative">

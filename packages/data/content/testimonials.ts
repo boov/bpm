@@ -1,3 +1,4 @@
+import type { SchemaContext } from "astro/content/config";
 import { z } from "astro/zod";
 
 const data = [
@@ -15,7 +16,7 @@ const data = [
   }
 ] satisfies Testimonial[];
 
-const schema = ({ image }) =>
+const schema = ({ image }: SchemaContext) =>
   z.object({
     status: z.enum(["draft", "published"]).default("published").optional(),
     author: z.string(),

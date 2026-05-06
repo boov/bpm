@@ -83,7 +83,7 @@
 
   a {
     &:not(:where(:is(h2, h3, h4) *)) {
-      font-weight: var(--font-weight-semibold);
+      font-weight: var(--font-weight-bold);
       text-decoration: underline;
       text-underline-offset: 0.2em;
     }

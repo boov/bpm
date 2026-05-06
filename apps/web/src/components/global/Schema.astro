@@ -11,25 +11,45 @@ const { ...props } = Astro.props;
 const { appTitle, schemaImage, schemaLogo } = props.data;
 const siteURL = Astro.site?.href;
 
+const brandName = "Belgarum Property Management";
+const slogan = "Property management experts since 1989";
+
 let schema = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "RealEstateAgent"],
       "@id": "#localbusiness",
-      name: appTitle,
+      name: brandName,
+      slogan,
       url: siteURL,
       image: schemaImage,
       logo: schemaLogo || schemaImage,
-      telephone: "+447890123456",
-      email: "hello@example.com",
-      openingHours: "Mo-Fr 09:00-18:00",
-      priceRange: "Varies"
+      telephone: "+448002980069",
+      email: "management@bpmanagement.org",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Old Manor Nursery, Kilham Lane",
+        addressLocality: "Winchester",
+        addressRegion: "Hampshire",
+        postalCode: "SO22 5QD",
+        addressCountry: "GB"
+      },
+      areaServed: ["Hampshire", "Sussex", "Dorset", "London", "Home Counties"],
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "09:00",
+          closes: "18:00"
+        }
+      ],
+      priceRange: "££"
     },
     {
       "@type": "WebSite",
       "@id": "#website",
-      name: appTitle,
+      name: brandName,
       url: siteURL
     }
   ]

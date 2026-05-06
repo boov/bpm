@@ -3,10 +3,7 @@
   "bracketSpacing": true,
   "overrides": [
     {
-      "files": [
-        "*.md",
-        "*.mdx"
-      ],
+      "files": ["*.md", "*.mdx"],
       "options": {
         "parser": "mdx",
         "printWidth": 9001,
@@ -20,18 +17,12 @@
       }
     }
   ],
-  "plugins": [
-    "prettier-plugin-astro",
-    "prettier-plugin-tailwindcss"
-  ],
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
   "printWidth": 180,
   "semi": true,
   "singleQuote": false,
   "tabWidth": 2,
-  "tailwindFunctions": [
-    "twMerge",
-    "twSort"
-  ],
+  "tailwindFunctions": ["twMerge", "twSort"],
   "trailingComma": "none",
   "useTabs": false
 }

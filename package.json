@@ -7,10 +7,14 @@
     "packages/*"
   ],
   "scripts": {
-    "dev:web": "npm run netlify:dev --workspace=@bpm/web",
-    "build": "npm run build --workspaces --if-present",
-    "prettier": "npm run prettier --workspaces --if-present",
-    "prettier:fix": "npm run prettier:fix --workspaces --if-present"
+    "dev": "npm run dev --workspace=@bpm/$(cat .active-app 2>/dev/null || echo web) --if-present",
+    "build": "npm run build --workspace=@bpm/$(cat .active-app 2>/dev/null || echo web) --if-present",
+    "preview": "npm run preview --workspace=@bpm/$(cat .active-app 2>/dev/null || echo web) --if-present",
+    "build:all": "npm run build --workspaces --if-present",
+    "clean": "rm -rf apps/*/dist apps/*/.astro apps/*/.netlify .eslintcache",
+    "eslint": "eslint . --cache --fix",
+    "prettier": "prettier -lw .",
+    "format": "npm run prettier && npm run eslint"
   },
   "engines": {
     "node": ">=22.0.0"
@@ -36,6 +40,12 @@
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^10.3.0",
+    "eslint-plugin-astro": "^1.7.0",
+    "eslint-plugin-simple-import-sort": "^13.0.0",
+    "typescript-eslint": "^8.59.2"
   },
   "overrides": {
     "vite": "^7.3.2"

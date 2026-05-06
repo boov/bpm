@@ -6,6 +6,7 @@ node_modules/
 
 .DS_Store
 .env
+.eslintcache
 
 # Local Netlify folder
 .netlify

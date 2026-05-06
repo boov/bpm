@@ -2,33 +2,10 @@ import { z } from "astro/zod";
 
 const data = [
   {
-    title: "Occaecat duis pariatur culpa eiusmod.",
+    title: "Do you have a cut off of the size of development you'll take on?",
     group: "Our Services",
     answer: [
-      "Excepteur in cillum ipsum laborum deserunt et dolor labore. Reprehenderit aliqua voluptate est nisi eu veniam nulla amet fugiat veniam. Aliquip occaecat et culpa commodo. Minim exercitation voluptate ex id sunt qui minim ea enim duis. Laboris exercitation commodo aliqua ex commodo nulla magna excepteur nostrud elit esse ad deserunt non ut. Proident reprehenderit magna minim id irure ipsum est proident tempor aliqua laboris exercitation."
-    ]
-  },
-  {
-    title: "Aute in duis ad occaecat excepteur sit magna quis duis ea cillum mollit.",
-    group: "Our Services",
-    answer: [
-      "Velit amet ex ea. Aute nulla adipisicing laborum laborum tempor ex ullamco. Consectetur ut nostrud mollit mollit. Ea et officia voluptate cupidatat esse ex. Dolore veniam sit consequat commodo. Fugiat sint dolore fugiat id cupidatat labore.",
-      "Excepteur in cillum ipsum laborum deserunt et dolor labore. Reprehenderit aliqua voluptate est nisi eu veniam nulla amet fugiat veniam. Aliquip occaecat et culpa commodo. Minim exercitation voluptate ex id sunt qui minim ea enim duis. Laboris exercitation commodo aliqua ex commodo nulla magna excepteur nostrud elit esse ad deserunt non ut. Proident reprehenderit magna minim id irure ipsum est proident tempor aliqua laboris exercitation."
-    ]
-  },
-  {
-    title: "Veniam deserunt commodo reprehenderit dolor cillum et in est.",
-    group: "Payment and Terms",
-    answer: [
-      "Excepteur in cillum ipsum laborum deserunt et dolor labore. Reprehenderit aliqua voluptate est nisi eu veniam nulla amet fugiat veniam. Aliquip occaecat et culpa commodo. Minim exercitation voluptate ex id sunt qui minim ea enim duis. Laboris exercitation commodo aliqua ex commodo nulla magna excepteur nostrud elit esse ad deserunt non ut. Proident reprehenderit magna minim id irure ipsum est proident tempor aliqua laboris exercitation."
-    ]
-  },
-  {
-    title: "Nulla laboris labore magna quis fugiat eiusmod commodo eu ut commodo ex laborum excepteur laboris.",
-    group: "Payment and Terms",
-    answer: [
-      "Velit amet ex ea. Aute nulla adipisicing laborum laborum tempor ex ullamco. Consectetur ut nostrud mollit mollit. Ea et officia voluptate cupidatat esse ex. Dolore veniam sit consequat commodo. Fugiat sint dolore fugiat id cupidatat labore.",
-      "Excepteur in cillum ipsum laborum deserunt et dolor labore. Reprehenderit aliqua voluptate est nisi eu veniam nulla amet fugiat veniam. Aliquip occaecat et culpa commodo. Minim exercitation voluptate ex id sunt qui minim ea enim duis. Laboris exercitation commodo aliqua ex commodo nulla magna excepteur nostrud elit esse ad deserunt non ut. Proident reprehenderit magna minim id irure ipsum est proident tempor aliqua laboris exercitation."
+      "BPM have a vast portfolio ranging from blocks of flats with 4 unitholders to a high rise with 22 floors, we pride ourselves on having a versatile team able to care for all sized developments in our management."
     ]
   }
 ] satisfies Question[];

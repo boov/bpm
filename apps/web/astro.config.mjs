@@ -1,9 +1,9 @@
 // @ts-nocheck
-import compress from "astro-compress";
-import metaTags from "astro-meta-tags";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
+import compress from "astro-compress";
+import metaTags from "astro-meta-tags";
 
 export default defineConfig({
   site: import.meta.env.DEV ? "http://localhost:4321" : "https://www.belgarum-property.co.uk",
@@ -24,7 +24,13 @@ export default defineConfig({
     }),
     metaTags(),
     sitemap({
-      filter: page => !["https://www.belgarum-property.co.uk/contact/thanks/", "https://www.belgarum-property.co.uk/contact/submitting/"].some(url => page.startsWith(url))
+      filter: page =>
+        ![
+          "https://www.belgarum-property.co.uk/contact/thanks/",
+          "https://www.belgarum-property.co.uk/contact/submitting/",
+          "https://www.belgarum-property.co.uk/pay-online/success/",
+          "https://www.belgarum-property.co.uk/pay-online/failed/"
+        ].some(url => page.startsWith(url))
     })
   ],
   devToolbar: {

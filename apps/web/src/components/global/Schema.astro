@@ -19,7 +19,7 @@ let schema = JSON.stringify({
   "@graph": [
     {
       "@type": ["LocalBusiness", "RealEstateAgent"],
-      "@id": "#localbusiness",
+      "@id": `${siteURL}#localbusiness`,
       name: brandName,
       slogan,
       url: siteURL,
@@ -48,7 +48,7 @@ let schema = JSON.stringify({
     },
     {
       "@type": "WebSite",
-      "@id": "#website",
+      "@id": `${siteURL}#website`,
       name: brandName,
       url: siteURL
     }

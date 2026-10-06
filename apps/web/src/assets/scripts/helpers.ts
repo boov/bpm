@@ -73,4 +73,6 @@ export const getQuestionsByGroup = async () => {
 export const getServices = async () =>
   (await getCollection("services")).filter(service => service.data.status === "published").sort((a, b) => a.data.order.valueOf() - b.data.order.valueOf());
 
+export const getAudiences = async () => [] as { id: string; data: { title: string } }[];
+
 export const getTestimonials = async () => (await getCollection("testimonials")).filter(testimonial => testimonial.data.status === "published");

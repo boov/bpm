@@ -1,22 +1,31 @@
-import { getServices } from "@helpers";
+import { getAudiences, getServices } from "@helpers";
 
 export type NavLink = {
   label: string;
-  href: string;
+  href?: string;
+  activePath?: string;
+  allLabel?: string;
   children?: NavLink[];
 };
 
 export const getNavLinks = async (): Promise<NavLink[]> => {
-  const services = await getServices();
+  const [services, audiences] = await Promise.all([getServices(), getAudiences()]);
 
   return [
     { label: "Home", href: "/" },
     {
-      label: "Our Services",
+      label: "Services",
       href: "/services",
-      children: services.map(s => ({ label: s.data.title, href: `/services/${s.id}` }))
+      allLabel: "All services",
+      children: services.map(service => ({ label: service.data.title, href: `/services/${service.id}` }))
     },
-    { label: "About Us", href: "/about" },
-    { label: "FAQs", href: "/faqs" }
+    {
+      label: "Who we work with",
+      activePath: "/who-we-work-with",
+      children: audiences.map(audience => ({ label: audience.data.title, href: `/who-we-work-with/${audience.id}` }))
+    },
+    { label: "About", href: "/about" },
+    { label: "FAQs", href: "/faqs" },
+    { label: "Contact", href: "/contact" }
   ];
 };

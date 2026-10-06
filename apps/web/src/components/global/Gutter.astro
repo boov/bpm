@@ -1,5 +1,7 @@
 ---
+import { calls } from "@assets/scripts/calls-to-action";
 import { getNavLinks } from "@assets/scripts/nav-links";
+import { site } from "@assets/scripts/site";
 import Button from "@components/Button.astro";
 import ArrowRight from "@lucide/astro/icons/arrow-right";
 import ChevronDown from "@lucide/astro/icons/chevron-down";
@@ -21,13 +23,13 @@ const links = await getNavLinks();
       <div class="flex h-full flex-col gap-10">
         <div class="flex justify-end">
           <button
-            aria-label="Open mobile navigation"
+            aria-label="Close menu"
             class="focus:ring-theme-brand bg-theme-background-highlight relative h-full rounded-md p-3 focus:ring-2 focus:outline-hidden"
-            title="Open mobile navigation"
+            title="Close menu"
             type="button"
             x-on:click="$dispatch('toggle-gutter')"
           >
-            <span class="sr-only">Close mobile navigation</span>
+            <span class="sr-only">Close menu</span>
             <X stroke-width={1.75} size={20} class="text-theme-foreground-bold" />
           </button>
         </div>
@@ -38,26 +40,30 @@ const links = await getNavLinks();
                 {
                   links.map(link =>
                     link.children ? (
-                      <li x-data="{ expanded: false }">
-                        <button type="button" class="group flex w-full items-center gap-2 text-left" x-on:click="expanded = !expanded" x-bind:tabindex="!open && '-1'">
-                          <span class="text-theme-foreground-bold hover:text-theme-action transition-colors">{link.label}</span>
-                          <ChevronDown class="text-theme-action transition-transform" stroke-width={2} size="0.6666em" x-bind:class="{ 'rotate-180': expanded }" />
-                        </button>
-                        <ul class="ml-2 grid gap-1.5 overflow-hidden pt-4 text-base" x-show="expanded" x-collapse x-cloak>
-                          {link.children.map(child => (
-                            <li class="before:bg-theme-brand flex items-center gap-2 before:size-1 before:rounded-full">
-                              <a href={child.href} class="text-theme-foreground hover:text-theme-action transition-colors" x-bind:tabindex="!open && '-1'">
-                                {child.label}
-                              </a>
-                            </li>
-                          ))}
-                          <li class="before:bg-theme-brand flex items-center gap-2 before:size-1 before:rounded-full">
-                            <a href={link.href} class="text-theme-foreground hover:text-theme-action transition-colors" x-bind:tabindex="!open && '-1'">
-                              All {link.label}
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
+                      link.children.length > 0 ? (
+                        <li x-data="{ expanded: false }">
+                          <button type="button" class="group flex w-full items-center gap-2 text-left" x-on:click="expanded = !expanded" x-bind:tabindex="!open && '-1'">
+                            <span class="text-theme-foreground-bold hover:text-theme-action transition-colors">{link.label}</span>
+                            <ChevronDown class="text-theme-action transition-transform" stroke-width={2} size="0.6666em" x-bind:class="{ 'rotate-180': expanded }" />
+                          </button>
+                          <ul class="ml-2 grid gap-1.5 overflow-hidden pt-4 text-base" x-show="expanded" x-collapse x-cloak>
+                            {link.children.map(child => (
+                              <li class="before:bg-theme-brand flex items-center gap-2 before:size-1 before:rounded-full">
+                                <a href={child.href} class="text-theme-foreground hover:text-theme-action transition-colors" x-bind:tabindex="!open && '-1'">
+                                  {child.label}
+                                </a>
+                              </li>
+                            ))}
+                            {link.href && link.allLabel && (
+                              <li class="before:bg-theme-brand flex items-center gap-2 before:size-1 before:rounded-full">
+                                <a href={link.href} class="text-theme-foreground hover:text-theme-action transition-colors" x-bind:tabindex="!open && \'-1\'">
+                                  {link.allLabel}
+                                </a>
+                              </li>
+                            )}
+                          </ul>
+                        </li>
+                      ) : null
                     ) : (
                       <li>
                         <a href={link.href} class="group flex items-baseline gap-2 transition-all hover:gap-4" x-bind:tabindex="!open && '-1'">
@@ -75,15 +81,12 @@ const links = await getNavLinks();
           </div>
           <hr />
           <div class="flex flex-col gap-5 lg:gap-8">
-            <div class="flex flex-col whitespace-nowrap">
-              <p class="label text-sm">Give us a call</p>
-              <a class="label link leading-snug" href="tel:+448002980069">0800 298 0069</a>
-            </div>
+            <a class="label link whitespace-nowrap" href={site.phoneHref}>Call {site.phone}</a>
             <div class="flex flex-row flex-wrap gap-3 sm:gap-5">
-              <Button label="Enquire online" href="/contact" class="grow text-base sm:grow-0">
+              <Button label={calls.proposal.label} href={calls.proposal.href} class="grow text-base sm:grow-0">
                 <ArrowRight slot="suffix" />
               </Button>
-              <Button label="Pay bill" href="/pay-online" variant="outline" class="grow text-base sm:grow-0">
+              <Button label={calls.pay.label} href={calls.pay.href} variant="outline" class="grow text-base sm:grow-0">
                 <CreditCard slot="suffix" />
               </Button>
             </div>

@@ -1,5 +1,7 @@
 ---
+import { calls } from "@assets/scripts/calls-to-action";
 import { getNavLinks } from "@assets/scripts/nav-links";
+import { site } from "@assets/scripts/site";
 import Button from "@components/Button.astro";
 import ArrowRight from "@lucide/astro/icons/arrow-right";
 import ChevronDown from "@lucide/astro/icons/chevron-down";
@@ -22,53 +24,59 @@ const parentPath = `/${pathNames.slice(0, 1)}`;
             {
               links.map(link =>
                 link.children ? (
-                  <li class="relative" x-data="{ open: false }" x-on:mouseenter="open = true" x-on:click="open = true" x-on:mouseleave="open = false">
-                    <button type="button" class="group flex cursor-pointer flex-col items-center" x-on:click="open = !open">
-                      <span class="text-theme-foreground-bold flex items-center gap-1 py-1 font-bold transition-colors">
-                        {link.label}
-                        <ChevronDown size={14} class="text-theme-action stroke-3" />
-                      </span>
-                      <span
-                        class="h-0.5 w-1/2 rounded-full transition-all group-hover:w-full"
-                        class:list={[parentPath === link.href ? "bg-theme-brand w-full!" : "group-hover:bg-theme-brand"]}
-                      />
-                    </button>
-                    <div
-                      class="bg-theme-background-highlight dark:bg-theme-background-lowlight absolute top-full left-0 z-50 min-w-48 -translate-x-5 rounded-lg py-2 shadow-xl"
-                      x-show="open"
-                      x-cloak
-                      x-transition:enter="transition ease-out duration-100"
-                      x-transition:enter-start="opacity-0 scale-95"
-                      x-transition:enter-end="opacity-100 scale-100"
-                      x-transition:leave="transition ease-in duration-75"
-                      x-transition:leave-start="opacity-100 scale-100"
-                      x-transition:leave-end="opacity-0 scale-95"
-                    >
-                      <ul>
-                        {link.children.map(child => (
-                          <li>
-                            <a
-                              href={child.href}
-                              class="hover:bg-theme-background/50 hover:text-theme-foreground-bold text-theme-foreground label block rounded-none px-5 py-2 pr-10 text-sm font-normal whitespace-nowrap transition-colors"
-                            >
-                              {child.label}
+                  link.children.length > 0 ? (
+                    <li class="relative" x-data="{ open: false }" x-on:mouseenter="open = true" x-on:click="open = true" x-on:mouseleave="open = false">
+                      <button type="button" class="group flex cursor-pointer flex-col items-center" x-on:click="open = !open">
+                        <span class="text-theme-foreground-bold flex items-center gap-1 py-1 font-bold transition-colors">
+                          {link.label}
+                          <ChevronDown size={14} class="text-theme-action stroke-3" />
+                        </span>
+                        <span
+                          class="h-0.5 w-1/2 rounded-full transition-all group-hover:w-full"
+                          class:list={[parentPath === (link.activePath ?? link.href) ? "bg-theme-brand w-full!" : "group-hover:bg-theme-brand"]}
+                        />
+                      </button>
+                      <div
+                        class="bg-theme-background-highlight dark:bg-theme-background-lowlight absolute top-full left-0 z-50 min-w-48 -translate-x-5 rounded-lg py-2 shadow-xl"
+                        x-show="open"
+                        x-cloak
+                        x-transition:enter="transition ease-out duration-100"
+                        x-transition:enter-start="opacity-0 scale-95"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-75"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-95"
+                      >
+                        <ul>
+                          {link.children.map(child => (
+                            <li>
+                              <a
+                                href={child.href}
+                                class="hover:bg-theme-background/50 hover:text-theme-foreground-bold text-theme-foreground label block rounded-none px-5 py-2 pr-10 text-sm font-normal whitespace-nowrap transition-colors"
+                              >
+                                {child.label}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                        {link.href && link.allLabel && (
+                          <>
+                            <hr class="my-2 max-w-none" />
+                            <a href={link.href} class="hover:bg-theme-background/50 link label block rounded-none px-5 py-2 text-sm transition-colors">
+                              {link.allLabel}
                             </a>
-                          </li>
-                        ))}
-                      </ul>
-                      <hr class="my-2 max-w-none" />
-                      <a href={link.href} class="hover:bg-theme-background/50 link label block rounded-none px-5 py-2 text-sm transition-colors">
-                        All {link.label}
-                      </a>
-                    </div>
-                  </li>
+                          </>
+                        )}
+                      </div>
+                    </li>
+                  ) : null
                 ) : (
                   <li>
                     <a href={link.href} class="group flex flex-col items-center">
                       <div class="text-theme-foreground-bold py-1 font-bold transition-colors">{link.label}</div>
                       <div
                         class="h-0.5 w-1/2 rounded-full transition-all group-hover:w-full"
-                        class:list={[parentPath === link.href ? "bg-theme-brand w-full!" : "group-hover:bg-theme-brand"]}
+                        class:list={[parentPath === (link.activePath ?? link.href) ? "bg-theme-brand w-full!" : "group-hover:bg-theme-brand"]}
                       />
                     </a>
                   </li>
@@ -80,7 +88,7 @@ const parentPath = `/${pathNames.slice(0, 1)}`;
       </div>
 
       <!-- Logo -->
-      <a href="/" class="relative block" title="Return home">
+      <a href="/" class="relative block" title="Belgarum Property Management home page">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-auto sm:h-14 md:h-16 xl:h-18" width="272" height="75" viewBox="0 0 272 75">
           <title>Belgarum Property Management</title>
           <path
@@ -100,27 +108,24 @@ const parentPath = `/${pathNames.slice(0, 1)}`;
 
       <!-- Actions -->
       <div class="flex items-center justify-end gap-4 md:gap-6 xl:gap-8">
-        <div class="flex flex-col text-right whitespace-nowrap max-sm:hidden">
-          <p class="label text-sm">Give us a call</p>
-          <a class="label link leading-snug" href="tel:+448002980069">0800 298 0069</a>
-        </div>
+        <a class="label link whitespace-nowrap max-md:hidden xl:max-2xl:hidden" href={site.phoneHref}>Call {site.phone}</a>
         <div class="flex gap-2">
-          <Button label="Enquire online" href="/contact" class="text-base max-sm:hidden">
+          <Button label={calls.proposal.label} href={calls.proposal.href} class="text-base max-sm:hidden">
             <ArrowRight slot="suffix" />
           </Button>
-          <Button label="Pay bill" href="/pay-online" variant="outline" class="text-base max-lg:hidden">
+          <Button label={calls.pay.label} href={calls.pay.href} variant="outline" class="text-base max-2xl:hidden">
             <CreditCard slot="suffix" />
           </Button>
         </div>
-        <div class="self-stretch xl:hidden" x-data>
+        <div class="self-stretch 2xl:hidden" x-data>
           <button
-            aria-label="Open mobile navigation"
+            aria-label="Open menu"
             class="focus:ring-theme-brand bg-theme-background-highlight relative h-full rounded-md p-3 focus:ring-2 focus:outline-hidden"
-            title="Open mobile navigation"
+            title="Open menu"
             type="button"
             x-on:click="$dispatch('toggle-gutter')"
           >
-            <span class="sr-only">Open mobile navigation</span>
+            <span class="sr-only">Open menu</span>
             <Menu stroke-width={1.75} size={20} class="text-theme-foreground-bold" />
           </button>
         </div>

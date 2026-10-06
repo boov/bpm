@@ -1,11 +1,20 @@
 ---
 import heroBackground from "@assets/images/hero-background.jpeg";
 import logoMark from "@assets/images/logo-mark.svg?raw";
+import { calls } from "@assets/scripts/calls-to-action";
+import { site } from "@assets/scripts/site";
 import Button from "@components/Button.astro";
+import TrustStrip from "@components/global/TrustStrip.astro";
 import Heading from "@components/Heading.astro";
 import ArrowRight from "@lucide/astro/icons/arrow-right";
-import Mail from "@lucide/astro/icons/mail";
+import CreditCard from "@lucide/astro/icons/credit-card";
 import { Image } from "astro:assets";
+
+interface Props {
+  description: string;
+}
+
+const { description } = Astro.props;
 ---
 
 <div class="relative">
@@ -17,19 +26,19 @@ import { Image } from "astro:assets";
       <div class="relative z-30">
         <div class="flex flex-col gap-10 sm:gap-12">
           <div class="max-w-8c flex flex-col gap-4">
-            <Heading as="h1" class="text-h2 sm:text-h1">Your local trusted managing agent for Freeholders, Directors of RMC companies and leaseholders</Heading>
-            <p class="text-theme-foreground max-w-2xl text-lg sm:text-xl md:text-2xl">
-              Belgarum Property Management is an extension of your building balancing our clients requirements and residents living spaces.
-            </p>
+            <p class="subheading text-theme-action">{site.strapline}</p>
+            <Heading as="h1" class="text-h2 sm:text-h1">One property manager who knows your building</Heading>
+            <p class="text-theme-foreground max-w-2xl text-lg sm:text-xl md:text-2xl">{description}</p>
           </div>
           <div class="flex flex-row flex-wrap gap-3 sm:gap-5">
-            <Button label="Our services" href="/services" class="grow text-base sm:grow-0">
+            <Button label={calls.proposal.label} href={calls.proposal.href} class="grow text-base sm:grow-0">
               <ArrowRight slot="suffix" />
             </Button>
-            <Button label="Enquire online" href="/contact" variant="outline" palette="bold" class="grow text-base sm:grow-0">
-              <Mail slot="suffix" />
+            <Button label={calls.pay.label} href={calls.pay.href} variant="outline" palette="bold" class="grow text-base sm:grow-0">
+              <CreditCard slot="suffix" />
             </Button>
           </div>
+          <TrustStrip variant="compact" />
         </div>
       </div>
       <div

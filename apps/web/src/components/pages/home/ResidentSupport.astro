@@ -1,0 +1,33 @@
+---
+import { calls } from "@assets/scripts/calls-to-action";
+import { site } from "@assets/scripts/site";
+import Heading from "@components/Heading.astro";
+
+const links = [
+  calls.pay,
+  calls.residents,
+  { label: "Order a leasehold sale pack", href: "/services/leasehold-sale-packs" },
+  { label: "Read our complaints procedure", href: "/complaints-procedure" }
+];
+---
+
+<div class="bg-theme-background-highlight flex flex-col gap-6 rounded-xl p-8 sm:p-10 lg:flex-row lg:items-start lg:justify-between lg:gap-20">
+  <div class="flex flex-col gap-3 lg:max-w-1/2">
+    <Heading as="h2" class="text-h4 sm:text-h3">Live in a building we manage?</Heading>
+    <p>Pay your service charge, contact your property manager or find what you need to sell your flat.</p>
+    <p class="text-sm">
+      <a class="link" href={site.phoneHref}>Call {site.phone}</a>. {site.hours}.
+    </p>
+  </div>
+  <ul class="flex flex-col gap-3">
+    {
+      links.map(link => (
+        <li>
+          <a class="link label" href={link.href}>
+            {link.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

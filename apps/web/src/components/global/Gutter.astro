@@ -56,7 +56,7 @@ const links = await getNavLinks();
                             ))}
                             {link.href && link.allLabel && (
                               <li class="before:bg-theme-brand flex items-center gap-2 before:size-1 before:rounded-full">
-                                <a href={link.href} class="text-theme-foreground hover:text-theme-action transition-colors" x-bind:tabindex="!open && \'-1\'">
+                                <a href={link.href} class="text-theme-foreground hover:text-theme-action transition-colors" x-bind:tabindex="!open && '-1'">
                                   {link.allLabel}
                                 </a>
                               </li>

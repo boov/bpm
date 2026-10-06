@@ -21,5 +21,8 @@ export const expectedPages = {
     h1: "Block management for freeholders and landlords"
   },
   "/who-we-work-with/developers/": { title: "New build managing agent - Belgarum Property Management", h1: "Block and estate management for new developments" },
+  "/contact/": { title: "Contact our Winchester office - Belgarum Property Management", h1: "Contact us" },
+  "/contact/thanks/": { title: "Thank you for your enquiry - Belgarum Property Management", h1: "Thank you for your enquiry" },
+  "/contact/submitting/": { title: "Sending your enquiry - Belgarum Property Management", h1: "Sending your enquiry" },
   "/about/": { title: "About our Winchester team - Belgarum Property Management", h1: "About Belgarum Property Management" }
 };

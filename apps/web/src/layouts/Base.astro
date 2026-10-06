@@ -93,10 +93,14 @@ const pageTitle = isHomePage ? title : `${title} - ${brand}`;
 
     <script>
       import collapse from "@alpinejs/collapse";
+      import contactForm from "@assets/scripts/contact-form";
       import paymentForm from "@assets/scripts/payment-form";
+      import { installValidationMessages } from "@assets/scripts/validation-messages";
       import Alpine from "alpinejs";
 
+      Alpine.data("contactForm", contactForm);
       Alpine.data("paymentForm", paymentForm);
+      installValidationMessages(document);
       Alpine.plugin(collapse);
       Alpine.start();
     </script>

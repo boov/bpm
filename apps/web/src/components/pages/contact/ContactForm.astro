@@ -1,36 +1,37 @@
 ---
+import { enquiryTypes } from "@assets/scripts/enquiry-types";
+import { site } from "@assets/scripts/site";
 import Button from "@components/Button.astro";
 import Input from "@components/Input.astro";
+import InlineText from "@components/sections/InlineText.astro";
 import Select from "@components/Select.astro";
 import Textarea from "@components/Textarea.astro";
 import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
 ---
 
 <form name="contact_form" data-netlify="true" netlify-honeypot="bot-field" hidden>
-  <input name="form-name" value="contact_form" />
+  <input name="form-name" />
   <input name="bot-field" />
   <input name="name" />
   <input name="email_address" />
   <input name="phone_number" />
   <input name="enquiry_type" />
   <input name="property_address" />
-  <input name="repair_urgency" />
-  <input name="repair_area" />
-  <input name="financial_year" />
-  <input name="accounting_query" />
-  <input name="sale_stage" />
-  <input name="legal_pack" />
-  <input name="solicitor_details" />
-  <input name="building_height" />
-  <input name="fire_query_type" />
+  <input name="client_type" />
   <input name="unit_count" />
-  <input name="visit_reason" />
-  <input name="preferred_date" />
-  <input name="access_arrangements" />
+  <input name="current_agent" />
+  <input name="agreement_end" />
+  <input name="development_location" />
+  <input name="home_count" />
+  <input name="development_stage" />
+  <input name="repair_location" />
+  <input name="repair_urgency" />
+  <input name="seller_role" />
+  <input name="solicitor_details" />
   <textarea name="enquiry_text"></textarea>
 </form>
 
-<form action="/contact/submitting" netlify netlify-honeypot="bot-field" method="POST" name="contact_form" x-data="{ enquiryTextLength: 0, enquiryType: '' }">
+<form action="/contact/submitting" netlify netlify-honeypot="bot-field" method="POST" name="contact_form" x-data="contactForm()">
   <input type="hidden" name="form-name" value="contact_form" />
   <p class="hidden">
     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -38,12 +39,12 @@ import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
   <div class="flex flex-col gap-6 md:gap-8">
     <div class="grid gap-1">
       <label for="name">Your name</label>
-      <Input id="name" minlength="2" required />
+      <Input id="name" minlength="2" data-error="Enter your name" required />
     </div>
     <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
       <div class="grid gap-1">
         <label for="email_address">Email address</label>
-        <Input id="email_address" type="email" inputmode="email" minlength="5" required />
+        <Input id="email_address" type="email" inputmode="email" minlength="5" data-error="Enter your email address, for example name@example.com" required />
       </div>
       <div class="grid gap-1">
         <label for="phone_number">Phone number <span class="text-theme-foreground-light font-copy ml-2 text-xs font-normal">optional</span></label>
@@ -51,241 +52,156 @@ import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
       </div>
     </div>
     <div class="grid gap-1">
-      <label for="enquiry_type">Enquiry type</label>
-      <Select
-        id="enquiry_type"
-        x-model="enquiryType"
-        options={[
-          { value: "", label: "Select" },
-          { value: "general", label: "General enquiry" },
-          { value: "repairs", label: "Repairs & Maintenance" },
-          { value: "accounting", label: "Year-end Accounting" },
-          { value: "legal", label: "Property Sales Legal Support" },
-          { value: "fire-safety", label: "Fire Safety Guidance" },
-          { value: "site-visit", label: "Site Visit Request" }
-        ]}
-        required
-      />
+      <label for="enquiry_type">What is it about?</label>
+      <Select id="enquiry_type" x-model="enquiryType" options={[{ value: "", label: "Select" }, ...enquiryTypes]} data-error="Select what your enquiry is about" required />
     </div>
-    <template x-if="enquiryType">
+    <template x-if="needsAddress">
+      <div class="grid gap-1">
+        <label for="property_address">Property address</label>
+        <Input id="property_address" placeholder="The building or flat address" data-error="Enter the building or flat address" required />
+      </div>
+    </template>
+
+    <template x-if="enquiryType === 'new-management'">
       <div class="flex flex-col gap-6 md:gap-8">
-        <!-- Property Address (shown for all except general) -->
-        <template x-if="enquiryType !== 'general'">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <div class="grid gap-1">
-            <label for="property_address">Property address</label>
-            <Input id="property_address" placeholder="Enter the full property address" required />
+            <label for="client_type">You are</label>
+            <Select
+              id="client_type"
+              options={[
+                { value: "", label: "Select" },
+                { value: "rmc-director", label: "An RMC director" },
+                { value: "rtm-director", label: "An RTM director" },
+                { value: "freeholder", label: "A freeholder" },
+                { value: "private-landlord", label: "A private landlord" },
+                { value: "other", label: "Other" }
+              ]}
+              required
+            />
           </div>
-        </template>
-
-        <!-- Repairs & Maintenance fields -->
-        <template x-if="enquiryType === 'repairs'">
-          <div class="flex flex-col gap-6 md:gap-8">
-            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-              <div class="grid gap-1">
-                <label for="repair_urgency">Urgency level</label>
-                <Select
-                  id="repair_urgency"
-                  options={[
-                    { value: "", label: "Select" },
-                    { value: "emergency", label: "Emergency (within 24 hours)" },
-                    { value: "urgent", label: "Urgent (within 48 hours)" },
-                    { value: "routine", label: "Routine (within 2 weeks)" },
-                    { value: "planned", label: "Planned maintenance" }
-                  ]}
-                  required
-                />
-              </div>
-              <div class="grid gap-1">
-                <label for="repair_area">Affected area</label>
-                <Select
-                  id="repair_area"
-                  options={[
-                    { value: "", label: "Select" },
-                    { value: "plumbing", label: "Plumbing" },
-                    { value: "electrical", label: "Electrical" },
-                    { value: "heating", label: "Heating / Boiler" },
-                    { value: "structural", label: "Structural" },
-                    { value: "exterior", label: "Exterior / Roof" },
-                    { value: "communal", label: "Communal areas" },
-                    { value: "other", label: "Other" }
-                  ]}
-                  required
-                />
-              </div>
-            </div>
+          <div class="grid gap-1">
+            <label for="unit_count">Number of flats or homes</label>
+            <Input id="unit_count" type="number" min="1" inputmode="numeric" placeholder="For example, 24" required />
           </div>
-        </template>
-
-        <!-- Year-end Accounting fields -->
-        <template x-if="enquiryType === 'accounting'">
-          <div class="flex flex-col gap-6 md:gap-8">
-            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-              <div class="grid gap-1">
-                <label for="financial_year">Financial year</label>
-                <Select
-                  id="financial_year"
-                  options={[
-                    { value: "", label: "Select" },
-                    { value: "2024-2025", label: "2024/2025" },
-                    { value: "2025-2026", label: "2025/2026" },
-                    { value: "2026-2027", label: "2026/2027" }
-                  ]}
-                  required
-                />
-              </div>
-              <div class="grid gap-1">
-                <label for="accounting_query">Query type</label>
-                <Select
-                  id="accounting_query"
-                  options={[
-                    { value: "", label: "Select" },
-                    { value: "service-charge", label: "Service charge accounts" },
-                    { value: "budget", label: "Budget preparation" },
-                    { value: "arrears", label: "Arrears / debt recovery" },
-                    { value: "reserve-fund", label: "Reserve fund queries" },
-                    { value: "audit", label: "Audit requirements" },
-                    { value: "other", label: "Other" }
-                  ]}
-                  required
-                />
-              </div>
-            </div>
+        </div>
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div class="grid gap-1">
+            <label for="current_agent">Current managing agent <span class="text-theme-foreground-light font-copy ml-2 text-xs font-normal">optional</span></label>
+            <Input id="current_agent" />
           </div>
-        </template>
-
-        <!-- Property Sales Legal Support fields -->
-        <template x-if="enquiryType === 'legal'">
-          <div class="flex flex-col gap-6 md:gap-8">
-            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-              <div class="grid gap-1">
-                <label for="sale_stage">Sale stage</label>
-                <Select
-                  id="sale_stage"
-                  options={[
-                    { value: "", label: "Select" },
-                    { value: "pre-sale", label: "Preparing to sell" },
-                    { value: "on-market", label: "Property on market" },
-                    { value: "offer-accepted", label: "Offer accepted" },
-                    { value: "conveyancing", label: "Conveyancing in progress" },
-                    { value: "completion", label: "Near completion" }
-                  ]}
-                  required
-                />
-              </div>
-              <div class="grid gap-1">
-                <label for="legal_pack">Management pack required?</label>
-                <Select
-                  id="legal_pack"
-                  options={[
-                    { value: "", label: "Select" },
-                    { value: "yes", label: "Yes, I need a management pack" },
-                    { value: "no", label: "No, just a query" },
-                    { value: "unsure", label: "Not sure yet" }
-                  ]}
-                  required
-                />
-              </div>
-            </div>
-            <div class="grid gap-1">
-              <label for="solicitor_details">Solicitor details <span class="text-theme-foreground-light font-copy ml-2 text-xs font-normal">optional</span></label>
-              <Input id="solicitor_details" placeholder="Solicitor name and firm (if known)" />
-            </div>
+          <div class="grid gap-1">
+            <label for="agreement_end"
+              >When does your current management agreement end? <span class="text-theme-foreground-light font-copy ml-2 text-xs font-normal">optional</span></label
+            >
+            <Input id="agreement_end" />
           </div>
-        </template>
-
-        <!-- Fire Safety Guidance fields -->
-        <template x-if="enquiryType === 'fire-safety'">
-          <div class="flex flex-col gap-6 md:gap-8">
-            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-              <div class="grid gap-1">
-                <label for="building_height">Building height</label>
-                <Select
-                  id="building_height"
-                  options={[
-                    { value: "", label: "Select" },
-                    { value: "under-11m", label: "Under 11 metres" },
-                    { value: "11-18m", label: "11 to 18 metres" },
-                    { value: "over-18m", label: "Over 18 metres" },
-                    { value: "unsure", label: "Not sure" }
-                  ]}
-                  required
-                />
-              </div>
-              <div class="grid gap-1">
-                <label for="fire_query_type">Guidance needed</label>
-                <Select
-                  id="fire_query_type"
-                  options={[
-                    { value: "", label: "Select" },
-                    { value: "fra", label: "Fire risk assessment" },
-                    { value: "remediation", label: "Remediation works" },
-                    { value: "ews1", label: "EWS1 form queries" },
-                    { value: "compliance", label: "Compliance advice" },
-                    { value: "alarm-systems", label: "Alarm / detection systems" },
-                    { value: "other", label: "Other" }
-                  ]}
-                  required
-                />
-              </div>
-            </div>
-            <div class="grid gap-1">
-              <label for="unit_count">Number of units in building</label>
-              <Input id="unit_count" type="number" inputmode="numeric" min="1" placeholder="e.g. 24" required />
-            </div>
-          </div>
-        </template>
-
-        <!-- Site Visit Request fields -->
-        <template x-if="enquiryType === 'site-visit'">
-          <div class="flex flex-col gap-6 md:gap-8">
-            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-              <div class="grid gap-1">
-                <label for="visit_reason">Reason for visit</label>
-                <Select
-                  id="visit_reason"
-                  options={[
-                    { value: "", label: "Select" },
-                    { value: "inspection", label: "Routine inspection" },
-                    { value: "contractor", label: "Contractor supervision" },
-                    { value: "meeting", label: "Residents meeting" },
-                    { value: "issue", label: "Investigate an issue" },
-                    { value: "agm", label: "AGM attendance" },
-                    { value: "other", label: "Other" }
-                  ]}
-                  required
-                />
-              </div>
-              <div class="grid gap-1">
-                <label for="preferred_date">Preferred date</label>
-                <Input id="preferred_date" type="date" required />
-              </div>
-            </div>
-            <div class="grid gap-1">
-              <label for="access_arrangements">Access arrangements <span class="text-theme-foreground-light font-copy ml-2 text-xs font-normal">optional</span></label>
-              <Input id="access_arrangements" placeholder="Key holder details, access codes, etc." />
-            </div>
-          </div>
-        </template>
-
-        <!-- Enquiry text (shown for all types) -->
-        <div class="grid gap-1">
-          <label for="enquiry_text" x-text="enquiryType === 'general' ? 'Your enquiry' : 'Additional details'"></label>
-          <Textarea
-            id="enquiry_text"
-            x-on:focus="enquiryTextLength = $event.target.value.length;"
-            x-on:keyup="enquiryTextLength = $event.target.value.length;"
-            rows="4"
-            minlength="200"
-            x-bind:placeholder="enquiryType === 'repairs' ? 'Please describe the issue in detail, including when it started and any immediate risks...' : enquiryType === 'general' ? 'How can we help you today?' : 'Please provide any additional information that may help us assist you...'"
-            required
-          />
-          <p class="text-theme-foreground-light text-sm whitespace-nowrap">
-            <span x-bind:class="enquiryTextLength < 200 ? 'text-negative' : 'text-theme-brand'" x-text="enquiryTextLength"></span> of 200 minimum
-          </p>
         </div>
       </div>
     </template>
-    <Button label="Submit enquiry" type="submit" class="mt-2 px-7 py-5 text-base sm:self-start">
+
+    <template x-if="enquiryType === 'new-development'">
+      <div class="flex flex-col gap-6 md:gap-8">
+        <div class="grid gap-1">
+          <label for="development_location">Development location</label>
+          <Input id="development_location" placeholder="Town or postcode" required />
+        </div>
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div class="grid gap-1">
+            <label for="home_count">Number of homes</label>
+            <Input id="home_count" type="number" min="1" inputmode="numeric" placeholder="For example, 40" required />
+          </div>
+          <div class="grid gap-1">
+            <label for="development_stage">Stage</label>
+            <Select
+              id="development_stage"
+              options={[
+                { value: "", label: "Select" },
+                { value: "planning", label: "Planning" },
+                { value: "under-construction", label: "Under construction" },
+                { value: "selling", label: "Selling" }
+              ]}
+              required
+            />
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template x-if="enquiryType === 'repairs'">
+      <div class="flex flex-col gap-6 md:gap-8">
+        <div class="grid gap-1">
+          <label for="repair_location">Where is it?</label>
+          <Select
+            id="repair_location"
+            options={[
+              { value: "", label: "Select" },
+              { value: "communal-area", label: "Communal area" },
+              { value: "roof-or-outside-of-the-building", label: "Roof or outside of the building" },
+              { value: "inside-my-flat", label: "Inside my flat" },
+              { value: "grounds-or-car-park", label: "Grounds or car park" },
+              { value: "not-sure", label: "Not sure" }
+            ]}
+            required
+          />
+        </div>
+        <p class="text-sm">This form isn't for emergencies. If there is a risk to life, call 999.</p>
+        <div class="grid gap-1">
+          <label for="repair_urgency">How urgent is it?</label>
+          <Select
+            id="repair_urgency"
+            options={[
+              { value: "", label: "Select" },
+              { value: "urgent-it-is-causing-damage-or-a-safety-risk", label: "Urgent: it is causing damage or a safety risk" },
+              { value: "not-urgent", label: "Not urgent" }
+            ]}
+            required
+          />
+        </div>
+      </div>
+    </template>
+
+    <template x-if="enquiryType === 'leasehold-sale-pack'">
+      <div class="flex flex-col gap-6 md:gap-8">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div class="grid gap-1">
+            <label for="seller_role">You are</label>
+            <Select
+              id="seller_role"
+              options={[
+                { value: "", label: "Select" },
+                { value: "the-seller", label: "The seller" },
+                { value: "the-sellers-solicitor", label: "The seller's solicitor" },
+                { value: "the-buyers-solicitor", label: "The buyer's solicitor" }
+              ]}
+              required
+            />
+          </div>
+          <div class="grid gap-1">
+            <label for="solicitor_details">Solicitor details <span class="text-theme-foreground-light font-copy ml-2 text-xs font-normal">optional</span></label>
+            <Input id="solicitor_details" placeholder="Name and firm" />
+          </div>
+        </div>
+        <InlineText text={`Solicitors can also email [${site.solicitorEmail}](mailto:${site.solicitorEmail}).`} class="text-sm" />
+      </div>
+    </template>
+
+    <template x-if="enquiryType === 'complaint'">
+      <InlineText text="Tell us what happened, when, and what you would like us to do. Read our [complaints procedure](/complaints-procedure)." class="text-sm" />
+    </template>
+
+    <div class="grid gap-1">
+      <label for="enquiry_text">Your message</label>
+      <Textarea
+        id="enquiry_text"
+        rows="4"
+        x-bind:placeholder="enquiryType === 'new-management' ? 'Tell us about the building and what you need from a managing agent' : 'Tell us how we can help'"
+        data-error="Enter your message"
+        required
+      />
+    </div>
+    <InlineText text="We use your details to reply to your enquiry. Read our [privacy policy](/privacy-policy)." class="text-sm" />
+    <Button label="Send your enquiry" type="submit" class="px-7 py-5 text-base sm:self-start">
       <CircleCheckBig slot="suffix" />
     </Button>
   </div>

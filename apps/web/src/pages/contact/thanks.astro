@@ -1,29 +1,35 @@
 ---
+import { site } from "@assets/scripts/site";
 import Button from "@components/Button.astro";
 import Trim from "@components/global/Trim.astro";
 import Heading from "@components/Heading.astro";
 import Section from "@components/Section.astro";
+import InlineText from "@components/sections/InlineText.astro";
 import Default from "@layouts/Default.astro";
-import ArrowLeft from "@lucide/astro/icons/arrow-left";
 import MailCheck from "@lucide/astro/icons/mail-check";
 
-const title = "Thank you for reaching out";
-const description = "We have received your message and will respond to your enquiry as soon as possible. Our team is reviewing the details you've shared.";
+const title = "Thank you for your enquiry";
+const description = "We've received your enquiry and we'll reply as soon as we can.";
+const links = [
+  { label: "Go to the home page", href: "/" },
+  { label: "Read our FAQs", href: "/faqs" },
+  { label: "About us", href: "/about" }
+];
 ---
 
 <Default title={title} description={description} allowIndexing={false}>
   <Section>
     <div class="container">
-      <div class="flex flex-col items-center gap-16 lg:gap-24">
-        <div class="flex flex-col items-center gap-8 text-center lg:gap-10">
-          <MailCheck class="text-positive-500 size-14 stroke-[1.5] lg:size-18" />
-          <div class="flex flex-col items-center gap-4">
-            <Heading as="h1" class="text-h3 md:text-h2 lg:text-h1">{title}</Heading>
-            <p class="max-w-[60ch] text-lg" set:text={description} />
-          </div>
-          <Button label="Head back home" href="/" variant="text">
-            <ArrowLeft slot="prefix" />
-          </Button>
+      <div class="flex flex-col items-center gap-8 text-center lg:gap-10">
+        <MailCheck class="text-positive-500 size-14 stroke-[1.5] lg:size-18" />
+        <div class="flex max-w-[60ch] flex-col items-center gap-4">
+          <Heading as="h1" class="text-h3 md:text-h2 lg:text-h1">{title}</Heading>
+          <p class="text-lg">We've received your enquiry and we'll reply as soon as we can. Our office is open Monday to Thursday, 9am to 5pm, and Friday, 9am to 4.30pm.</p>
+          <p>If you asked for a management proposal, we'll reply with what we can do for your building.</p>
+          <InlineText text={`If your enquiry is urgent, call us on [${site.phone}](${site.phoneHref}).`} />
+        </div>
+        <div class="flex flex-wrap justify-center gap-x-8 gap-y-2">
+          {links.map(link => <Button label={link.label} href={link.href} variant="text" />)}
         </div>
       </div>
     </div>

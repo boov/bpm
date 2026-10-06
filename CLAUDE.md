@@ -164,7 +164,9 @@ Use these aliases in imports rather than relative paths.
 - **Base components**: `src/components/` (Button, Input, Heading, Section, etc.)
 - **Global components**: `src/components/global/` (Footer, CTA, Banner, Schema, GTM, etc.) used across pages
 - **Page components**: `src/components/pages/<page>/` (per-route building blocks: `home`, `about`, `contact`, `pay-online`)
-- **Collection components**: `src/components/collection/{personnel,question,service}/` rendering content collection entries
+- **Section components**: `src/components/sections/` (shared page sections: PageHero, IntroBlock, IncludedList, StepList, ProofList, FaqList, ServiceLinks, InlineText)
+- **Collection components**: `src/components/collection/{audience,personnel,question,service}/` rendering content collection entries
+- **Shared constants**: call to action labels and targets live only in `src/assets/scripts/calls-to-action.ts`; business details live only in `src/assets/scripts/site.ts`
 - **Layouts**: `src/layouts/` (`Base`, `Default`, `Text`)
 
 ### Build & Deployment
@@ -180,6 +182,7 @@ Use these aliases in imports rather than relative paths.
 
 - Build command: `npm run build`
 - Publish directory: `apps/web/dist`
+- Redirects from the live site: `[[redirects]]` blocks in `netlify.toml` (301)
 - Lighthouse audits on: /, /services, /services/block-and-estate-management, /who-we-work-with/rmc-and-rtm-directors, /about, /faqs, /contact, /privacy-policy
 - Node.js 22+ required (see `.nvmrc`)
 

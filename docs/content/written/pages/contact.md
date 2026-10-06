@@ -156,10 +156,3 @@ Send your enquiry
 
 - `[NEEDS: out-of-hours line (Q2)]`
 - `[NEEDS: response times (Q8)]` How soon we reply to an enquiry.
-
-Build notes (not copy):
-
-- The form fields and enquiry types above replace the current ones in `ContactForm.astro`. `?type=new-management` and `?type=new-development` preset the enquiry type.
-- The current repair urgency options promise timescales ("within 24 hours", "within 48 hours", "within 2 weeks"). There is no source for these, so the options above give none.
-- The current form needs at least 200 characters in the message. That is long for a short question. Consider a lower minimum.
-- The "Site visit request" type is removed, because site visits are part of block and estate management.

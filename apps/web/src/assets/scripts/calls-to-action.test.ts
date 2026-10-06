@@ -14,6 +14,7 @@ test("labels match the tone of voice table", () => {
 test("proposal and development preset the enquiry type", () => {
   assert.equal(calls.proposal.href, "/contact?type=new-management");
   assert.equal(calls.development.href, "/contact?type=new-development");
+  assert.equal(calls["sale-pack"].href, "/services/leasehold-sale-packs#how-it-works");
 });
 
 test("leaseholder calls use the residents band", () => {

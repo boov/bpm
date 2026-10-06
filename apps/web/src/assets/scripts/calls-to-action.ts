@@ -7,7 +7,7 @@ export const calls: Record<CallKey, { label: string; href: string }> = {
   proposal: { label: "Request a management proposal", href: "/contact?type=new-management" },
   development: { label: "Talk to us about a new development", href: "/contact?type=new-development" },
   residents: { label: "Contact your property manager", href: "/contact" },
-  "sale-pack": { label: "Order a leasehold sale pack", href: "#how-it-works" },
+  "sale-pack": { label: "Order a leasehold sale pack", href: "/services/leasehold-sale-packs#how-it-works" },
   pay: { label: "Pay your service charge", href: "/pay-online" }
 };
 

@@ -1,0 +1,90 @@
+{
+  "order": 8,
+  "title": "Fire and building safety",
+  "metaTitle": "Fire safety in blocks of flats",
+  "hero": {},
+  "cta": "proposal",
+  "description": "What the law requires for fire safety in blocks of flats. We arrange fire risk, asbestos and health and safety assessments with specialist firms.",
+  "image": "https://dummyimage.com/1536x658/ede2de/7e6d67",
+  "intro": {
+    "heading": "Safety duties for blocks of flats",
+    "paragraphs": [
+      "Whoever manages a block of flats has legal duties to keep the communal areas safe. That can be the freeholder (the owner of the building and the land), a resident management company (RMC) or a right to manage (RTM) company. The duties cover fire safety, asbestos and the health and safety of people using the building. Taller buildings have extra duties.",
+      "Belgarum Property Management arranges the assessments these duties require, using specialist firms. You get each report with its actions and how urgent they are, and we arrange the work that follows."
+    ]
+  },
+  "included": {
+    "heading": "What's included",
+    "items": [
+      "Fire risk assessments, carried out by specialist assessors",
+      "Health and safety risk assessments of the communal areas",
+      "Asbestos surveys of the communal areas in older buildings",
+      "Reporting each assessment's findings and actions to the board or freeholder",
+      "Arranging the work the assessments recommend, through our contractors",
+      "Specialist firms for lifts",
+      "Regular site inspections, so your property manager sees the condition of the communal areas"
+    ]
+  },
+  "steps": [
+    {
+      "title": "Find out what applies",
+      "text": "The duties depend on the building: its height, its age and how it is used. We check which assessments and checks the building needs."
+    },
+    {
+      "title": "Commission the assessments",
+      "text": "We arrange fire risk, health and safety and, where needed, asbestos assessments with specialist firms. A fire risk assessment is a written check of fire risks in the communal areas, the structure, the external walls and the flat entrance doors."
+    },
+    {
+      "title": "Report the findings",
+      "text": "We send the board or freeholder each assessment, with the actions it recommends and how urgent they are."
+    },
+    {
+      "title": "Act on the findings",
+      "text": "We arrange the work with contractors. If the work counts as major works, we run [Section 20 consultation](/services/section-20-consultation) first."
+    },
+    {
+      "title": "Keep it under review",
+      "text": "Assessments need reviewing regularly, and after any significant change to the building. Your property manager also checks the communal areas during site inspections."
+    }
+  ],
+  "proof": [
+    "We arrange formal fire risk, asbestos, lift and health and safety checks with specialist firms, rather than doing this work ourselves.",
+    "We manage developments from blocks of 4 flats to a 22-floor high rise.",
+    "Your property manager inspects the building and communal areas regularly."
+  ],
+  "faqs": [
+    {
+      "question": "Who is responsible for fire safety in a block of flats?",
+      "answer": [
+        "In most blocks, it is the freeholder, the RMC or the RTM company that manages the building. The law calls them the \"responsible person\". If the responsible person is a company, its directors need to make sure the duties are met.",
+        "We arrange the assessments and the work. The responsible person keeps their legal duties. A managing agent also has duties for the work its contract gives it."
+      ]
+    },
+    {
+      "question": "Does the fire risk assessment cover flat entrance doors?",
+      "answer": [
+        "Yes. The Fire Safety Act 2021 made this clear. The fire risk assessment for a block of flats must cover the communal areas. It must also cover the structure, the external walls and the flat entrance doors.",
+        "Some buildings also need regular checks of fire doors. This applies where the top floor is more than 11 metres above the ground, under the Fire Safety (England) Regulations 2022. Communal fire doors must be checked every 3 months. Flat entrance doors must be checked once a year, as far as possible."
+      ]
+    },
+    {
+      "question": "What is a higher-risk building?",
+      "answer": [
+        "A higher-risk building is at least 18 metres or 7 storeys tall, with at least 2 homes. Under the Building Safety Act 2022, these buildings must be registered with the Building Safety Regulator, and extra safety rules apply."
+      ]
+    },
+    {
+      "question": "Does my building need an asbestos survey?",
+      "answer": [
+        "Buildings built or refurbished before 2000 may contain asbestos. In these buildings, the law requires asbestos in the communal areas to be found and managed safely. An asbestos survey is a check for asbestos, so it can be managed or removed. Asbestos is usually safe if it is in good condition and left undisturbed."
+      ]
+    },
+    {
+      "question": "What should residents do to help keep the building safe?",
+      "answer": [
+        "Keep communal areas clear of belongings, rubbish and bikes. Don't wedge fire doors open, and report any damaged door, closer or alarm to your property manager. Read the fire safety instructions for your building, so you know what to do if there is a fire."
+      ]
+    }
+  ],
+  "related": ["repairs-and-maintenance", "major-works", "block-and-estate-management"]
+}

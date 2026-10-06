@@ -6,11 +6,16 @@ import Trim from "@components/global/Trim.astro";
 import Heading from "@components/Heading.astro";
 import Section from "@components/Section.astro";
 import Default from "@layouts/Default.astro";
-import ArrowLeft from "@lucide/astro/icons/arrow-left";
 import OctagonAlert from "@lucide/astro/icons/octagon-alert";
 
-const title = "Resource not found";
-const description = "The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.";
+const title = "Page not found";
+const description = "The page you're looking for has moved or doesn't exist.";
+const links = [
+  { label: "Go to the home page", href: "/" },
+  { label: "See our services", href: "/services" },
+  { label: "Pay your service charge", href: "/pay-online" },
+  { label: "Contact your property manager", href: "/contact" }
+];
 ---
 
 <Default title={title} description={description} allowIndexing={false}>
@@ -19,10 +24,10 @@ const description = "The resource you are looking for might have been removed, h
       <div class="flex flex-col items-center gap-4 text-center sm:gap-6">
         <OctagonAlert class="text-negative size-18 stroke-1" />
         <Heading as="h1" class="text-h3 lg:text-h2" set:text={title} />
-        <p class="text-lg md:text-balance" set:text={description} />
-        <Button label="Head back home" href="/" variant="text">
-          <ArrowLeft slot="prefix" />
-        </Button>
+        <p class="text-lg md:text-balance">The page you're looking for has moved or doesn't exist. Try one of these links instead.</p>
+        <div class="flex flex-wrap justify-center gap-x-8 gap-y-2">
+          {links.map(link => <Button label={link.label} href={link.href} variant="text" />)}
+        </div>
       </div>
     </div>
   </Section>

@@ -1,5 +1,6 @@
 export default () => ({
   amount: "",
+  email: "",
 
   formatAmount() {
     const parsed = parseFloat(this.amount);

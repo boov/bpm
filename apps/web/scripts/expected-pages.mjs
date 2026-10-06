@@ -19,5 +19,6 @@ export const expectedPages = {
     title: "Freeholder block management - Belgarum Property Management",
     h1: "Block management for freeholders and landlords"
   },
-  "/who-we-work-with/developers/": { title: "New build managing agent - Belgarum Property Management", h1: "Block and estate management for new developments" }
+  "/who-we-work-with/developers/": { title: "New build managing agent - Belgarum Property Management", h1: "Block and estate management for new developments" },
+  "/about/": { title: "About our Winchester team - Belgarum Property Management", h1: "About Belgarum Property Management" }
 };

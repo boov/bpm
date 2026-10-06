@@ -1,6 +1,12 @@
 ---
 import Heading from "@components/Heading.astro";
 import SubHeading from "@components/SubHeading.astro";
+
+const paragraphs = [
+  "Belgarum Property Management manages blocks of flats and shared estates for resident management companies (RMCs), right to manage (RTM) companies, freeholders, private landlords and developers. We don't sell or let property.",
+  "We started as a family firm in 1989. Today we manage over 150 developments, from blocks of 4 flats to a 22-floor high rise, across Hampshire, Sussex, Dorset, London and the Home Counties.",
+  "Our office is in Winchester, close to the M3. Every client has a dedicated property manager, available Monday to Thursday, 9am to 5pm, and Friday, 9am to 4.30pm."
+];
 ---
 
 <div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-20 xl:gap-28">
@@ -9,25 +15,11 @@ import SubHeading from "@components/SubHeading.astro";
       <SubHeading class="text-theme-action">About us</SubHeading>
       <div class="bg-theme-action h-0.5 w-20 rounded sm:w-24"></div>
     </div>
-    <Heading as="h1" class="text-h2 sm:text-h1 xl:text-h0">Our property management story</Heading>
+    <Heading as="h1" class="text-h2 sm:text-h1 xl:text-h0">About Belgarum Property Management</Heading>
   </div>
   <div class="flex flex-1 flex-col gap-5 lg:pt-12">
-    <p class="text-lg sm:text-xl">
-      We began with a simple truth. Property management is not about buildings. It is about people. In 2010, a small group of professionals looked at the industry and saw
-      opportunity where others saw complexity.
-    </p>
-    <p>
-      Our founders understood that every property tells a story. Some are quiet residential blocks. Others are bustling commercial estates. Each requires a unique approach, a
-      nuanced understanding of space and human interaction.
-    </p>
-    <p>
-      We built Belgarum on principles of transparency and precision. No bureaucratic nonsense. No hidden fees. Just clear, direct communication and strategic management. We
-      listened to property owners and residents alike, learning their challenges and developing solutions that truly mattered.
-    </p>
-    <p>
-      Over the years, we transformed from a local startup to a national leader. Our growth was not about size, but about depth of expertise. We invested in technology. We trained
-      our team rigorously. We remained committed to our original vision of making property management simple, efficient, and human.
-    </p>
-    <p>Today, we continue to push boundaries. We are not just managing properties. We are creating environments where people can thrive, invest, and build their futures.</p>
+    <p class="text-lg sm:text-xl">A family firm established in 1989. Block and estate management is all we do.</p>
+    <Heading as="h2" class="text-h4 lg:text-h3">Block and estate management from Winchester</Heading>
+    {paragraphs.map(paragraph => <p set:text={paragraph} />)}
   </div>
 </div>

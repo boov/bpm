@@ -4,7 +4,7 @@ import UserRound from "@lucide/astro/icons/user-round";
 import { Image } from "astro:assets";
 
 const { data: person } = Astro.props;
-const { name, role, headshot } = person.data;
+const { name, role, since, headshot } = person.data;
 ---
 
 <article class="flex flex-col items-center gap-4">
@@ -21,9 +21,9 @@ const { name, role, headshot } = person.data;
   </div>
   <div class="flex flex-col gap-4 text-center text-sm">
     <div class="flex flex-col">
-      <Heading as="h3" class="text-h6 sm:text-h5 xl:text-h4">{name}</Heading>
+      <Heading as="h4" class="text-h6 sm:text-h5 xl:text-h4">{name}</Heading>
       <p class="label text-theme-brand">{role}</p>
     </div>
-    <p class="text-theme-foreground-light sm:text-balance">Veteran property management expert with over 20 years of strategic leadership and industry insight.</p>
+    <p class="text-theme-foreground-light">With us since {since}</p>
   </div>
 </article>

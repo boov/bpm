@@ -26,6 +26,18 @@ const decode = text =>
     .replace(/\s+/g, " ")
     .trim();
 
+const tagPattern = name => `<${name}(?:\\s(?:"[^"]*"|'[^']*'|[^>"'])*)?>`;
+
+const attrsOf = tag => {
+  const attrs = new Map();
+  for (const [, key, double, single, bare] of tag.replace(/^<[^\s>]+/, "").matchAll(/([^\s"'<>/=]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?/g)) {
+    attrs.set(key.toLowerCase(), double ?? single ?? bare ?? "");
+  }
+  return attrs;
+};
+
+const tagsOf = (html, name) => [...html.matchAll(new RegExp(tagPattern(name), "gi"))].map(([tag]) => attrsOf(tag));
+
 const walk = dir => readdirSync(dir).flatMap(name => (statSync(join(dir, name)).isDirectory() ? walk(join(dir, name)) : [join(dir, name)]));
 
 const toPath = file => {
@@ -47,7 +59,7 @@ const matchesPrefix = path => prefixes.length === 0 || prefixes.some(prefix => (
 const pages = walk(dist)
   .filter(file => file.endsWith(".html"))
   .map(file => ({ file, path: toPath(file), html: readFileSync(file, "utf8") }))
-  .filter(page => !page.html.includes('http-equiv="refresh"'))
+  .filter(page => !tagsOf(page.html, "meta").some(meta => meta.get("http-equiv")?.toLowerCase() === "refresh"))
   .filter(page => matchesPrefix(page.path));
 
 for (const page of pages) {
@@ -61,8 +73,11 @@ for (const page of pages) {
   if (!title) fail("missing <title>");
   if (title.length > 65) fail(`title is ${title.length} characters: ${title}`);
 
-  const noindex = /<meta name="robots" content="noindex/.test(html);
-  const description = decode(html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? "");
+  const markup = html.replace(/<(script|style)\b[\s\S]*?<\/\1>/gi, "");
+  const metas = tagsOf(markup, "meta");
+  const metaContent = name => metas.find(meta => meta.get("name")?.toLowerCase() === name)?.get("content");
+  const noindex = metaContent("robots")?.toLowerCase().startsWith("noindex") ?? false;
+  const description = decode(metaContent("description") ?? "");
   if (!noindex && !description) fail("missing meta description");
   if (description.length > 155) fail(`description is ${description.length} characters`);
 
@@ -70,7 +85,8 @@ for (const page of pages) {
     if (pattern.test(html.replace(/<svg[\s\S]*?<\/svg>/g, ""))) fail(`contains ${label}`);
   }
 
-  for (const [, json] of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+  for (const [, openTag, json] of html.matchAll(new RegExp(`(${tagPattern("script")})([\\s\\S]*?)<\\/script>`, "gi"))) {
+    if (attrsOf(openTag).get("type")?.toLowerCase() !== "application/ld+json") continue;
     try {
       JSON.parse(json);
     } catch {
@@ -79,9 +95,13 @@ for (const page of pages) {
     if (json.includes("](")) fail("markdown link inside JSON-LD");
   }
 
-  for (const [, href] of html.matchAll(/href="([^"]+)"/g)) {
+  const allAttrs = [...markup.matchAll(new RegExp(tagPattern("[a-z][^\\s>/]*"), "gi"))].map(([tag]) => attrsOf(tag));
+  const ids = new Set(allAttrs.map(attrs => attrs.get("id")));
+  const hrefs = allAttrs.map(attrs => attrs.get("href")).filter(href => href);
+
+  for (const href of hrefs) {
     if (href.startsWith("#")) {
-      if (href.length > 1 && !html.includes(`id="${href.slice(1)}"`)) fail(`anchor ${href} has no target`);
+      if (href.length > 1 && !ids.has(href.slice(1))) fail(`anchor ${href} has no target`);
       continue;
     }
     if (!href.startsWith("/") || href.startsWith("//") || href.startsWith("/_astro/") || href.startsWith("/images/") || href.startsWith("/sitemap")) continue;

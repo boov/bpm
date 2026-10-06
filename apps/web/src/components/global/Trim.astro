@@ -1,20 +1,18 @@
 ---
+import { site } from "@assets/scripts/site";
 const links = [
-  { label: "Home", href: "/" },
   { label: "Pay online", href: "/pay-online" },
-  { label: "Privacy policy", href: "/privacy-policy" },
+  { label: "Contact", href: "/contact" },
   { label: "Complaints procedure", href: "/complaints-procedure" },
-  { label: "Contact", href: "/contact" }
+  { label: "Privacy policy", href: "/privacy-policy" },
+  { label: "Cookie policy", href: "/cookie-policy" }
 ];
 ---
 
 <div id="p_trim" class="py-8 sm:py-10 md:py-12">
   <div class="container">
     <div class="flex flex-col gap-1 text-xs md:flex-row md:items-center md:justify-between">
-      <p>
-        &copy; {new Date().getFullYear()} Belgarum Property Management Limited. Registered in England and Wales, company number 07580603. Registered office: Highland House, Mayflower
-        Close, Chandlers Ford, Hampshire, SO53 4AR.
-      </p>
+      <p>&copy; {new Date().getFullYear()} {site.legalName}. Registered in England and Wales, company number {site.companyNumber}. Registered office: {site.registeredOffice}.</p>
       <ul class="flex flex-wrap items-center gap-x-3 gap-y-1 md:justify-center lg:gap-x-4">
         {
           links.map(link => (

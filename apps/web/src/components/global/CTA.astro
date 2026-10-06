@@ -1,8 +1,34 @@
 ---
 import logoMark from "@assets/images/logo-mark.svg?raw";
+import { type BandVariant, calls } from "@assets/scripts/calls-to-action";
+import { site } from "@assets/scripts/site";
 import Button from "@components/Button.astro";
 import Heading from "@components/Heading.astro";
 import ArrowRight from "@lucide/astro/icons/arrow-right";
+
+interface Props {
+  variant?: BandVariant;
+  heading?: string;
+  text?: string;
+}
+
+const bands = {
+  proposal: {
+    heading: "Looking for a managing agent?",
+    text: "Tell us about your block or estate. We'll reply with a management proposal that sets out what we would do, with one dedicated property manager as your contact."
+  },
+  development: {
+    heading: "Planning a new development?",
+    text: "Involve us at the planning stage, so the management of your development is set up from the start."
+  },
+  residents: {
+    heading: "Live in a building we manage?",
+    text: "Your property manager is your first contact for questions about your building, your service charge or repairs."
+  }
+};
+
+const { variant = "proposal", heading = bands[variant].heading, text = bands[variant].text } = Astro.props;
+const call = calls[variant];
 ---
 
 <div class="relative">
@@ -10,17 +36,18 @@ import ArrowRight from "@lucide/astro/icons/arrow-right";
     <div id="p_cta" class="theme-dark scoop relative z-20 flex overflow-hidden rounded-xl shadow-2xl sm:rounded-2xl md:rounded-3xl">
       <div class="bg-theme-background-lowlight site:px-28 site:py-24 relative flex-1 overflow-hidden p-10 sm:p-12 md:p-16 lg:p-20">
         <div class="relative z-20 flex flex-col gap-6">
-          <div class="flex flex-col">
-            <p class="subheading text-theme-action">Get in touch</p>
-            <Heading as="h2" class="text-h3 sm:text-h2">Discover how we can help you</Heading>
+          <div class="flex flex-col gap-4">
+            <Heading as="h2" class="text-h3 sm:text-h2">{heading}</Heading>
+            <p class="max-w-[60ch] text-lg">{text}</p>
           </div>
           <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-8">
-            <Button label="Enquire online" href="/contact">
+            <Button label={call.label} href={call.href}>
               <ArrowRight slot="suffix" />
             </Button>
-            <div class="flex flex-col whitespace-nowrap max-sm:hidden">
-              <p class="label text-sm">Give us a call</p>
-              <a class="label link leading-snug" href="tel:+448002980069">0800 298 0069</a>
+            <div class="flex flex-col whitespace-nowrap">
+              <p class="label text-sm">Or call us</p>
+              <a class="label link leading-snug" href={site.phoneHref}>Call {site.phone}</a>
+              <p class="text-sm">{site.hours}</p>
             </div>
           </div>
         </div>

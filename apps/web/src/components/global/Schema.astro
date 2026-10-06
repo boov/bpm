@@ -1,14 +1,13 @@
 ---
 interface Props {
   data: {
-    appTitle: string;
     schemaImage: string;
     schemaLogo?: string;
   };
 }
 
 const { ...props } = Astro.props;
-const { appTitle, schemaImage, schemaLogo } = props.data;
+const { schemaImage, schemaLogo } = props.data;
 const siteURL = Astro.site?.href;
 
 const brandName = "Belgarum Property Management";

@@ -1,0 +1,36 @@
+---
+import twMerge from "@bpm/custom-merge";
+
+interface Props {
+  variant?: "full" | "compact";
+  class?: string;
+}
+
+const { variant = "full", class: classes } = Astro.props;
+
+const items = {
+  full: [
+    "Established in 1989",
+    "Over 150 developments managed",
+    "Full Member of The Property Institute",
+    "Member of The Property Ombudsman",
+    "Service charge money held in designated trust accounts",
+    "£5 million professional indemnity insurance"
+  ],
+  compact: ["Over 150 developments managed", "Full Member of The Property Institute", "Member of The Property Ombudsman", "Service charge money held in designated trust accounts"]
+};
+---
+
+<ul
+  aria-label="About Belgarum Property Management"
+  class={twMerge(variant === "full" ? "grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3" : "flex flex-wrap gap-x-6 gap-y-2 text-sm", classes)}
+>
+  {
+    items[variant].map(item => (
+      <li class="label flex items-center gap-3">
+        <span class="bg-theme-brand size-1.5 shrink-0 rounded-full" aria-hidden="true" />
+        {item}
+      </li>
+    ))
+  }
+</ul>

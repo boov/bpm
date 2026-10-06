@@ -36,10 +36,7 @@ const isHomePage = Astro.url.pathname === "/";
 const hasDarkHeader = isHomePage;
 
 const brand = "Belgarum Property Management";
-const strapline = "Block and estate management since 1989";
-
-const appTitle = `${brand} - ${strapline}`;
-const pageTitle = isHomePage ? appTitle : `${title} - ${brand}`;
+const pageTitle = isHomePage ? title : `${title} - ${brand}`;
 ---
 
 <!doctype html>
@@ -64,7 +61,7 @@ const pageTitle = isHomePage ? appTitle : `${title} - ${brand}`;
 
     <meta property="og:description" content={description} />
     <meta property="og:image" content={socialImageURL} />
-    <meta property="og:site_name" content={appTitle} />
+    <meta property="og:site_name" content={brand} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:type" content={pageType} />
     <meta property="og:url" content={canonicalURL} />
@@ -79,7 +76,7 @@ const pageTitle = isHomePage ? appTitle : `${title} - ${brand}`;
 
     {google.tagManagerContainer && <GTM container={google.tagManagerContainer} />}
 
-    <Schema data={{ appTitle, schemaImage: socialImageURL, schemaLogo }} />
+    <Schema data={{ schemaImage: socialImageURL, schemaLogo }} />
 
     <ClientRouter />
 

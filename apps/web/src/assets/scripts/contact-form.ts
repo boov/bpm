@@ -9,7 +9,7 @@ export default () => ({
     document.addEventListener(
       "astro:page-load",
       () => {
-        if (!this.enquiryType) this.enquiryType = presetEnquiryType(window.location.search);
+        this.enquiryType = presetEnquiryType(window.location.search);
       },
       { once: true }
     );

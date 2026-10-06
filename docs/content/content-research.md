@@ -77,20 +77,20 @@ Patterns to avoid:
 
 ### Service list
 
-| Page                                  | Current file                        | Reason                                                                     |
-| ------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------- |
-| **Block and estate management** (hub) | (none)                              | Main search term; most competitors have one. Covers site inspections       |
-| **Service charge budgets**            | `budgeting.json`                    | Clearer search term                                                        |
-| **Service charge accounts**           | `year-end-accounting.json`          | Clearer search term; covers year end accounts and collection               |
-| **Company secretarial**               | `company-secretarial.json`          | Few local firms explain it                                                 |
-| **Repairs and maintenance**           | `repairs-maintenance.json`          | Core service                                                               |
-| **Major works**                       | `major-works.json`                  | Market gap                                                                 |
-| **Section 20 consultation**           | `section-20-consultation.json`      | Market gap; leaseholders and directors search for it                       |
-| **Fire and building safety**          | `fire-safety-guidance.json`         | Covers health and safety and the Building Safety Act 2022                  |
-| **Leasehold sale packs**              | `property-sales-legal-support.json` | The term solicitors and sellers use                                        |
-| **Buildings insurance**               | (none, on hold)                     | 7 of 8 competitors cover it. Write only if BPM confirms its insurance role |
+| Page                                  | Reason                                                                     |
+| ------------------------------------- | -------------------------------------------------------------------------- |
+| **Block and estate management** (hub) | Main search term; most competitors have one. Covers site inspections       |
+| **Service charge budgets**            | Clearer search term                                                        |
+| **Service charge accounts**           | Clearer search term; covers year end accounts and collection               |
+| **Company secretarial**               | Few local firms explain it                                                 |
+| **Repairs and maintenance**           | Core service                                                               |
+| **Major works**                       | Market gap                                                                 |
+| **Section 20 consultation**           | Market gap; leaseholders and directors search for it                       |
+| **Fire and building safety**          | Covers health and safety and the Building Safety Act 2022                  |
+| **Leasehold sale packs**              | The term solicitors and sellers use                                        |
+| **Buildings insurance**               | 7 of 8 competitors cover it. Write only if BPM confirms its insurance role |
 
-Site inspections have no page of their own. They are covered on the block and estate management page, and `site-visits.json` is removed.
+Site inspections have no page of their own. They are covered on the block and estate management page.
 
 ### Audience pages
 
@@ -109,7 +109,7 @@ Competitors' pages are short and thin. A fuller page with real detail is the cle
 7. **Related services:** 2 or 3 links.
 8. **Call to action band.**
 
-The template is agreed before writing starts. The fields and build changes are in `page-map.md`.
+The template is agreed before writing starts. The fields are in `page-map.md`.
 
 ### Resident support
 

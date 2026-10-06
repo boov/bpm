@@ -11,13 +11,6 @@ npm run dev              # Start Astro dev server for the active app (default: w
 npm run preview          # Build then serve the production output locally
 ```
 
-### Test and check
-
-```bash
-npm run test --workspace=@bpm/web    # Unit tests
-npm run check --workspace=@bpm/web   # Post-build checks (run after npm run build)
-```
-
 `dev`, `build`, and `preview` proxy to the workspace named in `.active-app` (falling back to `web` when the file is absent), e.g. `npm run dev --workspace=@bpm/$(cat .active-app)`.
 
 ### Build
@@ -26,6 +19,13 @@ npm run check --workspace=@bpm/web   # Post-build checks (run after npm run buil
 npm run build            # Build only the active app
 npm run build:all        # Build every workspace that defines a build script
 npm run clean            # Remove apps/*/dist, apps/*/.astro, apps/*/.netlify, .eslintcache
+```
+
+### Test and check
+
+```bash
+npm run test --workspace=@bpm/web    # Unit tests
+npm run check --workspace=@bpm/web   # Post-build checks (run after npm run build)
 ```
 
 ### Quality
@@ -72,16 +72,28 @@ The site uses Astro's Content Collections API with custom loaders (apps/web/src/
 Example collection definition:
 
 ```typescript
+const pageFields = {
+  status: statusSchema,
+  order: z.number().optional().default(0),
+  title: z.string(),
+  metaTitle: z.string().max(34),
+  hero: z.object({ heading: z.string().optional(), note: z.string().optional(), trustLine: z.boolean().default(false) }).default({ trustLine: false }),
+  cta: z.enum(callKeys),
+  description: z.string().max(155),
+  intro: z.object({ heading: z.string(), paragraphs: z.array(z.string()).min(1) }),
+  included: z.object({ heading: z.string(), items: z.array(z.string()).min(1) }),
+  proof: z.array(z.string()).min(1),
+  faqs: z.array(faqSchema).min(1)
+};
+
 const services = defineCollection({
   loader: glob({ pattern: "*.json", base: "./src/content/services" }),
   schema: ({ image }) =>
     z.object({
-      status: statusSchema,
-      order: z.number().optional().default(0),
-      title: z.string(),
-      description: z.string(),
+      ...pageFields,
       image: image(),
-      content: z.object({ heading: z.string(), paragraphs: z.array(z.string()) }).default({ heading: "", paragraphs: [] })
+      steps: z.array(stepSchema).min(1),
+      related: z.array(reference("services")).min(1)
     })
 });
 ```

@@ -11,8 +11,6 @@ meta_description: "Block and estate management for RMCs, RTM companies, freehold
 
 Block management Winchester | Belgarum Property Management
 
-Build note: the home page title is set in `Base.astro` (`appTitle`), not from this field. The build needs to use this value. `appTitle` also feeds `og:site_name` and the Schema data.
-
 ## description
 
 Block and estate management for RMCs, RTM companies, freeholders and developers across Hampshire and the south, from our office in Winchester.

@@ -47,17 +47,9 @@ The leasehold sale packs page is written with placeholders for the ordering rout
 
 `/404`, `/contact/thanks`, `/contact/submitting`, `/pay-online/success`, `/pay-online/failed`. Short copy only. Status: draft.
 
-## Build changes
-
-These are needed before the pages above can go live:
-
-- **Service slugs:** the file name sets the URL slug. Rename `budgeting.json` to `service-charge-budgets.json`, `year-end-accounting.json` to `service-charge-accounts.json`, `repairs-maintenance.json` to `repairs-and-maintenance.json`, `fire-safety-guidance.json` to `fire-and-building-safety.json` and `property-sales-legal-support.json` to `leasehold-sale-packs.json`. Remove `site-visits.json`. Add `block-and-estate-management.json`.
-- **Audience pages:** add the `audiences` collection and the `/who-we-work-with/[slug]` route.
-- **Contact form:** add the enquiry types "New management" and "New development", and let a `?type=` query string preset the enquiry type, so the calls to action in `tone-of-voice.md` can link to them. Rename the other enquiry types to match the service names.
-
 ## Redirects from the live site
 
-Add these to `redirects` in `apps/web/astro.config.mjs` at launch. The live site uses `belgarum-property.co.uk` without `www`; also redirect that host to `https://www.belgarum-property.co.uk` in Netlify domain settings.
+The redirects are in `apps/web/astro.config.mjs`. The live site uses `belgarum-property.co.uk` without `www`. Redirect that host to `https://www.belgarum-property.co.uk` in Netlify domain settings. This step is manual.
 
 | Live URL                 | New URL                                               |
 | ------------------------ | ----------------------------------------------------- |
@@ -107,31 +99,33 @@ Fields:
 
 ## Content fields
 
-Proposed. Not built.
-
 ### Services (`apps/web/src/content/services/*.json`)
 
-Fields marked "new" need schema and template changes. `intro` takes the place of the current `content` field.
+| Field              | Type                                                         | Used for                                                                                    |
+| ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| `title`            | string                                                       | H1 (unless `hero.heading` is set), menus, cards                                             |
+| `hero.heading`     | string, optional                                             | H1, when it should differ from the menu label                                               |
+| `metaTitle`        | string                                                       | The `meta_title`, 34 characters max                                                         |
+| `hero.note`        | string, optional                                             | Short note under the hero lead                                                              |
+| `hero.trustLine`   | boolean                                                      | Show the compact trust line under the hero                                                  |
+| `cta`              | `proposal`, `development`, `residents`, `sale-pack` or `pay` | Call to action shown on the page                                                            |
+| `description`      | string                                                       | Meta description and hero lead                                                              |
+| `image`            | image                                                        | Hero image                                                                                  |
+| `order`            | number                                                       | Sort order                                                                                  |
+| `intro.heading`    | string                                                       | Intro heading                                                                               |
+| `intro.paragraphs` | string[]                                                     | Intro, 60 to 100 words                                                                      |
+| `included.heading` | string                                                       | "What's included" heading                                                                   |
+| `included.items`   | string[]                                                     | Bullet list                                                                                 |
+| `steps`            | { title, text }[]                                            | "How it works", 3 to 5 steps                                                                |
+| `proof`            | string[]                                                     | "Why BPM" points, from `facts.md` only                                                      |
+| `faqs`             | { question, answer: string[] }[]                             | Aim for 3 to 5 FAQs; a few more is fine where the page needs them. Output as FAQPage schema |
+| `related`          | service slug[]                                               | 2 or 3 related service links                                                                |
 
-| Field                    | Type                             | Used for                                                                                    |
-| ------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------- |
-| `title`                  | string                           | H1 (unless `hero.heading` is set), menus, cards                                             |
-| `hero.heading` (new)     | string, optional                 | H1, when it should differ from the menu label                                               |
-| `description`            | string                           | Meta description and hero lead                                                              |
-| `image`                  | image                            | Hero image                                                                                  |
-| `order`                  | number                           | Sort order                                                                                  |
-| `intro.heading`          | string                           | Intro heading                                                                               |
-| `intro.paragraphs`       | string[]                         | Intro, 60 to 100 words                                                                      |
-| `included.heading` (new) | string                           | "What's included" heading                                                                   |
-| `included.items` (new)   | string[]                         | Bullet list                                                                                 |
-| `steps` (new)            | { title, text }[]                | "How it works", 3 to 5 steps                                                                |
-| `proof` (new)            | string[]                         | "Why BPM" points, from `facts.md` only                                                      |
-| `faqs` (new)             | { question, answer: string[] }[] | Aim for 3 to 5 FAQs; a few more is fine where the page needs them. Output as FAQPage schema |
-| `related` (new)          | service slug[]                   | 2 or 3 related service links                                                                |
+Section headings on service pages are "How it works", "Why BPM", "Common questions" and "Related services" ("Services for you" on audience pages).
 
-### Audiences (new collection, `apps/web/src/content/audiences/*.json`)
+### Audiences (`audiences` collection, `apps/web/src/content/audiences/*.json`)
 
-Route: `/who-we-work-with/[slug]`. Same fields as services, except `steps` is optional, and `services` (a list of 3 to 5 service slugs) is used in place of `related`.
+Route: `/who-we-work-with/[slug]`. Same fields as services, except `steps` is optional, and `services` (a list of 3 to 5 service slugs) is used in place of `related`. Audiences add `card` (string, the card text on the home and services pages).
 
 ### Shared blocks on service pages
 

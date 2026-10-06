@@ -11,6 +11,13 @@ npm run dev              # Start Astro dev server for the active app (default: w
 npm run preview          # Build then serve the production output locally
 ```
 
+### Test and check
+
+```bash
+npm run test --workspace=@bpm/web    # Unit tests
+npm run check --workspace=@bpm/web   # Post-build checks (run after npm run build)
+```
+
 `dev`, `build`, and `preview` proxy to the workspace named in `.active-app` (falling back to `web` when the file is absent), e.g. `npm run dev --workspace=@bpm/$(cat .active-app)`.
 
 ### Build
@@ -55,9 +62,9 @@ This is an npm workspaces monorepo:
 
 The site uses Astro's Content Collections API with custom loaders (apps/web/src/content.config.ts):
 
-- **Collections**: `personnel`, `services`, `questions`, `testimonials`
+- **Collections**: `personnel`, `services`, `audiences`, `questions`, `testimonials`
 - **Data Sources**:
-  - JSON files in `src/content/` (services)
+  - JSON files in `src/content/` (services, audiences)
   - Shared workspace package `@bpm/data` (personnel, questions, testimonials)
 - **Validation**: All collections use Zod schemas
 - **ID Generation**: Auto-generated from name fields (e.g., "John Doe" → "john-doe")
@@ -161,7 +168,7 @@ Use these aliases in imports rather than relative paths.
 
 - Build command: `npm run build`
 - Publish directory: `apps/web/dist`
-- Lighthouse audits on: /, /services, /services/budgeting, /about, /faqs, /contact, /privacy-policy
+- Lighthouse audits on: /, /services, /services/block-and-estate-management, /who-we-work-with/rmc-and-rtm-directors, /about, /faqs, /contact, /privacy-policy
 - Node.js 22+ required (see `.nvmrc`)
 
 **Tailwind CSS**:

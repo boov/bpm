@@ -12,7 +12,10 @@ path = "/"
 path = "/services"
 
 [[plugins.inputs.audits]]
-path = "/services/budgeting"
+path = "/services/block-and-estate-management"
+
+[[plugins.inputs.audits]]
+path = "/who-we-work-with/rmc-and-rtm-directors"
 
 [[plugins.inputs.audits]]
 path = "/about"

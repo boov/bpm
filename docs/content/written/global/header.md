@@ -71,8 +71,3 @@ Same labels and order as the primary navigation, then the 3 header actions.
 **Gaps:**
 
 None.
-
-Build notes (not copy):
-
-- There is no `/who-we-work-with` overview page in `page-map.md`. The dropdown needs no "All" link, or the build needs an overview page.
-- "Leasehold sale packs" shows in the services dropdown once that page is live.

@@ -53,21 +53,12 @@ export const longDateFormat = (date: Date): string => {
 
 export const getPersonnel = async () => (await getCollection("personnel")).filter(person => person.data.status === "published");
 
-export const getQuestions = async () => (await getCollection("questions")).sort((a, b) => a.data.title.localeCompare(b.data.title));
+export const getQuestions = async () => (await getCollection("questions")).sort((a, b) => a.data.order - b.data.order);
 
 export const getQuestionsByGroup = async () => {
-  const questions = await getQuestions();
-  type QuestionEntry = (typeof questions)[number];
-  return Object.entries(
-    questions.reduce((acc: { [key: string]: QuestionEntry[] }, post) => {
-      const group = post.data.group;
-      if (!acc[group]) {
-        acc[group] = [];
-      }
-      acc[group].push(post);
-      return acc;
-    }, {})
-  ).sort((a, b) => b[1].length - a[1].length);
+  const groups = new Map<string, Awaited<ReturnType<typeof getQuestions>>>();
+  for (const question of await getQuestions()) groups.set(question.data.group, [...(groups.get(question.data.group) ?? []), question]);
+  return [...groups.entries()];
 };
 
 export const getServices = async () =>

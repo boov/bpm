@@ -1,4 +1,5 @@
 ---
+import { faqPageSchema } from "@assets/scripts/faq-schema";
 import QuestionGroup from "@components/collection/question/QuestionGroup.astro";
 import Heading from "@components/Heading.astro";
 import Section from "@components/Section.astro";
@@ -8,31 +9,23 @@ import Default from "@layouts/Default.astro";
 const questionGroups = await getQuestionsByGroup();
 const questions = await getQuestions();
 
-const title = "Frequently asked questions";
-const description = "";
+const title = "Leaseholder and RMC FAQs";
+const description = "Answers for leaseholders and directors: paying your service charge, why it goes up, repairs, Section 20, major works and selling your flat.";
 
-const faqSchema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: questions.map(question => ({
-    "@type": "Question",
-    name: question.data.title,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: question.data.answer.join("\n\n")
-    }
-  }))
-});
+const faqSchema = JSON.stringify(faqPageSchema(questions.map(q => ({ question: q.data.title, answer: q.data.answer }))));
 ---
 
-<Default title={title} description={description}>
+<Default title={title} description={description} cta="residents">
   <Fragment slot="head">
     <script type="application/ld+json" set:html={faqSchema} />
   </Fragment>
   <Section>
     <div class="container-8c">
       <div class="flex flex-col gap-12 md:gap-16">
-        <Heading as="h1" class="text-h3 sm:text-h2 md:text-h1" set:text={title} />
+        <div class="flex flex-col gap-4">
+          <Heading as="h1" class="text-h3 sm:text-h2 md:text-h1" set:text="Frequently asked questions" />
+          <p class="text-lg">{description}</p>
+        </div>
         {questionGroups.map(([groupName, questions]) => <QuestionGroup title={groupName} questions={questions} />)}
       </div>
     </div>

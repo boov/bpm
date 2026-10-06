@@ -17,8 +17,9 @@ const personnel = defineCollection({
 
 const questions = defineCollection({
   loader: async () => {
-    return questionsContent.data.map(question => ({
+    return questionsContent.data.map((question, index) => ({
       id: question.title.toLowerCase().replace(/\s+/g, "-"),
+      order: index,
       ...question
     }));
   },

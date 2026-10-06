@@ -15,7 +15,7 @@ Where sources disagree, the working decision is in `client-questions.md` and the
 | Key    | Source                                                                                                                                       | Read       |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | LIVE   | Current website, https://belgarum-property.co.uk/ (home, services, developers, residential, freeholders, our team, about us, links, contact) | 2026-10-06 |
-| FAQ    | Client-supplied FAQ text in the new site, `packages/data/content/questions.ts`                                                               | 2026-10-06 |
+| FAQ    | Client-supplied FAQ text, formerly in `packages/data/content/questions.ts` (git history before this commit)                                  | 2026-10-06 |
 | NEW    | Other new site content in this repository (`apps/web`, `packages/data`), written without client input                                        | 2026-10-06 |
 | CH     | Companies House, company 07580603 and its officer records                                                                                    | 2026-10-06 |
 | TPI    | The Property Institute member directory, South West, page 2                                                                                  | 2026-10-06 |

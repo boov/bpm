@@ -1,0 +1,26 @@
+---
+import twMerge from "@bpm/custom-merge";
+import Heading from "@components/Heading.astro";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  service: CollectionEntry<"services">;
+  label?: string;
+  featured?: boolean;
+}
+
+const { service, label = service.data.title, featured = false } = Astro.props;
+const href = `/services/${service.id}`;
+---
+
+<article
+  class={twMerge(
+    "bg-theme-background-highlight flex flex-col gap-3 rounded-xl p-6 sm:py-7 md:p-8",
+    featured && "theme-dark bg-theme-background-lowlight sm:col-span-2 lg:col-span-3"
+  )}
+>
+  <Heading as="h3" class={featured ? "text-h4 sm:text-h3" : "text-h5 sm:text-h4"}>
+    <a href={href} class="text-theme-foreground-bold hover:text-theme-action">{label}</a>
+  </Heading>
+  <p class="text-sm">{service.data.description}</p>
+</article>

@@ -1,0 +1,21 @@
+---
+import Heading from "@components/Heading.astro";
+import { getAudiences } from "@helpers";
+
+const audiences = await getAudiences();
+---
+
+<div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
+  {
+    audiences.map(audience => (
+      <article class="bg-theme-background-highlight flex flex-col gap-3 rounded-xl p-6 sm:py-7 md:p-8">
+        <Heading as="h3" class="text-h5 sm:text-h4">
+          <a href={`/who-we-work-with/${audience.id}`} class="text-theme-foreground-bold hover:text-theme-action">
+            {audience.data.title}
+          </a>
+        </Heading>
+        <p class="text-sm">{audience.data.card}</p>
+      </article>
+    ))
+  }
+</div>

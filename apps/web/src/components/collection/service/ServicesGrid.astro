@@ -1,10 +1,20 @@
 ---
-import Service from "@components/collection/service/Service.astro";
+import ServiceCard from "@components/collection/service/ServiceCard.astro";
 import { getServices } from "@helpers";
 
-const services = await getServices();
+interface Props {
+  ids?: string[];
+  featureFirst?: boolean;
+}
+
+const { ids, featureFirst = false } = Astro.props;
+const services = (await getServices()).filter(service => !ids || ids.includes(service.id));
 ---
 
 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
-  {services.map(service => <Service data={service} />)}
+  {
+    services.map((service, index) =>
+      featureFirst && index === 0 ? <ServiceCard service={service} label="Full block and estate management" featured /> : <ServiceCard service={service} />
+    )
+  }
 </div>

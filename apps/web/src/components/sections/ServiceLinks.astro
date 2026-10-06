@@ -1,6 +1,6 @@
 ---
+import ServicesGrid from "@components/collection/service/ServicesGrid.astro";
 import Heading from "@components/Heading.astro";
-import { getServices } from "@helpers";
 
 interface Props {
   heading: string;
@@ -8,22 +8,11 @@ interface Props {
 }
 
 const { heading, ids } = Astro.props;
-const services = (await getServices()).filter(service => ids.includes(service.id));
 ---
 
 <div class="container">
   <div class="flex flex-col gap-8">
     <Heading as="h2" class="text-h4 sm:text-h3" set:text={heading} />
-    <ul class="flex flex-col gap-2">
-      {
-        services.map(service => (
-          <li>
-            <a class="link" href={`/services/${service.id}`}>
-              {service.data.title}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    <ServicesGrid {ids} />
   </div>
 </div>

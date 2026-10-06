@@ -12,15 +12,7 @@ export default defineConfig({
   prefetch: {
     prefetchAll: true
   },
-  redirects: {
-    "/services/developers": "/who-we-work-with/developers",
-    "/services/residential": "/who-we-work-with/rmc-and-rtm-directors",
-    "/services/freeholders": "/who-we-work-with/freeholders-and-private-landlords",
-    "/our-team": "/about",
-    "/about-us": "/about",
-    "/about-us/links": "/about",
-    "/contact-us": "/contact"
-  },
+  redirects: {},
   integrations: [
     compress({
       CSS: false,

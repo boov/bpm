@@ -2,6 +2,41 @@
 publish = "apps/web/dist"
 command = "npm run build"
 
+[[redirects]]
+from = "/services/developers"
+to = "/who-we-work-with/developers"
+status = 301
+
+[[redirects]]
+from = "/services/residential"
+to = "/who-we-work-with/rmc-and-rtm-directors"
+status = 301
+
+[[redirects]]
+from = "/services/freeholders"
+to = "/who-we-work-with/freeholders-and-private-landlords"
+status = 301
+
+[[redirects]]
+from = "/our-team"
+to = "/about"
+status = 301
+
+[[redirects]]
+from = "/about-us"
+to = "/about"
+status = 301
+
+[[redirects]]
+from = "/about-us/links"
+to = "/about"
+status = 301
+
+[[redirects]]
+from = "/contact-us"
+to = "/contact"
+status = 301
+
 [[plugins]]
 package = "@netlify/plugin-lighthouse"
 

@@ -49,7 +49,7 @@ The leasehold sale packs page is written with placeholders for the ordering rout
 
 ## Redirects from the live site
 
-The redirects are in `apps/web/astro.config.mjs`. The live site uses `belgarum-property.co.uk` without `www`. Redirect that host to `https://www.belgarum-property.co.uk` in Netlify domain settings. This step is manual.
+The redirects are `[[redirects]]` blocks in `apps/web/netlify.toml`. They return 301 on Netlify only; `npm run dev` does not apply them. The live site uses `belgarum-property.co.uk` without `www`. Redirect that host to `https://www.belgarum-property.co.uk` in Netlify domain settings. This step is manual.
 
 | Live URL                 | New URL                                               |
 | ------------------------ | ----------------------------------------------------- |

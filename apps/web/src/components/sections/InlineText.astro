@@ -1,0 +1,14 @@
+---
+import { renderInline } from "@assets/scripts/inline-markdown";
+import type { HTMLTag } from "astro/types";
+
+interface Props {
+  text: string;
+  as?: HTMLTag;
+  class?: string;
+}
+
+const { text, as: Tag = "p", class: classes } = Astro.props;
+---
+
+<Tag class={classes} set:html={renderInline(text)} />

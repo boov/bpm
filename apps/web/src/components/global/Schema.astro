@@ -12,13 +12,13 @@ const { appTitle, schemaImage, schemaLogo } = props.data;
 const siteURL = Astro.site?.href;
 
 const brandName = "Belgarum Property Management";
-const slogan = "Property management experts since 1989";
+const slogan = "Block and estate management since 1989";
 
 let schema = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "RealEstateAgent"],
+      "@type": "LocalBusiness",
       "@id": `${siteURL}#localbusiness`,
       name: brandName,
       slogan,
@@ -39,9 +39,15 @@ let schema = JSON.stringify({
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
           opens: "09:00",
-          closes: "18:00"
+          closes: "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: "Friday",
+          opens: "09:00",
+          closes: "16:30"
         }
       ],
       priceRange: "££"

@@ -11,5 +11,11 @@ export const expectedPages = {
   "/services/major-works/": { title: "Major works managing agent - Belgarum Property Management", h1: "Major works" },
   "/services/section-20-consultation/": { title: "Section 20 consultation explained - Belgarum Property Management", h1: "Section 20 consultation" },
   "/services/fire-and-building-safety/": { title: "Fire safety in blocks of flats - Belgarum Property Management", h1: "Fire and building safety" },
-  "/services/leasehold-sale-packs/": { title: "Leasehold sale packs (LPE1) - Belgarum Property Management", h1: "Leasehold sale packs" }
+  "/services/leasehold-sale-packs/": { title: "Leasehold sale packs (LPE1) - Belgarum Property Management", h1: "Leasehold sale packs" },
+  "/who-we-work-with/rmc-and-rtm-directors/": { title: "RMC and RTM managing agent - Belgarum Property Management", h1: "A managing agent for RMC and RTM boards" },
+  "/who-we-work-with/freeholders-and-private-landlords/": {
+    title: "Freeholder block management - Belgarum Property Management",
+    h1: "Block management for freeholders and landlords"
+  },
+  "/who-we-work-with/developers/": { title: "New build managing agent - Belgarum Property Management", h1: "Block and estate management for new developments" }
 };

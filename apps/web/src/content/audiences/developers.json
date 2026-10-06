@@ -1,0 +1,75 @@
+{
+  "order": 3,
+  "title": "Developers",
+  "metaTitle": "New build managing agent",
+  "hero": {
+    "heading": "Block and estate management for new developments",
+    "trustLine": true
+  },
+  "cta": "development",
+  "description": "Plan the management before the first home is sold. Block and estate management for new developments, from 4 flats to 22 floors, since 1989.",
+  "card": "Involve us from the planning stage, so the management of your development is set up from the start.",
+  "intro": {
+    "heading": "Plan the management while you plan the build",
+    "paragraphs": [
+      "How a development will be managed affects its running costs, its service charge and the questions buyers' solicitors ask. The best time to plan it is before the first home is sold.",
+      "Belgarum Property Management advises developers to involve the managing agent (the firm that runs the development day to day) from the planning stage. We've managed blocks of flats and shared estates since 1989. Today we manage over 150 developments, from blocks of 4 flats to a 22-floor high rise."
+    ]
+  },
+  "included": {
+    "heading": "What's included",
+    "items": [
+      "Involvement from the planning stage, before the first home is sold",
+      "Service charge money held in a designated trust account for each block or estate",
+      "Fire risk, asbestos and health and safety assessments, through specialist firms",
+      "Company secretary duties for a resident management company (RMC), if the development has one",
+      "Day-to-day management of the communal areas once residents move in",
+      "Management of leasehold blocks and freehold estate areas"
+    ]
+  },
+  "steps": [
+    {
+      "title": "Talk to us at the planning stage",
+      "text": "Tell us about the development: the number of homes, the shared areas and the timetable. Early decisions, such as the design of the shared areas, affect running costs for years."
+    },
+    {
+      "title": "Plan the management before sales",
+      "text": "Before the first home is sold, we talk through how the development will be managed, and what the service charge or estate charge will cover."
+    },
+    {
+      "title": "Manage the development",
+      "text": "Once residents move in, we manage the building or estate day to day, with a dedicated property manager."
+    }
+  ],
+  "proof": [
+    "Established in 1989. Block and estate management is all we do.",
+    "We manage leasehold blocks and freehold estate areas, from blocks of 4 flats to a 22-floor high rise.",
+    "We act as company secretary for about 15 RMCs today.",
+    "We use specialist firms for fire risk, asbestos, lifts and health and safety."
+  ],
+  "faqs": [
+    {
+      "question": "When should a developer involve a managing agent?",
+      "answer": ["At the planning stage. Decisions made early, such as the design of the shared areas, affect what the development costs to run for years to come."]
+    },
+    {
+      "question": "What is the difference between a service charge and an estate charge?",
+      "answer": [
+        "A [service charge](/services/service-charge-budgets) is what leaseholders pay, under their lease, towards running, repairing and insuring a block of flats. An estate charge is what owners of freehold homes pay towards the shared areas of an estate, such as roads, paths and green spaces."
+      ]
+    },
+    {
+      "question": "Do new leases have ground rent?",
+      "answer": [
+        "Ground rent is a yearly payment a leaseholder may owe the freeholder under the lease. The Leasehold Reform (Ground Rent) Act 2022 applies to most new long residential leases granted from 30 June 2022. These leases can only have a peppercorn (zero) ground rent. There are exceptions, including rent on the landlord's share of a shared ownership lease."
+      ]
+    },
+    {
+      "question": "What fire and building safety rules apply to a new block of flats?",
+      "answer": [
+        "Every block of flats needs a fire risk assessment of its communal areas, structure, external walls and flat entrance doors. Buildings at least 18 metres or 7 storeys tall, with at least 2 homes, are higher-risk buildings. Under the Building Safety Act 2022, they must be registered with the Building Safety Regulator before residents move in, and extra rules apply."
+      ]
+    }
+  ],
+  "services": ["block-and-estate-management", "service-charge-budgets", "fire-and-building-safety", "company-secretarial"]
+}

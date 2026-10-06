@@ -53,6 +53,16 @@ const services = defineCollection({
     })
 });
 
+const audiences = defineCollection({
+  loader: glob({ pattern: "*.json", base: "./src/content/audiences" }),
+  schema: z.object({
+    ...pageFields,
+    card: z.string(),
+    steps: z.array(stepSchema).default([]),
+    services: z.array(reference("services")).min(1)
+  })
+});
+
 const testimonials = defineCollection({
   loader: async () => {
     return testimonialsContent.data.map(testimonial => ({
@@ -67,5 +77,6 @@ export const collections = {
   personnel,
   questions,
   services,
+  audiences,
   testimonials
 };

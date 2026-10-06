@@ -1,4 +1,4 @@
-// Full <title> and H1 text per built page. Each task adds its pages.
+// Full <title> and H1 text per built page.
 export const expectedPages = {
   "/": { title: "Block management Winchester | Belgarum Property Management", h1: "One property manager who knows your building" },
   "/faqs/": { title: "Leaseholder and RMC FAQs - Belgarum Property Management", h1: "Frequently asked questions" },

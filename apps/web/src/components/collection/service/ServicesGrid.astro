@@ -8,7 +8,8 @@ interface Props {
 }
 
 const { ids, featureFirst = false } = Astro.props;
-const services = (await getServices()).filter(service => !ids || ids.includes(service.id));
+const all = await getServices();
+const services = ids ? ids.flatMap(id => all.find(service => service.id === id) ?? []) : all;
 ---
 
 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">

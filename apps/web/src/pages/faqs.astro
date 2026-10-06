@@ -1,5 +1,6 @@
 ---
 import { faqPageSchema } from "@assets/scripts/faq-schema";
+import { toJsonLd } from "@assets/scripts/json-ld";
 import QuestionGroup from "@components/collection/question/QuestionGroup.astro";
 import Heading from "@components/Heading.astro";
 import Section from "@components/Section.astro";
@@ -12,7 +13,7 @@ const questions = await getQuestions();
 const title = "Leaseholder and RMC FAQs";
 const description = "Answers for leaseholders and directors: paying your service charge, why it goes up, repairs, Section 20, major works and selling your flat.";
 
-const faqSchema = JSON.stringify(faqPageSchema(questions.map(q => ({ question: q.data.title, answer: q.data.answer }))));
+const faqSchema = toJsonLd(faqPageSchema(questions.map(q => ({ question: q.data.title, answer: q.data.answer }))));
 ---
 
 <Default title={title} description={description} cta="residents">

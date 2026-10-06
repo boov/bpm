@@ -1,4 +1,6 @@
 ---
+import { toJsonLd } from "@assets/scripts/json-ld";
+
 interface Props {
   data: {
     schemaImage: string;
@@ -13,7 +15,7 @@ const siteURL = Astro.site?.href;
 const brandName = "Belgarum Property Management";
 const slogan = "Block and estate management since 1989";
 
-let schema = JSON.stringify({
+const schema = toJsonLd({
   "@context": "https://schema.org",
   "@graph": [
     {

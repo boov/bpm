@@ -1,0 +1,29 @@
+---
+import Heading from "@components/Heading.astro";
+import InlineText from "@components/sections/InlineText.astro";
+
+interface Props {
+  steps: { title: string; text: string }[];
+}
+
+const { steps } = Astro.props;
+---
+
+<div class="container" id="how-it-works">
+  <div class="flex flex-col gap-8">
+    <Heading as="h2" class="text-h4 sm:text-h3">How it works</Heading>
+    <ol class="grid grid-cols-1 gap-1.5 overflow-hidden rounded-xl sm:grid-cols-2 xl:grid-cols-3">
+      {
+        steps.map((step, index) => (
+          <li class="bg-theme-background-highlight flex flex-col gap-3 p-8 sm:p-10">
+            <p class="text-theme-action text-h4 font-bold" aria-hidden="true">
+              {index + 1}
+            </p>
+            <Heading as="h3" class="text-h5" set:text={step.title} />
+            <InlineText text={step.text} class="text-sm" />
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</div>

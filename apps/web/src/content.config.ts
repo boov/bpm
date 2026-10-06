@@ -1,6 +1,7 @@
+import { callKeys } from "@assets/scripts/calls-to-action";
 import { personnel as personnelContent, questions as questionsContent, testimonials as testimonialsContent } from "@bpm/data";
 import { glob } from "astro/loaders";
-import { defineCollection, z } from "astro:content";
+import { defineCollection, reference, z } from "astro:content";
 
 const statusSchema = z.enum(["draft", "published"]).default("published");
 
@@ -24,21 +25,31 @@ const questions = defineCollection({
   schema: questionsContent.schema
 });
 
+const stepSchema = z.object({ title: z.string(), text: z.string() });
+const faqSchema = z.object({ question: z.string(), answer: z.array(z.string()).min(1) });
+
+const pageFields = {
+  status: statusSchema,
+  order: z.number().optional().default(0),
+  title: z.string(),
+  metaTitle: z.string().max(34),
+  hero: z.object({ heading: z.string().optional(), note: z.string().optional(), trustLine: z.boolean().default(false) }).default({ trustLine: false }),
+  cta: z.enum(callKeys),
+  description: z.string().max(155),
+  intro: z.object({ heading: z.string(), paragraphs: z.array(z.string()).min(1) }),
+  included: z.object({ heading: z.string(), items: z.array(z.string()).min(1) }),
+  proof: z.array(z.string()).min(1),
+  faqs: z.array(faqSchema).min(1)
+};
+
 const services = defineCollection({
   loader: glob({ pattern: "*.json", base: "./src/content/services" }),
   schema: ({ image }) =>
     z.object({
-      status: statusSchema,
-      order: z.number().optional().default(0),
-      title: z.string(),
-      description: z.string(),
+      ...pageFields,
       image: image(),
-      content: z
-        .object({
-          heading: z.string(),
-          paragraphs: z.array(z.string())
-        })
-        .default({ heading: "", paragraphs: [] })
+      steps: z.array(stepSchema).min(1),
+      related: z.array(reference("services")).min(1)
     })
 });
 

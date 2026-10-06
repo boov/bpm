@@ -1,0 +1,19 @@
+---
+import Question from "@components/collection/question/Question.astro";
+import Heading from "@components/Heading.astro";
+
+interface Props {
+  faqs: { question: string; answer: string[] }[];
+}
+
+const { faqs } = Astro.props;
+---
+
+<div class="container-8c">
+  <div class="flex flex-col gap-8">
+    <Heading as="h2" class="text-h4 sm:text-h3">Common questions</Heading>
+    <div class="flex flex-col gap-4">
+      {faqs.map(faq => <Question title={faq.question} answer={faq.answer} />)}
+    </div>
+  </div>
+</div>

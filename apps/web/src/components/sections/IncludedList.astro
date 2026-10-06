@@ -1,0 +1,27 @@
+---
+import Heading from "@components/Heading.astro";
+import InlineText from "@components/sections/InlineText.astro";
+
+interface Props {
+  heading: string;
+  items: string[];
+}
+
+const { heading, items } = Astro.props;
+---
+
+<div class="container">
+  <div class="flex flex-col gap-8">
+    <Heading as="h2" class="text-h4 sm:text-h3" set:text={heading} />
+    <ul class="grid grid-cols-1 gap-x-10 gap-y-4 md:grid-cols-2">
+      {
+        items.map(item => (
+          <li class="flex items-start gap-4">
+            <span class="bg-theme-action mt-2.5 size-1.5 shrink-0 rounded-full" aria-hidden="true" />
+            <InlineText as="span" text={item} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

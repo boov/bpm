@@ -16,4 +16,4 @@ We will acknowledge your complaint and respond as quickly as we can.
 
 ## If you remain unhappy
 
-If you are still dissatisfied after our final response, you can refer your complaint to The Property Institute (TPI) for independent review.
+If you are still dissatisfied after our final response, you can refer your complaint to [The Property Ombudsman (TPO)](https://www.tpos.co.uk/) for independent review. You must complete our complaints procedure first, and you must refer your complaint to TPO within 12 months of our final response.

@@ -28,5 +28,8 @@ export const expectedPages = {
   "/pay-online/": { title: "Pay your service charge - Belgarum Property Management", h1: "Pay your service charge" },
   "/pay-online/success/": { title: "Payment complete - Belgarum Property Management", h1: "Payment complete" },
   "/pay-online/failed/": { title: "Payment not completed - Belgarum Property Management", h1: "Payment not completed" },
+  "/complaints-procedure/": { title: "Complaints procedure - Belgarum Property Management", h1: "Complaints procedure" },
+  "/privacy-policy/": { title: "Privacy policy - Belgarum Property Management", h1: "Privacy policy" },
+  "/cookie-policy/": { title: "Cookie policy - Belgarum Property Management", h1: "Cookie policy" },
   "/404": { title: "Page not found - Belgarum Property Management", h1: "Page not found" }
 };

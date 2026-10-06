@@ -1,34 +1,74 @@
 ---
 layout: "@layouts/Text.astro"
-title: Privacy Policy
-description: I value your privacy, and want to be transparent about how I handle your information. Please take a moment to read this simple privacy policy.
+title: Privacy policy
+description: How Belgarum Property Management uses the personal information you give us through this website, by email or by phone, and your rights.
+updated: 2026-10-06
 ---
 
-## What information I collect
+This policy explains how Belgarum Property Management Limited uses personal information collected through this website, and when you contact us by email or by phone. It also explains your rights.
 
-- **Cookies:** I use cookies to enhance your browsing experience. These cookies are mostly for making this website function and work smoothly.
-- **Analytics:** I also use analytics to understand how visitors interact with this website. This helps me improve this websites content and make your experience better.
-- **Contact Form:** If you choose to reach out to me through the contact form, I collect the information you provide, such as your name and email address. This helps me respond to your enquiries.
+## Who we are
 
-## How I use your information
+Belgarum Property Management Limited is the controller of your personal information. This means we decide how it is used.
 
-- **Cookies:** I use cookies to personalize your experience and remember your preferences. These cookies do not store any personal information.
-- **Analytics:** The data from analytics is used to analyze trends, track user movements, and gather demographic information. Rest assured, it's all about improving this website for the end user.
-- **Contact Form:** The information you share through the contact form is solely used to respond to your enquiries. I don’t share this information with third parties.
+- Registered in England and Wales, company number 07580603
+- Registered office: Highland House, Mayflower Close, Chandlers Ford, Hampshire, SO53 4AR
+- Office: Old Manor Nursery, Kilham Lane, Winchester, Hampshire, SO22 5QD
+- Email: management@bpmanagement.org
+- Phone: 0800 298 0069
 
-## Your choices
+## What we collect and why
 
-- **Cookies:** You can manage your cookie preferences through your browser settings. However, keep in mind that disabling cookies may affect the functionality of this website.
-- **Analytics:** If you prefer not to be part of analytics data... something something CookieYes.
+### When you send an enquiry
 
-## Security
+If you use our contact form, we collect your name, email address and phone number (if you give it). We also collect the type of enquiry, the property address, your message and any details you give for your enquiry type.
 
-I take the security of your information seriously. This website has measures in place to protect against unauthorized access and alteration.
+We use this information to reply to your enquiry and, if you ask, to prepare a management proposal. Our lawful basis is our legitimate interest in answering enquiries, or taking steps at your request before entering into a contract.
 
-## Updates to this privacy policy
+### When you pay online
 
-I may update this privacy policy from time to time. Any changes will be reflected on this page, so please check back periodically.
+If you pay your service charge online, you enter the amount and your email address on our website. The payment is then taken by Stripe on its own secure payment page. We do not see or store your full card details.
 
-## Get in touch
+We use the payment information to record your payment against the right account. Our lawful basis is our legitimate interest in recording payments, and our legal obligations, including keeping financial records.
 
-If you have any questions about this privacy policy or how I handle your data, feel free to send an email to [management@bpmanagement.org](mailto:management@bpmanagement.org).
+### When you call us
+
+Calls to our office are recorded for training. Our lawful basis is our legitimate interest in training our staff and keeping the quality of our service high.
+
+### When you browse this website
+
+If you agree to analytics cookies, we collect information about how you use this website, such as the pages you visit. We use it to improve the website. Our lawful basis is your consent, which you can withdraw at any time. Read our [cookie policy](/cookie-policy).
+
+## Who we share it with
+
+We use service providers to run this website and take payments:
+
+- **Netlify:** hosts this website and receives contact form submissions
+- **Stripe:** takes online card payments
+- **Google:** provides website analytics, if you agree to analytics cookies
+
+Where we need to, to deal with your enquiry, we may share your information with contractors. We may also share it with the freeholder, resident management company or right to manage company of your building. We do not sell your information.
+
+Some of these providers may process information outside the UK. When they do, they use safeguards recognised by UK data protection law.
+
+## Your rights
+
+Under UK data protection law, you have the right to:
+
+- Ask for a copy of the personal information we hold about you
+- Ask us to correct information that is wrong
+- Ask us to delete your information
+- Ask us to limit how we use your information
+- Object to how we use your information
+- Ask us to transfer your information to another organisation
+- Withdraw your consent, where we rely on it
+
+To use any of these rights, email management@bpmanagement.org or write to our office. Some rights apply only in certain circumstances.
+
+## How to complain
+
+If you are unhappy with how we have used your information, please contact us first. We will acknowledge your complaint within 30 days. You can also complain to the Information Commissioner's Office (ICO) at [ico.org.uk](https://ico.org.uk) or on 0303 123 1113.
+
+## Changes to this policy
+
+We may update this policy. The current version is always on this page.

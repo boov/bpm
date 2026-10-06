@@ -1,34 +1,36 @@
 ---
 layout: "@layouts/Text.astro"
-title: Cookie Policy
-description: I value your privacy, and want to be transparent about how I handle your information. Please take a moment to read this simple privacy policy.
+title: Cookie policy
+description: Which cookies the Belgarum Property Management website uses, what they do, and how to accept or refuse them.
+updated: 2026-10-06
 ---
 
-## 1. What information I collect
+This policy explains which cookies this website uses and how you can control them.
 
-- **Cookies:** I use cookies to enhance your browsing experience. These cookies are mostly for making this website function and work smoothly.
-- **Analytics:** I also use analytics to understand how visitors interact with this website. This helps me improve this websites content and make your experience better.
-- **Contact Form:** If you choose to reach out to me through the contact form, I collect the information you provide, such as your name and email address. This helps me respond to your enquiries.
+## What cookies are
 
-## 2. How I use your information
+Cookies are small files that a website stores on your device. Some are needed for the website to work. Others help us understand how the website is used.
 
-- **Cookies:** I use cookies to personalize your experience and remember your preferences. These cookies do not store any personal information.
-- **Analytics:** The data from analytics is used to analyze trends, track user movements, and gather demographic information. Rest assured, it's all about improving this website for the end user.
-- **Contact Form:** The information you share through the contact form is solely used to respond to your enquiries. I don’t share this information with third parties.
+## Cookies we use
 
-## 3. Your choices
+### Strictly necessary cookies
 
-- **Cookies:** You can manage your cookie preferences through your browser settings. However, keep in mind that disabling cookies may affect the functionality of this website.
-- **Analytics:** If you prefer not to be part of analytics data... something something CookieYes.
+These cookies are needed for the website to work, or to remember your cookie choices. They do not need your consent.
 
-## 4. Security
+### Analytics cookies
 
-I take the security of your information seriously. This website has measures in place to protect against unauthorized access and alteration.
+We use these cookies only if you agree. They tell us how visitors use the website, such as which pages they visit, so we can improve it.
 
-## 5. Updates to this privacy policy
+## Payments
 
-I may update this privacy policy from time to time. Any changes will be reflected on this page, so please check back periodically.
+When you pay online, you go to a payment page run by Stripe. Stripe sets its own cookies on that page, for security and to prevent fraud. Stripe's cookie policy explains them.
 
-## 6. Get in touch
+## How to control cookies
 
-If you have any questions about this privacy policy or how I handle your data, feel free to send an email to [management@bpmanagement.org](mailto:management@bpmanagement.org).
+When you first visit this website, a banner asks whether you accept analytics cookies. You can change your choice at any time using the cookie settings link at the foot of each page.
+
+You can also block or delete cookies in your browser settings. If you block strictly necessary cookies, parts of the website may not work.
+
+## More information
+
+Read our [privacy policy](/privacy-policy) to find out how we use personal information. If you have a question about cookies, email management@bpmanagement.org.

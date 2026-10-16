@@ -11,7 +11,7 @@ const failures = [];
 const banned = [
   [/\[NEEDS/, "[NEEDS tag"],
   [/\b(lorem|ipsum|incididunt|consequat|dolore)\b/i, "placeholder Latin"],
-  [/Find out more|Enquire online|Pay bill|Give us a call|Head back home/, "retired label"],
+  [/Find out more|Enquire online/, "retired label"],
   [/[–—]/, "en or em dash"]
 ];
 

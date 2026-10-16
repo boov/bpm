@@ -1,56 +1,5 @@
 import { getCollection } from "astro:content";
 
-export const toTelHref = (input?: string) => {
-  if (!input) return undefined;
-
-  const cleaned = input.replace(/[^\d+]/g, "").replace(/(?!^)\+/g, "");
-
-  if (cleaned.startsWith("00")) return `tel:+${cleaned.slice(2)}`;
-  if (cleaned.startsWith("0")) return `tel:+44${cleaned.slice(1)}`;
-  return `tel:${cleaned}`;
-};
-
-export const dayOrdinal = (number: number): string => {
-  if (number > 3 && number < 21) return "th";
-  switch (number % 10) {
-    case 1:
-      return "st";
-    case 2:
-      return "nd";
-    case 3:
-      return "rd";
-    default:
-      return "th";
-  }
-};
-
-export const getDateParts = (date: Date): [string, string, string] => {
-  const [day, month, year] = date
-    .toLocaleDateString("en-GB", {
-      day: "numeric",
-      month: "long",
-      year: "numeric"
-    })
-    .split(" ");
-
-  return [day, month, year];
-};
-
-export const broadDateFormat = (date: Date): string => {
-  const [, month, year] = getDateParts(date);
-  return `${month} ${year}`;
-};
-
-export const shortDateFormat = (date: Date): string => {
-  const [day, month] = getDateParts(date);
-  return `${day}${dayOrdinal(Number(day))} ${month}`;
-};
-
-export const longDateFormat = (date: Date): string => {
-  const [day, month, year] = getDateParts(date);
-  return `${day}${dayOrdinal(Number(day))} ${month} ${year}`;
-};
-
 export const getPersonnel = async () => (await getCollection("personnel")).filter(person => person.data.status === "published");
 
 export const getQuestions = async () => (await getCollection("questions")).sort((a, b) => a.data.order - b.data.order);
@@ -65,5 +14,3 @@ export const getServices = async () =>
   (await getCollection("services")).filter(service => service.data.status === "published").sort((a, b) => a.data.order.valueOf() - b.data.order.valueOf());
 
 export const getAudiences = async () => (await getCollection("audiences")).filter(audience => audience.data.status === "published").sort((a, b) => a.data.order - b.data.order);
-
-export const getTestimonials = async () => (await getCollection("testimonials")).filter(testimonial => testimonial.data.status === "published");

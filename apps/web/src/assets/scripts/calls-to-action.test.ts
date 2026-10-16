@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { bandFor, calls } from "./calls-to-action.ts";
+import { bandFor, calls, headerCalls } from "./calls-to-action.ts";
 
 test("labels match the tone of voice table", () => {
   assert.equal(calls.proposal.label, "Request a management proposal");
@@ -12,9 +12,14 @@ test("labels match the tone of voice table", () => {
 });
 
 test("proposal and development preset the enquiry type", () => {
-  assert.equal(calls.proposal.href, "/contact?type=new-management");
-  assert.equal(calls.development.href, "/contact?type=new-development");
-  assert.equal(calls["sale-pack"].href, "/services/leasehold-sale-packs#how-it-works");
+  assert.equal(calls.proposal.href, "/contact/?type=new-management");
+  assert.equal(calls.development.href, "/contact/?type=new-development");
+  assert.equal(calls["sale-pack"].href, "/services/leasehold-sale-packs/#how-it-works");
+});
+
+test("header calls link to plain contact and pay pages", () => {
+  assert.deepEqual(headerCalls.contact, { label: "Get in touch", href: "/contact/" });
+  assert.deepEqual(headerCalls.pay, { label: "Pay bill", href: "/pay-online/" });
 });
 
 test("leaseholder calls use the residents band", () => {

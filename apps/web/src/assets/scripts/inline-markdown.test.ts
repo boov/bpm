@@ -9,8 +9,8 @@ test("escapes plain text", () => {
 
 test("renders a link and keeps its query string", () => {
   assert.equal(
-    renderInline("To find out, [request a management proposal](/contact?type=new-management)."),
-    'To find out, <a href="/contact?type=new-management" class="link">request a management proposal</a>.'
+    renderInline("To find out, [request a management proposal](/contact/?type=new-management)."),
+    'To find out, <a href="/contact/?type=new-management" class="link">request a management proposal</a>.'
   );
 });
 
@@ -23,5 +23,5 @@ test("leaves square brackets that are not links as text", () => {
 });
 
 test("stripInline keeps the label only", () => {
-  assert.equal(stripInline("Read how [Section 20 consultation](/services/section-20-consultation) works."), "Read how Section 20 consultation works.");
+  assert.equal(stripInline("Read how [Section 20 consultation](/services/section-20-consultation/) works."), "Read how Section 20 consultation works.");
 });

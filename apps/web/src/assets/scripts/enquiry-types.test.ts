@@ -6,7 +6,7 @@ import { enquiryTypes, needsPropertyAddress, presetEnquiryType } from "./enquiry
 test("lists the 10 enquiry types in order", () => {
   assert.deepEqual(
     enquiryTypes.map(type => type.value),
-    ["new-management", "new-development", "service-charge", "repairs", "leasehold-sale-pack", "fire-safety", "section-20", "company-secretarial", "complaint", "general"]
+    ["general", "new-management", "new-development", "service-charge", "repairs", "leasehold-sale-pack", "fire-safety", "section-20", "company-secretarial", "complaint"]
   );
 });
 
@@ -15,10 +15,10 @@ test("presets a known type from the query string", () => {
   assert.equal(presetEnquiryType("?utm_source=x&type=new-development"), "new-development");
 });
 
-test("ignores a missing or unknown type", () => {
-  assert.equal(presetEnquiryType(""), "");
-  assert.equal(presetEnquiryType("?type=site-visit"), "");
-  assert.equal(presetEnquiryType("?type="), "");
+test("falls back to general for a missing or unknown type", () => {
+  assert.equal(presetEnquiryType(""), "general");
+  assert.equal(presetEnquiryType("?type=site-visit"), "general");
+  assert.equal(presetEnquiryType("?type="), "general");
 });
 
 test("property address is needed except for no type, new development and general", () => {

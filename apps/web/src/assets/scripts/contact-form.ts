@@ -1,7 +1,7 @@
 import { needsPropertyAddress, presetEnquiryType } from "./enquiry-types";
 
 export default () => ({
-  enquiryType: "",
+  enquiryType: "general",
 
   init() {
     this.enquiryType = presetEnquiryType(window.location.search);

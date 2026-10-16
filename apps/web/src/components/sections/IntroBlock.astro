@@ -11,10 +11,10 @@ const { heading, paragraphs } = Astro.props;
 ---
 
 <div class="container">
-  <div class="flex flex-col gap-5 lg:flex-row lg:items-start lg:gap-20 xl:gap-40">
-    <Heading as="h2" class="text-h4 sm:text-h3 xl:text-h2 lg:w-80 lg:shrink-0 xl:w-96" set:text={heading} />
-    <div class="flex flex-1 flex-col gap-5">
-      {paragraphs.map((paragraph, index) => <InlineText text={paragraph} class={index === 0 ? "text-lg" : ""} />)}
+  <div class="flex flex-col gap-5 lg:flex-row lg:items-start lg:gap-20 xl:gap-30">
+    <Heading as="h2" class="text-h4 sm:text-h3 xl:text-h2 lg:w-80 lg:shrink-0 xl:w-110" set:text={heading} />
+    <div class="flex flex-1 flex-col gap-5 text-lg">
+      {paragraphs.map((paragraph, index) => <InlineText text={paragraph} class={index === 0 ? "text-xl" : ""} />)}
     </div>
   </div>
 </div>

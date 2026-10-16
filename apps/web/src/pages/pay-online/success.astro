@@ -4,7 +4,6 @@ import Button from "@components/Button.astro";
 import Trim from "@components/global/Trim.astro";
 import Heading from "@components/Heading.astro";
 import Section from "@components/Section.astro";
-import InlineText from "@components/sections/InlineText.astro";
 import Default from "@layouts/Default.astro";
 import CircleCheck from "@lucide/astro/icons/circle-check";
 import CreditCard from "@lucide/astro/icons/credit-card";
@@ -21,12 +20,12 @@ const description = "Thank you. Your service charge payment is complete.";
         <CircleCheck class="text-positive size-16" />
         <Heading as="h1" class="text-h2" set:text={title} />
         <p class="text-lg" set:text={description} />
-        <InlineText text={`If you have a question about your payment, contact your property manager on [${site.phone}](${site.phoneHref}).`} />
+        <p>If you have a question about your payment, contact your property manager on <a href={site.phoneHref} class="link">{site.phone}</a>.</p>
         <div class="flex flex-col gap-4 sm:flex-row">
           <Button label="Go to the home page" href="/" variant="solid">
             <House slot="suffix" />
           </Button>
-          <Button label="Make another payment" href="/pay-online" variant="outline">
+          <Button label="Make another payment" href="/pay-online/" variant="outline">
             <CreditCard slot="suffix" />
           </Button>
         </div>

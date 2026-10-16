@@ -1,5 +1,5 @@
 ---
-import { calls } from "@assets/scripts/calls-to-action";
+import { headerCalls } from "@assets/scripts/calls-to-action";
 import { getNavLinks } from "@assets/scripts/nav-links";
 import { site } from "@assets/scripts/site";
 import Button from "@components/Button.astro";
@@ -43,10 +43,20 @@ const links = await getNavLinks();
                     link.children ? (
                       link.children.length > 0 ? (
                         <li x-data="{ expanded: false }">
-                          <button type="button" class="group flex w-full items-center gap-2 text-left" x-on:click="expanded = !expanded">
-                            <span class="text-theme-foreground-bold hover:text-theme-action transition-colors">{link.label}</span>
-                            <ChevronDown class="text-theme-action transition-transform" stroke-width={2} size="0.6666em" x-bind:class="{ 'rotate-180': expanded }" />
-                          </button>
+                          <div class="flex items-center gap-2">
+                            <a href={link.href} class="text-theme-foreground-bold hover:text-theme-action transition-colors">
+                              {link.label}
+                            </a>
+                            <button
+                              type="button"
+                              class="cursor-pointer p-1"
+                              x-on:click="expanded = !expanded"
+                              x-bind:aria-expanded="expanded"
+                              aria-label={`Show ${link.label} pages`}
+                            >
+                              <ChevronDown class="text-theme-action transition-transform" stroke-width={2} size="0.6666em" x-bind:class="{ 'rotate-180': expanded }" />
+                            </button>
+                          </div>
                           <ul class="ml-2 grid gap-1.5 overflow-hidden pt-4 text-base" x-show="expanded" x-collapse x-cloak>
                             {link.children.map(child => (
                               <li class="before:bg-theme-brand flex items-center gap-2 before:size-1 before:rounded-full">
@@ -55,22 +65,13 @@ const links = await getNavLinks();
                                 </a>
                               </li>
                             ))}
-                            {link.href && link.allLabel && (
-                              <li class="before:bg-theme-brand flex items-center gap-2 before:size-1 before:rounded-full">
-                                <a href={link.href} class="text-theme-foreground hover:text-theme-action transition-colors">
-                                  {link.allLabel}
-                                </a>
-                              </li>
-                            )}
                           </ul>
                         </li>
                       ) : null
                     ) : (
                       <li>
                         <a href={link.href} class="group flex items-baseline gap-2 transition-all hover:gap-4">
-                          <span class:list={[link.href === "/contact" ? "text-theme-action" : "text-theme-foreground-bold", "hover:text-theme-action transition-colors"]}>
-                            {link.label}
-                          </span>
+                          <span class="text-theme-foreground-bold hover:text-theme-action transition-colors">{link.label}</span>
                           <ArrowRight class="text-theme-action opacity-0 transition-opacity group-hover:opacity-100" stroke-width={2} size="0.6666em" />
                         </a>
                       </li>
@@ -82,12 +83,15 @@ const links = await getNavLinks();
           </div>
           <hr />
           <div class="flex flex-col gap-5 lg:gap-8">
-            <a class="label link whitespace-nowrap" href={site.phoneHref}>Call {site.phone}</a>
+            <div class="flex flex-col whitespace-nowrap">
+              <p class="label text-sm">Give us a call</p>
+              <a class="label link leading-snug" href={site.phoneHref}>{site.phone}</a>
+            </div>
             <div class="flex flex-row flex-wrap gap-3 sm:gap-5">
-              <Button label={calls.proposal.label} href={calls.proposal.href} class="grow text-base sm:grow-0">
+              <Button label={headerCalls.contact.label} href={headerCalls.contact.href} class="grow text-base sm:grow-0">
                 <ArrowRight slot="suffix" />
               </Button>
-              <Button label={calls.pay.label} href={calls.pay.href} variant="outline" class="grow text-base sm:grow-0">
+              <Button label={headerCalls.pay.label} href={headerCalls.pay.href} variant="outline" class="grow text-base sm:grow-0">
                 <CreditCard slot="suffix" />
               </Button>
             </div>

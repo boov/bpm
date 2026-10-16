@@ -1,67 +1,42 @@
 ---
-import { site } from "@assets/scripts/site";
 import Footer from "@components/global/Footer.astro";
 import FooterBorder from "@components/global/FooterBorder.astro";
 import Trim from "@components/global/Trim.astro";
 import Heading from "@components/Heading.astro";
 import ContactForm from "@components/pages/contact/ContactForm.astro";
 import Section from "@components/Section.astro";
-import InlineText from "@components/sections/InlineText.astro";
 import Default from "@layouts/Default.astro";
+import TriangleAlert from "@lucide/astro/icons/triangle-alert";
 
 const title = "Contact our Winchester office";
 const description = "Contact Belgarum Property Management in Winchester. Call 0800 298 0069, email us, or request a management proposal for your block or estate.";
-
-const details = [
-  { label: "Phone", value: site.phone, href: site.phoneHref },
-  { label: "Email", value: site.email, href: `mailto:${site.email}` },
-  { label: "Solicitor enquiries", value: site.solicitorEmail, href: `mailto:${site.solicitorEmail}` },
-  { label: "Office", value: site.office },
-  { label: "Office hours", value: site.hours }
-];
 ---
 
 <Default title={title} description={description}>
   <Section>
     <div class="container-8c">
       <div class="flex flex-col gap-10 sm:gap-12 md:gap-14">
-        <div class="flex flex-col gap-4">
-          <Heading as="h1" class="text-h2 sm:text-h1 md:text-h0 text-balance">Contact us</Heading>
-          <p class="text-lg sm:text-xl">Call {site.phone}, email {site.email} or send us an enquiry below.</p>
+        <div class="flex items-center justify-center gap-5">
+          <div class="bg-theme-action h-0.5 grow rounded"></div>
+          <Heading as="h1" class="text-h2 sm:text-h1 md:text-h0">Get in touch</Heading>
+          <div class="bg-theme-action h-0.5 grow rounded"></div>
         </div>
-        <div class="flex flex-col gap-4">
-          <dl class="grid gap-x-8 gap-y-3 sm:grid-cols-[max-content_1fr]">
-            {
-              details.map(detail => (
-                <>
-                  <dt class="font-semibold">{detail.label}</dt>
-                  <dd>
-                    {detail.href ? (
-                      <a href={detail.href} class="link">
-                        {detail.value}
-                      </a>
-                    ) : (
-                      detail.value
-                    )}
-                  </dd>
-                </>
-              ))
-            }
-          </dl>
-          <p>We record calls for training.</p>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+          <div class="bg-theme-background-lowlight flex flex-col items-start gap-2 rounded-2xl p-8 text-sm">
+            <Heading as="h2" class="text-h4">If you live in a building we manage</Heading>
+            <p>Your property manager is your contact for questions about your building, your service charge or repairs. Use the form below, or call or email us.</p>
+          </div>
+          <div class="bg-theme-background-lowlight flex flex-col items-start gap-2 rounded-2xl p-8 text-sm">
+            <Heading as="h2" class="text-h4">If you're looking for a managing agent</Heading>
+            <p>Choose "New management for a building" in the form and tell us about the building. We'll reply with a management proposal that sets out what we would do for it.</p>
+          </div>
         </div>
-        <div class="flex flex-col gap-3">
-          <Heading as="h2" class="text-h4 lg:text-h3">If you live in a building we manage</Heading>
-          <p>Your property manager is your contact for questions about your building, your service charge or repairs. Use the form below, or call or email us.</p>
-          <InlineText text="To pay your service charge, go to [pay online](/pay-online)." />
-        </div>
-        <div class="flex flex-col gap-3">
-          <Heading as="h2" class="text-h4 lg:text-h3">If you're looking for a managing agent</Heading>
-          <p>Choose "New management for a building" in the form and tell us about the building. We'll reply with a management proposal that sets out what we would do for it.</p>
-        </div>
-        <p>This form isn't for emergencies. If there is a risk to life, call 999. If you smell gas, call the National Gas Emergency number on 0800 111 999.</p>
         <div class="flex flex-col gap-6">
-          <Heading as="h2" class="text-h4 lg:text-h3">Send us an enquiry</Heading>
+          <Heading as="h2" class="text-h4 lg:text-h3 border-b-theme-border border-b pb-2">Send us an enquiry</Heading>
+          <div role="note" class="border-negative-200 bg-negative-50 text-negative-800 flex items-start gap-4 rounded-xl border p-6">
+            <TriangleAlert class="text-negative mt-0.5 size-6 shrink-0" />
+            <p>This form isn't for emergencies. If there is a risk to life, call 999. If you smell gas, call the National Gas Emergency number on 0800 111 999.</p>
+          </div>
           <ContactForm />
         </div>
       </div>

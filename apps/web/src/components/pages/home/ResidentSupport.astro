@@ -2,29 +2,51 @@
 import { calls } from "@assets/scripts/calls-to-action";
 import { site } from "@assets/scripts/site";
 import Heading from "@components/Heading.astro";
+import ArrowRight from "@lucide/astro/icons/arrow-right";
+import CreditCard from "@lucide/astro/icons/credit-card";
+import FileText from "@lucide/astro/icons/file-text";
+import MessageSquare from "@lucide/astro/icons/message-square";
+import Phone from "@lucide/astro/icons/phone";
+import Scale from "@lucide/astro/icons/scale";
 
 const links = [
-  calls.pay,
-  calls.residents,
-  { label: "Order a leasehold sale pack", href: "/services/leasehold-sale-packs" },
-  { label: "Read our complaints procedure", href: "/complaints-procedure" }
+  { ...calls.pay, icon: CreditCard },
+  { ...calls.residents, icon: MessageSquare },
+  { label: "Order a leasehold sale pack", href: "/services/leasehold-sale-packs/", icon: FileText },
+  { label: "Read our complaints procedure", href: "/complaints-procedure/", icon: Scale }
 ];
 ---
 
-<div class="bg-theme-background-highlight flex flex-col gap-6 rounded-xl p-8 sm:p-10 lg:flex-row lg:items-start lg:justify-between lg:gap-20">
-  <div class="flex flex-col gap-3 lg:max-w-1/2">
-    <Heading as="h2" class="text-h4 sm:text-h3">Live in a building we manage?</Heading>
+<div class="bg-theme-background-lowlight grid gap-8 rounded-2xl p-6 sm:p-10 md:gap-10 lg:p-14 xl:grid-cols-[2fr_3fr] xl:items-end xl:gap-16">
+  <div class="flex flex-col gap-4">
+    <div class="flex flex-col">
+      <p class="subheading text-theme-action">For residents</p>
+      <Heading as="h2" class="text-h4 sm:text-h3">Live in a building we manage?</Heading>
+    </div>
     <p>Pay your service charge, contact your property manager or find what you need to sell your flat.</p>
-    <p class="text-sm">
-      <a class="link" href={site.phoneHref}>Call {site.phone}</a>. {site.hours}.
-    </p>
+    <div class="mt-2 flex items-center gap-4">
+      <div class="bg-theme-action/10 text-theme-action flex size-12 shrink-0 items-center justify-center rounded-lg">
+        <Phone class="size-6" aria-hidden="true" />
+      </div>
+      <div class="flex flex-col">
+        <a class="label link text-lg leading-snug" href={site.phoneHref}>{site.phone}</a>
+        <p class="text-sm">{site.hours}</p>
+      </div>
+    </div>
   </div>
-  <ul class="flex flex-col gap-3">
+  <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
     {
-      links.map(link => (
+      links.map(({ label, href, icon: Icon }) => (
         <li>
-          <a class="link label" href={link.href}>
-            {link.label}
+          <a
+            href={href}
+            class="group bg-theme-background-highlight focus-visible:ring-theme-brand flex h-full items-center gap-4 rounded-lg p-4 shadow-sm outline-hidden transition-all hover:-translate-y-0.5 hover:shadow-lg focus-visible:ring-2 sm:p-5"
+          >
+            <span class="bg-theme-brand/10 text-theme-brand flex size-10 shrink-0 items-center justify-center rounded-lg transition-colors">
+              <Icon class="size-5" aria-hidden="true" />
+            </span>
+            <span class="label group-hover:text-theme-action flex-1 text-sm leading-snug transition-colors sm:text-base">{label}</span>
+            <ArrowRight class="text-theme-action size-4 shrink-0 transition-transform" aria-hidden="true" />
           </a>
         </li>
       ))

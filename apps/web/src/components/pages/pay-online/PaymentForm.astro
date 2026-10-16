@@ -34,7 +34,6 @@ if (!import.meta.env.STRIPE_PAYMENT_URL) {
     </div>
     <div class="grid gap-1">
       <label for="prefilled_email">Email address</label>
-      <p id="prefilled_email_hint" class="text-theme-foreground-light text-sm">For your payment confirmation</p>
       <Input
         id="prefilled_email"
         aria-describedby="prefilled_email_hint"
@@ -44,12 +43,13 @@ if (!import.meta.env.STRIPE_PAYMENT_URL) {
         required
         data-error="Enter your email address, for example name@example.com"
       />
+      <p id="prefilled_email_hint" class="text-theme-foreground-light text-sm">Used for your payment confirmation</p>
     </div>
-    <div class="flex flex-col gap-3 sm:items-start">
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
       <Button label="Pay your service charge" type="submit" class="px-7 py-5 text-base" target="_blank">
         <ArrowRight slot="suffix" />
       </Button>
-      <div class="flex items-center gap-2 text-xs">
+      <div class="flex flex-col gap-0.5 text-xs">
         <p>Payments by Stripe</p>
         <svg aria-hidden="true" width="61" height="25" viewBox="0 0 61 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path

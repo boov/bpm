@@ -1,10 +1,14 @@
 ---
 import Heading from "@components/Heading.astro";
+import Timeline from "@components/pages/about/Timeline.astro";
 import SubHeading from "@components/SubHeading.astro";
 
 const paragraphs = [
-  "Belgarum Property Management manages blocks of flats and shared estates for resident management companies (RMCs), right to manage (RTM) companies, freeholders, private landlords and developers. We don't sell or let property.",
-  "We started as a family firm in 1989. Today we manage over 150 developments, from blocks of 4 flats to a 22-floor high rise, across Hampshire, Sussex, Dorset, London and the Home Counties.",
+  "A family firm established in 1989. Block and estate management is all we do.",
+  "No estate agency, no lettings. Belgarum Property Management looks after blocks of flats and shared estates for resident management companies (RMCs), right to manage (RTM) companies, freeholders, private landlords and developers.",
+  "From the start, we've treated the people who own the homes we look after as our customers. The day-to-day work lands with us: maintenance, tenant queries, even vandalism.",
+  "Today we manage over 150 developments of every size, including blocks of 4 flats and a 22-floor high-rise, across Hampshire, Sussex, Dorset, London and the Home Counties. Some clients own several hundred homes. Others have one small development.",
+  "We work closely with specialists in fire risk, asbestos, lifts, health and safety and insurance broking. Our own Code of Conduct sets time limits for replying to you.",
   "Our office is in Winchester, close to the M3. Every client has a dedicated property manager, available Monday to Thursday, 9am to 5pm, and Friday, 9am to 4.30pm."
 ];
 ---
@@ -15,11 +19,12 @@ const paragraphs = [
       <SubHeading class="text-theme-action">About us</SubHeading>
       <div class="bg-theme-action h-0.5 w-20 rounded sm:w-24"></div>
     </div>
-    <Heading as="h1" class="text-h2 sm:text-h1 xl:text-h0">About Belgarum Property Management</Heading>
+    <Heading as="h1" class="text-h2 sm:text-h1">About Belgarum Property Management</Heading>
   </div>
-  <div class="flex flex-1 flex-col gap-5 lg:pt-12">
-    <p class="text-lg sm:text-xl">A family firm established in 1989. Block and estate management is all we do.</p>
-    <Heading as="h2" class="text-h4 lg:text-h3">Block and estate management from Winchester</Heading>
-    {paragraphs.map(paragraph => <p set:text={paragraph} />)}
+  <div class="flex flex-1 flex-col gap-8 lg:pt-12">
+    <div class="flex flex-col gap-4">
+      {paragraphs.map((paragraph, index) => <p class:list={{ "text-lg sm:text-xl": index === 0 }} set:text={paragraph} />)}
+    </div>
+    <Timeline />
   </div>
 </div>

@@ -1,17 +1,24 @@
 ---
 import Heading from "@components/Heading.astro";
+import SubHeading from "@components/SubHeading.astro";
+
+const paragraphs = [
+  "A family firm established in 1989, Belgarum Property Management looks after blocks of flats and shared estates. Block and estate management is all we do: no estate agency, no lettings.",
+  "Today we manage over 150 developments of every size, including blocks of 4 flats and a 22-floor high-rise, for resident management companies (RMCs), right to manage (RTM) companies, freeholders, private landlords and developers. Our office is in Winchester, close to the M3, and we cover Hampshire, Sussex, Dorset, London and the Home Counties.",
+  "You get a dedicated property manager, who inspects the building regularly and is your main contact. Service charge money for each block or estate is held in its own designated trust account."
+];
 ---
 
 <div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-20 xl:gap-28">
-  <Heading as="h2" class="text-h3 sm:text-h2 lg:max-w-1/3 lg:min-w-85">Block management from Winchester</Heading>
-  <div class="flex flex-1 flex-col gap-5">
-    <p class="sm:text-lg">
-      Belgarum Property Management looks after blocks of flats and shared estates across Hampshire, Sussex, Dorset, London and the Home Counties. Our office is in Winchester, close
-      to the M3.
-    </p>
-    <p>
-      Your property manager inspects the building regularly and is your main contact. Service charge money for each block or estate is held in its own designated trust account.
-      Block and estate management is all we do.
-    </p>
+  <div class="flex shrink-0 flex-col gap-2 md:gap-3 lg:max-w-1/3 lg:min-w-85">
+    <div class="flex items-center gap-5">
+      <SubHeading class="text-theme-action">About us</SubHeading>
+      <div class="bg-theme-action h-0.5 w-20 rounded sm:w-24"></div>
+    </div>
+    <Heading as="h2" class="text-h3 sm:text-h2">Where Working Together Matters</Heading>
+  </div>
+
+  <div class="flex flex-1 flex-col gap-5 text-lg">
+    {paragraphs.map((paragraph, index) => <p class:list={{ "text-xl": index === 0 }} set:text={paragraph} />)}
   </div>
 </div>

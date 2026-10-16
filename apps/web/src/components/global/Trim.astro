@@ -1,18 +1,23 @@
 ---
 import { site } from "@assets/scripts/site";
 const links = [
-  { label: "Pay online", href: "/pay-online" },
-  { label: "Contact", href: "/contact" },
-  { label: "Complaints procedure", href: "/complaints-procedure" },
-  { label: "Privacy policy", href: "/privacy-policy" },
-  { label: "Cookie policy", href: "/cookie-policy" }
+  { label: "Pay online", href: "/pay-online/" },
+  { label: "Contact", href: "/contact/" },
+  { label: "Complaints procedure", href: "/complaints-procedure/" },
+  { label: "Privacy policy", href: "/privacy-policy/" },
+  { label: "Cookie policy", href: "/cookie-policy/" }
 ];
+
+const hasCookieConsent = Boolean(import.meta.env.GOOGLE_TAG_MANAGER_CONTAINER);
 ---
 
 <div id="p_trim" class="py-8 sm:py-10 md:py-12">
   <div class="container">
     <div class="flex flex-col gap-1 text-xs md:flex-row md:items-center md:justify-between">
-      <p>&copy; {new Date().getFullYear()} {site.legalName}. Registered in England and Wales, company number {site.companyNumber}. Registered office: {site.registeredOffice}.</p>
+      <p class="max-w-[90ch] text-pretty">
+        &copy; {new Date().getFullYear()}
+        {site.legalName}. Registered in England and Wales, company number {site.companyNumber}. Registered office: {site.registeredOffice}.
+      </p>
       <ul class="flex flex-wrap items-center gap-x-3 gap-y-1 md:justify-center lg:gap-x-4">
         {
           links.map(link => (
@@ -22,6 +27,15 @@ const links = [
               </a>
             </li>
           ))
+        }
+        {
+          hasCookieConsent && (
+            <li>
+              <button type="button" data-cookie-settings class="text-theme-foreground hover:text-theme-action cursor-pointer whitespace-nowrap">
+                Cookie settings
+              </button>
+            </li>
+          )
         }
       </ul>
     </div>

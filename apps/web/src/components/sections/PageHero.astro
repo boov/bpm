@@ -1,10 +1,7 @@
 ---
 import logoMark from "@assets/images/logo-mark.svg?raw";
-import { type CallKey, calls } from "@assets/scripts/calls-to-action";
-import Button from "@components/Button.astro";
 import TrustStrip from "@components/global/TrustStrip.astro";
 import Heading from "@components/Heading.astro";
-import ArrowRight from "@lucide/astro/icons/arrow-right";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
@@ -12,15 +9,12 @@ interface Props {
   eyebrow: string;
   heading: string;
   lead: string;
-  call: CallKey;
   note?: string;
-  trustLine?: boolean;
   image?: ImageMetadata;
   imageAlt?: string;
 }
 
-const { eyebrow, heading, lead, call, note, trustLine = false, image, imageAlt = "" } = Astro.props;
-const { label, href } = calls[call];
+const { eyebrow, heading, lead, note, image, imageAlt = "" } = Astro.props;
 ---
 
 <div class="container">
@@ -32,26 +26,25 @@ const { label, href } = calls[call];
       </div>
       <Heading as="h1" class="text-h2 sm:text-h1 md:text-h0">{heading}</Heading>
     </div>
-    <div class="flex flex-col items-start gap-5 lg:max-w-[50ch] lg:flex-1">
+    <div class="flex flex-col items-start gap-5 lg:max-w-[60ch] lg:flex-1">
       <p class="text-lg sm:text-balance xl:text-xl">{lead}</p>
-      <Button label={label} href={href}>
-        <ArrowRight slot="suffix" />
-      </Button>
-      {note && <p class="text-sm">{note}</p>}
+      {note && <p class="text-sm" set:text={note} />}
     </div>
   </div>
-  {trustLine && <TrustStrip variant="compact" class="mt-8 md:mt-10" />}
 </div>
 {
   image && (
-    <div class="container-14c">
-      <div class="theme-dark scoop relative overflow-hidden rounded-xl xl:rounded-3xl">
-        <Image src={image} alt={imageAlt} width={1536} height={658} class="aspect-ultrawide w-full object-cover" />
-        <div
-          class="text-theme-foreground-bold pointer-events-none absolute right-0 bottom-0 z-20 hidden w-90 translate-1/6 -scale-x-100 opacity-40 lg:block xl:w-120"
-          aria-hidden="true"
-          set:html={logoMark}
-        />
+    <div class="container-13c">
+      <div class="scoop relative z-20 overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl">
+        <div class="theme-dark relative overflow-hidden">
+          <Image src={image} alt={imageAlt} width={1536} height={658} densities={[1, 2]} class="aspect-ultrawide w-full object-cover" />
+          <div
+            class="text-theme-foreground-bold pointer-events-none absolute right-0 bottom-0 z-20 hidden w-90 translate-1/6 -scale-x-100 opacity-40 lg:block xl:w-120"
+            aria-hidden="true"
+            set:html={logoMark}
+          />
+        </div>
+        <TrustStrip />
       </div>
     </div>
   )

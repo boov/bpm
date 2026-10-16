@@ -25,7 +25,7 @@ const faqSchema = toJsonLd(faqPageSchema(questions.map(q => ({ question: q.data.
       <div class="flex flex-col gap-12 md:gap-16">
         <div class="flex flex-col gap-4">
           <Heading as="h1" class="text-h3 sm:text-h2 md:text-h1" set:text="Frequently asked questions" />
-          <p class="text-lg">{description}</p>
+          <p class="text-lg text-balance">{description}</p>
         </div>
         {questionGroups.map(([groupName, questions]) => <QuestionGroup title={groupName} questions={questions} />)}
       </div>

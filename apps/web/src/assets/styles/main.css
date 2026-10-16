@@ -162,7 +162,7 @@
 
   --color-theme-background: hsl(16deg 30% 95%);
   --color-theme-background-highlight: hsl(16deg 30% 100%);
-  --color-theme-background-lowlight: hsl(16deg 30% 93%);
+  --color-theme-background-lowlight: hsl(16deg 30% 92%);
 
   --color-theme-border: hsl(0deg 0% 0% / 0.1);
   --color-theme-border-bold: hsl(0deg 0% 0% / 0.2);
@@ -200,16 +200,26 @@
 }
 
 @utility button {
-  @apply font-copy inline-flex cursor-pointer appearance-none items-center justify-between gap-2.5 rounded-lg leading-tight font-bold whitespace-nowrap transition focus:outline-hidden disabled:cursor-not-allowed disabled:opacity-50;
+  @apply font-copy inline-flex cursor-pointer appearance-none items-center justify-between gap-2.5 rounded-lg leading-tight font-bold transition focus:outline-hidden disabled:cursor-not-allowed disabled:opacity-50;
 
   span {
-    @apply font-copy;
+    @apply font-copy text-left;
     font-size: inherit;
   }
 
   svg {
-    @apply size-[1.2em] stroke-[2.5];
+    @apply size-[1.2em] shrink-0 stroke-[2.5];
   }
+}
+
+@utility grid-cols-fit-* {
+  grid-template-columns: repeat(auto-fit, minmax(min(calc(--value(integer) * 1rem), 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(--value([length]), 100%), 1fr));
+}
+
+@utility grid-cols-fill-* {
+  grid-template-columns: repeat(auto-fill, minmax(min(calc(--value(integer) * 1rem), 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(--value([length]), 100%), 1fr));
 }
 
 @utility link {

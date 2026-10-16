@@ -1,6 +1,7 @@
 ---
 import Heading from "@components/Heading.astro";
 import InlineText from "@components/sections/InlineText.astro";
+import Check from "@lucide/astro/icons/check";
 
 interface Props {
   heading: string;
@@ -12,15 +13,19 @@ const { heading, items } = Astro.props;
 
 <div class="container">
   <div class="flex flex-col gap-8">
-    <Heading as="h2" class="text-h4 sm:text-h3" set:text={heading} />
-    <ul class="grid grid-cols-1 gap-x-10 gap-y-4 md:grid-cols-2">
+    <Heading as="h2" class="text-h4 sm:text-h3 border-b-theme-border border-b pb-2" set:text={heading} />
+    <ul class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
       {
-        items.map(item => (
-          <li class="flex items-start gap-4">
-            <span class="bg-theme-action mt-2.5 size-1.5 shrink-0 rounded-full" aria-hidden="true" />
-            <InlineText as="span" text={item} />
-          </li>
-        ))
+        items.map(item => {
+          return (
+            <li class="border-theme-border-light flex items-start gap-4">
+              <span class="bg-theme-brand/15 text-theme-brand-lowlight flex size-7 shrink-0 items-center justify-center rounded-full" aria-hidden="true">
+                <Check class="size-3 stroke-3" />
+              </span>
+              <InlineText as="span" text={item} class="text-theme-foreground-bold font-bold" />
+            </li>
+          );
+        })
       }
     </ul>
   </div>

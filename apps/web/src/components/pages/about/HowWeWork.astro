@@ -1,5 +1,6 @@
 ---
 import Heading from "@components/Heading.astro";
+import Check from "@lucide/astro/icons/check";
 
 const items = [
   { title: "A dedicated property manager", text: "One named contact who knows your building and inspects it regularly." },
@@ -10,16 +11,18 @@ const items = [
 ];
 ---
 
-<div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-20 xl:gap-28">
-  <div class="flex shrink-0 flex-col gap-2 md:gap-3 lg:w-80 xl:w-96">
-    <Heading as="h2" class="text-h3 lg:text-h2">How we work</Heading>
+<div class="flex flex-col gap-10 lg:gap-12">
+  <div class="max-w-12c mx-auto flex w-full items-center justify-center gap-5">
+    <Heading as="h2" class="text-h3 lg:text-h2 whitespace-nowrap">How we work</Heading>
+    <div class="bg-theme-border h-[2px] w-full rounded"></div>
   </div>
-  <div class="flex flex-1 flex-col gap-8">
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
     {
       items.map(item => (
-        <div class="flex flex-col gap-2.5">
+        <div class="bg-theme-background-highlight flex flex-col gap-2 rounded-xl p-6 sm:p-8">
+          <Check class="text-theme-brand mb-2 size-6 stroke-3" aria-hidden="true" />
           <Heading as="h3" class="text-h5" set:text={item.title} />
-          <p class="md:text-lg" set:text={item.text} />
+          <p set:text={item.text} />
         </div>
       ))
     }

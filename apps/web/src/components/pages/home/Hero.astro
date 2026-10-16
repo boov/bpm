@@ -1,13 +1,11 @@
 ---
 import heroBackground from "@assets/images/hero-background.jpeg";
 import logoMark from "@assets/images/logo-mark.svg?raw";
-import { calls } from "@assets/scripts/calls-to-action";
-import { site } from "@assets/scripts/site";
 import Button from "@components/Button.astro";
 import TrustStrip from "@components/global/TrustStrip.astro";
 import Heading from "@components/Heading.astro";
 import ArrowRight from "@lucide/astro/icons/arrow-right";
-import CreditCard from "@lucide/astro/icons/credit-card";
+import Mail from "@lucide/astro/icons/mail";
 import { Image } from "astro:assets";
 
 interface Props {
@@ -18,47 +16,48 @@ const { description } = Astro.props;
 ---
 
 <div class="relative">
-  <div class="container-14c px-[3vw]">
-    <div
-      id="p_hero"
-      class="scoop theme-dark relative z-20 flex items-center overflow-hidden rounded-xl p-10 sm:rounded-2xl sm:p-12 md:rounded-3xl md:p-14 lg:p-20 xl:p-24 2xl:p-28"
-    >
-      <div class="relative z-30">
-        <div class="flex flex-col gap-10 sm:gap-12">
-          <div class="max-w-8c flex flex-col gap-4">
-            <p class="subheading text-theme-action">{site.strapline}</p>
-            <Heading as="h1" class="text-h2 sm:text-h1">One property manager who knows your building</Heading>
-            <p class="text-theme-foreground max-w-2xl text-lg sm:text-xl md:text-2xl">{description}</p>
+  <div class="container-14c theme-dark px-[3vw]">
+    <div class="scoop relative z-20 overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl">
+      <div id="p_hero" class="relative flex items-center overflow-hidden p-10 sm:p-12 md:p-14 lg:p-20 xl:p-24 2xl:p-28">
+        <div class="relative z-30">
+          <div class="flex flex-col gap-10 sm:gap-12">
+            <div class="max-w-8c flex flex-col gap-4">
+              <Heading as="h1" class="text-h2 sm:text-h1 md:text-h0">
+                <span class="subheading text-theme-action font-copy mb-4 block">Block management in Winchester</span>
+                One property manager who knows your building
+              </Heading>
+              <p class="text-theme-foreground max-w-2xl text-lg sm:text-xl md:text-2xl">{description}</p>
+            </div>
+            <div class="flex flex-row flex-wrap gap-3 sm:gap-5">
+              <Button label="See how we can help you" href="/services/" class="grow text-base sm:grow-0">
+                <ArrowRight slot="suffix" />
+              </Button>
+              <Button label="Get in touch" href="/contact/" variant="outline" palette="bold" class="grow text-base sm:grow-0">
+                <Mail slot="suffix" />
+              </Button>
+            </div>
           </div>
-          <div class="flex flex-row flex-wrap gap-3 sm:gap-5">
-            <Button label={calls.proposal.label} href={calls.proposal.href} class="grow text-base sm:grow-0">
-              <ArrowRight slot="suffix" />
-            </Button>
-            <Button label={calls.pay.label} href={calls.pay.href} variant="outline" palette="bold" class="grow text-base sm:grow-0">
-              <CreditCard slot="suffix" />
-            </Button>
-          </div>
-          <TrustStrip variant="compact" />
+        </div>
+        <div
+          class="text-theme-foreground lg:text-theme-brand pointer-events-none absolute right-0 bottom-0 z-20 w-90 translate-1/6 -scale-x-100 opacity-20 lg:opacity-100 xl:w-120"
+          aria-hidden="true"
+          set:html={logoMark}
+        />
+        <div class="bg-theme-background-lowlight pointer-events-none absolute inset-0 z-10" aria-hidden="true">
+          <Image
+            src={heroBackground}
+            alt=""
+            width={2000}
+            height={850}
+            widths={[640, 1024, 1600, 2000]}
+            sizes="(min-width: 1280px) 1600px, (min-width: 640px) 100vw, 100vw"
+            loading="eager"
+            fetchpriority="high"
+            class="absolute inset-0 size-full object-cover opacity-65 mix-blend-overlay"
+          />
         </div>
       </div>
-      <div
-        class="text-theme-foreground lg:text-theme-brand pointer-events-none absolute right-0 bottom-0 z-20 w-90 translate-1/6 -scale-x-100 opacity-20 lg:opacity-100 xl:w-120"
-        aria-hidden="true"
-        set:html={logoMark}
-      />
-      <div class="bg-theme-background-lowlight pointer-events-none absolute inset-0 z-10" aria-hidden="true">
-        <Image
-          src={heroBackground}
-          alt=""
-          width={2000}
-          height={850}
-          widths={[640, 1024, 1600, 2000]}
-          sizes="(min-width: 1280px) 1600px, (min-width: 640px) 100vw, 100vw"
-          loading="eager"
-          fetchpriority="high"
-          class="absolute inset-0 size-full object-cover opacity-65 mix-blend-overlay"
-        />
-      </div>
+      <TrustStrip />
     </div>
   </div>
   <div class="bg-theme-background theme-light absolute top-4/5 right-0 bottom-0 left-0 z-10"></div>

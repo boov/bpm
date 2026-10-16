@@ -1,6 +1,7 @@
 ---
 import twMerge from "@bpm/custom-merge";
 import Heading from "@components/Heading.astro";
+import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -10,17 +11,22 @@ interface Props {
 }
 
 const { service, label = service.data.title, featured = false } = Astro.props;
-const href = `/services/${service.id}`;
+const href = `/services/${service.id}/`;
 ---
 
 <article
   class={twMerge(
-    "bg-theme-background-highlight flex flex-col gap-3 rounded-xl p-6 sm:py-7 md:p-8",
-    featured && "theme-dark bg-theme-background-lowlight sm:col-span-2 lg:col-span-3"
+    "group bg-theme-background-highlight focus-within:ring-theme-brand relative flex flex-col overflow-hidden rounded-xl shadow-xs transition-all focus-within:ring-2 hover:-translate-y-1 hover:shadow-xl",
+    featured && "sm:col-span-2 md:flex-row lg:col-span-2"
   )}
 >
-  <Heading as="h3" class={featured ? "text-h4 sm:text-h3" : "text-h5 sm:text-h4"}>
-    <a href={href} class="text-theme-foreground-bold hover:text-theme-action">{label}</a>
-  </Heading>
-  <p class="text-sm">{service.data.description}</p>
+  <div class={twMerge("bg-theme-background-lowlight aspect-video w-full overflow-hidden", featured && "md:aspect-auto md:w-1/2")}>
+    <Image src={service.data.image} alt="" width={featured ? 800 : 400} height={featured ? 450 : 225} class="size-full object-cover" />
+  </div>
+  <div class={twMerge("flex flex-1 flex-col gap-3 p-6 sm:py-7 md:p-8", featured && "md:p-10 lg:p-12")}>
+    <Heading as="h3" class={featured ? "text-h4 sm:text-h3" : "text-h5 sm:text-h4"}>
+      <a href={href} class="text-theme-foreground-bold group-hover:text-theme-action outline-hidden transition-colors after:absolute after:inset-0">{label}</a>
+    </Heading>
+    <p class="text-sm">{service.data.description}</p>
+  </div>
 </article>

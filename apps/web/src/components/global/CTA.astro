@@ -38,16 +38,15 @@ const call = calls[variant];
         <div class="relative z-20 flex flex-col gap-6">
           <div class="flex flex-col gap-4">
             <Heading as="h2" class="text-h3 sm:text-h2">{heading}</Heading>
-            <p class="max-w-[60ch] text-lg">{text}</p>
+            <p class="max-w-[70ch] text-lg text-balance">{text}</p>
           </div>
           <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-8">
-            <Button label={call.label} href={call.href}>
+            <Button label={call.label} href={call.href} class="text-base">
               <ArrowRight slot="suffix" />
             </Button>
             <div class="flex flex-col whitespace-nowrap">
-              <p class="label text-sm">Or call us</p>
-              <a class="label link leading-snug" href={site.phoneHref}>Call {site.phone}</a>
-              <p class="text-sm">{site.hours}</p>
+              <p class="label text-sm">Or give us a call</p>
+              <a class="label link text-lg leading-snug" href={site.phoneHref}>{site.phone}</a>
             </div>
           </div>
         </div>

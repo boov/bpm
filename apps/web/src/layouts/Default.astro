@@ -5,18 +5,15 @@ import CTA from "@components/global/CTA.astro";
 import Footer from "@components/global/Footer.astro";
 import FooterBorder from "@components/global/FooterBorder.astro";
 import Trim from "@components/global/Trim.astro";
-import TrustStrip from "@components/global/TrustStrip.astro";
-import Section from "@components/Section.astro";
 import Base, { type Props as BaseProps } from "@layouts/Base.astro";
 
 interface Props extends BaseProps {
   cta?: BandVariant | false;
   ctaHeading?: string;
   ctaText?: string;
-  trustStrip?: boolean;
 }
 
-const { title, description, cta = "proposal", ctaHeading, ctaText, trustStrip = false, ...props } = Astro.props;
+const { title, description, cta = "proposal", ctaHeading, ctaText, ...props } = Astro.props;
 ---
 
 <Base title={title} description={description} {...props}>
@@ -29,15 +26,6 @@ const { title, description, cta = "proposal", ctaHeading, ctaText, trustStrip = 
     </slot>
     <main id="p_main-group" class="my-auto">
       <slot name="default" />
-      {
-        trustStrip && (
-          <Section class="pt-0 sm:pt-0 md:pt-0 lg:pt-0">
-            <div class="container">
-              <TrustStrip />
-            </div>
-          </Section>
-        )
-      }
     </main>
     <slot name="footer">
       <footer id="p_footer-group" class="bg-theme-background theme-dark">

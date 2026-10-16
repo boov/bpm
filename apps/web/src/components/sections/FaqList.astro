@@ -11,7 +11,11 @@ const { faqs } = Astro.props;
 
 <div class="container-8c">
   <div class="flex flex-col gap-8">
-    <Heading as="h2" class="text-h4 sm:text-h3">Common questions</Heading>
+    <div class="flex items-center justify-center gap-5">
+      <div class="bg-theme-border h-[2px] w-full rounded sm:max-w-24"></div>
+      <Heading as="h2" class="text-h4 sm:text-h3 md:text-h2">Common questions</Heading>
+      <div class="bg-theme-border h-[2px] w-full rounded sm:max-w-24"></div>
+    </div>
     <div class="flex flex-col gap-4">
       {faqs.map(faq => <Question title={faq.question} answer={faq.answer} />)}
     </div>

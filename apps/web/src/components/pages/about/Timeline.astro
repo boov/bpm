@@ -1,26 +1,28 @@
 ---
+import Heading from "@components/Heading.astro";
+
 const milestones = [
   { title: "1989", text: "The business starts as a family firm" },
   { title: "2011", text: "Belgarum Property Management Limited is incorporated" },
-  { title: "Today", text: "Over 150 developments managed, from 4 flats to a 22-floor high rise" }
+  { title: "Today", text: "Over 150 developments managed, from 4 flats to a 22-floor high-rise" }
 ];
 ---
 
-<div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-20 xl:gap-28">
-  <div class="flex flex-1 flex-col gap-8">
+<div class="flex flex-col gap-8">
+  <Heading as="h2" class="text-h4 border-b-theme-border border-b pb-2">Our history</Heading>
+  <div class="flex flex-1 flex-col">
     {
       milestones.map((milestone, index) => (
         <div class="flex gap-6 sm:gap-8">
-          <div class="flex flex-col items-center gap-2.5">
-            <div class="flex items-center py-3">
+          <div class="flex flex-col items-center">
+            <div class="flex items-center py-2.5">
               <div class="bg-theme-brand size-2 rounded-full" />
             </div>
-            {index < milestones.length - 1 && <div class="bg-theme-border w-0.5 flex-1 rounded-full" />}
+            {index < milestones.length - 1 && <div class="bg-theme-border -my-2 w-0.5 flex-1" />}
           </div>
-          <div class="flex flex-1 flex-col gap-2.5 pb-4">
-            <p class="text-theme-foreground-bold text-xl font-bold" set:text={milestone.title} />
-            <p class="md:text-lg" set:text={milestone.text} />
-          </div>
+          <p class="pb-4 md:text-lg">
+            <strong class="text-theme-foreground-bold font-bold">{milestone.title}:</strong> {milestone.text}
+          </p>
         </div>
       ))
     }

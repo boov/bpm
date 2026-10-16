@@ -4,7 +4,6 @@ import Button from "@components/Button.astro";
 import Trim from "@components/global/Trim.astro";
 import Heading from "@components/Heading.astro";
 import Section from "@components/Section.astro";
-import InlineText from "@components/sections/InlineText.astro";
 import Default from "@layouts/Default.astro";
 import CircleX from "@lucide/astro/icons/circle-x";
 import Phone from "@lucide/astro/icons/phone";
@@ -21,12 +20,12 @@ const description = "Your payment wasn't completed. You can try again, or contac
         <CircleX class="text-negative size-16" />
         <Heading as="h1" class="text-h2" set:text={title} />
         <p class="text-lg">Your payment wasn't completed. You can try again, or use a different card.</p>
-        <InlineText text={`If money has left your account, contact your property manager on [${site.phone}](${site.phoneHref}) before you try again.`} />
+        <p>If money has left your account, contact your property manager on <a href={site.phoneHref} class="link">{site.phone}</a> before you try again.</p>
         <div class="flex flex-col gap-4 sm:flex-row">
-          <Button label="Try again" href="/pay-online" variant="solid">
+          <Button label="Try again" href="/pay-online/" variant="solid">
             <RefreshCw slot="suffix" />
           </Button>
-          <Button label="Contact your property manager" href="/contact" variant="outline">
+          <Button label="Contact your property manager" href="/contact/" variant="outline">
             <Phone slot="suffix" />
           </Button>
         </div>

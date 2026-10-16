@@ -31,12 +31,12 @@ import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
   <textarea name="enquiry_text"></textarea>
 </form>
 
-<form action="/contact/submitting" netlify netlify-honeypot="bot-field" method="POST" name="contact_form" x-data="contactForm()">
+<form action="/contact/submitting/" netlify netlify-honeypot="bot-field" method="POST" name="contact_form" x-data="contactForm()">
   <input type="hidden" name="form-name" value="contact_form" />
   <p class="hidden">
     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
   </p>
-  <div class="flex flex-col gap-6 md:gap-8">
+  <div class="flex flex-col gap-6">
     <div class="grid gap-1">
       <label for="name">Your name</label>
       <Input id="name" minlength="2" data-error="Enter your name" required />
@@ -53,7 +53,7 @@ import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
     </div>
     <div class="grid gap-1">
       <label for="enquiry_type">What is it about?</label>
-      <Select id="enquiry_type" x-model="enquiryType" options={[{ value: "", label: "Select" }, ...enquiryTypes]} data-error="Select what your enquiry is about" required />
+      <Select id="enquiry_type" x-model="enquiryType" options={[...enquiryTypes]} data-error="Select what your enquiry is about" required />
     </div>
     <template x-if="needsAddress">
       <div class="grid gap-1">
@@ -70,7 +70,7 @@ import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
             <Select
               id="client_type"
               options={[
-                { value: "", label: "Select" },
+                { value: "", label: "‒" },
                 { value: "rmc-director", label: "An RMC director" },
                 { value: "rtm-director", label: "An RTM director" },
                 { value: "freeholder", label: "A freeholder" },
@@ -85,17 +85,15 @@ import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
             <Input id="unit_count" type="number" min="1" inputmode="numeric" placeholder="For example, 24" required />
           </div>
         </div>
-        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          <div class="grid gap-1">
-            <label for="current_agent">Current managing agent <span class="text-theme-foreground-light font-copy ml-2 text-xs font-normal">optional</span></label>
-            <Input id="current_agent" />
-          </div>
-          <div class="grid gap-1">
-            <label for="agreement_end"
-              >When does your current management agreement end? <span class="text-theme-foreground-light font-copy ml-2 text-xs font-normal">optional</span></label
-            >
-            <Input id="agreement_end" />
-          </div>
+        <div class="grid gap-1">
+          <label for="current_agent">Current managing agent <span class="text-theme-foreground-light font-copy ml-2 text-xs font-normal">optional</span></label>
+          <Input id="current_agent" />
+        </div>
+        <div class="grid gap-1">
+          <label for="agreement_end"
+            >When does your current management agreement end? <span class="text-theme-foreground-light font-copy ml-2 text-xs font-normal">optional</span></label
+          >
+          <Input id="agreement_end" />
         </div>
       </div>
     </template>
@@ -116,7 +114,7 @@ import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
             <Select
               id="development_stage"
               options={[
-                { value: "", label: "Select" },
+                { value: "", label: "‒" },
                 { value: "planning", label: "Planning" },
                 { value: "under-construction", label: "Under construction" },
                 { value: "selling", label: "Selling" }
@@ -135,7 +133,7 @@ import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
           <Select
             id="repair_location"
             options={[
-              { value: "", label: "Select" },
+              { value: "", label: "‒" },
               { value: "communal-area", label: "Communal area" },
               { value: "roof-or-outside-of-the-building", label: "Roof or outside of the building" },
               { value: "inside-my-flat", label: "Inside my flat" },
@@ -145,13 +143,12 @@ import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
             required
           />
         </div>
-        <p class="text-sm">This form isn't for emergencies. If there is a risk to life, call 999.</p>
         <div class="grid gap-1">
           <label for="repair_urgency">How urgent is it?</label>
           <Select
             id="repair_urgency"
             options={[
-              { value: "", label: "Select" },
+              { value: "", label: "‒" },
               { value: "urgent-it-is-causing-damage-or-a-safety-risk", label: "Urgent: it is causing damage or a safety risk" },
               { value: "not-urgent", label: "Not urgent" }
             ]}
@@ -169,7 +166,7 @@ import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
             <Select
               id="seller_role"
               options={[
-                { value: "", label: "Select" },
+                { value: "", label: "‒" },
                 { value: "the-seller", label: "The seller" },
                 { value: "the-sellers-solicitor", label: "The seller's solicitor" },
                 { value: "the-buyers-solicitor", label: "The buyer's solicitor" }
@@ -182,12 +179,9 @@ import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
             <Input id="solicitor_details" placeholder="Name and firm" />
           </div>
         </div>
+        {/* A literal <a> inside <template> makes the Astro compiler leak the link past </template> */}
         <InlineText text={`Solicitors can also email [${site.solicitorEmail}](mailto:${site.solicitorEmail}).`} class="text-sm" />
       </div>
-    </template>
-
-    <template x-if="enquiryType === 'complaint'">
-      <InlineText text="Tell us what happened, when, and what you would like us to do. Read our [complaints procedure](/complaints-procedure)." class="text-sm" />
     </template>
 
     <div class="grid gap-1">
@@ -200,9 +194,11 @@ import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
         required
       />
     </div>
-    <InlineText text="We use your details to reply to your enquiry. Read our [privacy policy](/privacy-policy)." class="text-sm" />
-    <Button label="Send your enquiry" type="submit" class="px-7 py-5 text-base sm:self-start">
-      <CircleCheckBig slot="suffix" />
-    </Button>
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
+      <Button label="Send your enquiry" type="submit" class="shrink-0 px-7 py-5 text-base">
+        <CircleCheckBig slot="suffix" />
+      </Button>
+      <p class="text-theme-foreground-light text-sm">We use your details to reply to your enquiry. Read our <a href="/privacy-policy/" class="link">privacy policy</a>.</p>
+    </div>
   </div>
 </form>

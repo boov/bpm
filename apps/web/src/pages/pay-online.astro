@@ -4,7 +4,6 @@ import Trim from "@components/global/Trim.astro";
 import Heading from "@components/Heading.astro";
 import PaymentForm from "@components/pages/pay-online/PaymentForm.astro";
 import Section from "@components/Section.astro";
-import InlineText from "@components/sections/InlineText.astro";
 import Default from "@layouts/Default.astro";
 
 const title = "Pay your service charge";
@@ -21,22 +20,21 @@ const steps = [
   <Section>
     <div class="container-6c">
       <div class="flex flex-col gap-10 sm:gap-12 md:gap-14 lg:gap-16">
-        <div class="flex flex-col gap-8">
-          <Heading as="h1" class="text-h2 sm:text-h1 text-balance">{title}</Heading>
-          <p>Pay online by debit or credit card. Stripe takes your payment securely.</p>
-          <div class="flex flex-col gap-4">
-            <Heading as="h2" class="text-h4">How to pay</Heading>
-            <ol class="flex list-decimal flex-col gap-2 pl-6">
-              {steps.map(step => <li>{step}</li>)}
-            </ol>
-          </div>
+        <div class="flex flex-col gap-6">
+          <Heading as="h1" class="text-h2 sm:text-h1">{title}</Heading>
+          <p class="text-lg">Pay online by debit or credit card. Stripe takes your payment securely.</p>
+          <ol class="flex list-decimal flex-col gap-1 pl-6 text-sm">
+            {steps.map(step => <li>{step}</li>)}
+          </ol>
         </div>
         <PaymentForm />
-        <div class="flex flex-col gap-4">
-          <Heading as="h2" class="text-h4">Questions about your demand?</Heading>
-          <InlineText
-            text={`If you're not sure how much to pay, or you think your demand is wrong, contact your property manager before you pay. Call [${site.phone}](${site.phoneHref}) or email [${site.email}](mailto:${site.email}).`}
-          />
+        <div class="bg-theme-background-lowlight flex flex-col items-start gap-2 rounded-2xl p-8 text-sm">
+          <Heading as="h2" class="text-h5">Questions about your service charge?</Heading>
+          <p>
+            If you're not sure how much to pay, or you think your demand is wrong, contact your property manager before you pay. Call <a href={site.phoneHref} class="link"
+              >{site.phone}</a
+            > or email <a href={`mailto:${site.email}`} class="link">{site.email}</a>.
+          </p>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 ---
 import { site } from "@assets/scripts/site";
 import Heading from "@components/Heading.astro";
+import SocialLinks from "@components/SocialLinks.astro";
 import { getAudiences, getServices } from "@helpers";
 
 const [services, audiences] = await Promise.all([getServices(), getAudiences()]);
@@ -17,27 +18,25 @@ const bulletClass = "before:bg-theme-brand flex items-center gap-2 before:block 
           <Heading as="h2" class="text-h5">{site.brand}</Heading>
           <p class="md:text-balance">
             Block and estate management since 1989. From our Winchester office, we look after blocks of flats and shared estates across Hampshire, Sussex, Dorset, London and the
-            Home Counties.
+            Home Counties. We are a Full Member of The Property Institute and a Member of The Property Ombudsman.
           </p>
+          <SocialLinks />
         </div>
-        <ul class="flex flex-col gap-1">
-          <li>Full Member of The Property Institute</li>
-          <li>Member of The Property Ombudsman</li>
-        </ul>
       </div>
       <div class="flex flex-col items-start gap-2.5 lg:shrink">
-        <Heading as="h2" class="text-h5">Services</Heading>
+        <Heading as="h2" class="text-h5">Our Services</Heading>
         <ul class="flex flex-col gap-1">
           {
-            services.map(service => (
+            services.slice(0, 4).map(service => (
               <li class={bulletClass}>
-                <a href={`/services/${service.id}`} class={linkClass}>
+                <a href={`/services/${service.id}/`} class={linkClass}>
                   {service.data.title}
                 </a>
               </li>
             ))
           }
         </ul>
+        <a href="/services/" class="link label text-sm">All services</a>
       </div>
       <div class="flex flex-col items-start gap-2.5 lg:shrink">
         <Heading as="h2" class="text-h5">Who we work with</Heading>
@@ -45,7 +44,7 @@ const bulletClass = "before:bg-theme-brand flex items-center gap-2 before:block 
           {
             audiences.map(audience => (
               <li class={bulletClass}>
-                <a href={`/who-we-work-with/${audience.id}`} class={linkClass}>
+                <a href={`/who-we-work-with/${audience.id}/`} class={linkClass}>
                   {audience.data.title}
                 </a>
               </li>
@@ -56,14 +55,14 @@ const bulletClass = "before:bg-theme-brand flex items-center gap-2 before:block 
       <div class="flex shrink flex-col items-start gap-2.5">
         <Heading as="h2" class="text-h5">Contact details</Heading>
         <dl class="grid grid-cols-[max-content_1fr] gap-x-5 gap-y-1">
-          <dt><strong class="label text-sm">Phone</strong></dt>
+          <dt class="label text-sm">Phone</dt>
           <dd><a href={site.phoneHref}>{site.phone}</a></dd>
-          <dt><strong class="label text-sm">Email</strong></dt>
+          <dt class="label text-sm">Email</dt>
           <dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>
-          <dt><strong class="label text-sm">Office</strong></dt>
-          <dd class="lg:max-w-[28ch]">{site.office}</dd>
-          <dt><strong class="label text-sm">Office hours</strong></dt>
+          <dt class="label text-sm">Hours</dt>
           <dd class="lg:max-w-[28ch]">{site.hours}</dd>
+          <dt class="label text-sm">Post</dt>
+          <dd class="lg:max-w-[28ch]">{site.office}</dd>
         </dl>
       </div>
     </div>

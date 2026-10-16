@@ -56,10 +56,10 @@ const parentPath = pathNames.length ? `/${pathNames[0]}/` : "/";
                       <a href={link.href} class="group flex flex-col items-center" aria-haspopup="true" x-bind:aria-expanded="open">
                         <span class="text-theme-foreground-bold flex items-center gap-1 py-1 font-bold whitespace-nowrap transition-colors">
                           {link.label}
-                          <ChevronDown size={14} class="text-theme-action stroke-3" />
+                          <ChevronDown size={14} class="text-theme-brand stroke-3" />
                         </span>
                         <span
-                          class="h-0.5 w-1/2 rounded-full transition-all group-hover:w-full"
+                          class="h-[2px] w-1/2 rounded-full transition-all group-hover:w-full"
                           class:list={[parentPath === link.href ? "bg-theme-brand w-full!" : "group-hover:bg-theme-brand"]}
                         />
                       </a>
@@ -94,7 +94,7 @@ const parentPath = pathNames.length ? `/${pathNames[0]}/` : "/";
                     <a href={link.href} class="group flex flex-col items-center">
                       <div class="text-theme-foreground-bold py-1 font-bold transition-colors">{link.label}</div>
                       <div
-                        class="h-0.5 w-1/2 rounded-full transition-all group-hover:w-full"
+                        class="h-[2px] w-1/2 rounded-full transition-all group-hover:w-full"
                         class:list={[parentPath === link.href ? "bg-theme-brand w-full!" : "group-hover:bg-theme-brand"]}
                       />
                     </a>

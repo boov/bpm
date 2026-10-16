@@ -30,12 +30,13 @@
   --color-theme-border-light: unset;
 
   --color-theme-brand: hsl(16deg 83% 66%);
-  --color-theme-brand-highlight: hsl(16deg 83% 76%);
-  --color-theme-brand-lowlight: hsl(16deg 83% 56%);
+  --color-theme-brand-highlight: hsl(16deg 83% 69%);
+  --color-theme-brand-lowlight: hsl(16deg 83% 63%);
 
   --color-theme-action: var(--color-theme-brand);
-  --color-theme-action-hover: var(--color-theme-brand);
-  --color-theme-action-focus: var(--color-theme-brand);
+  --color-theme-action-hover: var(--color-theme-brand-lowlight);
+  --color-theme-action-focus: var(--color-theme-brand-lowlight);
+  --color-theme-action-foreground: hsl(16deg 5% 15%);
 
   --color-white: white;
   --color-black: black;
@@ -158,7 +159,7 @@
 @utility theme-light {
   --color-theme-foreground: hsl(16deg 5% 25%);
   --color-theme-foreground-bold: hsl(16deg 5% 15%);
-  --color-theme-foreground-light: hsl(16deg 5% 45%);
+  --color-theme-foreground-light: hsl(16deg 5% 42%);
 
   --color-theme-background: hsl(16deg 30% 95%);
   --color-theme-background-highlight: hsl(16deg 30% 100%);
@@ -292,6 +293,10 @@
     @apply focus:no-underline;
     @apply focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current;
     @apply active:no-underline;
+  }
+
+  .link:not(.label) {
+    @apply underline underline-offset-[0.2em];
   }
 
   p,

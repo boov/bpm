@@ -25,7 +25,7 @@ const bulletClass = "before:bg-theme-brand flex items-center gap-2 before:block 
       </div>
       <div class="flex flex-col items-start gap-2.5 lg:shrink">
         <Heading as="h2" class="text-h5">Our Services</Heading>
-        <ul class="flex flex-col gap-1">
+        <ul class="flex flex-col gap-1.5">
           {
             services.slice(0, 4).map(service => (
               <li class={bulletClass}>
@@ -40,7 +40,7 @@ const bulletClass = "before:bg-theme-brand flex items-center gap-2 before:block 
       </div>
       <div class="flex flex-col items-start gap-2.5 lg:shrink">
         <Heading as="h2" class="text-h5">Who we work with</Heading>
-        <ul class="flex flex-col gap-1">
+        <ul class="flex flex-col gap-1.5">
           {
             audiences.map(audience => (
               <li class={bulletClass}>

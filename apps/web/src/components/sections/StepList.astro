@@ -12,7 +12,7 @@ const { steps } = Astro.props;
 <div class="container" id="how-it-works">
   <div class="flex flex-col gap-8">
     <div class="flex items-center gap-5">
-      <div class="bg-theme-action h-[2px] w-full rounded sm:max-w-12"></div>
+      <div class="bg-theme-brand h-[2px] w-full rounded sm:max-w-12"></div>
       <Heading as="h2" class="text-h4 sm:text-h3 md:text-h2 whitespace-nowrap">How it works</Heading>
       <div class="bg-theme-border-light h-[2px] w-full rounded"></div>
     </div>
@@ -21,7 +21,7 @@ const { steps } = Astro.props;
         steps.map((step, index) => (
           <li class="bg-theme-background-highlight flex flex-col gap-3 rounded-2xl p-8">
             <div class="flex flex-col gap-1">
-              <p class="text-theme-action text-h4 font-light" aria-hidden="true" set:text={index + 1} />
+              <p class="text-theme-brand text-h4 font-light" aria-hidden="true" set:text={index + 1} />
               <Heading as="h3" class="text-h4" set:text={step.title} />
             </div>
             <InlineText text={step.text} class="text-sm" />

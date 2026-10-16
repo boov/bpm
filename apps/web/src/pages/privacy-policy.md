@@ -2,7 +2,7 @@
 layout: "@layouts/Text.astro"
 title: Privacy policy
 description: How Belgarum Property Management uses the personal information you give us through this website, by email or by phone, and your rights.
-updated: 2026-10-06
+updated: 2026-10-16
 ---
 
 This policy explains how Belgarum Property Management Limited uses personal information collected through this website, and when you contact us by email or by phone. It also explains your rights.
@@ -12,6 +12,7 @@ This policy explains how Belgarum Property Management Limited uses personal info
 Belgarum Property Management Limited is the controller of your personal information. This means we decide how it is used.
 
 - Registered in England and Wales, company number 07580603
+- Registered with the Information Commissioner's Office, registration number Z3332513
 - Registered office: Highland House, Mayflower Close, Chandlers Ford, Hampshire, SO53 4AR
 - Office: Old Manor Nursery, Kilham Lane, Winchester, Hampshire, SO22 5QD
 - Email: management@bpmanagement.org
@@ -37,7 +38,7 @@ Calls to our office are recorded for training. Our lawful basis is our legitimat
 
 ### When you browse this website
 
-If you agree to analytics cookies, we collect information about how you use this website, such as the pages you visit. We use it to improve the website. Our lawful basis is your consent, which you can withdraw at any time. Read our [cookie policy](/cookie-policy).
+If you agree to analytics cookies, we collect information about how you use this website, such as the pages you visit. We use it to improve the website. Our lawful basis is your consent, which you can withdraw at any time. Read our [cookie policy](/cookie-policy/).
 
 ## Who we share it with
 

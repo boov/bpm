@@ -22,12 +22,11 @@ This policy explains how Belgarum Property Management Limited uses personal info
 Belgarum Property Management Limited is the controller of your personal information. This means we decide how it is used.
 
 - Registered in England and Wales, company number 07580603
+- Registered with the Information Commissioner's Office, registration number Z3332513
 - Registered office: Highland House, Mayflower Close, Chandlers Ford, Hampshire, SO53 4AR
 - Office: Old Manor Nursery, Kilham Lane, Winchester, Hampshire, SO22 5QD
 - Email: management@bpmanagement.org
 - Phone: 0800 298 0069
-
-`[NEEDS: privacy details]` ICO registration number.
 
 ## What we collect and why
 
@@ -58,8 +57,6 @@ We use service providers to run this website and take payments:
 - **Netlify:** hosts this website and receives contact form submissions
 - **Stripe:** takes online card payments
 - **Google:** provides website analytics, if you agree to analytics cookies
-
-`[NEEDS: cookie list]` Confirm the analytics provider.
 
 Where we need to, to deal with your enquiry, we may share your information with contractors. We may also share it with the freeholder, resident management company or right to manage company of your building. We do not sell your information.
 
@@ -99,14 +96,14 @@ We may update this policy. The current version is always on this page.
 | --------------------------------------------- | ------------------------------------------------------ | ------- |
 | Legal name; company number; registered office | Company: Legal name; Company number; Registered office | Sourced |
 | Trading address; email; phone                 | Company: Trading address; Email; Phone                 | Sourced |
+| ICO registration number                       | ICO register of fee payers (entry Z3332513)            | Sourced |
 | Calls are recorded for training               | Ways of working: Calls are recorded for training       | Sourced |
 | Online card payments (Stripe)                 | Ways of working: Online card payments (Stripe)         | Sourced |
 
-Checked in the code: the contact form fields (`ContactForm.astro`, using Netlify Forms), the payment form fields (`PaymentForm.astro`, using a Stripe payment link) and Google Tag Manager (`GTM.astro`, loaded when `GOOGLE_TAG_MANAGER_CONTAINER` is set). The contact form fields listed match the new form in `pages/contact.md`.
+Checked in the code: the contact form fields (`ContactForm.astro`, using Netlify Forms), the payment form fields (`PaymentForm.astro`, using a Stripe payment link) and Google Tag Manager (`GTM.astro`), whose only tag is Google Analytics 4, blocked until the visitor accepts analytics cookies. The contact form fields listed match the new form in `pages/contact.md`.
 
 Tone follows "Legal pages" in `tone-of-voice.md`, with no contractions. This is a plain summary for review, not legal advice.
 
 **Gaps:**
 
-- `[NEEDS: privacy details]` ICO registration number, retention periods, and any separate privacy notice for leaseholders and clients.
-- `[NEEDS: cookie list]` Which analytics tools run through Google Tag Manager.
+- `[NEEDS: privacy details]` Retention periods (client question 14) and any separate privacy notice for leaseholders and clients (client question 15).

@@ -71,4 +71,4 @@ Page checks from `compliance.md`: names TPO as the redress route; says the compl
 
 **Gaps:**
 
-- `[NEEDS: complaint timescales]` Acknowledgement and final response times, if BPM has them.
+- `[NEEDS: complaint timescales]` Acknowledgement and final response times, if BPM has them (client question 7).

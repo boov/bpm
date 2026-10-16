@@ -14,7 +14,7 @@ Please send us the details of your complaint in writing:
 - **By email:** management@bpmanagement.org
 - **By post:** Belgarum Property Management, Old Manor Nursery, Kilham Lane, Winchester, Hampshire, SO22 5QD
 
-You can also use the [contact form](/contact) and choose "A complaint".
+You can also use the [contact form](/contact/) and choose "A complaint".
 
 If you would like to talk it through first, please call your property manager on 0800 298 0069. Office hours are Monday to Thursday, 9am to 5pm, and Friday, 9am to 4.30pm.
 

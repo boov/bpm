@@ -7,7 +7,6 @@
 
   type ConsentWindow = Window & { gtag?: (...args: unknown[]) => void; loadGTM?: () => void };
 
-  // GTM loads only after consent, so its page view tags fire on load with consent already granted.
   // Returning visitors get their stored choice from the consent default in GTM.astro instead.
   const updateConsent = () => {
     const { gtag, loadGTM } = window as ConsentWindow;

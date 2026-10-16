@@ -4,38 +4,43 @@ command = "npm run build"
 
 [[redirects]]
 from = "/services/developers"
-to = "/who-we-work-with/developers"
+to = "/who-we-work-with/developers/"
 status = 301
 
 [[redirects]]
 from = "/services/residential"
-to = "/who-we-work-with/rmc-and-rtm-directors"
+to = "/who-we-work-with/rmc-and-rtm-directors/"
 status = 301
 
 [[redirects]]
 from = "/services/freeholders"
-to = "/who-we-work-with/freeholders-and-private-landlords"
+to = "/who-we-work-with/freeholders-and-private-landlords/"
 status = 301
 
 [[redirects]]
 from = "/our-team"
-to = "/about"
+to = "/about/"
 status = 301
 
 [[redirects]]
 from = "/about-us"
-to = "/about"
+to = "/about/"
 status = 301
 
 [[redirects]]
 from = "/about-us/links"
-to = "/about"
+to = "/about/"
 status = 301
 
 [[redirects]]
 from = "/contact-us"
-to = "/contact"
+to = "/contact/"
 status = 301
+
+[[headers]]
+for = "/_astro/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
 
 [[plugins]]
 package = "@netlify/plugin-lighthouse"
@@ -44,22 +49,22 @@ package = "@netlify/plugin-lighthouse"
 path = "/"
 
 [[plugins.inputs.audits]]
-path = "/services"
+path = "/services/"
 
 [[plugins.inputs.audits]]
-path = "/services/block-and-estate-management"
+path = "/services/block-and-estate-management/"
 
 [[plugins.inputs.audits]]
-path = "/who-we-work-with/rmc-and-rtm-directors"
+path = "/who-we-work-with/rmc-and-rtm-directors/"
 
 [[plugins.inputs.audits]]
-path = "/about"
+path = "/about/"
 
 [[plugins.inputs.audits]]
-path = "/faqs"
+path = "/faqs/"
 
 [[plugins.inputs.audits]]
-path = "/contact"
+path = "/contact/"
 
 [[plugins.inputs.audits]]
-path = "/privacy-policy"
+path = "/privacy-policy/"

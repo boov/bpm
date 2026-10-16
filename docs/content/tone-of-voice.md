@@ -104,18 +104,18 @@ Check every example about how the site or a system behaves before you publish it
 - Link text says where the link goes: "read our complaints procedure", not "click here".
 - Calls to action start with a verb and say what happens:
 
-These are the only call to action labels. `page-map.md` uses them. A page whose call to action is for leaseholders, but which buyers also read (Section 20 consultation, repairs and maintenance), may add one in-text link labelled "request a management proposal". Navigation links are not calls to action: menus and utility pages (404, confirmations) may use plain labels such as "Go to the home page" or "Try again".
+These are the only call to action labels. `page-map.md` uses them. A page whose call to action is for leaseholders, but which buyers also read (Section 20 consultation, repairs and maintenance), may add one in-text link labelled "request a management proposal". The header and mobile menu buttons use "Get in touch" (to `/contact`, with no preset) and "Pay bill". The header phone link shows "Give us a call" above the number. Navigation links are not calls to action: menus and utility pages (404, confirmations) may use plain labels such as "Go to the home page" or "Try again".
 
-| Use                                | Goes to                                            | Avoid                         |
-| ---------------------------------- | -------------------------------------------------- | ----------------------------- |
-| Request a management proposal      | `/contact`, enquiry type preset to new management  | Enquire online                |
-| Talk to us about a new development | `/contact`, enquiry type preset to new development | Find out more                 |
-| Pay your service charge            | `/pay-online`                                      | Pay bill                      |
-| Contact your property manager      | `/contact`                                         | Get in touch, Report a repair |
-| Order a leasehold sale pack        | `/services/leasehold-sale-packs`                   | Find out more                 |
-| Read our complaints procedure      | `/complaints-procedure`                            | Click here                    |
-| Send your enquiry                  | Contact form submit button                         | Submit                        |
-| Call 0800 298 0069                 | `tel:` link                                        | Give us a call                |
+| Use                                | Goes to                                            | Avoid           |
+| ---------------------------------- | -------------------------------------------------- | --------------- |
+| Get in touch                       | `/contact`, enquiry type preset to new management  | Enquire online  |
+| Talk to us about a new development | `/contact`, enquiry type preset to new development | Find out more   |
+| Pay your service charge            | `/pay-online`                                      |                 |
+| Contact your property manager      | `/contact`                                         | Report a repair |
+| Order a leasehold sale pack        | `/services/leasehold-sale-packs`                   | Find out more   |
+| Read our complaints procedure      | `/complaints-procedure`                            | Click here      |
+| Send your enquiry                  | Contact form submit button                         | Submit          |
+| Call 0800 298 0069                 | `tel:` link                                        |                 |
 
 ## Words to use and avoid
 

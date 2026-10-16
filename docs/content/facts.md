@@ -43,6 +43,7 @@ Where sources disagree, the working decision is in `client-questions.md` and the
 | Areas covered        | Hampshire, Sussex, Dorset, London and the Home Counties                   | LIVE, NEW     | Sourced |
 | Client types         | RMCs, RTM companies, freeholders, new build developers, private landlords | LIVE          | Sourced |
 | Tagline              | "Where Working Together Matters"                                          | LI            | Sourced |
+| Ethos                | Treat the owners of the properties managed as customers                   | LI            | Sourced |
 
 Conflicts and decisions:
 
@@ -55,15 +56,16 @@ Conflicts and decisions:
 
 ## Scale
 
-| Fact                               | Value                                              | Source    | Status              |
-| ---------------------------------- | -------------------------------------------------- | --------- | ------------------- |
-| Developments managed               | Over 150                                           | LIVE, NEW | Sourced             |
-| Range                              | Blocks of 4 flats to a 22-floor high rise          | FAQ       | Sourced             |
-| Tenures                            | Leasehold blocks and freehold estate areas         | LIVE      | Sourced             |
-| RMC company secretary appointments | 38 in total, about 15 current                      | CH        | Sourced             |
-| Units managed                      | Unknown                                            |           |                     |
-| Staff                              | 11 to 50 (LinkedIn band); 12 on the live team page | LI, LIVE  | Sourced             |
-| Combined experience                | Over 150 years                                     | LI        | Sourced, do not use |
+| Fact                               | Value                                                 | Source    | Status              |
+| ---------------------------------- | ----------------------------------------------------- | --------- | ------------------- |
+| Developments managed               | Over 150                                              | LIVE, NEW | Sourced             |
+| Range                              | Blocks of 4 flats to a 22-floor high rise             | FAQ       | Sourced             |
+| Tenures                            | Leasehold blocks and freehold estate areas            | LIVE      | Sourced             |
+| Client size                        | From several hundred properties to small developments | LIVE      | Sourced             |
+| RMC company secretary appointments | 38 in total, about 15 current                         | CH        | Sourced             |
+| Units managed                      | Unknown                                               |           |                     |
+| Staff                              | 11 to 50 (LinkedIn band); 12 on the live team page    | LI, LIVE  | Sourced             |
+| Combined experience                | Over 150 years                                        | LI        | Sourced, do not use |
 
 ## Memberships and protections
 
@@ -90,7 +92,7 @@ Conflicts and decisions:
 | Service charge budgets, set at the start of each financial year; longer-term budgeting to build up reserves    | LIVE   | Sourced    |
 | Bookkeeping service to account for client money                                                                | LIVE   | Sourced    |
 | Year end adjustment of the service charge at the end of each accounting period                                 | LIVE   | Sourced    |
-| Year end service charge accounts, produced by BPM (working decision; confirm with the client, question 10)     | NEW    | Sourced    |
+| Year end service charge accounts, produced by BPM (working decision; confirm with the client, question 9)      | NEW    | Sourced    |
 | Makes sure lease covenants are kept (staff are "well versed" in this)                                          | LIVE   | Sourced    |
 | Organises Companies House accounts submissions for RMCs                                                        | LIVE   | Sourced    |
 | Runs Section 20 projects (Senior Property Manager's remit, in a LinkedIn post)                                 | LI     | Sourced    |
@@ -102,6 +104,7 @@ Conflicts and decisions:
 | Knowledge of property law, land registration and conveyancing                                                  | LIVE   | Sourced    |
 | Advises developers to involve the managing agent from the planning stage; notes the growth of shared ownership | LIVE   | Sourced    |
 | A voluntary Code of Conduct that includes replying within set time periods. The times are not published        | LIVE   | Sourced    |
+| Day-to-day matters dealt with for clients, including maintenance, tenant queries and vandalism                 | LIVE   | Sourced    |
 | Calls are recorded for training                                                                                | LIVE   | Sourced    |
 | No estate agency or lettings                                                                                   | LIVE   | Sourced    |
 | Online card payments (Stripe)                                                                                  | NEW    | Sourced    |
@@ -137,7 +140,7 @@ Michael Culhane is a director at Companies House but is not on the team page.
 | Item                                         | Value                                                                                                          | Source | Status     |
 | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------ | ---------- |
 | Managed developments (possible case studies) | The Peninsula Barracks, Charles House, The Marston Gate (Winchester), One Degree North (Eastleigh)             | SEARCH | Unverified |
-| Testimonials                                 | None. New site testimonials are placeholders                                                                   | NEW    |            |
+| Testimonials                                 | None                                                                                                           | NEW    |            |
 | Awards                                       | None found                                                                                                     |        |            |
 | Public reviews                               | AllAgents 1.1 out of 5 from 17 reviews; Cylex complaint from Feb 2024 about high charges. Mostly older reviews | SEARCH | Unverified |
 

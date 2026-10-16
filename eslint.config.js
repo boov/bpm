@@ -5,7 +5,7 @@ import tseslint from "typescript-eslint";
 export default tseslint.config(
   // Global ignores
   {
-    ignores: ["**/dist/**", "**/.astro/**", "**/*.d.ts"]
+    ignores: ["**/dist/**", "**/.astro/**", "**/*.d.ts", ".remember", ".superpowers"]
   },
 
   // TypeScript files

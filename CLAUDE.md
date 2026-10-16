@@ -56,16 +56,16 @@ This is an npm workspaces monorepo:
   - `design-system` - Tailwind CSS plugin with custom utilities
   - `tailwind-base` - Base Tailwind preset configuration
   - `custom-merge` - Object merging utility (lodash wrapper)
-  - `data` - Shared content data (personnel, questions, testimonials)
+  - `data` - Shared content data (personnel, questions)
 
 ### Content Collections System
 
 The site uses Astro's Content Collections API with custom loaders (apps/web/src/content.config.ts):
 
-- **Collections**: `personnel`, `services`, `audiences`, `questions`, `testimonials`
+- **Collections**: `personnel`, `services`, `audiences`, `questions`
 - **Data Sources**:
   - JSON files in `src/content/` (services, audiences)
-  - Shared workspace package `@bpm/data` (personnel, questions, testimonials)
+  - Shared workspace package `@bpm/data` (personnel, questions)
 - **Validation**: All collections use Zod schemas
 - **ID Generation**: Auto-generated from name fields (e.g., "John Doe" → "john-doe")
 

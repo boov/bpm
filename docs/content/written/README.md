@@ -55,19 +55,18 @@ Use only the tags below, so the search finds every page. Add a new tag to this t
 
 | Tag                                     | Missing                                                                     |
 | --------------------------------------- | --------------------------------------------------------------------------- |
-| `[NEEDS: testimonials (Q1)]`            | Testimonials BPM approves for publication                                   |
 | `[NEEDS: case studies]`                 | Named developments or projects BPM approves for publication                 |
-| `[NEEDS: client money protection (Q2)]` | Whether BPM has client money protection cover                               |
-| `[NEEDS: out-of-hours line (Q2)]`       | Whether BPM has an out-of-hours emergency line                              |
-| `[NEEDS: team photos (Q3)]`             | Current team list and headshots                                             |
-| `[NEEDS: insurance role (Q4)]`          | Whether BPM arranges buildings insurance, and commission                    |
-| `[NEEDS: VAT number (Q5)]`              | VAT registration and number                                                 |
-| `[NEEDS: sale pack ordering (Q6)]`      | How to order a leasehold sale pack                                          |
-| `[NEEDS: sale pack cost (Q6)]`          | What a leasehold sale pack costs                                            |
-| `[NEEDS: sale pack turnaround (Q6)]`    | How long a leasehold sale pack takes                                        |
-| `[NEEDS: repair reporting (Q7)]`        | How leaseholders report a repair                                            |
-| `[NEEDS: response times (Q8)]`          | Reply times from BPM's Code of Conduct                                      |
-| `[NEEDS: switching process (Q9)]`       | How a building signs up or moves from another agent                         |
+| `[NEEDS: client money protection (Q1)]` | Whether BPM has client money protection cover                               |
+| `[NEEDS: out-of-hours line (Q1)]`       | Whether BPM has an out-of-hours emergency line                              |
+| `[NEEDS: team photos (Q2)]`             | Current team list and headshots                                             |
+| `[NEEDS: insurance role (Q3)]`          | Whether BPM arranges buildings insurance, and commission                    |
+| `[NEEDS: VAT number (Q4)]`              | VAT registration and number                                                 |
+| `[NEEDS: sale pack ordering (Q5)]`      | How to order a leasehold sale pack                                          |
+| `[NEEDS: sale pack cost (Q5)]`          | What a leasehold sale pack costs                                            |
+| `[NEEDS: sale pack turnaround (Q5)]`    | How long a leasehold sale pack takes                                        |
+| `[NEEDS: repair reporting (Q6)]`        | How leaseholders report a repair                                            |
+| `[NEEDS: response times (Q7)]`          | Reply times from BPM's Code of Conduct                                      |
+| `[NEEDS: switching process (Q8)]`       | How a building signs up or moves from another agent                         |
 | `[NEEDS: inspection frequency]`         | How often site inspections happen                                           |
 | `[NEEDS: major works supervision]`      | Who supervises major works on site, and how progress is reported            |
 | `[NEEDS: accounts certification]`       | Whether an independent accountant checks or certifies the year end accounts |

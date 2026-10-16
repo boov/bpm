@@ -6,17 +6,17 @@ Status values: not started, draft, review, approved, on hold.
 
 ## Main pages
 
-| Page                    | Purpose                                | Audience                                                          | Working keyword                         | CTA                                                    | Status |
-| ----------------------- | -------------------------------------- | ----------------------------------------------------------------- | --------------------------------------- | ------------------------------------------------------ | ------ |
-| `/`                     | Say who BPM is and route each audience | All                                                               | block management Winchester / Hampshire | Request a management proposal; Pay your service charge | draft  |
-| `/about`                | History, team, memberships             | RMC and RTM directors, Freeholders                                |                                         | Request a management proposal                          | draft  |
-| `/services`             | Overview of all services               | RMC and RTM directors, Freeholders, Developers, Private landlords | block management services               | Request a management proposal                          | draft  |
-| `/faqs`                 | Answer common questions                | Leaseholders, RMC and RTM directors                               |                                         | Contact your property manager                          | draft  |
-| `/contact`              | Contact details and enquiry form       | All                                                               |                                         | Send your enquiry                                      | draft  |
-| `/pay-online`           | Pay a service charge by card           | Leaseholders                                                      |                                         | Pay your service charge                                | draft  |
-| `/complaints-procedure` | How to complain; TPO redress           | Leaseholders, RMC and RTM directors, Freeholders                  |                                         |                                                        | draft  |
-| `/privacy-policy`       | Legal                                  | All                                                               |                                         |                                                        | draft  |
-| `/cookie-policy`        | Legal                                  | All                                                               |                                         |                                                        | draft  |
+| Page                    | Purpose                                | Audience                                                          | Working keyword                         | CTA                                   | Status |
+| ----------------------- | -------------------------------------- | ----------------------------------------------------------------- | --------------------------------------- | ------------------------------------- | ------ |
+| `/`                     | Say who BPM is and route each audience | All                                                               | block management Winchester / Hampshire | See how we can help you; Get in touch | draft  |
+| `/about`                | History, team, memberships             | RMC and RTM directors, Freeholders                                |                                         | Request a management proposal         | draft  |
+| `/services`             | Overview of all services               | RMC and RTM directors, Freeholders, Developers, Private landlords | block management services               | Request a management proposal         | draft  |
+| `/faqs`                 | Answer common questions                | Leaseholders, RMC and RTM directors                               |                                         | Contact your property manager         | draft  |
+| `/contact`              | Contact details and enquiry form       | All                                                               |                                         | Send your enquiry                     | draft  |
+| `/pay-online`           | Pay a service charge by card           | Leaseholders                                                      |                                         | Pay your service charge               | draft  |
+| `/complaints-procedure` | How to complain; TPO redress           | Leaseholders, RMC and RTM directors, Freeholders                  |                                         |                                       | draft  |
+| `/privacy-policy`       | Legal                                  | All                                                               |                                         |                                       | draft  |
+| `/cookie-policy`        | Legal                                  | All                                                               |                                         |                                       | draft  |
 
 ## Services
 
@@ -33,7 +33,7 @@ Status values: not started, draft, review, approved, on hold.
 | `/services/leasehold-sale-packs`        | How to order a pack, cost, turnaround            | Sellers' solicitors, Leaseholders                     | leasehold management pack; LPE1     | Order a leasehold sale pack   | draft   |
 | `/services/buildings-insurance`         | Insurance and claims                             | RMC and RTM directors, Freeholders                    |                                     | Request a management proposal | on hold |
 
-The leasehold sale packs page is written with placeholders for the ordering route, cost and turnaround until BPM gives them (question 6 in `client-questions.md`). Buildings insurance is on hold until BPM confirms its insurance role (question 4).
+The leasehold sale packs page is written with placeholders for the ordering route, cost and turnaround until BPM gives them (question 5 in `client-questions.md`). Buildings insurance is on hold until BPM confirms its insurance role (question 3).
 
 ## Who we work with
 
@@ -72,13 +72,13 @@ The redirects are `[[redirects]]` blocks in `apps/web/netlify.toml`. They return
 
 Sections, in order:
 
-1. **Hero:** an eyebrow line (the strapline in `messaging.md`), an H1 that speaks to the reader, a lead of 155 characters max, two calls to action ("Request a management proposal" and "Pay your service charge") and the compact trust line (`written/global/trust-strip.md`).
+1. **Hero:** an eyebrow line (the strapline in `messaging.md`), an H1 that speaks to the reader, a lead of 155 characters max, two calls to action ("See how we can help you" and "Get in touch") and the compact trust line (`written/global/trust-strip.md`).
 2. **Audience routes:** 3 cards, one for each "Who we work with" page. Each card has a title, one sentence (25 words max) and a link.
 3. **Intro:** a heading and 60 to 100 words on what BPM does and where, for readers and for search.
 4. **Resident support:** links to pay your service charge, contact your property manager, leasehold sale packs and the complaints procedure, with the phone number and office hours.
 5. **Services grid:** one card for each live service page: title and the service `description`.
 6. **Trust strip:** the shared block below.
-7. **Call to action band:** heading, one sentence, "Request a management proposal".
+7. **Call to action band:** heading, one sentence, "Get in touch".
 
 Fields:
 
@@ -138,7 +138,7 @@ The home page, the block and estate management page and the three audience pages
 The block and estate management page can describe what the live site supports (see "Ways of working" in `facts.md`). These have no source, so leave them out until the client answers:
 
 - How often site inspections happen (only a LinkedIn post mentions quarterly visits)
-- How a new building signs up, or moves from another agent (question 9)
-- The repair reporting route (question 7)
-- Insurance arrangements and commission (question 4)
-- Approved photos of buildings and the team (question 3)
+- How a new building signs up, or moves from another agent (question 8)
+- The repair reporting route (question 6)
+- Insurance arrangements and commission (question 3)
+- Approved photos of buildings and the team (question 2)

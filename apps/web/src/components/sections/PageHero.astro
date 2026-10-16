@@ -37,7 +37,17 @@ const { eyebrow, heading, lead, note, image, imageAlt = "" } = Astro.props;
     <div class="container-13c">
       <div class="scoop relative z-20 overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl">
         <div class="theme-dark relative overflow-hidden">
-          <Image src={image} alt={imageAlt} width={1536} height={658} densities={[1, 2]} class="aspect-ultrawide w-full object-cover" />
+          <Image
+            src={image}
+            alt={imageAlt}
+            width={1536}
+            height={658}
+            widths={[640, 1024, 1536, 2048, 3072]}
+            sizes="(min-width: 1536px) 1536px, 100vw"
+            loading="eager"
+            fetchpriority="high"
+            class="aspect-ultrawide w-full object-cover"
+          />
           <div
             class="text-theme-foreground-bold pointer-events-none absolute right-0 bottom-0 z-20 hidden w-90 translate-1/6 -scale-x-100 opacity-40 lg:block xl:w-120"
             aria-hidden="true"

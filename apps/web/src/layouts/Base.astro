@@ -71,7 +71,9 @@ const pageTitle = isHomePage ? title : `${title} - ${brand}`;
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preconnect" href="https://use.typekit.net" crossorigin />
     <link rel="preconnect" href="https://p.typekit.net" crossorigin />
-    <link rel="stylesheet" href="https://use.typekit.net/glq6gsv.css" />
+    {/* Persisted so ClientRouter keeps the swapped stylesheet instead of re-adding the preload on each navigation. */}
+    <link rel="preload" href="https://use.typekit.net/glq6gsv.css" as="style" onload={"this.onload=null;this.rel='stylesheet'"} transition:persist="typekit" />
+    <noscript><link rel="stylesheet" href="https://use.typekit.net/glq6gsv.css" /></noscript>
 
     {google.tagManagerContainer && <GTM container={google.tagManagerContainer} />}
 

@@ -4,7 +4,7 @@ How BPM sounds on the website. The voice stays the same everywhere. The tone cha
 
 ## Why this voice
 
-Most competitor sites sound corporate, old-fashioned or generic (see `competitors.md`). BPM's readers are often volunteer directors and worried leaseholders, not property professionals. Public reviews of BPM are poor, so broad promises will not be believed. The voice has to earn trust with clear, specific, useful words.
+Most competitor sites sound corporate, old-fashioned or generic. BPM's readers are often volunteer directors and worried leaseholders, not property professionals. Public reviews of BPM are poor, so broad promises will not be believed. The voice has to earn trust with clear, specific, useful words.
 
 ## The voice
 
@@ -134,16 +134,6 @@ These are the only call to action labels. `page-map.md` uses them. A page whose 
 | service charge           | maintenance fee                              |
 
 Do not use: solutions, one-stop shop, bespoke, world-class, unrivalled, cutting-edge, seamless, peace of mind (as a claim), hassle-free, passionate, journey, synergy, leverage, best-in-class, award-winning (no award), leading.
-
-## Rewrites of current copy
-
-| Current                                                                                                                                                                | Rewrite                                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| "Your Local Trusted Managing Agent For Freeholders Directors Of Rmc Companies And Leaseholders"                                                                        | "Block and estate management in Hampshire and the south"                                                                                     |
-| "BPM Ltd offers comprehensive services for property owners, landlords, and developers, providing a one-stop solution for all corporate and individual landlord needs." | "Belgarum Property Management looks after blocks of flats and shared estates for resident management companies, freeholders and developers." |
-| "Property management can be a frustrating and complex business."                                                                                                       | "Running a block of flats takes time and carries legal duties. We take that work on for you."                                                |
-| "Lending A Supportive Hand To All Sized Clients"                                                                                                                       | "Services for blocks from 4 flats to 22 floors"                                                                                              |
-| "Transparent Contracts: Every contract tells a clear story of responsibility and expectation."                                                                         | "Industry-standard contracts: your management agreement sets out what we do."                                                                |
 
 ## Checklist before publishing
 

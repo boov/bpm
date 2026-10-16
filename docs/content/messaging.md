@@ -66,7 +66,7 @@ These facts show how long BPM has worked, how much it manages, and who it answer
 - Service charge money held in designated trust accounts
 - £5 million professional indemnity insurance
 
-The compact trust line under the hero uses four of these: over 150 developments, TPI, TPO and trust accounts. Its contents are in `written/global/trust-strip.md`.
+The compact trust line under the hero uses four of these: over 150 developments, TPI, TPO and trust accounts. It leaves out "Established in 1989", because the strapline and leads already carry the date.
 
 ## Messages per audience
 

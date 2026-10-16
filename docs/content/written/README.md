@@ -39,7 +39,6 @@ Meta titles: the site layout adds " - Belgarum Property Management" (31 characte
 | `utility/contact-thanks.md`                             | `/contact/thanks`                                     | draft  |
 | `utility/contact-submitting.md`                         | `/contact/submitting`                                 | draft  |
 | `utility/payment-success.md`                            | `/pay-online/success`                                 | draft  |
-| `utility/payment-failed.md`                             | `/pay-online/failed`                                  | draft  |
 
 ## Gaps
 

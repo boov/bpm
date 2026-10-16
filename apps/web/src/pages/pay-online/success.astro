@@ -38,12 +38,3 @@ const description = "Thank you. Your service charge payment is complete.";
     </footer>
   </Fragment>
 </Default>
-
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const redirectStatus = params.get("redirect_status");
-
-  if (redirectStatus && redirectStatus !== "succeeded") {
-    window.location.href = "/pay-online/failed/";
-  }
-</script>

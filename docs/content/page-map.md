@@ -45,7 +45,7 @@ The leasehold sale packs page is written with placeholders for the ordering rout
 
 ## Utility pages
 
-`/404`, `/contact/thanks`, `/contact/submitting`, `/pay-online/success`, `/pay-online/failed`. Short copy only. Status: draft.
+`/404`, `/contact/thanks`, `/contact/submitting`, `/pay-online/success`. Short copy only. Status: draft.
 
 ## Redirects from the live site
 

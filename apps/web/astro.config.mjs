@@ -25,8 +25,7 @@ export default defineConfig({
         ![
           "https://www.belgarum-property.co.uk/contact/thanks/",
           "https://www.belgarum-property.co.uk/contact/submitting/",
-          "https://www.belgarum-property.co.uk/pay-online/success/",
-          "https://www.belgarum-property.co.uk/pay-online/failed/"
+          "https://www.belgarum-property.co.uk/pay-online/success/"
         ].some(url => page.startsWith(url))
     })
   ],

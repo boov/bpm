@@ -13,14 +13,16 @@ const title = "Payment complete";
 const description = "Thank you. Your service charge payment is complete.";
 ---
 
-<Default title={title} description={description} allowIndexing={false}>
+<Default title={title} description={description} allowIndexing={false} centered>
   <Section>
     <div class="container-6c">
       <div class="flex flex-col items-center gap-6 text-center">
         <CircleCheck class="text-positive size-16" />
         <Heading as="h1" class="text-h2" set:text={title} />
         <p class="text-lg" set:text={description} />
-        <p>If you have a question about your payment, contact your property manager on <a href={site.phoneHref} class="link">{site.phone}</a>.</p>
+        <p class="text-balance">
+          If you have a question about your payment, contact your property manager on <a href={site.phoneHref} class="link whitespace-nowrap">{site.phone}</a>.
+        </p>
         <div class="flex flex-col gap-4 sm:flex-row">
           <Button label="Go to the home page" href="/" variant="solid">
             <House slot="suffix" />

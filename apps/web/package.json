@@ -9,6 +9,7 @@
     "astro": "astro",
     "astro:update": "npmx @astrojs/upgrade",
     "test": "node --test \"src/**/*.test.ts\"",
-    "check": "node scripts/check-build.mjs"
+    "check": "node scripts/check-build.mjs",
+    "typecheck": "astro check"
   }
 }

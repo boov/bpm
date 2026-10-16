@@ -26,6 +26,7 @@ npm run clean            # Remove apps/*/dist, apps/*/.astro, apps/*/.netlify, .
 ```bash
 npm run test --workspace=@bpm/web    # Unit tests
 npm run check --workspace=@bpm/web   # Post-build checks (run after npm run build)
+npm run typecheck --workspace=@bpm/web   # Type check .astro and .ts files (astro check; dist and scripts are excluded)
 ```
 
 ### Quality

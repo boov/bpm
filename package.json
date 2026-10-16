@@ -40,6 +40,9 @@
     "vanilla-cookieconsent": "^3.1.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@types/alpinejs": "^3.17.0",
+    "@types/alpinejs__collapse": "^3.13.4",
     "@types/lodash": "^4.17.24",
     "eslint": "^10.3.0",
     "eslint-plugin-astro": "^1.7.0",
@@ -47,6 +50,7 @@
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.8.0",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.59.2"
   },
   "overrides": {

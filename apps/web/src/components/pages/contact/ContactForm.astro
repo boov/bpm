@@ -31,7 +31,7 @@ import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
   <textarea name="enquiry_text"></textarea>
 </form>
 
-<form action="/contact/submitting/" netlify netlify-honeypot="bot-field" method="POST" name="contact_form" x-data="contactForm()">
+<form action="/contact/submitting/" data-netlify="true" netlify-honeypot="bot-field" method="POST" name="contact_form" x-data="contactForm()">
   <input type="hidden" name="form-name" value="contact_form" />
   <p class="hidden">
     <label>Don't fill this out if you're human: <input name="bot-field" /></label>

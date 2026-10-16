@@ -5,14 +5,15 @@
 
   import { acceptedCategory, run, showPreferences } from "vanilla-cookieconsent";
 
-  type ConsentWindow = Window & { gtag?: (...args: unknown[]) => void; dataLayer?: unknown[] };
+  type ConsentWindow = Window & { gtag?: (...args: unknown[]) => void; loadGTM?: () => void };
 
-  // GTM does not re-run tags it blocked for consent, so the event gives them a trigger to fire on.
+  // GTM loads only after consent, so its page view tags fire on load with consent already granted.
   // Returning visitors get their stored choice from the consent default in GTM.astro instead.
   const updateConsent = () => {
-    const { gtag, dataLayer } = window as ConsentWindow;
-    gtag?.("consent", "update", { analytics_storage: acceptedCategory("analytics") ? "granted" : "denied" });
-    dataLayer?.push({ event: "cookie_consent_update" });
+    const { gtag, loadGTM } = window as ConsentWindow;
+    const analytics = acceptedCategory("analytics");
+    gtag?.("consent", "update", { analytics_storage: analytics ? "granted" : "denied" });
+    if (analytics) loadGTM?.();
   };
 
   // The footer is replaced on each client-side navigation, so listen on the document instead of the library's data-cc binding.

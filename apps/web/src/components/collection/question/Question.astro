@@ -15,7 +15,7 @@ const { title, answer } = Astro.props;
     <span class="text-theme-foreground-bold flex-1 leading-normal font-bold" set:text={title} />
     <ChevronDown class="text-theme-brand size-5 shrink-0 transition-transform duration-200" :class="open && 'rotate-180'" aria-hidden="true" />
   </button>
-  <div x-show="open" x-collapse class="px-6 pb-5 text-sm sm:px-7 sm:pb-6">
+  <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-sm sm:px-7 sm:pb-6">
     <div class="flex flex-col gap-4">
       {answer.map(paragraph => <InlineText text={paragraph} />)}
     </div>

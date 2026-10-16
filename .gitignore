@@ -1,7 +1,11 @@
 .astro/
 .claude/
 .idea/
+.remember/
+.superpowers/
+.unlighthouse/
 dist/
+docs/superpowers/
 node_modules/
 
 .DS_Store

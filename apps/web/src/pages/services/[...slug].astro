@@ -8,7 +8,6 @@ import IncludedList from "@components/sections/IncludedList.astro";
 import IntroBlock from "@components/sections/IntroBlock.astro";
 import PageHero from "@components/sections/PageHero.astro";
 import ProofList from "@components/sections/ProofList.astro";
-import ServiceLinks from "@components/sections/ServiceLinks.astro";
 import StepList from "@components/sections/StepList.astro";
 import { getServices } from "@helpers";
 import Default from "@layouts/Default.astro";
@@ -50,28 +49,23 @@ const serviceSchema = toJsonLd({
 const faqSchema = toJsonLd(faqPageSchema(data.faqs));
 ---
 
-<Default title={data.metaTitle} description={data.description} cta={bandFor(data.cta)} trustStrip>
+<Default title={data.metaTitle} description={data.description} cta={bandFor(data.cta)}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={serviceSchema} />
     <script type="application/ld+json" set:html={faqSchema} />
   </Fragment>
   <Section>
     <div class="flex flex-col gap-14 sm:gap-16 md:gap-18 lg:gap-20 xl:gap-24">
-      <PageHero
-        eyebrow="Our services"
-        heading={data.hero.heading ?? data.title}
-        lead={data.description}
-        call={data.cta}
-        note={data.hero.note}
-        trustLine={data.hero.trustLine}
-        image={data.image}
-      />
+      <PageHero eyebrow="Our services" heading={data.hero.heading ?? data.title} lead={data.description} note={data.hero.note} image={data.image} imageAlt={data.imageAlt} />
       <IntroBlock heading={data.intro.heading} paragraphs={data.intro.paragraphs} />
       <IncludedList heading={data.included.heading} items={data.included.items} />
-      <StepList steps={data.steps} />
+    </div>
+  </Section>
+  <Section class="from-theme-background-lowlight to-theme-background bg-linear-to-b">
+    <div class="flex flex-col gap-14 sm:gap-16 md:gap-18 lg:gap-20 xl:gap-24">
+      {data.steps.length > 0 && <StepList steps={data.steps} />}
       <ProofList items={data.proof} />
       <FaqList faqs={data.faqs} />
-      <ServiceLinks heading="Related services" ids={data.related.map(entry => entry.id)} />
     </div>
   </Section>
 </Default>

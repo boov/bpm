@@ -1,0 +1,34 @@
+---
+import Heading from "@components/Heading.astro";
+import Building2 from "@lucide/astro/icons/building-2";
+import HardHat from "@lucide/astro/icons/hard-hat";
+import KeyRound from "@lucide/astro/icons/key-round";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  audience: CollectionEntry<"audiences">;
+}
+
+const { audience } = Astro.props;
+
+const icons = {
+  "building-2": Building2,
+  "hard-hat": HardHat,
+  "key-round": KeyRound
+};
+const Icon = icons[audience.data.icon];
+---
+
+<article
+  class="group bg-theme-background-highlight focus-within:ring-theme-brand relative flex flex-col gap-3 rounded-xl p-6 shadow-sm transition-all focus-within:ring-2 hover:-translate-y-1 hover:shadow-xl sm:py-7 md:p-8"
+>
+  <div class="bg-theme-brand/10 text-theme-brand mb-2 flex items-center justify-center self-start rounded-lg p-3 transition-colors">
+    <Icon class="size-8" aria-hidden="true" />
+  </div>
+  <Heading as="h3" class="text-h5 sm:text-h4">
+    <a href={`/who-we-work-with/${audience.id}/`} class="text-theme-foreground-bold outline-hidden transition-colors after:absolute after:inset-0">
+      {audience.data.title}
+    </a>
+  </Heading>
+  <p class="text-sm">{audience.data.card}</p>
+</article>

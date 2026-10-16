@@ -1,0 +1,30 @@
+---
+import ServicesGrid from "@components/collection/service/ServicesGrid.astro";
+import ServicesIntro from "@components/collection/service/ServicesIntro.astro";
+import Section from "@components/Section.astro";
+import IntroBlock from "@components/sections/IntroBlock.astro";
+import Default from "@layouts/Default.astro";
+
+const title = "Block management services";
+const description = "Our services for blocks and estates: budgets, accounts, repairs, major works, Section 20, fire safety, company secretary and leasehold sale packs.";
+---
+
+<Default title={title} description={description}>
+  <Section>
+    <div class="flex flex-col gap-14 sm:gap-16 md:gap-18 lg:gap-20 xl:gap-24">
+      <div class="container">
+        <ServicesIntro as="h1" heading="Block management services" lead={description} />
+      </div>
+      <IntroBlock
+        heading="The services a block or estate needs, from one managing agent"
+        paragraphs={[
+          "Belgarum Property Management looks after blocks of flats and shared estates for the people responsible for them. That can be a resident management company (RMC), a right to manage (RTM) company, a freeholder, a private landlord or a developer.",
+          "Our full block and estate management service brings together the money, the repairs, the safety checks and the company paperwork. You get one dedicated property manager as your contact. Each page below explains one part of that work: what is included, how it works and the questions people ask."
+        ]}
+      />
+      <div class="container">
+        <ServicesGrid featureFirst />
+      </div>
+    </div>
+  </Section>
+</Default>

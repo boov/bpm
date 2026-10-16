@@ -19,29 +19,41 @@ export async function getStaticPaths() {
 }
 
 const { data } = Astro.props.audience;
+
+const siteURL = Astro.site?.href;
+
+const breadcrumbSchema = toJsonLd({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteURL },
+    { "@type": "ListItem", position: 2, name: "Who we work with", item: new URL("/who-we-work-with/", Astro.site).href },
+    { "@type": "ListItem", position: 3, name: data.title, item: Astro.url.href }
+  ]
+});
 const faqSchema = toJsonLd(faqPageSchema(data.faqs));
 ---
 
-<Default title={data.metaTitle} description={data.description} cta={bandFor(data.cta)} trustStrip>
+<Default title={data.metaTitle} description={data.description} cta={bandFor(data.cta)}>
   <Fragment slot="head">
+    <script type="application/ld+json" set:html={breadcrumbSchema} />
     <script type="application/ld+json" set:html={faqSchema} />
   </Fragment>
   <Section>
     <div class="flex flex-col gap-14 sm:gap-16 md:gap-18 lg:gap-20 xl:gap-24">
-      <PageHero
-        eyebrow="Who we work with"
-        heading={data.hero.heading ?? data.title}
-        lead={data.description}
-        call={data.cta}
-        note={data.hero.note}
-        trustLine={data.hero.trustLine}
-      />
+      <PageHero eyebrow="Who we work with" heading={data.hero.heading ?? data.title} lead={data.description} note={data.hero.note} image={data.image} imageAlt={data.imageAlt} />
       <IntroBlock heading={data.intro.heading} paragraphs={data.intro.paragraphs} />
       <IncludedList heading={data.included.heading} items={data.included.items} />
+    </div>
+  </Section>
+  <Section class="from-theme-background-lowlight via-theme-background to-theme-background-lowlight bg-linear-to-b">
+    <div class="flex flex-col gap-14 sm:gap-16 md:gap-18 lg:gap-20 xl:gap-24">
       {data.steps.length > 0 && <StepList steps={data.steps} />}
       <ProofList items={data.proof} />
       <FaqList faqs={data.faqs} />
-      <ServiceLinks heading="Services for you" ids={data.services.map(entry => entry.id)} />
     </div>
+  </Section>
+  <Section>
+    <ServiceLinks heading="The perfect services for you" ids={data.services.map(entry => entry.id)} />
   </Section>
 </Default>

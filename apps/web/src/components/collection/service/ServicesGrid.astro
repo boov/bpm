@@ -13,9 +13,5 @@ const services = ids ? ids.flatMap(id => all.find(service => service.id === id) 
 ---
 
 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
-  {
-    services.map((service, index) =>
-      featureFirst && index === 0 ? <ServiceCard service={service} label="Full block and estate management" featured /> : <ServiceCard service={service} />
-    )
-  }
+  {services.map((service, index) => (featureFirst && index === 0 ? <ServiceCard service={service} featured /> : <ServiceCard service={service} />))}
 </div>

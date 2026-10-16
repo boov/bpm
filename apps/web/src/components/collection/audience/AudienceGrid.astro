@@ -1,0 +1,10 @@
+---
+import AudienceCard from "@components/collection/audience/AudienceCard.astro";
+import { getAudiences } from "@helpers";
+
+const audiences = await getAudiences();
+---
+
+<div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
+  {audiences.map(audience => <AudienceCard {audience} />)}
+</div>

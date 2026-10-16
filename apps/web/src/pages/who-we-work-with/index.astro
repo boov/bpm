@@ -1,0 +1,30 @@
+---
+import AudienceGrid from "@components/collection/audience/AudienceGrid.astro";
+import AudienceIntro from "@components/collection/audience/AudienceIntro.astro";
+import Section from "@components/Section.astro";
+import IntroBlock from "@components/sections/IntroBlock.astro";
+import Default from "@layouts/Default.astro";
+
+const title = "Who we work with";
+const description = "Block and estate management for RMC and RTM directors, freeholders, private landlords and developers. See how we work with you.";
+---
+
+<Default title={title} description={description}>
+  <Section>
+    <div class="flex flex-col gap-14 sm:gap-16 md:gap-18 lg:gap-20 xl:gap-24">
+      <div class="container">
+        <AudienceIntro as="h1" eyebrow="Our clients" heading={title} lead={description} />
+      </div>
+      <IntroBlock
+        heading="One managing agent for everyone responsible for a building"
+        paragraphs={[
+          "Belgarum Property Management looks after blocks of flats and shared estates for the people responsible for them. We work for resident management companies (RMCs), right to manage (RTM) companies, freeholders, private landlords and developers.",
+          "Each of these clients has different duties and different questions. Choose the page that fits you to see what we do for you, how we work and the questions people ask."
+        ]}
+      />
+      <div class="container">
+        <AudienceGrid />
+      </div>
+    </div>
+  </Section>
+</Default>

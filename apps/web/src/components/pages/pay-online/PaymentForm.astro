@@ -4,9 +4,12 @@ import Input from "@components/Input.astro";
 import ArrowRight from "@lucide/astro/icons/arrow-right";
 
 const TEST_PAYMENT_URL = "https://buy.stripe.com/test_7sY4gBddRbov0mMf229EI00";
-const stripePaymentUrl = import.meta.env.STRIPE_PAYMENT_URL ?? TEST_PAYMENT_URL;
+const stripePaymentUrl = import.meta.env.STRIPE_PAYMENT_URL || TEST_PAYMENT_URL;
 
 if (!import.meta.env.STRIPE_PAYMENT_URL) {
+  if (import.meta.env.PROD && process.env.CONTEXT === "production") {
+    throw new Error("STRIPE_PAYMENT_URL is not set. Production builds must use the live Stripe Payment Link. See apps/web/.env.example.");
+  }
   console.warn("STRIPE_PAYMENT_URL is not set; falling back to the Stripe test link. See apps/web/.env.example.");
 }
 ---

@@ -2,10 +2,10 @@
   "order": 8,
   "title": "Fire and building safety",
   "metaTitle": "Fire safety in blocks of flats",
-  "hero": {},
   "cta": "proposal",
   "description": "What the law requires for fire safety in blocks of flats. We arrange fire risk, asbestos and health and safety assessments with specialist firms.",
-  "image": "https://dummyimage.com/1536x658/ede2de/7e6d67",
+  "image": "../../assets/images/services/fire-and-building-safety.jpg",
+  "imageAlt": "Red fire alarm call point in a communal area",
   "intro": {
     "heading": "Safety duties for blocks of flats",
     "paragraphs": [
@@ -40,7 +40,7 @@
     },
     {
       "title": "Act on the findings",
-      "text": "We arrange the work with contractors. If the work counts as major works, we run [Section 20 consultation](/services/section-20-consultation) first."
+      "text": "We arrange the work with contractors. If the work counts as major works, we run [Section 20 consultation](/services/section-20-consultation/) first."
     },
     {
       "title": "Keep it under review",
@@ -48,9 +48,10 @@
     }
   ],
   "proof": [
-    "We arrange formal fire risk, asbestos, lift and health and safety checks with specialist firms, rather than doing this work ourselves.",
-    "We manage developments from blocks of 4 flats to a 22-floor high rise.",
-    "Your property manager inspects the building and communal areas regularly."
+    "Specialist firms carry out the fire risk, asbestos, lift and health and safety checks. Your property manager is your one contact for all of them.",
+    "We already manage a 22-floor high-rise, so the extra duties of taller buildings are familiar ground.",
+    "Your property manager checks the communal areas at each site inspection, so problems are spotted between assessments.",
+    "We don't stop at the report. We arrange the work it recommends, and run Section 20 consultation when the cost calls for it."
   ],
   "faqs": [
     {
@@ -85,6 +86,5 @@
         "Keep communal areas clear of belongings, rubbish and bikes. Don't wedge fire doors open, and report any damaged door, closer or alarm to your property manager. Read the fire safety instructions for your building, so you know what to do if there is a fire."
       ]
     }
-  ],
-  "related": ["repairs-and-maintenance", "major-works", "block-and-estate-management"]
+  ]
 }

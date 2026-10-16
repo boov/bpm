@@ -118,4 +118,3 @@ General content (not BPM facts): ground rent on new leases and the shared owners
 
 - `[NEEDS: developer services]` What BPM does for developers beyond planning-stage involvement: advice on the management structure, setting the first budget, handover to an RMC, and shared ownership. The page does not claim these.
 - `[NEEDS: case studies]` New developments BPM has managed from the start.
-- `[NEEDS: testimonials (Q1)]`

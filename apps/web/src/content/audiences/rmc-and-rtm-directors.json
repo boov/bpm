@@ -3,12 +3,14 @@
   "title": "RMC and RTM directors",
   "metaTitle": "RMC and RTM managing agent",
   "hero": {
-    "heading": "A managing agent for RMC and RTM boards",
-    "trustLine": true
+    "heading": "A managing agent for RMC and RTM boards"
   },
   "cta": "proposal",
+  "image": "../../assets/images/audiences/rmc-and-rtm-directors.jpg",
+  "imageAlt": "Board of directors meeting around an office table",
   "description": "Managing agent for RMC and RTM boards. You give your time for free; we do the day-to-day work and act as company secretary for about 15 RMCs.",
   "card": "You give your time for free but carry legal duties. We do the day-to-day work and can act as your company secretary.",
+  "icon": "building-2",
   "intro": {
     "heading": "You give your time. We carry the workload.",
     "paragraphs": [
@@ -21,10 +23,10 @@
     "items": [
       "Day-to-day management of the building and communal areas",
       "Service charge budgets, collection and credit control",
-      "Year end service charge accounts",
+      "Year-end service charge accounts",
       "Company secretary duties for RMCs, including Companies House returns and annual general meetings (AGMs)",
       "Fire risk, asbestos and health and safety assessments, through specialist firms",
-      "Section 20 consultation (the legal process for consulting leaseholders) before major works",
+      "[Section 20 consultation](/services/section-20-consultation/) (the legal process for consulting leaseholders) before major works",
       "Enforcement of lease covenants, the promises each leaseholder makes in their lease",
       "Regular site inspections, and management reports for larger developments"
     ]
@@ -48,10 +50,10 @@
     }
   ],
   "proof": [
-    "We act as company secretary for about 15 RMCs today, and have held 38 appointments in total, as Companies House records show.",
-    "We've managed blocks and estates since 1989, from blocks of 4 flats to a 22-floor high rise.",
-    "Each building's service charge money is held in its own designated trust account, separate from our money.",
-    "If something goes wrong, leaseholders and directors can use our [complaints procedure](/complaints-procedure), and then The Property Ombudsman (TPO), an independent complaints service."
+    "We can manage the building and act as your company secretary, so the board deals with one firm.",
+    "Switching agents? We handle the handover from your current agent, including the records, funds and contracts.",
+    "Your building's money sits in its own trust account, never mixed with ours or with another building's.",
+    "Our own Code of Conduct sets time limits for replying to the board."
   ],
   "faqs": [
     {
@@ -70,12 +72,12 @@
     {
       "question": "How do we move to BPM from our current managing agent?",
       "answer": [
-        "Check your current management agreement for its notice period. The board then decides when to give notice.",
-        "To compare us with your current agent, [request a management proposal](/contact?type=new-management). It sets out what we would do for your building."
+        "Check your current management agreement for its notice period. The board then decides when to give notice. We then arrange the handover with your current agent, including the building's records, service charge funds and contracts.",
+        "To compare us with your current agent, [request a management proposal](/contact/?type=new-management). It sets out what we would do for your building."
       ]
     },
     {
-      "question": "We're thinking about the right to manage. Can you help?",
+      "question": "Do you manage buildings for RTM companies?",
       "answer": [
         "We manage buildings for RTM companies once they have taken over management. Since 3 March 2025, the RTM company and its members do not usually pay the freeholder's costs of a claim. A tribunal can still order costs in some cases, such as a claim withdrawn unreasonably. An RTM claim is also possible where up to 50% of the building is not residential. For advice on making a claim, take independent legal advice."
       ]

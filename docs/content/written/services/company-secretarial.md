@@ -15,7 +15,7 @@ Company secretary for RMCs
 
 We act as company secretary for about 15 RMCs. Confirmation statements, the share register, AGMs and a registered office, handled for your board.
 
-Hero call to action: Request a management proposal
+Hero call to action: Get in touch
 
 ## intro
 
@@ -116,4 +116,3 @@ General content (not BPM facts): Companies Act 2006 duties, the optional company
 
 - `[NEEDS: RTM company secretary]` The sources say BPM acts as company secretary for RMCs only. Add RTM companies if BPM confirms.
 - `[NEEDS: fees]`
-- `[NEEDS: testimonials (Q1)]`

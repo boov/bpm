@@ -9,6 +9,10 @@ meta_description: "Our services for blocks and estates: budgets, accounts, repai
 
 ## Hero
 
+### Eyebrow
+
+Our services
+
 ### Heading
 
 Block management services
@@ -16,10 +20,6 @@ Block management services
 ### Lead
 
 Our services for blocks and estates: budgets, accounts, repairs, major works, Section 20, fire safety, company secretary and leasehold sale packs.
-
-### Call to action
-
-Request a management proposal
 
 ## Intro
 
@@ -48,6 +48,10 @@ One card for each live service page, in this order. Each card shows the page `ti
 9. Leasehold sale packs
 
 ## Who we work with
+
+### Eyebrow
+
+Who we work with
 
 ### Heading
 
@@ -90,4 +94,4 @@ Trust strip (`global/trust-strip.md`), then the call to action band, management 
 **Gaps:**
 
 - `[NEEDS: fees]`
-- `[NEEDS: insurance role (Q4)]` A buildings insurance card, if that page goes live.
+- `[NEEDS: insurance role (Q3)]` A buildings insurance card, if that page goes live.

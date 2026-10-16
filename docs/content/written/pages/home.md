@@ -27,14 +27,24 @@ One property manager who knows your building
 
 ### Calls to action
 
-- Request a management proposal
-- Pay your service charge
+- See how we can help you (`/services`)
+- Get in touch (`/contact`)
 
 ### Under the hero
 
 Compact trust line (`global/trust-strip.md`).
 
 ## audiences
+
+### audiences.eyebrow
+
+Who we work with
+
+### audiences.heading
+
+Find the services for you
+
+### Cards
 
 | title                             | text                                                                                                                 | href                                                  |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
@@ -52,9 +62,11 @@ Block management from Winchester
 
 ### intro.paragraphs
 
-Belgarum Property Management looks after blocks of flats and shared estates across Hampshire, Sussex, Dorset, London and the Home Counties. Our office is in Winchester, close to the M3.
+A family firm established in 1989, Belgarum Property Management looks after blocks of flats and shared estates. Block and estate management is all we do: no estate agency, no lettings.
 
-Your property manager inspects the building regularly and is your main contact. Service charge money for each block or estate is held in its own designated trust account. Block and estate management is all we do.
+Today we manage over 150 developments, from blocks of 4 flats to a 22-floor high rise, for resident management companies (RMCs), right to manage (RTM) companies, freeholders, private landlords and developers. Our office is in Winchester, close to the M3, and we cover Hampshire, Sussex, Dorset, London and the Home Counties.
+
+You get a dedicated property manager, who inspects the building regularly and is your main contact. Service charge money for each block or estate is held in its own designated trust account.
 
 ## support
 
@@ -81,6 +93,10 @@ Call 0800 298 0069. Monday to Thursday, 9am to 5pm; Friday, 9am to 4.30pm.
 
 ## services
 
+### services.eyebrow
+
+Our services
+
 ### services.heading
 
 Block and estate management services
@@ -105,7 +121,7 @@ Tell us about your block or estate, and we'll send you a management proposal.
 
 ### Button
 
-Request a management proposal
+Get in touch
 
 ---
 
@@ -120,6 +136,8 @@ Request a management proposal
 | Close to the M3                                    | Company: Location                                                                         | Sourced |
 | Regular site inspections                           | Ways of working: Regular site inspections                                                 | Sourced |
 | Block and estate management is all we do           | Ways of working: No estate agency or lettings                                             | Sourced |
+| Over 150 developments; 4 flats to 22 floors        | Scale: Developments managed; Range                                                        | Sourced |
+| Client types                                       | Company: Client types                                                                     | Sourced |
 | Company secretary (RMC card)                       | Ways of working: Company secretary duties for RMCs                                        | Sourced |
 | Compact trust line                                 | `global/trust-strip.md`                                                                   | Sourced |
 | Trust accounts; in-house credit control            | Memberships and protections: Client money; Ways of working: In-house credit control       | Sourced |
@@ -129,6 +147,5 @@ Request a management proposal
 
 **Gaps:**
 
-- `[NEEDS: testimonials (Q1)]`
-- `[NEEDS: repair reporting (Q7)]` A "report a repair" link in the support block, if BPM has a route.
-- `[NEEDS: out-of-hours line (Q2)]` An emergency number in the support block.
+- `[NEEDS: repair reporting (Q6)]` A "report a repair" link in the support block, if BPM has a route.
+- `[NEEDS: out-of-hours line (Q1)]` An emergency number in the support block.

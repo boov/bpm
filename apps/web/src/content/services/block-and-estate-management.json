@@ -2,39 +2,39 @@
   "order": 1,
   "title": "Block and estate management",
   "metaTitle": "Block management in Hampshire",
-  "hero": { "trustLine": true },
   "cta": "proposal",
   "description": "Block and estate management across Hampshire and the south since 1989. A dedicated property manager, money held in trust and the legal admin done for you.",
-  "image": "https://dummyimage.com/1536x658/ede2de/7e6d67",
+  "image": "../../assets/images/services/block-and-estate-management.jpg",
+  "imageAlt": "Modern brick blocks of flats with balconies",
   "intro": {
     "heading": "What block and estate management covers",
     "paragraphs": [
       "Running a block of flats or a shared estate takes time and carries legal duties. A managing agent takes that work on for you: the money, the repairs, the safety checks and the company paperwork.",
-      "Belgarum Property Management works for [resident management companies (RMCs) and right to manage (RTM) companies](/who-we-work-with/rmc-and-rtm-directors), run by the leaseholders. We also work for [freeholders](/who-we-work-with/freeholders-and-private-landlords) (the owners of the building and the land) and private landlords.",
+      "Belgarum Property Management works for [resident management companies (RMCs) and right to manage (RTM) companies](/who-we-work-with/rmc-and-rtm-directors/), run by the leaseholders. We also work for [freeholders](/who-we-work-with/freeholders-and-private-landlords/) (the owners of a building and its land) and private landlords.",
       "You get one dedicated property manager who knows your building. Block and estate management is all we do, and we've done it since 1989."
     ]
   },
   "included": {
     "heading": "What's included",
     "items": [
-      "A dedicated property manager, available Monday to Friday in office hours",
+      "A dedicated property manager, available Monday to Thursday, 9am to 5pm, and Friday, 9am to 4.30pm",
       "Regular site inspections, so your property manager sees problems in the communal areas",
       "Management reports for larger developments",
-      "[Service charge budgets](/services/service-charge-budgets) (the yearly plan for what leaseholders pay), so each leaseholder knows what they will pay towards running the building",
+      "[Service charge budgets](/services/service-charge-budgets/) (the yearly plan for what leaseholders pay), so each leaseholder knows their share of the running costs",
       "Reserve fund planning, to save for large future costs such as a new roof",
       "Collection of service charges, with in-house credit control and independent solicitors for arrears",
       "Bookkeeping, with the money for each block or estate held in its own designated trust account, separate from our own money",
       "Repairs and maintenance through contractors from our database, with work tendered regularly so prices are compared",
       "Insurance policies, as part of managing the communal areas",
-      "[Fire risk, asbestos and health and safety assessments](/services/fire-and-building-safety) by specialist firms, with the actions and their urgency reported to you",
-      "Planning for major works, and [Section 20 consultation](/services/section-20-consultation) (the legal process for consulting leaseholders before major works)",
-      "[Company secretary duties for RMCs](/services/company-secretarial): annual general meetings (AGMs), Companies House returns, the share register and a registered office",
-      "Enforcement of lease covenants, the promises in each lease such as paying the service charge or not causing a nuisance"
+      "[Fire risk, asbestos and health and safety assessments](/services/fire-and-building-safety/) by specialist firms, with the actions and their urgency reported to you",
+      "Planning for major works, and [Section 20 consultation](/services/section-20-consultation/) (the legal process for consulting leaseholders before major works)",
+      "[Company secretary duties for RMCs](/services/company-secretarial/): annual general meetings (AGMs), Companies House returns, the share register and a registered office",
+      "Enforcement of lease covenants, the promises in each lease, such as paying the service charge or not causing a nuisance"
     ]
   },
   "steps": [
     {
-      "title": "One named contact",
+      "title": "One dedicated contact",
       "text": "You get a dedicated property manager. They know your building and are your main contact, Monday to Thursday, 9am to 5pm, and Friday, 9am to 4.30pm."
     },
     {
@@ -55,13 +55,12 @@
     }
   ],
   "proof": [
-    "Block and estate management is all we do. We don't sell or let property.",
-    "We manage developments from blocks of 4 flats to a 22-floor high rise.",
-    "Our office is in Winchester, close to the M3.",
-    "Our own accounts team keeps the books and runs credit control for each block or estate.",
-    "We act as company secretary for about 15 RMCs today.",
-    "We use specialist firms for fire risk, asbestos, lifts and health and safety.",
-    "Several of our team have been with BPM since 2011 or earlier. [Meet the team](/about)."
+    "We don't sell or let property, so block and estate management gets our full attention.",
+    "We manage developments of every size, from blocks of 4 flats to a 22-floor high-rise.",
+    "Our own in-house accounts team keeps your books and chases late payers.",
+    "We already act as company secretary for about 15 RMCs, so your board's paperwork is in practised hands.",
+    "Our own Code of Conduct sets time limits for replying to you.",
+    "Our team stays. Several have been with BPM since 2011 or earlier, so you keep the people who know your building. [Meet the team](/about/)."
   ],
   "faqs": [
     {
@@ -72,15 +71,15 @@
       ]
     },
     {
-      "question": "How much does block management cost?",
+      "question": "How is the block management fee set?",
       "answer": [
         "It depends on the building: its size, its communal areas and the work it needs. Our management fee is one part of the service charge, and it is set out in the budget.",
-        "To find out what we would charge for your building, [request a management proposal](/contact?type=new-management)."
+        "To find out what we would charge for your building, [request a management proposal](/contact/?type=new-management)."
       ]
     },
     {
       "question": "Do you manage small blocks?",
-      "answer": ["Yes. We manage buildings from 4 flats up to a 22-floor high rise. We also work for private landlords."]
+      "answer": ["Yes. Some of the developments we manage are blocks of just 4 flats. We also work for private landlords."]
     },
     {
       "question": "Do you manage freehold estates as well as blocks of flats?",
@@ -92,6 +91,5 @@
       "question": "Which areas do you cover?",
       "answer": ["Hampshire, Sussex, Dorset, London and the Home Counties. Our office is in Winchester, close to the M3."]
     }
-  ],
-  "related": ["service-charge-budgets", "company-secretarial", "fire-and-building-safety"]
+  ]
 }

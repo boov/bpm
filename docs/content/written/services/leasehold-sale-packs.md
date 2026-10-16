@@ -53,15 +53,15 @@ What a pack usually covers
 
 ### 1. The seller's solicitor orders the pack
 
-The seller's solicitor orders the pack from us. `[NEEDS: sale pack ordering (Q6)]` Send enquiries to solicitorenquiries@bpmanagement.org.
+The seller's solicitor orders the pack from us. `[NEEDS: sale pack ordering (Q5)]` Send enquiries to solicitorenquiries@bpmanagement.org.
 
 ### 2. The seller pays the fee
 
-The seller usually pays the pack fee. Depending on the lease, it may count as an administration charge: a fee charged to one leaseholder, not to everyone. `[NEEDS: sale pack cost (Q6)]`
+The seller usually pays the pack fee. Depending on the lease, it may count as an administration charge: a fee charged to one leaseholder, not to everyone. `[NEEDS: sale pack cost (Q5)]`
 
 ### 3. We prepare the pack
 
-We prepare the pack from the building's records, including the budgets, accounts and Section 20 records. `[NEEDS: sale pack turnaround (Q6)]`
+We prepare the pack from the building's records, including the budgets, accounts and Section 20 records. `[NEEDS: sale pack turnaround (Q5)]`
 
 ### 4. Further questions
 
@@ -85,9 +85,9 @@ Usually the seller's solicitor. If you're selling a flat in a building we manage
 
 ### How much does a pack cost, and how long does it take?
 
-`[NEEDS: sale pack cost (Q6)]` The seller usually pays the fee. Depending on the lease, it may count as an administration charge.
+`[NEEDS: sale pack cost (Q5)]` The seller usually pays the fee. Depending on the lease, it may count as an administration charge.
 
-`[NEEDS: sale pack turnaround (Q6)]` To avoid delays, the seller's solicitor should order the pack as soon as a sale is agreed.
+`[NEEDS: sale pack turnaround (Q5)]` To avoid delays, the seller's solicitor should order the pack as soon as a sale is agreed.
 
 ### What is the LPE1 form?
 
@@ -124,7 +124,7 @@ General content (not BPM facts): what an LPE1 pack usually covers, the FME1 form
 
 **Gaps:**
 
-- `[NEEDS: sale pack ordering (Q6)]` Step 1 needs the ordering route (form, email or portal).
-- `[NEEDS: sale pack cost (Q6)]` Step 2 and FAQ 2.
-- `[NEEDS: sale pack turnaround (Q6)]` Step 3 and FAQ 2.
-- `[NEEDS: insurance role (Q4)]` The included list says "buildings insurance details" in general terms only.
+- `[NEEDS: sale pack ordering (Q5)]` Step 1 needs the ordering route (form, email or portal).
+- `[NEEDS: sale pack cost (Q5)]` Step 2 and FAQ 2.
+- `[NEEDS: sale pack turnaround (Q5)]` Step 3 and FAQ 2.
+- `[NEEDS: insurance role (Q3)]` The included list says "buildings insurance details" in general terms only.

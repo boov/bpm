@@ -15,7 +15,7 @@ Fire and building safety
 
 What the law requires for fire safety in blocks of flats. We arrange fire risk, asbestos and health and safety assessments with specialist firms.
 
-Hero call to action: Request a management proposal
+Hero call to action: Get in touch
 
 ## intro
 
@@ -123,4 +123,3 @@ General content (not BPM facts): the responsible person and the duties of others
 
 - `[NEEDS: building safety role]` What BPM does for higher-risk buildings under the Building Safety Act 2022, such as registration, the safety case and resident engagement. The page explains the law only.
 - `[NEEDS: case studies]`
-- `[NEEDS: testimonials (Q1)]`

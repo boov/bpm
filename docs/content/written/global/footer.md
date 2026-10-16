@@ -15,7 +15,11 @@ Belgarum Property Management
 
 ### Text
 
-Block and estate management since 1989. From our Winchester office, we look after blocks of flats and shared estates across Hampshire, Sussex, Dorset, London and the Home Counties.
+Block and estate management since 1989. From our Winchester office, we look after blocks of flats and shared estates across Hampshire, Sussex, Dorset, London and the Home Counties. We are a Full Member of The Property Institute and a Member of The Property Ombudsman.
+
+### Social links
+
+Icon links below the text: Facebook (`https://www.facebook.com/belgarumpropertymanagementltd`), Instagram (`https://www.instagram.com/belgarumpropertymanagementltd`) and LinkedIn (`https://www.linkedin.com/company/belgarumpropertymanagementltd`).
 
 ## Services column
 
@@ -25,7 +29,9 @@ Services
 
 ### Links
 
-One link for each live service page, using the page `title`. Same list as the services dropdown in `header.md`.
+The first 4 service pages in the order of the services dropdown in `header.md`, using the page `title`.
+
+Link below the list: All services (`/services`)
 
 ## Who we work with column
 
@@ -47,23 +53,17 @@ Contact details
 
 ### Items
 
-| Label        | Value                                                           | Link                                 |
-| ------------ | --------------------------------------------------------------- | ------------------------------------ |
-| Phone        | 0800 298 0069                                                   | `tel:+448002980069`                  |
-| Email        | management@bpmanagement.org                                     | `mailto:management@bpmanagement.org` |
-| Office       | Old Manor Nursery, Kilham Lane, Winchester, Hampshire, SO22 5QD |                                      |
-| Office hours | Monday to Thursday, 9am to 5pm; Friday, 9am to 4.30pm           |                                      |
-
-## Memberships
-
-- Full Member of The Property Institute
-- Member of The Property Ombudsman
+| Label | Value                                                           | Link                                 |
+| ----- | --------------------------------------------------------------- | ------------------------------------ |
+| Phone | 0800 298 0069                                                   | `tel:+448002980069`                  |
+| Email | management@bpmanagement.org                                     | `mailto:management@bpmanagement.org` |
+| Post  | Old Manor Nursery, Kilham Lane, Winchester, Hampshire, SO22 5QD |                                      |
 
 ## Legal line
 
 © {year} Belgarum Property Management Limited. Registered in England and Wales, company number 07580603. Registered office: Highland House, Mayflower Close, Chandlers Ford, Hampshire, SO53 4AR.
 
-`[NEEDS: VAT number (Q5)]` If BPM is VAT registered, add: "VAT number: {number}."
+`[NEEDS: VAT number (Q4)]` If BPM is VAT registered, add: "VAT number: {number}."
 
 ## Footer links
 
@@ -89,8 +89,8 @@ In this order:
 | Place of registration       | Legal line                            |
 | Registered office address   | Legal line                            |
 | Trading address and contact | Contact column                        |
-| Professional body           | Memberships                           |
-| Redress scheme              | Memberships                           |
+| Professional body           | Company description                   |
+| Redress scheme              | Company description                   |
 | VAT number                  | Legal line, when known                |
 | Complaints procedure        | Footer links                          |
 | Privacy notice              | Footer links                          |
@@ -108,10 +108,9 @@ In this order:
 | Registered office  | Company: Registered office                  | Sourced |
 | Trading address    | Company: Trading address                    | Sourced |
 | Phone, email       | Company: Phone; Email                       | Sourced |
-| Office hours       | Company: Office hours                       | Sourced |
 | TPI Full Member    | Memberships and protections: Trade body     | Sourced |
 | TPO member         | Memberships and protections: Redress scheme | Sourced |
 
 **Gaps:**
 
-- `[NEEDS: VAT number (Q5)]`
+- `[NEEDS: VAT number (Q4)]`

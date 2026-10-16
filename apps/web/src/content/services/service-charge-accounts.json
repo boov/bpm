@@ -2,10 +2,10 @@
   "order": 3,
   "title": "Service charge accounts",
   "metaTitle": "Service charge accounts",
-  "hero": {},
   "cta": "proposal",
-  "description": "Service charge collection, arrears and year end accounts from our own accounts team, with each building's money in its own designated trust account.",
-  "image": "https://dummyimage.com/1536x658/ede2de/7e6d67",
+  "description": "Service charge collection, arrears and year-end accounts from our own accounts team, with each building's money in its own designated trust account.",
+  "image": "../../assets/images/services/service-charge-accounts.jpg",
+  "imageAlt": "Accountant working through figures with a calculator",
   "intro": {
     "heading": "Keeping the building's money in order",
     "paragraphs": [
@@ -21,7 +21,7 @@
       "Credit control by our own team when payments are late",
       "Arrears recovery through independent solicitors, when reminders don't work",
       "Paying contractors and suppliers from the building's trust account",
-      "Year end service charge accounts, comparing what was spent with the budget",
+      "Year-end service charge accounts, comparing what was spent with the budget",
       "Balancing charges or credits for each leaseholder after the year end"
     ]
   },
@@ -48,16 +48,16 @@
     }
   ],
   "proof": [
-    "Our accounts team keeps the books for each block or estate. Our block accounts and bookkeeping specialist has been with us since 2014.",
-    "Service charge money for each building is held in its own designated trust account, named for that block or estate.",
-    "Credit control is done in-house. Independent solicitors handle arrears cases that need legal action.",
-    "Leaseholders can pay their service charge online by card."
+    "Your books are kept by our own accounts team, including a block accounts specialist who has been with us since 2014.",
+    "Your building's money sits in its own trust account, never mixed with ours or with another building's.",
+    "Late payers hear from our own team first, so arrears are chased early and the budget stays on track.",
+    "Leaseholders can pay online by debit or credit card, so paying on time is easy."
   ],
   "faqs": [
     {
       "question": "What are service charge accounts?",
       "answer": [
-        "Service charge accounts are the year end statement of what was actually spent on the building, compared with the budget. They show whether leaseholders paid too much or too little during the year."
+        "Service charge accounts are the year-end statement of what was actually spent on the building, compared with the budget. They show whether leaseholders paid too much or too little during the year."
       ]
     },
     {
@@ -82,9 +82,8 @@
     {
       "question": "How do I pay my service charge?",
       "answer": [
-        "You can [pay your service charge](/pay-online) online by debit or credit card. Use the amount on your demand. If you have a question about your demand, contact your property manager."
+        "You can [pay your service charge](/pay-online/) online by debit or credit card. Use the amount on your demand. If you have a question about your demand, contact your property manager."
       ]
     }
-  ],
-  "related": ["service-charge-budgets", "leasehold-sale-packs", "block-and-estate-management"]
+  ]
 }

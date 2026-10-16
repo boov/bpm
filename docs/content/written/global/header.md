@@ -9,16 +9,14 @@ meta_description: (none)
 
 ## Primary navigation
 
-Labels in menu order. Menu labels are navigation, not calls to action, so they are short nouns.
+Labels in menu order. Menu labels are navigation, not calls to action, so they are short nouns. The logo links home and the header actions lead to contact, so the menu has no Home or Contact link.
 
 | Label            | Link               | Dropdown                                                    |
 | ---------------- | ------------------ | ----------------------------------------------------------- |
-| Home             | `/`                |                                                             |
 | Services         | `/services`        | One link for each live service page, using the page `title` |
 | Who we work with | (no overview page) | The 3 audience pages, using the labels below                |
 | About            | `/about`           |                                                             |
 | FAQs             | `/faqs`            |                                                             |
-| Contact          | `/contact`         |                                                             |
 
 ### Services dropdown
 
@@ -44,11 +42,11 @@ Link at the foot of the dropdown: All services
 
 ## Header actions
 
-| Element          | Copy                          | Link                                              |
-| ---------------- | ----------------------------- | ------------------------------------------------- |
-| Phone label      | Call 0800 298 0069            | `tel:+448002980069`                               |
-| Primary button   | Request a management proposal | `/contact`, enquiry type preset to new management |
-| Secondary button | Pay your service charge       | `/pay-online`                                     |
+| Element          | Copy                          | Link                |
+| ---------------- | ----------------------------- | ------------------- |
+| Phone label      | Give us a call, 0800 298 0069 | `tel:+448002980069` |
+| Primary button   | Get in touch                  | `/contact`          |
+| Secondary button | Pay bill                      | `/pay-online`       |
 
 ## Mobile navigation
 

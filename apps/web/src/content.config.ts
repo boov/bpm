@@ -1,7 +1,8 @@
 import { callKeys } from "@assets/scripts/calls-to-action";
-import { personnel as personnelContent, questions as questionsContent, testimonials as testimonialsContent } from "@bpm/data";
+import { personnel as personnelContent, questions as questionsContent } from "@bpm/data";
 import { glob } from "astro/loaders";
-import { defineCollection, reference, z } from "astro:content";
+import { z } from "astro/zod";
+import { defineCollection, reference } from "astro:content";
 
 const statusSchema = z.enum(["draft", "published"]).default("published");
 
@@ -34,7 +35,7 @@ const pageFields = {
   order: z.number().optional().default(0),
   title: z.string(),
   metaTitle: z.string().max(34),
-  hero: z.object({ heading: z.string().optional(), note: z.string().optional(), trustLine: z.boolean().default(false) }).default({ trustLine: false }),
+  hero: z.object({ heading: z.string().optional(), note: z.string().optional() }).default({}),
   cta: z.enum(callKeys),
   description: z.string().max(155),
   intro: z.object({ heading: z.string(), paragraphs: z.array(z.string()).min(1) }),
@@ -49,35 +50,28 @@ const services = defineCollection({
     z.object({
       ...pageFields,
       image: image(),
-      steps: z.array(stepSchema).min(1),
-      related: z.array(reference("services")).min(1)
+      imageAlt: z.string(),
+      steps: z.array(stepSchema).min(1)
     })
 });
 
 const audiences = defineCollection({
   loader: glob({ pattern: "*.json", base: "./src/content/audiences" }),
-  schema: z.object({
-    ...pageFields,
-    card: z.string(),
-    steps: z.array(stepSchema).default([]),
-    services: z.array(reference("services")).min(1)
-  })
-});
-
-const testimonials = defineCollection({
-  loader: async () => {
-    return testimonialsContent.data.map(testimonial => ({
-      id: testimonial.author.toLowerCase().replace(/\s+/g, "-"),
-      ...testimonial
-    }));
-  },
-  schema: testimonialsContent.schema
+  schema: ({ image }) =>
+    z.object({
+      ...pageFields,
+      image: image(),
+      imageAlt: z.string(),
+      card: z.string(),
+      icon: z.enum(["building-2", "hard-hat", "key-round"]),
+      steps: z.array(stepSchema).default([]),
+      services: z.array(reference("services")).min(1)
+    })
 });
 
 export const collections = {
   personnel,
   questions,
   services,
-  audiences,
-  testimonials
+  audiences
 };

@@ -47,7 +47,7 @@ What's included
 
 ### 1. Tell your property manager
 
-Contact your property manager by phone or email. Tell them the address, what the problem is, where it is and when it started. Photos help. `[NEEDS: repair reporting (Q7)]`
+Contact your property manager by phone or email. Tell them the address, what the problem is, where it is and when it started. Photos help. `[NEEDS: repair reporting (Q6)]`
 
 ### 2. We check who is responsible
 
@@ -86,7 +86,7 @@ If you rent your flat, report repairs inside the flat to your landlord or lettin
 
 If there is a risk to life, such as a fire, call 999. If you smell gas, call the National Gas Emergency number on 0800 111 999.
 
-`[NEEDS: out-of-hours line (Q2)]`
+`[NEEDS: out-of-hours line (Q1)]`
 
 ### Water is leaking into my flat. What should I do?
 
@@ -120,6 +120,6 @@ General content (not BPM facts): who usually repairs what under a lease, emergen
 
 **Gaps:**
 
-- `[NEEDS: repair reporting (Q7)]` A formal repair reporting route, such as a form or portal. The page says to contact the property manager, as `client-questions.md` decides.
-- `[NEEDS: out-of-hours line (Q2)]` The emergency FAQ gives only the 999 and gas numbers.
-- `[NEEDS: response times (Q8)]` How quickly repairs are dealt with.
+- `[NEEDS: repair reporting (Q6)]` A formal repair reporting route, such as a form or portal. The page says to contact the property manager, as `client-questions.md` decides.
+- `[NEEDS: out-of-hours line (Q1)]` The emergency FAQ gives only the 999 and gas numbers.
+- `[NEEDS: response times (Q7)]` How quickly repairs are dealt with.

@@ -21,11 +21,25 @@ If your enquiry is urgent, call us on 0800 298 0069.
 
 ## Links
 
-| Label               | Link     |
-| ------------------- | -------- |
-| Go to the home page | `/`      |
-| Read our FAQs       | `/faqs`  |
-| About us            | `/about` |
+| Label          | Link     |
+| -------------- | -------- |
+| Head back home | `/`      |
+| Read our FAQs  | `/faqs`  |
+| About us       | `/about` |
+
+## Social panel
+
+### Heading
+
+Find us elsewhere
+
+### Links
+
+| Label     | Link                                                             |
+| --------- | ---------------------------------------------------------------- |
+| Facebook  | `https://www.facebook.com/belgarumpropertymanagementltd`         |
+| Instagram | `https://www.instagram.com/belgarumpropertymanagementltd`        |
+| LinkedIn  | `https://www.linkedin.com/company/belgarumpropertymanagementltd` |
 
 ---
 
@@ -38,4 +52,4 @@ If your enquiry is urgent, call us on 0800 298 0069.
 
 **Gaps:**
 
-- `[NEEDS: response times (Q8)]` How soon we reply. The page says "as soon as we can".
+- `[NEEDS: response times (Q7)]` How soon we reply. The page says "as soon as we can".

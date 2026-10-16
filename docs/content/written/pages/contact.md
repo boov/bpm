@@ -11,27 +11,11 @@ meta_description: "Contact Belgarum Property Management in Winchester. Call 0800
 
 ### Heading
 
-Contact us
-
-### Lead
-
-Call 0800 298 0069, email management@bpmanagement.org or send us an enquiry below.
-
-## Contact details
-
-| Label               | Value                                                           | Link                                         |
-| ------------------- | --------------------------------------------------------------- | -------------------------------------------- |
-| Phone               | 0800 298 0069                                                   | `tel:+448002980069`                          |
-| Email               | management@bpmanagement.org                                     | `mailto:management@bpmanagement.org`         |
-| Solicitor enquiries | solicitorenquiries@bpmanagement.org                             | `mailto:solicitorenquiries@bpmanagement.org` |
-| Office              | Old Manor Nursery, Kilham Lane, Winchester, Hampshire, SO22 5QD |                                              |
-| Office hours        | Monday to Thursday, 9am to 5pm; Friday, 9am to 4.30pm           |                                              |
-
-### Note under the details
-
-We record calls for training.
+Get in touch
 
 ## If you live in a building we manage
+
+Shown beside the managing agent section, each in its own panel.
 
 Your property manager is your contact for questions about your building, your service charge or repairs. Use the form below, or call or email us.
 
@@ -43,9 +27,11 @@ Choose "New management for a building" in the form and tell us about the buildin
 
 ## Emergency note
 
+Shown as an alert.
+
 This form isn't for emergencies. If there is a risk to life, call 999. If you smell gas, call the National Gas Emergency number on 0800 111 999.
 
-`[NEEDS: out-of-hours line (Q2)]`
+`[NEEDS: out-of-hours line (Q1)]`
 
 ## Enquiry form
 
@@ -60,7 +46,7 @@ Send us an enquiry
 | name             | Your name         |                              | Yes                                                   |
 | email_address    | Email address     |                              | Yes                                                   |
 | phone_number     | Phone number      | optional                     | No                                                    |
-| enquiry_type     | What is it about? | Select                       | Yes                                                   |
+| enquiry_type     | What is it about? | Defaults to General enquiry  | Yes                                                   |
 | property_address | Property address  | The building or flat address | Yes, except for new development and general enquiries |
 | enquiry_text     | Your message      | Tell us how we can help      | Yes                                                   |
 
@@ -68,6 +54,7 @@ Send us an enquiry
 
 | Value               | Label                         |
 | ------------------- | ----------------------------- |
+| general             | General enquiry               |
 | new-management      | New management for a building |
 | new-development     | A new development             |
 | service-charge      | Service charge or accounts    |
@@ -77,7 +64,6 @@ Send us an enquiry
 | section-20          | Section 20 or major works     |
 | company-secretarial | Company secretary             |
 | complaint           | A complaint                   |
-| general             | Something else                |
 
 ### Extra fields by enquiry type
 
@@ -140,6 +126,20 @@ We use your details to reply to your enquiry. Read our [privacy policy](/privacy
 
 Send your enquiry
 
+## Contact details
+
+| Label               | Value                                                           | Link                                         |
+| ------------------- | --------------------------------------------------------------- | -------------------------------------------- |
+| Phone               | 0800 298 0069                                                   | `tel:+448002980069`                          |
+| Email               | management@bpmanagement.org                                     | `mailto:management@bpmanagement.org`         |
+| Solicitor enquiries | solicitorenquiries@bpmanagement.org                             | `mailto:solicitorenquiries@bpmanagement.org` |
+| Office              | Old Manor Nursery, Kilham Lane, Winchester, Hampshire, SO22 5QD |                                              |
+| Office hours        | Monday to Thursday, 9am to 5pm; Friday, 9am to 4.30pm           |                                              |
+
+### Note under the details
+
+We record calls for training.
+
 ---
 
 **Facts used:**
@@ -154,5 +154,5 @@ Send your enquiry
 
 **Gaps:**
 
-- `[NEEDS: out-of-hours line (Q2)]`
-- `[NEEDS: response times (Q8)]` How soon we reply to an enquiry.
+- `[NEEDS: out-of-hours line (Q1)]`
+- `[NEEDS: response times (Q7)]` How soon we reply to an enquiry.

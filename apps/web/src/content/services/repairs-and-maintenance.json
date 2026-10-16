@@ -2,10 +2,10 @@
   "order": 5,
   "title": "Repairs and maintenance",
   "metaTitle": "Block repairs and maintenance",
-  "hero": {},
   "cta": "residents",
-  "description": "How to report a repair in a block we manage, and who pays for what under the lease. We arrange the work with contractors we tender regularly.",
-  "image": "https://dummyimage.com/1536x658/ede2de/7e6d67",
+  "description": "How to report a repair in a block we manage, and who pays for what under the lease. We arrange the work through contractors from our database.",
+  "image": "../../assets/images/services/repairs-and-maintenance.jpg",
+  "imageAlt": "Plumber repairing the pipes under a sink",
   "intro": {
     "heading": "How to report a repair",
     "paragraphs": [
@@ -16,7 +16,7 @@
   "included": {
     "heading": "What's included",
     "items": [
-      "Repairs to the communal areas, and to the other parts of the building that the lease makes the freeholder, RMC or RTM company repair",
+      "Repairs to the communal areas, and to the other parts of the building that the lease makes the freeholder, resident management company (RMC) or right to manage (RTM) company responsible for",
       "A database of contractors, with work tendered regularly",
       "Specialist firms for lifts, asbestos and fire risk",
       "Regular site inspections, so your property manager can spot problems in the communal areas",
@@ -38,14 +38,14 @@
     },
     {
       "title": "We pay the contractor",
-      "text": "We pay the contractor's invoice from the building's service charge money. The cost shows in the year end service charge accounts."
+      "text": "We pay the contractor's invoice from the building's service charge money. The cost shows in the year-end service charge accounts."
     }
   ],
   "proof": [
-    "We keep a database of contractors and tender work regularly.",
-    "We use specialist firms for lifts, asbestos, fire risk and health and safety.",
-    "Your property manager inspects the building and communal areas regularly.",
-    "You have one dedicated property manager, available Monday to Thursday, 9am to 5pm, and Friday, 9am to 4.30pm."
+    "Work is tendered with contractors from our database, so repair costs are compared and your service charge goes further.",
+    "We check the lease before any work starts, so the building pays only for the repairs it should.",
+    "Your property manager inspects the communal areas regularly, so problems can be spotted before you need to report them.",
+    "You report repairs to one dedicated property manager who knows your building."
   ],
   "faqs": [
     {
@@ -58,26 +58,28 @@
     {
       "question": "How do I report a repair?",
       "answer": [
-        "Contact your property manager by phone on 0800 298 0069 or by email at management@bpmanagement.org. Our office is open Monday to Thursday, 9am to 5pm, and Friday, 9am to 4.30pm.",
+        "Contact your property manager by phone on [0800 298 0069](tel:+448002980069) or by email at [management@bpmanagement.org](mailto:management@bpmanagement.org). Our office is open Monday to Thursday, 9am to 5pm, and Friday, 9am to 4.30pm.",
         "If you rent your flat, report repairs inside the flat to your landlord or letting agent."
       ]
     },
     {
       "question": "What should I do in an emergency?",
-      "answer": ["If there is a risk to life, such as a fire, call 999. If you smell gas, call the National Gas Emergency number on 0800 111 999."]
+      "answer": [
+        "If there is a risk to life, such as a fire, call 999. If you smell gas, call the National Gas Emergency number on [0800 111 999](tel:+44800111999).",
+        "For an urgent problem with the building, such as a leak from the roof or a communal pipe, call your property manager on [0800 298 0069](tel:+448002980069) during office hours."
+      ]
     },
     {
       "question": "Water is leaking into my flat. What should I do?",
       "answer": [
-        "If the water is coming from the flat above, contact the people who live there first, as the leak is often inside their flat. If the leak comes from the roof, a communal pipe or a communal area, contact your property manager. If water is near electrics, turn off the electricity at the consumer unit if it is safe to do so."
+        "If the water is coming from the flat above, contact the people who live there first, as the leak is often inside their flat. If the leak comes from the roof, a communal pipe or a communal area, contact your property manager. Where water is near electrics, turn off the electricity at the consumer unit if it is safe to do so."
       ]
     },
     {
       "question": "Who pays for repairs to the building?",
       "answer": [
-        "Repairs that the lease makes the building's responsibility are paid from the service charge. The service charge is the money leaseholders pay, under their lease, towards running, repairing and insuring the building. Large, one-off projects are [major works](/services/major-works), and the law may require leaseholders to be consulted first."
+        "Repairs that the lease makes the building's responsibility are paid from the service charge. The service charge is the money leaseholders pay, under their lease, towards running, repairing and insuring the building. Large, one-off projects are [major works](/services/major-works/), and the law may require leaseholders to be consulted first."
       ]
     }
-  ],
-  "related": ["major-works", "fire-and-building-safety", "block-and-estate-management"]
+  ]
 }

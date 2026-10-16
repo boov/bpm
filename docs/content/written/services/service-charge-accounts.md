@@ -15,7 +15,7 @@ Service charge accounts
 
 Service charge collection, arrears and year end accounts from our own accounts team, with each building's money in its own designated trust account.
 
-Hero call to action: Request a management proposal
+Hero call to action: Get in touch
 
 ## intro
 
@@ -124,6 +124,5 @@ General content (not BPM facts): balancing charges, recovery of arrears costs un
 **Gaps:**
 
 - `[NEEDS: accounts certification]` Whether the year end accounts are checked or certified by an independent accountant.
-- `[NEEDS: client money protection (Q2)]`
+- `[NEEDS: client money protection (Q1)]`
 - `[NEEDS: fees]`
-- `[NEEDS: testimonials (Q1)]`

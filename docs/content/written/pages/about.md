@@ -25,13 +25,23 @@ Block and estate management from Winchester
 
 ### Paragraphs
 
-Belgarum Property Management manages blocks of flats and shared estates for resident management companies (RMCs), right to manage (RTM) companies, freeholders, private landlords and developers. We don't sell or let property.
+No estate agency, no lettings. Belgarum Property Management looks after blocks of flats and shared estates for resident management companies (RMCs), right to manage (RTM) companies, freeholders, private landlords and developers.
 
-We started as a family firm in 1989. Today we manage over 150 developments, from blocks of 4 flats to a 22-floor high rise, across Hampshire, Sussex, Dorset, London and the Home Counties.
+From the start, we've treated the people who own the homes we look after as our customers. The day-to-day work lands with us: maintenance, tenant queries, even vandalism.
+
+Today we manage over 150 developments, from blocks of 4 flats to a 22-floor high rise, across Hampshire, Sussex, Dorset, London and the Home Counties. Some clients own several hundred homes. Others have one small development.
+
+We work closely with specialists in fire risk, asbestos, lifts, health and safety and insurance broking. Our own Code of Conduct sets time limits for replying to you.
 
 Our office is in Winchester, close to the M3. Every client has a dedicated property manager, available Monday to Thursday, 9am to 5pm, and Friday, 9am to 4.30pm.
 
 ## Milestones
+
+### Heading
+
+Our history
+
+### Items
 
 | Year  | Text                                                                |
 | ----- | ------------------------------------------------------------------- |
@@ -105,26 +115,29 @@ Call to action band, management proposal variant (`global/cta-band.md`). No trus
 
 **Facts used:**
 
-| Claim on this page                                    | `facts.md` row                                                                               | Status  |
-| ----------------------------------------------------- | -------------------------------------------------------------------------------------------- | ------- |
-| Family firm, established 1989                         | Company: Business established                                                                | Sourced |
-| Incorporated 2011                                     | Company: Incorporated                                                                        | Sourced |
-| Client types; no estate agency or lettings            | Company: Client types; Ways of working: No estate agency or lettings                         | Sourced |
-| Over 150 developments; 4 flats to 22 floors           | Scale: Developments managed; Range                                                           | Sourced |
-| Areas; Winchester, close to the M3                    | Company: Areas covered; Location                                                             | Sourced |
-| Dedicated property manager; office hours; inspections | Ways of working: Dedicated property manager; Regular site inspections; Company: Office hours | Sourced |
-| Designated trust accounts                             | Memberships and protections: Client money                                                    | Sourced |
-| Own accounts team; credit control                     | Ways of working: Bookkeeping service; In-house credit control                                | Sourced |
-| Service charge accounts in-house                      | Ways of working: Year end service charge accounts                                            | Sourced |
-| Specialists                                           | Ways of working: Specialists used                                                            | Sourced |
-| Industry-standard management contracts                | Ways of working: Industry-standard management contracts                                      | Sourced |
-| Team names, roles and join dates                      | Team (live team page, with Chloe Dixon and Ryan Ashurst's role from LinkedIn)                | Sourced |
-| TPI Full Member; formed from ARMA and IRPM            | Memberships and protections: Trade body; Former trade body                                   | Sourced |
-| TPO member                                            | Memberships and protections: Redress scheme                                                  | Sourced |
-| £5 million professional indemnity insurance           | Memberships and protections: Professional indemnity insurance                                | Sourced |
+| Claim on this page                                         | `facts.md` row                                                                               | Status  |
+| ---------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ------- |
+| Family firm, established 1989                              | Company: Business established                                                                | Sourced |
+| Incorporated 2011                                          | Company: Incorporated                                                                        | Sourced |
+| Client types; no estate agency or lettings                 | Company: Client types; Ways of working: No estate agency or lettings                         | Sourced |
+| Over 150 developments; 4 flats to 22 floors                | Scale: Developments managed; Range                                                           | Sourced |
+| Owners treated as customers                                | Company: Ethos                                                                               | Sourced |
+| Day-to-day matters: maintenance, tenant queries, vandalism | Ways of working: Day-to-day matters                                                          | Sourced |
+| Clients from several hundred homes to one development      | Scale: Client size                                                                           | Sourced |
+| Code of Conduct with reply time limits                     | Ways of working: Code of Conduct                                                             | Sourced |
+| Areas; Winchester, close to the M3                         | Company: Areas covered; Location                                                             | Sourced |
+| Dedicated property manager; office hours; inspections      | Ways of working: Dedicated property manager; Regular site inspections; Company: Office hours | Sourced |
+| Designated trust accounts                                  | Memberships and protections: Client money                                                    | Sourced |
+| Own accounts team; credit control                          | Ways of working: Bookkeeping service; In-house credit control                                | Sourced |
+| Service charge accounts in-house                           | Ways of working: Year end service charge accounts                                            | Sourced |
+| Specialists, including insurance broking                   | Ways of working: Specialists used                                                            | Sourced |
+| Industry-standard management contracts                     | Ways of working: Industry-standard management contracts                                      | Sourced |
+| Team names, roles and join dates                           | Team (live team page, with Chloe Dixon and Ryan Ashurst's role from LinkedIn)                | Sourced |
+| TPI Full Member; formed from ARMA and IRPM                 | Memberships and protections: Trade body; Former trade body                                   | Sourced |
+| TPO member                                                 | Memberships and protections: Redress scheme                                                  | Sourced |
+| £5 million professional indemnity insurance                | Memberships and protections: Professional indemnity insurance                                | Sourced |
 
 **Gaps:**
 
-- `[NEEDS: team photos (Q3)]` Headshots, and confirmation the team list is current.
-- `[NEEDS: testimonials (Q1)]`
+- `[NEEDS: team photos (Q2)]` Headshots, and confirmation the team list is current.
 - `[NEEDS: case studies]`

@@ -7,12 +7,13 @@
   },
   "cta": "sale-pack",
   "description": "How to order a leasehold sale pack (LPE1) for a flat we manage. What it covers, who pays, and how sellers and solicitors can avoid delays.",
-  "image": "https://dummyimage.com/1536x658/ede2de/7e6d67",
+  "image": "../../assets/images/services/leasehold-sale-packs.jpg",
+  "imageAlt": "Model house and a set of keys on a table",
   "intro": {
     "heading": "What a leasehold sale pack is",
     "paragraphs": [
       "When a leaseholder sells a flat, the buyer's solicitor needs information about the building and the service charge. The managing agent provides it in a leasehold sale pack (sometimes called a management pack), often on a standard form called the LPE1. A complete pack helps the sale move without delays.",
-      "If Belgarum Property Management manages the building, we prepare the pack. We also answer the further questions the buyer's solicitor may raise. Solicitors can send enquiries to solicitorenquiries@bpmanagement.org."
+      "If Belgarum Property Management manages the building, we prepare the pack. We also answer the further questions the buyer's solicitor may raise."
     ]
   },
   "included": {
@@ -30,10 +31,10 @@
   "steps": [
     {
       "title": "The seller's solicitor orders the pack",
-      "text": "The seller's solicitor orders the pack from us. Send enquiries to solicitorenquiries@bpmanagement.org."
+      "text": "The seller's solicitor orders the pack from us by email."
     },
     {
-      "title": "The seller pays the fee",
+      "title": "The seller usually pays the fee",
       "text": "The seller usually pays the pack fee. Depending on the lease, it may count as an administration charge: a fee charged to one leaseholder, not to everyone."
     },
     {
@@ -42,27 +43,28 @@
     },
     {
       "title": "Further questions",
-      "text": "The buyer's solicitor may have more questions after reading the pack. Send them to solicitorenquiries@bpmanagement.org."
+      "text": "The buyer's solicitor may have more questions after reading the pack. We answer them by email."
     },
     {
       "title": "After the sale",
-      "text": "After completion, the buyer's solicitor usually sends us notice of the sale. The lease may also need a deed of covenant, where the buyer promises to keep the lease covenants. A fee may apply, depending on the lease. We then update our records, so future service charge demands go to the new owner."
+      "text": "After completion, the buyer's solicitor usually sends us notice of the sale. The lease may also require a deed of covenant, in which the buyer promises to keep the lease covenants. A fee may apply, depending on the lease. We then update our records, so future service charge demands go to the new owner."
     }
   ],
   "proof": [
-    "The figures in the pack come from the books our own accounts team keeps for each block or estate.",
-    "Our team has knowledge of property law, land registration and conveyancing.",
-    "As managing agent, we hold the building's service charge budgets and Section 20 records."
+    "Pack figures come straight from the books our own accounts team keeps for your building.",
+    "Our team knows property law, land registration and conveyancing, so we understand what the buyer's solicitor is asking for.",
+    "Solicitors have their own email address for packs and enquiries, so requests reach the right team.",
+    "Our own Code of Conduct sets time limits for replying, which helps keep the sale moving."
   ],
   "faqs": [
     {
       "question": "Who orders a leasehold sale pack?",
       "answer": [
-        "Usually the seller's solicitor. If you're selling a flat in a building we manage, tell your solicitor that we're the managing agent. Give them our address for solicitor enquiries: solicitorenquiries@bpmanagement.org."
+        "Usually the seller's solicitor. If you're selling a flat in a building we manage, tell your solicitor that we're the managing agent. Give them our address for solicitor enquiries: [solicitorenquiries@bpmanagement.org](mailto:solicitorenquiries@bpmanagement.org)."
       ]
     },
     {
-      "question": "How much does a pack cost, and how long does it take?",
+      "question": "Who pays for a pack?",
       "answer": [
         "The seller usually pays the fee. Depending on the lease, it may count as an administration charge.",
         "To avoid delays, the seller's solicitor should order the pack as soon as a sale is agreed."
@@ -75,17 +77,16 @@
       ]
     },
     {
-      "question": "I am selling a freehold house on an estate you manage. Do I need a pack?",
+      "question": "I'm selling a freehold house on an estate you manage. Do I need a pack?",
       "answer": [
         "Usually, yes. The buyer's solicitor will want details of the estate charge, which is the money homeowners pay towards the shared areas of the estate. This information is often given on a standard form called the FME1."
       ]
     },
     {
-      "question": "I am selling my flat. What can I do to help the sale go smoothly?",
+      "question": "I'm selling my flat. What can I do to help the sale go smoothly?",
       "answer": [
         "Make sure your service charge is paid up to date, because any arrears show in the pack. Tell your solicitor early that we manage your building. If you have questions about your service charge, contact your property manager."
       ]
     }
-  ],
-  "related": ["service-charge-accounts", "section-20-consultation", "block-and-estate-management"]
+  ]
 }

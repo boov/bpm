@@ -15,7 +15,7 @@ Service charge budgets
 
 Why service charges go up, how a budget is set and how a reserve fund saves for big costs. We prepare service charge budgets for blocks and estates.
 
-Hero call to action: Request a management proposal
+Hero call to action: Get in touch
 
 ## intro
 
@@ -124,4 +124,3 @@ General content (not BPM facts): what a budget and the service charge cover, res
 **Gaps:**
 
 - `[NEEDS: fees]` Management fee level.
-- `[NEEDS: testimonials (Q1)]`

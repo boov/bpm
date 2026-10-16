@@ -57,13 +57,13 @@ Each building we manage has a dedicated property manager. If you don't know who 
 
 Contact your property manager by phone on 0800 298 0069 or by email at management@bpmanagement.org. Tell them the address, what the problem is and where it is. Photos help. If you rent your flat, report repairs inside the flat to your landlord or letting agent.
 
-`[NEEDS: repair reporting (Q7)]`
+`[NEEDS: repair reporting (Q6)]`
 
 #### What should I do in an emergency?
 
 If there is a risk to life, such as a fire, call 999. If you smell gas, call the National Gas Emergency number on 0800 111 999.
 
-`[NEEDS: out-of-hours line (Q2)]`
+`[NEEDS: out-of-hours line (Q1)]`
 
 #### Who is responsible for repairs inside my flat?
 
@@ -91,7 +91,7 @@ Your solicitor usually orders it from us. Tell them we manage your building, and
 
 #### How much does a leasehold sale pack cost, and how long does it take?
 
-`[NEEDS: sale pack cost (Q6)]` `[NEEDS: sale pack turnaround (Q6)]` The seller usually pays the fee. Depending on the lease, it may count as an administration charge.
+`[NEEDS: sale pack cost (Q5)]` `[NEEDS: sale pack turnaround (Q5)]` The seller usually pays the fee. Depending on the lease, it may count as an administration charge.
 
 ### Group: Complaints
 
@@ -115,7 +115,7 @@ An RMC is a company, usually owned by the leaseholders, that is responsible unde
 
 #### How do we change managing agent?
 
-Check your current management agreement for its notice period. The board then decides when to give notice. `[NEEDS: switching process (Q9)]` Read [how we work with RMC and RTM directors](/who-we-work-with/rmc-and-rtm-directors), or [request a management proposal](/contact?type=new-management).
+Check your current management agreement for its notice period. The board then decides when to give notice. `[NEEDS: switching process (Q8)]` Read [how we work with RMC and RTM directors](/who-we-work-with/rmc-and-rtm-directors), or [request a management proposal](/contact?type=new-management).
 
 #### Do you sell or let property?
 
@@ -151,8 +151,8 @@ General content (not BPM facts): as on the linked service pages.
 
 **Gaps:**
 
-- `[NEEDS: repair reporting (Q7)]`
-- `[NEEDS: out-of-hours line (Q2)]`
-- `[NEEDS: sale pack cost (Q6)]`
-- `[NEEDS: sale pack turnaround (Q6)]`
-- `[NEEDS: switching process (Q9)]`
+- `[NEEDS: repair reporting (Q6)]`
+- `[NEEDS: out-of-hours line (Q1)]`
+- `[NEEDS: sale pack cost (Q5)]`
+- `[NEEDS: sale pack turnaround (Q5)]`
+- `[NEEDS: switching process (Q8)]`

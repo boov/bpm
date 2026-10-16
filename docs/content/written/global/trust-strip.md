@@ -44,4 +44,4 @@ Under the hero on the home page, the block and estate management page and the th
 
 **Gaps:**
 
-- `[NEEDS: client money protection (Q2)]` Add as an item if BPM has cover.
+- `[NEEDS: client money protection (Q1)]` Add as an item if BPM has cover.

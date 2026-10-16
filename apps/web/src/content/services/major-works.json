@@ -2,10 +2,10 @@
   "order": 6,
   "title": "Major works",
   "metaTitle": "Major works managing agent",
-  "hero": {},
   "cta": "proposal",
   "description": "Major works planned ahead: reserve funds, Section 20 consultation and contractor tendering for blocks and estates, with plain answers on cost.",
-  "image": "https://dummyimage.com/1536x658/ede2de/7e6d67",
+  "image": "../../assets/images/services/major-works.jpg",
+  "imageAlt": "Roofer replacing roof tiles behind scaffolding",
   "intro": {
     "heading": "Planning large projects before they are needed",
     "paragraphs": [
@@ -36,7 +36,7 @@
     },
     {
       "title": "Consult leaseholders",
-      "text": "If any one leaseholder will pay more than £250, we run [Section 20 consultation](/services/section-20-consultation). Leaseholders are told about the works, can comment and can nominate a contractor."
+      "text": "If any one leaseholder will pay more than £250, we run [Section 20 consultation](/services/section-20-consultation/). Leaseholders are told about the works, can comment and can nominate a contractor."
     },
     {
       "title": "Tender and appoint",
@@ -48,17 +48,16 @@
     }
   ],
   "proof": [
-    "We keep a database of contractors and tender work regularly.",
-    "Running Section 20 projects is part of our senior property manager's role.",
-    "We manage reserve funds and plan major works as part of block and estate management.",
-    "We work with specialist firms for lifts, asbestos, fire risk and health and safety.",
-    "We manage developments from blocks of 4 flats to a 22-floor high rise."
+    "Every project goes out to tender with contractors from our database, so the board compares prices before choosing.",
+    "We run the Section 20 consultation ourselves, so the works and the legal process stay with one team.",
+    "Your property manager sees the building at every inspection, so works are planned before they become urgent.",
+    "We build each project into the reserve fund years ahead, so leaseholders face a smaller bill when works are due."
   ],
   "faqs": [
     {
       "question": "What counts as major works?",
       "answer": [
-        "Major works are large, one-off projects. Common examples are roof replacement, external redecoration, window replacement and lift renewal. Day-to-day jobs, such as fixing a light or a door, are [repairs and maintenance](/services/repairs-and-maintenance)."
+        "Major works are large, one-off projects. Common examples are roof replacement, external redecoration, window replacement and lift renewal. Day-to-day jobs, such as fixing a light or a door, are [repairs and maintenance](/services/repairs-and-maintenance/)."
       ]
     },
     {
@@ -69,7 +68,7 @@
       ]
     },
     {
-      "question": "When do I pay for major works?",
+      "question": "How is major works paid for?",
       "answer": [
         "That depends on your lease. Some or all of the cost may come from the reserve fund. Any extra is usually charged to leaseholders, in the shares the lease sets out. Your property manager can tell you how the cost will be met for your building."
       ]
@@ -89,9 +88,8 @@
     {
       "question": "Do leaseholders have a say in major works?",
       "answer": [
-        "Yes. Under Section 20 consultation, leaseholders are told about the works, can comment on them and can nominate a contractor. The board or freeholder must take the comments into account before choosing a contractor. Read how [Section 20 consultation](/services/section-20-consultation) works."
+        "Yes. Under Section 20 consultation, leaseholders are told about the works, can comment on them and can nominate a contractor. The board or freeholder must take the comments into account before choosing a contractor. Read how [Section 20 consultation](/services/section-20-consultation/) works."
       ]
     }
-  ],
-  "related": ["section-20-consultation", "service-charge-budgets", "repairs-and-maintenance"]
+  ]
 }

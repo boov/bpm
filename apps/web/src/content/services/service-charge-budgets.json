@@ -2,10 +2,10 @@
   "order": 2,
   "title": "Service charge budgets",
   "metaTitle": "Service charge budgets",
-  "hero": {},
   "cta": "proposal",
   "description": "Why service charges go up, how a budget is set and how a reserve fund saves for big costs. We prepare service charge budgets for blocks and estates.",
-  "image": "https://dummyimage.com/1536x658/ede2de/7e6d67",
+  "image": "../../assets/images/services/service-charge-budgets.jpg",
+  "imageAlt": "Jar of coins with a young plant growing from it",
   "intro": {
     "heading": "What a service charge budget does",
     "paragraphs": [
@@ -22,7 +22,7 @@
       "Sending service charge demands to each leaseholder",
       "Holding the money in a designated trust account for the block or estate, separate from our own money",
       "Credit control by our own team, so the money the budget depends on comes in",
-      "Comparing spending against the budget, ready for the year end accounts"
+      "Comparing spending against the budget, ready for the year-end accounts"
     ]
   },
   "steps": [
@@ -44,14 +44,14 @@
     },
     {
       "title": "Track spending through the year",
-      "text": "Our accounts team records every cost against the budget. At the year end, this becomes the [service charge accounts](/services/service-charge-accounts)."
+      "text": "Our accounts team records every cost against the budget. At the year end, this becomes the [service charge accounts](/services/service-charge-accounts/)."
     }
   ],
   "proof": [
-    "Our own accounts team keeps the books for each block or estate.",
-    "Our block accounts and bookkeeping specialist has been with us since 2014.",
-    "Each block or estate has its own designated trust account, named for that building.",
-    "Credit control is done in-house, with independent solicitors for arrears when needed."
+    "Every budget starts from last year's real spending, so the figures are grounded, not guessed.",
+    "We plan the reserve fund each year, so leaseholders save a little at a time instead of facing a sudden bill.",
+    "Our own accounts team tracks spending against the budget all year, so there are fewer surprises at the year end.",
+    "Your property manager can take any leaseholder through the budget line by line."
   ],
   "faqs": [
     {
@@ -80,9 +80,8 @@
     {
       "question": "What can I do if I think a service charge is unreasonable?",
       "answer": [
-        "The law says service charges must be reasonable. Start by asking your property manager to explain the charge. If you still disagree, you can take independent advice. A tribunal can decide whether a service charge is reasonable."
+        "The law says service charges must be reasonable. Start by asking your property manager to explain the charge. If you still disagree, you can take independent legal advice. A tribunal can decide whether a service charge is reasonable."
       ]
     }
-  ],
-  "related": ["service-charge-accounts", "major-works", "block-and-estate-management"]
+  ]
 }

@@ -15,7 +15,7 @@ Block and estate management
 
 Block and estate management across Hampshire and the south since 1989. A dedicated property manager, money held in trust and the legal admin done for you.
 
-Hero call to action: Request a management proposal
+Hero call to action: Get in touch
 
 Under the hero: compact trust line (`global/trust-strip.md`).
 
@@ -153,10 +153,9 @@ Hampshire, Sussex, Dorset, London and the Home Counties. Our office is in Winche
 
 **Gaps:**
 
-- `[NEEDS: switching process (Q9)]` This is a main question for RMC and RTM directors. Add a step or FAQ when answered.
+- `[NEEDS: switching process (Q8)]` This is a main question for RMC and RTM directors. Add a step or FAQ when answered.
 - `[NEEDS: inspection frequency]` Only a LinkedIn post says quarterly (Unverified). The page says "regularly".
-- `[NEEDS: insurance role (Q4)]` The page repeats the live site wording only.
-- `[NEEDS: testimonials (Q1)]`
+- `[NEEDS: insurance role (Q3)]` The page repeats the live site wording only.
 - `[NEEDS: case studies]`
-- `[NEEDS: response times (Q8)]`
+- `[NEEDS: response times (Q7)]`
 - `[NEEDS: fees]` The cost FAQ assumes a management proposal states the fee. If it does not, change its last sentence to "what we would do for your building".

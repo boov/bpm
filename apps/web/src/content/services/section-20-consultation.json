@@ -2,10 +2,10 @@
   "order": 7,
   "title": "Section 20 consultation",
   "metaTitle": "Section 20 consultation explained",
-  "hero": {},
   "cta": "residents",
   "description": "Section 20 consultation explained: when the £250 limit applies, the notices and 30-day comment periods, and what leaseholders can do. We run the process.",
-  "image": "https://dummyimage.com/1536x658/ede2de/7e6d67",
+  "image": "../../assets/images/services/section-20-consultation.jpg",
+  "imageAlt": "Leaseholder reading a letter at the kitchen table",
   "intro": {
     "heading": "What Section 20 consultation is",
     "paragraphs": [
@@ -34,7 +34,7 @@
     },
     {
       "title": "Statement of estimates",
-      "text": "We send leaseholders a statement of at least 2 estimates, with a summary of the comments from stage 1. All the estimates are available for leaseholders to see. Leaseholders have another 30 days to comment."
+      "text": "We send leaseholders a statement of at least 2 estimates, with a summary of the comments on the first notice. All the estimates are available for leaseholders to see. Leaseholders have another 30 days to comment."
     },
     {
       "title": "Choosing the contractor",
@@ -42,14 +42,14 @@
     },
     {
       "title": "The works",
-      "text": "Once the contractor is appointed, the works can start. Read about how we plan and run [major works](/services/major-works). Planning works for your board or building? [Request a management proposal](/contact?type=new-management)."
+      "text": "Once the contractor is appointed, the works can start. Read about how we plan and run [major works](/services/major-works/)."
     }
   ],
   "proof": [
-    "Running Section 20 projects is part of our senior property manager's role.",
-    "We keep a database of contractors and tender work regularly, so we can get estimates for each project.",
-    "We plan reserve funds with major works in mind, so the building can save for them.",
-    "Your property manager is your contact for questions at every stage of the consultation."
+    "We handle every notice and every deadline, so the board does not risk recovering only £250 from each leaseholder.",
+    "Estimates come from contractors we tender with regularly, so the board compares real market prices.",
+    "We plan the reserve fund years ahead, so a Section 20 notice is less likely to bring a large bill.",
+    "Questions about a notice go to your property manager, who knows your building and the works."
   ],
   "faqs": [
     {
@@ -62,7 +62,7 @@
       "question": "Does Section 20 consultation mean leaseholders can stop the works?",
       "answer": [
         "No. Leaseholders have a right to be told about the works, to comment and to nominate a contractor. The freeholder or board must take the comments into account, but they make the final decision.",
-        "If you think the cost is unreasonable, you can take advice about your own case."
+        "If you think the cost is unreasonable, you can take independent legal advice."
       ]
     },
     {
@@ -78,11 +78,10 @@
       ]
     },
     {
-      "question": "I have received a Section 20 notice. What should I do?",
+      "question": "I've received a Section 20 notice. What should I do?",
       "answer": [
         "Read it, and note the date the consultation period ends. If you want to comment or nominate a contractor, do it in writing before that date. If you have questions about the notice, contact your property manager."
       ]
     }
-  ],
-  "related": ["major-works", "service-charge-budgets", "block-and-estate-management"]
+  ]
 }

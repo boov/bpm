@@ -15,7 +15,7 @@ Major works
 
 Major works planned ahead: reserve funds, Section 20 consultation and contractor tendering for blocks and estates, with plain answers on cost.
 
-Hero call to action: Request a management proposal
+Hero call to action: Get in touch
 
 ## intro
 
@@ -130,4 +130,3 @@ Legal content (general law, not BPM facts): the £250 Section 20 threshold, the 
 - `[NEEDS: major works supervision]` Whether BPM or a surveyor supervises works on site, and how BPM reports progress. The page does not describe site supervision.
 - `[NEEDS: fees]` Whether BPM charges a separate fee for major works.
 - `[NEEDS: case studies]` Examples of past projects.
-- `[NEEDS: testimonials (Q1)]`

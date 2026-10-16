@@ -1,19 +1,21 @@
 {
   "order": 3,
   "title": "Developers",
-  "metaTitle": "New build managing agent",
+  "metaTitle": "New-build managing agent",
   "hero": {
-    "heading": "Block and estate management for new developments",
-    "trustLine": true
+    "heading": "Block and estate management for new developments"
   },
   "cta": "development",
-  "description": "Plan the management before the first home is sold. Block and estate management for new developments, from 4 flats to 22 floors, since 1989.",
+  "image": "../../assets/images/audiences/developers.jpg",
+  "imageAlt": "New-build blocks of flats around a landscaped courtyard",
+  "description": "Plan the management before the first home is sold. Block and estate management for new developments of every size, including high-rise, since 1989.",
   "card": "Involve us from the planning stage, so the management of your development is set up from the start.",
+  "icon": "hard-hat",
   "intro": {
     "heading": "Plan the management while you plan the build",
     "paragraphs": [
       "How a development will be managed affects its running costs, its service charge and the questions buyers' solicitors ask. The best time to plan it is before the first home is sold.",
-      "Belgarum Property Management advises developers to involve the managing agent (the firm that runs the development day to day) from the planning stage. We've managed blocks of flats and shared estates since 1989. Today we manage over 150 developments, from blocks of 4 flats to a 22-floor high rise."
+      "Belgarum Property Management advises developers to involve the managing agent (the firm that runs the development day to day) from the planning stage. We've managed blocks of flats and shared estates since 1989. Today we manage over 150 developments of every size, including blocks of 4 flats and a 22-floor high-rise."
     ]
   },
   "included": {
@@ -34,7 +36,7 @@
     },
     {
       "title": "Plan the management before sales",
-      "text": "Before the first home is sold, we talk through how the development will be managed, and what the service charge or estate charge will cover."
+      "text": "Before the first home is sold, we talk through how the development will be managed and what the service charge or estate charge will cover."
     },
     {
       "title": "Manage the development",
@@ -42,10 +44,10 @@
     }
   ],
   "proof": [
-    "Established in 1989. Block and estate management is all we do.",
-    "We manage leasehold blocks and freehold estate areas, from blocks of 4 flats to a 22-floor high rise.",
-    "We act as company secretary for about 15 RMCs today.",
-    "We use specialist firms for fire risk, asbestos, lifts and health and safety."
+    "We don't sell or let property, so we never compete with your sales agents.",
+    "We manage leasehold blocks and freehold estate areas, so one agent can run a mixed development.",
+    "If your development has an RMC, we can act as its company secretary, as we do for about 15 RMCs today.",
+    "We help set the service charge or estate charge before sales, so buyers' solicitors get clear answers."
   ],
   "faqs": [
     {
@@ -55,7 +57,7 @@
     {
       "question": "What is the difference between a service charge and an estate charge?",
       "answer": [
-        "A [service charge](/services/service-charge-budgets) is what leaseholders pay, under their lease, towards running, repairing and insuring a block of flats. An estate charge is what owners of freehold homes pay towards the shared areas of an estate, such as roads, paths and green spaces."
+        "A [service charge](/services/service-charge-budgets/) is what leaseholders pay, under their lease, towards running, repairing and insuring a block of flats. An estate charge is what owners of freehold homes pay towards the shared areas of an estate, such as roads, paths and green spaces."
       ]
     },
     {

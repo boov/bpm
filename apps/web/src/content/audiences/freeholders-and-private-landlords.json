@@ -3,12 +3,14 @@
   "title": "Freeholders and private landlords",
   "metaTitle": "Freeholder block management",
   "hero": {
-    "heading": "Block management for freeholders and landlords",
-    "trustLine": true
+    "heading": "Block management for freeholders and landlords"
   },
   "cta": "proposal",
+  "image": "../../assets/images/audiences/freeholders-and-private-landlords.jpg",
+  "imageAlt": "Red brick mansion blocks of flats on a city street",
   "description": "Block management for freeholders and private landlords, from 4 flats up: lease and legal compliance, trust accounts and in-house arrears control.",
   "card": "Meet your obligations under the leases and the law, with money held in trust and arrears chased in-house.",
+  "icon": "key-round",
   "intro": {
     "heading": "Meeting your obligations as a freeholder",
     "paragraphs": [
@@ -19,10 +21,10 @@
   "included": {
     "heading": "What's included",
     "items": [
-      "Service charge budgets, collection and year end accounts",
+      "Service charge budgets, collection and year-end accounts",
       "Service charge money held in a designated trust account for the building",
-      "In-house credit control, and independent solicitors for arrears",
-      "[Section 20 consultation](/services/section-20-consultation) (the legal process for consulting leaseholders) before major works, so the costs can be recovered",
+      "In-house credit control and independent solicitors for arrears",
+      "[Section 20 consultation](/services/section-20-consultation/) (the legal process for consulting leaseholders) before major works, so the costs can be recovered",
       "Repairs and maintenance through contractors from our database",
       "Insurance policies, as part of managing the communal areas",
       "Fire risk, asbestos and health and safety assessments, through specialist firms",
@@ -31,11 +33,10 @@
     ]
   },
   "proof": [
-    "We've managed blocks and estates since 1989.",
-    "We manage buildings from blocks of 4 flats to a 22-floor high rise.",
-    "Our team has knowledge of property law, land registration and conveyancing.",
-    "Your management agreement is industry-standard and sets out what we do.",
-    "Arrears cases that need legal action go to independent solicitors."
+    "We run Section 20 consultation properly, so you can recover the full cost of major works.",
+    "Leaseholder queries, repairs and complaints come to your property manager, not to you.",
+    "Our team knows property law, land registration and conveyancing, so your leases are read and applied correctly.",
+    "Our industry-standard management agreement sets out exactly what we do, so there are no grey areas."
   ],
   "faqs": [
     {

@@ -11,7 +11,7 @@ Each page uses the variant that matches its call to action in `page-map.md`. All
 
 ## Variant: management proposal
 
-Default. Used where the page call to action is "Request a management proposal".
+Default. Used where the page call to action is "Get in touch".
 
 ### Heading
 
@@ -23,7 +23,7 @@ Tell us about your block or estate. We'll reply with a management proposal that 
 
 ### Button
 
-Request a management proposal
+Get in touch
 
 ## Variant: new development
 
@@ -83,5 +83,5 @@ Monday to Thursday, 9am to 5pm; Friday, 9am to 4.30pm
 
 **Gaps:**
 
-- `[NEEDS: switching process (Q9)]` The proposal variant could say what happens after a request.
-- `[NEEDS: out-of-hours line (Q2)]` The residents variant could add an emergency number.
+- `[NEEDS: switching process (Q8)]` The proposal variant could say what happens after a request.
+- `[NEEDS: out-of-hours line (Q1)]` The residents variant could add an emergency number.

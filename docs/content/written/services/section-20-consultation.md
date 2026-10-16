@@ -119,4 +119,3 @@ Legal content (general law, not BPM facts): the £250 and £100 thresholds, the 
 
 - `[NEEDS: fees]` Whether BPM charges a separate fee for running Section 20 consultation.
 - `[NEEDS: case studies]`
-- `[NEEDS: testimonials (Q1)]`

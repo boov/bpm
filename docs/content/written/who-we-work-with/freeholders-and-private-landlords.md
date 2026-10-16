@@ -19,7 +19,7 @@ Block management for freeholders and landlords
 
 Block management for freeholders and private landlords, from 4 flats up: lease and legal compliance, trust accounts and in-house arrears control.
 
-Hero call to action: Request a management proposal
+Hero call to action: Get in touch
 
 Under the hero: compact trust line (`global/trust-strip.md`).
 
@@ -117,7 +117,6 @@ General content (not BPM facts): freeholder obligations under leases, Section 20
 
 **Gaps:**
 
-- `[NEEDS: insurance role (Q4)]` Freeholders will ask whether BPM arranges buildings insurance and takes commission.
+- `[NEEDS: insurance role (Q3)]` Freeholders will ask whether BPM arranges buildings insurance and takes commission.
 - `[NEEDS: fees]`
-- `[NEEDS: testimonials (Q1)]`
-- `[NEEDS: switching process (Q9)]`
+- `[NEEDS: switching process (Q8)]`

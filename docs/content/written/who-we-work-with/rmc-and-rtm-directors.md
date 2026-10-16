@@ -19,7 +19,7 @@ A managing agent for RMC and RTM boards
 
 Managing agent for RMC and RTM boards. You give your time for free; we do the day-to-day work and act as company secretary for about 15 RMCs.
 
-Hero call to action: Request a management proposal
+Hero call to action: Get in touch
 
 Under the hero: compact trust line (`global/trust-strip.md`).
 
@@ -91,7 +91,7 @@ Yes. Directors keep their duties under the Companies Act 2006, and the company k
 
 ### How do we move to BPM from our current managing agent?
 
-Check your current management agreement for its notice period. The board then decides when to give notice. `[NEEDS: switching process (Q9)]`
+Check your current management agreement for its notice period. The board then decides when to give notice. `[NEEDS: switching process (Q8)]`
 
 To compare us with your current agent, [request a management proposal](/contact?type=new-management). It sets out what we would do for your building.
 
@@ -134,8 +134,7 @@ General content (not BPM facts): directors' duties (Companies Act 2006) and the 
 
 **Gaps:**
 
-- `[NEEDS: switching process (Q9)]` The main question for boards. The FAQ gives only the general first step.
+- `[NEEDS: switching process (Q8)]` The main question for boards. The FAQ gives only the general first step.
 - `[NEEDS: RTM company secretary]` Company secretary duties are stated for RMCs only.
-- `[NEEDS: response times (Q8)]`
-- `[NEEDS: testimonials (Q1)]`
+- `[NEEDS: response times (Q7)]`
 - `[NEEDS: fees]`

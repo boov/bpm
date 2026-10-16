@@ -8,6 +8,27 @@ const { container } = Astro.props;
 
 <script is:inline define:vars={{ container }}>
   // @ts-nocheck
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () {
+    // GTM only processes consent commands pushed as an Arguments object, not an array.
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer.push(arguments);
+  };
+
+  // Read the cookieconsent cookie here so returning visitors are granted before GTM loads.
+  let analyticsAccepted = false;
+  try {
+    const stored = document.cookie.match(/(?:^|; )cc_cookie=([^;]*)/);
+    analyticsAccepted = !!stored && JSON.parse(decodeURIComponent(stored[1])).categories.includes("analytics");
+  } catch {}
+
+  window.gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: analyticsAccepted ? "granted" : "denied"
+  });
+
   (function (w, d, s, l, i) {
     w[l] = w[l] || [];
     w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });

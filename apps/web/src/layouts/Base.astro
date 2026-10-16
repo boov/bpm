@@ -1,6 +1,7 @@
 ---
 import "/src/assets/styles/main.css";
 
+import CookieConsent from "@components/global/CookieConsent.astro";
 import GTM from "@components/global/GTM.astro";
 import Gutter from "@components/global/Gutter.astro";
 import Schema from "@components/global/Schema.astro";
@@ -107,6 +108,7 @@ const pageTitle = isHomePage ? title : `${title} - ${brand}`;
 
     <slot />
     <Gutter />
+    {google.tagManagerContainer && <CookieConsent />}
     <slot name="foot" />
   </body>
 </html>

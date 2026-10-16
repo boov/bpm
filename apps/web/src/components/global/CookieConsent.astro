@@ -1,0 +1,113 @@
+<div id="cookie-consent" class="theme-light" transition:persist></div>
+
+<script>
+  import "vanilla-cookieconsent/dist/cookieconsent.css";
+
+  import { acceptedCategory, run, showPreferences } from "vanilla-cookieconsent";
+
+  type ConsentWindow = Window & { gtag?: (...args: unknown[]) => void; dataLayer?: unknown[] };
+
+  // GTM does not re-run tags it blocked for consent, so the event gives them a trigger to fire on.
+  // Returning visitors get their stored choice from the consent default in GTM.astro instead.
+  const updateConsent = () => {
+    const { gtag, dataLayer } = window as ConsentWindow;
+    gtag?.("consent", "update", { analytics_storage: acceptedCategory("analytics") ? "granted" : "denied" });
+    dataLayer?.push({ event: "cookie_consent_update" });
+  };
+
+  // The footer is replaced on each client-side navigation, so listen on the document instead of the library's data-cc binding.
+  document.addEventListener("click", event => {
+    if (event.target instanceof Element && event.target.closest("[data-cookie-settings]")) {
+      showPreferences();
+    }
+  });
+
+  run({
+    root: "#cookie-consent",
+    guiOptions: {
+      consentModal: {
+        layout: "box wide",
+        position: "bottom right",
+        equalWeightButtons: false,
+        flipButtons: false
+      },
+      preferencesModal: {
+        layout: "box",
+        position: "right",
+        equalWeightButtons: false,
+        flipButtons: true
+      }
+    },
+    categories: {
+      necessary: { enabled: true, readOnly: true },
+      analytics: { autoClear: { cookies: [{ name: /^_ga/ }] } }
+    },
+    onFirstConsent: updateConsent,
+    onChange: updateConsent,
+    language: {
+      default: "en",
+      translations: {
+        en: {
+          consentModal: {
+            title: "Cookies on this website",
+            description:
+              'We would like to use analytics cookies to understand how people use this website, so we can improve it. We only set them if you accept. Read our <a href="/cookie-policy/">cookie policy</a>.',
+            acceptAllBtn: "Accept all",
+            acceptNecessaryBtn: "Reject all",
+            showPreferencesBtn: "Manage preferences"
+          },
+          preferencesModal: {
+            title: "Consent Preferences Centre",
+            acceptAllBtn: "Accept all",
+            acceptNecessaryBtn: "Reject all",
+            savePreferencesBtn: "Save preferences",
+            closeIconLabel: "Close modal",
+            sections: [
+              {
+                title: "Strictly necessary cookies",
+                description: "These cookies are needed for the website to work, or to remember your cookie choices. They are always on.",
+                linkedCategory: "necessary"
+              },
+              {
+                title: "Analytics cookies",
+                description: "These cookies tell us how visitors use the website, such as which pages they visit, so we can improve it. We use Google Analytics.",
+                linkedCategory: "analytics"
+              },
+              {
+                title: "More information",
+                description: 'Read our <a href="/cookie-policy/">cookie policy</a> and <a href="/privacy-policy/">privacy policy</a>.'
+              }
+            ]
+          }
+        }
+      }
+    }
+  });
+</script>
+
+<style is:global>
+  #cc-main {
+    --cc-font-family: var(--font-copy);
+    --cc-bg: var(--color-theme-background-highlight);
+    --cc-primary-color: var(--color-theme-foreground-bold);
+    --cc-secondary-color: var(--color-theme-foreground);
+    --cc-link-color: var(--color-theme-foreground-bold);
+    --cc-btn-primary-bg: var(--color-theme-action);
+    --cc-btn-primary-border-color: var(--color-theme-action);
+    --cc-btn-primary-color: #fff;
+    --cc-btn-primary-hover-bg: var(--color-theme-brand-lowlight);
+    --cc-btn-primary-hover-border-color: var(--color-theme-brand-lowlight);
+    --cc-btn-primary-hover-color: #fff;
+    --cc-btn-secondary-bg: var(--color-theme-background-lowlight);
+    --cc-btn-secondary-border-color: var(--color-theme-background-lowlight);
+    --cc-btn-secondary-color: var(--color-theme-foreground-bold);
+    --cc-btn-secondary-hover-bg: var(--color-theme-background);
+    --cc-btn-secondary-hover-border-color: var(--color-theme-border-bold);
+    --cc-btn-secondary-hover-color: var(--color-theme-foreground-bold);
+    --cc-toggle-on-bg: var(--color-theme-action);
+    --cc-footer-bg: var(--color-theme-background);
+    --cc-cookie-category-block-bg: var(--color-theme-background);
+    --cc-cookie-category-block-hover-bg: var(--color-theme-background-lowlight);
+    --cc-separator-border-color: var(--color-theme-border);
+  }
+</style>

@@ -120,9 +120,13 @@ const parentPath = pathNames.length ? `/${pathNames[0]}/` : "/";
             <CreditCard slot="suffix" />
           </Button>
         </div>
-        <div class="self-stretch xl:hidden" x-data>
+        <div class="self-stretch xl:hidden" x-data="{ expanded: false }" x-on:gutter-state.window="expanded = $event.detail">
           <button
+            id="p_menu-toggle"
             aria-label="Open menu"
+            aria-controls="p_gutter"
+            aria-expanded="false"
+            x-bind:aria-expanded="expanded"
             class="focus:ring-theme-brand bg-theme-background-highlight relative h-full rounded-md p-3 focus:ring-2 focus:outline-hidden"
             title="Open menu"
             type="button"

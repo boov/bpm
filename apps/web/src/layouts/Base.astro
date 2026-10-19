@@ -10,7 +10,7 @@ import { ClientRouter } from "astro:transitions";
 export interface Props {
   title: string;
   description: string;
-  canonicalURL?: string;
+  canonicalURL?: string | null;
   allowIndexing?: boolean;
   socialImageURL?: string;
   pageType?: "article" | "website";
@@ -55,17 +55,21 @@ const pageTitle = isHomePage ? title : `${title} - ${brand}`;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImageURL} />
     <meta name="twitter:title" content={pageTitle} />
-    <meta name="twitter:url" content={canonicalURL} />
+    {canonicalURL && <meta name="twitter:url" content={canonicalURL} />}
 
     <meta property="og:description" content={description} />
     <meta property="og:image" content={socialImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={brand} />
+    <meta property="og:locale" content="en_GB" />
     <meta property="og:site_name" content={brand} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:type" content={pageType} />
-    <meta property="og:url" content={canonicalURL} />
+    {canonicalURL && <meta property="og:url" content={canonicalURL} />}
 
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple_touch_icon.png" />
-    <link rel="canonical" href={canonicalURL} />
+    {canonicalURL && <link rel="canonical" href={canonicalURL} />}
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preconnect" href="https://use.typekit.net" crossorigin />
@@ -93,11 +97,13 @@ const pageTitle = isHomePage ? title : `${title} - ${brand}`;
     <script>
       import collapse from "@alpinejs/collapse";
       import contactForm from "@assets/scripts/contact-form";
+      import gutter from "@assets/scripts/gutter";
       import paymentForm from "@assets/scripts/payment-form";
       import { installValidationMessages } from "@assets/scripts/validation-messages";
       import Alpine from "alpinejs";
 
       Alpine.data("contactForm", contactForm);
+      Alpine.data("gutter", gutter);
       Alpine.data("paymentForm", paymentForm);
       installValidationMessages(document);
       Alpine.plugin(collapse);

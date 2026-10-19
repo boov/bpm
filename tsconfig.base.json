@@ -2,17 +2,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "allowJs": true,
-    "baseUrl": ".",
     "checkJs": true,
     "jsx": "preserve",
-    "strictNullChecks": true,
-    "paths": {
-      "@helpers": ["src/assets/scripts/helpers.ts"],
-      "@types": ["src/types.ts"],
-      "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"]
-    }
+    "strictNullChecks": true
   },
   "exclude": ["node_modules", "**/node_modules/*", "dist"]
 }

@@ -1,7 +1,6 @@
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
-import compress from "astro-compress";
 import metaTags from "astro-meta-tags";
 
 export default defineConfig({
@@ -15,13 +14,6 @@ export default defineConfig({
   },
   redirects: {},
   integrations: [
-    compress({
-      CSS: false,
-      HTML: true,
-      Image: true,
-      JavaScript: true,
-      SVG: true
-    }),
     metaTags(),
     sitemap({
       filter: page =>

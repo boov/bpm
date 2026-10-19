@@ -176,7 +176,7 @@ Use these aliases in imports rather than relative paths.
 
 - Dev server: port 4321
 - Site URL: `https://www.belgarum-property.co.uk`
-- Integrations: compress (HTML/JS/Images), sitemap, meta-tags
+- Integrations: sitemap, meta-tags
 - Prefetching: enabled for all links
 
 **Netlify Deployment** (apps/web/netlify.toml):

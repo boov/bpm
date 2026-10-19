@@ -24,7 +24,6 @@
     "@tailwindcss/vite": "catalog:",
     "alpinejs": "catalog:",
     "astro": "catalog:",
-    "astro-compress": "catalog:",
     "astro-meta-tags": "catalog:",
     "tailwind-merge": "catalog:",
     "tailwindcss": "catalog:",

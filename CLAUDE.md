@@ -68,36 +68,9 @@ The site uses Astro's Content Collections API with custom loaders (apps/web/src/
   - JSON files in `src/content/` (services, audiences)
   - Shared workspace package `@bpm/data` (personnel, questions)
 - **Validation**: All collections use Zod schemas
-- **ID Generation**: Auto-generated from name fields (e.g., "John Doe" → "john-doe")
+- **ID Generation**: `personnel` and `questions` IDs come from the name or title (e.g., "John Doe" → "john-doe"); `services` and `audiences` IDs are the JSON file names
 
-Example collection definition:
-
-```typescript
-const pageFields = {
-  status: statusSchema,
-  order: z.number().optional().default(0),
-  title: z.string(),
-  metaTitle: z.string().max(34),
-  hero: z.object({ heading: z.string().optional(), note: z.string().optional(), trustLine: z.boolean().default(false) }).default({ trustLine: false }),
-  cta: z.enum(callKeys),
-  description: z.string().max(155),
-  intro: z.object({ heading: z.string(), paragraphs: z.array(z.string()).min(1) }),
-  included: z.object({ heading: z.string(), items: z.array(z.string()).min(1) }),
-  proof: z.array(z.string()).min(1),
-  faqs: z.array(faqSchema).min(1)
-};
-
-const services = defineCollection({
-  loader: glob({ pattern: "*.json", base: "./src/content/services" }),
-  schema: ({ image }) =>
-    z.object({
-      ...pageFields,
-      image: image(),
-      steps: z.array(stepSchema).min(1),
-      related: z.array(reference("services")).min(1)
-    })
-});
-```
+Read `content.config.ts` for the current fields; it is the only source of truth. Cross-page links are `reference()` fields: `services.related` and `audiences.services` list service IDs (the JSON file names).
 
 ### Custom Design System
 

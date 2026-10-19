@@ -51,7 +51,8 @@ const services = defineCollection({
       ...pageFields,
       image: image(),
       imageAlt: z.string(),
-      steps: z.array(stepSchema).min(1)
+      steps: z.array(stepSchema).min(1),
+      related: z.array(reference("services")).min(1)
     })
 });
 

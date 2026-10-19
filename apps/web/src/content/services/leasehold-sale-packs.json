@@ -88,5 +88,6 @@
         "Make sure your service charge is paid up to date, because any arrears show in the pack. Tell your solicitor early that we manage your building. If you have questions about your service charge, contact your property manager."
       ]
     }
-  ]
+  ],
+  "related": ["service-charge-accounts", "service-charge-budgets", "block-and-estate-management"]
 }

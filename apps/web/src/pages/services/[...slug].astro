@@ -2,12 +2,14 @@
 import { bandFor } from "@assets/scripts/calls-to-action";
 import { faqPageSchema } from "@assets/scripts/faq-schema";
 import { toJsonLd } from "@assets/scripts/json-ld";
+import { site } from "@assets/scripts/site";
 import Section from "@components/Section.astro";
 import FaqList from "@components/sections/FaqList.astro";
 import IncludedList from "@components/sections/IncludedList.astro";
 import IntroBlock from "@components/sections/IntroBlock.astro";
 import PageHero from "@components/sections/PageHero.astro";
 import ProofList from "@components/sections/ProofList.astro";
+import ServiceLinks from "@components/sections/ServiceLinks.astro";
 import StepList from "@components/sections/StepList.astro";
 import { getServices } from "@helpers";
 import Default from "@layouts/Default.astro";
@@ -34,7 +36,7 @@ const serviceSchema = toJsonLd({
       description: data.description,
       url: canonicalURL,
       provider: { "@id": `${siteURL}#localbusiness` },
-      areaServed: ["Hampshire", "Sussex", "Dorset", "London", "Home Counties"]
+      areaServed: site.areasServed
     },
     {
       "@type": "BreadcrumbList",
@@ -67,5 +69,8 @@ const faqSchema = toJsonLd(faqPageSchema(data.faqs));
       <ProofList items={data.proof} />
       <FaqList faqs={data.faqs} />
     </div>
+  </Section>
+  <Section class="border-t-theme-border border-t border-dashed">
+    <ServiceLinks heading="Related services" ids={data.related.map(entry => entry.id)} />
   </Section>
 </Default>

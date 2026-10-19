@@ -4,7 +4,7 @@ import { toJsonLd } from "@assets/scripts/json-ld";
 import QuestionGroup from "@components/collection/question/QuestionGroup.astro";
 import Heading from "@components/Heading.astro";
 import Section from "@components/Section.astro";
-import { getQuestions, getQuestionsByGroup } from "@helpers";
+import { getAudiences, getQuestions, getQuestionsByGroup, getServices } from "@helpers";
 import Default from "@layouts/Default.astro";
 
 const questionGroups = await getQuestionsByGroup();
@@ -13,7 +13,13 @@ const questions = await getQuestions();
 const title = "Leaseholder and RMC FAQs";
 const description = "Answers for leaseholders and directors: paying your service charge, why it goes up, repairs, Section 20, major works and selling your flat.";
 
-const faqSchema = toJsonLd(faqPageSchema(questions.map(q => ({ question: q.data.title, answer: q.data.answer }))));
+// Google wants FAQ markup on one page only, so questions already marked up on a topic page stay out of this page's schema.
+const normalise = (text: string) => text.replace(/[‘’]/g, "'").replace(/\s+/g, " ").trim().toLowerCase();
+const topicPages = [...(await getServices()), ...(await getAudiences())];
+const topicQuestions = new Set(topicPages.flatMap(page => page.data.faqs.map(faq => normalise(faq.question))));
+const schemaQuestions = questions.filter(q => !topicQuestions.has(normalise(q.data.title)));
+
+const faqSchema = toJsonLd(faqPageSchema(schemaQuestions.map(q => ({ question: q.data.title, answer: q.data.answer }))));
 ---
 
 <Default title={title} description={description} cta="residents">

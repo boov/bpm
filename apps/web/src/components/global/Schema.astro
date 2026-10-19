@@ -1,5 +1,6 @@
 ---
 import { toJsonLd } from "@assets/scripts/json-ld";
+import { site } from "@assets/scripts/site";
 
 interface Props {
   data: {
@@ -12,31 +13,30 @@ const { ...props } = Astro.props;
 const { schemaImage, schemaLogo } = props.data;
 const siteURL = Astro.site?.href;
 
-const brandName = "Belgarum Property Management";
-const slogan = "Block and estate management since 1989";
-
 const schema = toJsonLd({
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "LocalBusiness",
       "@id": `${siteURL}#localbusiness`,
-      name: brandName,
-      slogan,
+      name: site.brand,
+      legalName: site.legalName,
+      foundingDate: site.founded,
+      slogan: site.strapline,
       url: siteURL,
       image: schemaImage,
       logo: schemaLogo || schemaImage,
-      telephone: "+448002980069",
-      email: "management@bpmanagement.org",
+      telephone: site.phoneE164,
+      email: site.email,
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Old Manor Nursery, Kilham Lane",
-        addressLocality: "Winchester",
-        addressRegion: "Hampshire",
-        postalCode: "SO22 5QD",
+        streetAddress: site.officeAddress.street,
+        addressLocality: site.officeAddress.locality,
+        addressRegion: site.officeAddress.region,
+        postalCode: site.officeAddress.postcode,
         addressCountry: "GB"
       },
-      areaServed: ["Hampshire", "Sussex", "Dorset", "London", "Home Counties"],
+      areaServed: site.areasServed,
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
@@ -51,12 +51,13 @@ const schema = toJsonLd({
           closes: "16:30"
         }
       ],
-      priceRange: "££"
+      priceRange: "££",
+      sameAs: Object.values(site.social)
     },
     {
       "@type": "WebSite",
       "@id": `${siteURL}#website`,
-      name: brandName,
+      name: site.brand,
       url: siteURL
     }
   ]

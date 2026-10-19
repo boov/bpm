@@ -2,5 +2,11 @@
   "name": "@bpm/tailwind-base",
   "private": true,
   "main": "tailwind.base.ts",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@bpm/design-system": "workspace:*"
+  },
+  "devDependencies": {
+    "tailwindcss": "catalog:"
+  }
 }

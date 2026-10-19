@@ -1,6 +1,6 @@
 [build]
 publish = "apps/web/dist"
-command = "npm run build"
+command = "pnpm run build"
 
 [[redirects]]
 from = "/services/developers"

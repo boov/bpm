@@ -1,3 +1,4 @@
 /dist
 /node_modules
 /.remember
+pnpm-lock.yaml

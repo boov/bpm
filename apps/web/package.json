@@ -11,5 +11,28 @@
     "test": "node --test \"src/**/*.test.ts\"",
     "check": "node scripts/check-build.mjs",
     "typecheck": "astro check"
+  },
+  "dependencies": {
+    "@alpinejs/collapse": "catalog:",
+    "@astrojs/sitemap": "catalog:",
+    "@bpm/custom-merge": "workspace:*",
+    "@bpm/data": "workspace:*",
+    "@bpm/tailwind-base": "workspace:*",
+    "@fontsource/hanken-grotesk": "catalog:",
+    "@lucide/astro": "catalog:",
+    "@netlify/plugin-lighthouse": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "alpinejs": "catalog:",
+    "astro": "catalog:",
+    "astro-compress": "catalog:",
+    "astro-meta-tags": "catalog:",
+    "tailwind-merge": "catalog:",
+    "tailwindcss": "catalog:",
+    "vanilla-cookieconsent": "catalog:"
+  },
+  "devDependencies": {
+    "@astrojs/check": "catalog:",
+    "@types/alpinejs": "catalog:",
+    "@types/alpinejs__collapse": "catalog:"
   }
 }

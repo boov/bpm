@@ -52,7 +52,7 @@ pnpm --filter @bpm/web <script>
 
 This is a pnpm workspaces monorepo (`pnpm-workspace.yaml`). pnpm is pinned in the root `packageManager` field; run `corepack enable pnpm` once to install it. Each workspace lists its own dependencies; the root holds only lint, format and TypeScript tooling. External versions live once in the `catalog:` block of `pnpm-workspace.yaml`, and each `package.json` refers to them as `"catalog:"`; add new dependencies with `pnpm add --save-catalog <pkg>`. Workspace packages are linked with `workspace:*`:
 
-- **`apps/web/`** - Main Astro 6 static website application
+- **`apps/web/`** - Main Astro 7 static website application
 - **`packages/`** - Shared workspace packages:
   - `design-system` - Tailwind CSS plugin with custom utilities
   - `tailwind-base` - Base Tailwind preset configuration

@@ -6,6 +6,7 @@ import metaTags from "astro-meta-tags";
 export default defineConfig({
   site: import.meta.env.DEV ? "http://localhost:4321" : "https://www.belgarum-property.co.uk",
   trailingSlash: "always",
+  compressHTML: true,
   build: {
     inlineStylesheets: "always"
   },

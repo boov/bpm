@@ -4,7 +4,7 @@ import type { ButtonProps as Props } from "@types";
 
 const { class: classes, label, id, name = id, type, palette = "action", ...props } = Astro.props;
 
-const baseStyles = twSort("button text-sm active:ring-2");
+const baseStyles = twSort("button py-1.5 text-sm active:ring-2");
 
 const paletteStyles = {
   action: twSort("ring-theme-action/30"),

@@ -39,16 +39,16 @@ import CircleCheckBig from "@lucide/astro/icons/circle-check-big";
   <div class="flex flex-col gap-6">
     <div class="grid gap-1">
       <label for="name">Your name</label>
-      <Input id="name" minlength="2" data-error="Enter your name" required />
+      <Input id="name" autocomplete="name" minlength="2" data-error="Enter your name" required />
     </div>
     <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
       <div class="grid gap-1">
         <label for="email_address">Email address</label>
-        <Input id="email_address" type="email" inputmode="email" minlength="5" data-error="Enter your email address, for example name@example.com" required />
+        <Input id="email_address" type="email" inputmode="email" autocomplete="email" minlength="5" data-error="Enter your email address, for example name@example.com" required />
       </div>
       <div class="grid gap-1">
         <label for="phone_number">Phone number <span class="text-theme-foreground-light font-copy ml-2 text-xs font-normal">optional</span></label>
-        <Input id="phone_number" type="tel" inputmode="tel" minlength="10" maxlength="14" />
+        <Input id="phone_number" type="tel" inputmode="tel" autocomplete="tel" minlength="10" maxlength="14" />
       </div>
     </div>
     <div class="grid gap-1">

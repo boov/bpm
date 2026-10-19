@@ -23,7 +23,7 @@ const { description } = Astro.props;
           <div class="flex flex-col gap-10 sm:gap-12">
             <div class="max-w-8c flex flex-col gap-4">
               <Heading as="h1" class="text-h2 sm:text-h1 md:text-h0">
-                <span class="subheading text-theme-brand font-copy mb-4 block">Block management in Winchester</span>
+                <span class="subheading text-theme-brand-text font-copy mb-4 block">Block management in Winchester</span>
                 One property manager who knows your building
               </Heading>
               <p class="text-theme-foreground max-w-2xl text-lg sm:text-xl md:text-2xl">{description}</p>
@@ -53,7 +53,7 @@ const { description } = Astro.props;
             sizes="(min-width: 1280px) 1600px, (min-width: 640px) 100vw, 100vw"
             loading="eager"
             fetchpriority="high"
-            class="absolute inset-0 size-full object-cover opacity-65 mix-blend-overlay"
+            class="absolute inset-0 size-full object-cover opacity-40 mix-blend-overlay"
           />
         </div>
       </div>

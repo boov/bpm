@@ -20,7 +20,7 @@ const links = [
 <div class="bg-theme-background-lowlight grid gap-8 rounded-2xl p-6 sm:p-10 md:gap-10 lg:p-14 xl:grid-cols-[2fr_3fr] xl:items-end xl:gap-16">
   <div class="flex flex-col gap-4">
     <div class="flex flex-col">
-      <p class="subheading text-theme-brand">For residents</p>
+      <p class="subheading text-theme-brand-text">For residents</p>
       <Heading as="h2" class="text-h4 sm:text-h3">Live in a building we manage?</Heading>
     </div>
     <p>Pay your service charge, contact your property manager or find what you need to sell your flat.</p>
@@ -28,7 +28,7 @@ const links = [
       <div class="bg-theme-brand/10 text-theme-brand flex size-12 shrink-0 items-center justify-center rounded-lg">
         <Phone class="size-6" aria-hidden="true" />
       </div>
-      <div class="flex flex-col">
+      <div class="flex flex-col items-start">
         <a class="label link text-lg leading-snug" href={site.phoneHref}>{site.phone}</a>
         <p class="text-sm">{site.hours}</p>
       </div>
@@ -40,12 +40,12 @@ const links = [
         <li>
           <a
             href={href}
-            class="group bg-theme-background-highlight focus-visible:ring-theme-brand flex h-full items-center gap-4 rounded-lg p-4 shadow-sm outline-hidden transition-all hover:-translate-y-0.5 hover:shadow-lg focus-visible:ring-2 sm:p-5"
+            class="group bg-theme-background-highlight focus-visible:ring-theme-brand-text flex h-full items-center gap-4 rounded-lg p-4 shadow-sm outline-hidden transition-all hover:-translate-y-0.5 hover:shadow-lg focus-visible:ring-2 sm:p-5"
           >
             <span class="bg-theme-brand/10 text-theme-brand flex size-10 shrink-0 items-center justify-center rounded-lg transition-colors">
               <Icon class="size-5" aria-hidden="true" />
             </span>
-            <span class="label group-hover:text-theme-action flex-1 text-sm leading-snug transition-colors sm:text-base">{label}</span>
+            <span class="label group-hover:text-theme-brand-text flex-1 text-sm leading-snug transition-colors sm:text-base">{label}</span>
             <ArrowRight class="text-theme-action size-4 shrink-0 transition-transform" aria-hidden="true" />
           </a>
         </li>

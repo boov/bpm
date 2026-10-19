@@ -22,7 +22,7 @@ const hasCookieConsent = Boolean(import.meta.env.GOOGLE_TAG_MANAGER_CONTAINER);
         {
           links.map(link => (
             <li>
-              <a href={link.href} class="text-theme-foreground hover:text-theme-action whitespace-nowrap">
+              <a href={link.href} class="text-theme-foreground hover:text-theme-brand-text whitespace-nowrap">
                 {link.label}
               </a>
             </li>
@@ -31,7 +31,11 @@ const hasCookieConsent = Boolean(import.meta.env.GOOGLE_TAG_MANAGER_CONTAINER);
         {
           hasCookieConsent && (
             <li>
-              <button type="button" data-cookie-settings class="text-theme-foreground hover:text-theme-action cursor-pointer whitespace-nowrap">
+              <button
+                type="button"
+                data-cookie-settings
+                class="text-theme-foreground hover:text-theme-brand-text cursor-pointer rounded-xs whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
+              >
                 Cookie settings
               </button>
             </li>

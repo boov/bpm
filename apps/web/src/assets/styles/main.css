@@ -32,11 +32,13 @@
   --color-theme-brand: hsl(16deg 83% 66%);
   --color-theme-brand-highlight: hsl(16deg 83% 69%);
   --color-theme-brand-lowlight: hsl(16deg 83% 63%);
+  --color-theme-brand-text: unset;
+  --color-theme-brand-text-hover: unset;
 
   --color-theme-action: var(--color-theme-brand);
   --color-theme-action-hover: var(--color-theme-brand-lowlight);
   --color-theme-action-focus: var(--color-theme-brand-lowlight);
-  --color-theme-action-foreground: hsl(16deg 5% 15%);
+  --color-theme-action-foreground: hsl(16deg 30% 12%);
 
   --color-white: white;
   --color-black: black;
@@ -165,6 +167,9 @@
   --color-theme-background-highlight: hsl(16deg 30% 100%);
   --color-theme-background-lowlight: hsl(16deg 30% 92%);
 
+  --color-theme-brand-text: hsl(16deg 5% 25%);
+  --color-theme-brand-text-hover: hsl(16deg 5% 25%);
+
   --color-theme-border: hsl(0deg 0% 0% / 0.1);
   --color-theme-border-bold: hsl(0deg 0% 0% / 0.2);
   --color-theme-border-light: hsl(0deg 0% 0% / 0.05);
@@ -178,6 +183,9 @@
   --color-theme-background: hsl(220deg 2% 24%);
   --color-theme-background-highlight: hsl(220deg 2% 30%);
   --color-theme-background-lowlight: hsl(220deg 2% 18%);
+
+  --color-theme-brand-text: hsl(16deg 83% 70%);
+  --color-theme-brand-text-hover: hsl(16deg 83% 78%);
 
   --color-theme-border: hsl(0deg 0% 100% / 0.1);
   --color-theme-border-bold: hsl(0deg 0% 100% / 0.2);
@@ -201,7 +209,7 @@
 }
 
 @utility button {
-  @apply font-copy inline-flex cursor-pointer appearance-none items-center justify-between gap-2.5 rounded-lg leading-tight font-bold transition focus:outline-hidden disabled:cursor-not-allowed disabled:opacity-50;
+  @apply font-copy focus-visible:outline-theme-brand-text inline-flex cursor-pointer appearance-none items-center justify-between gap-2.5 rounded-lg leading-tight font-bold transition focus-visible:outline-2 focus-visible:outline-offset-4 disabled:cursor-not-allowed disabled:opacity-50;
 
   span {
     @apply font-copy text-left;
@@ -224,11 +232,11 @@
 }
 
 @utility link {
-  @apply text-theme-action;
-  @apply hover:text-theme-action-hover;
-  @apply focus:text-theme-action-focus;
-  @apply focus-visible:text-theme-action-focus;
-  @apply active:text-theme-action-focus;
+  @apply text-theme-brand-text;
+  @apply hover:text-theme-brand-text-hover;
+  @apply focus:text-theme-brand-text-hover;
+  @apply focus-visible:text-theme-brand-text-hover;
+  @apply active:text-theme-brand-text-hover;
 }
 
 @layer base {

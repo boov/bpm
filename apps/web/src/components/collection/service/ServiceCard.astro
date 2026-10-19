@@ -16,7 +16,7 @@ const href = `/services/${service.id}/`;
 
 <article
   class={twMerge(
-    "group bg-theme-background-highlight focus-within:ring-theme-brand relative flex flex-col overflow-hidden rounded-xl shadow-xs transition-all focus-within:ring-2 hover:-translate-y-1 hover:shadow-xl",
+    "group bg-theme-background-highlight focus-within:ring-theme-brand-text relative flex flex-col overflow-hidden rounded-xl shadow-xs transition-all focus-within:ring-2 hover:-translate-y-1 hover:shadow-xl",
     featured && "sm:col-span-2 md:flex-row lg:col-span-2"
   )}
 >
@@ -25,7 +25,7 @@ const href = `/services/${service.id}/`;
   </div>
   <div class={twMerge("flex flex-1 flex-col gap-3 p-6 sm:py-7 md:p-8", featured && "md:p-10 lg:p-12")}>
     <Heading as="h3" class={featured ? "text-h4 sm:text-h3" : "text-h5 sm:text-h4"}>
-      <a href={href} class="text-theme-foreground-bold group-hover:text-theme-action outline-hidden transition-colors after:absolute after:inset-0">{label}</a>
+      <a href={href} class="text-theme-foreground-bold outline-hidden transition-colors after:absolute after:inset-0">{label}</a>
     </Heading>
     <p class="text-sm">{service.data.description}</p>
   </div>

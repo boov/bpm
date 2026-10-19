@@ -21,7 +21,7 @@ const { steps } = Astro.props;
         steps.map((step, index) => (
           <li class="bg-theme-background-highlight flex flex-col gap-3 rounded-2xl p-8">
             <div class="flex flex-col gap-1">
-              <p class="text-theme-brand text-h4 font-light" aria-hidden="true" set:text={index + 1} />
+              <p class="text-theme-brand text-h4" aria-hidden="true" set:text={index + 1} />
               <Heading as="h3" class="text-h4" set:text={step.title} />
             </div>
             <InlineText text={step.text} class="text-sm" />

@@ -1,3 +1,5 @@
 {
-  "cooldown": 14
+  "cooldown": 14,
+  "root": true,
+  "workspaces": true
 }

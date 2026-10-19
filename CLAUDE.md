@@ -7,41 +7,41 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Development
 
 ```bash
-npm run dev              # Start Astro dev server for the active app (default: web) on http://localhost:4321/
-npm run preview          # Build then serve the production output locally
+pnpm dev              # Start Astro dev server for the active app (default: web) on http://localhost:4321/
+pnpm preview          # Build then serve the production output locally
 ```
 
-`dev`, `build`, and `preview` proxy to the workspace named in `.active-app` (falling back to `web` when the file is absent), e.g. `npm run dev --workspace=@bpm/$(cat .active-app)`.
+`dev`, `build`, and `preview` proxy to the workspace named in `.active-app` (falling back to `web` when the file is absent), e.g. `pnpm --filter @bpm/$(cat .active-app) run dev`.
 
 ### Build
 
 ```bash
-npm run build            # Build only the active app
-npm run build:all        # Build every workspace that defines a build script
-npm run clean            # Remove apps/*/dist, apps/*/.astro, apps/*/.netlify, .eslintcache
+pnpm build            # Build only the active app
+pnpm build:all        # Build every workspace that defines a build script
+pnpm clean            # Remove apps/*/dist, apps/*/.astro, apps/*/.netlify, .eslintcache
 ```
 
 ### Test and check
 
 ```bash
-npm run test --workspace=@bpm/web    # Unit tests
-npm run check --workspace=@bpm/web   # Post-build checks (run after npm run build)
-npm run typecheck --workspace=@bpm/web   # Type check .astro and .ts files (astro check; dist and scripts are excluded)
+pnpm --filter @bpm/web test    # Unit tests
+pnpm --filter @bpm/web check   # Post-build checks (run after pnpm build)
+pnpm --filter @bpm/web typecheck   # Type check .astro and .ts files (astro check; dist and scripts are excluded)
 ```
 
 ### Quality
 
 ```bash
-npm run prettier         # Format the repo in place (prettier -lw .)
-npm run eslint           # Lint with --cache --fix
-npm run format           # Run prettier then eslint (preferred pre-commit gate)
+pnpm prettier         # Format the repo in place (prettier -lw .)
+pnpm eslint           # Lint with --cache --fix
+pnpm format           # Run prettier then eslint (preferred pre-commit gate)
 ```
 
 ### Workspace-Specific Commands
 
 ```bash
 # Run commands in specific workspace
-npm run <script> --workspace=@bpm/web
+pnpm --filter @bpm/web <script>
 
 # Available workspaces: @bpm/web, @bpm/design-system, @bpm/tailwind-base, @bpm/custom-merge, @bpm/data
 ```
@@ -50,13 +50,13 @@ npm run <script> --workspace=@bpm/web
 
 ### Monorepo Structure
 
-This is an npm workspaces monorepo:
+This is a pnpm workspaces monorepo (`pnpm-workspace.yaml`). pnpm is pinned in the root `packageManager` field; run `corepack enable pnpm` once to install it. Each workspace lists its own dependencies; the root holds only lint, format and TypeScript tooling. External versions live once in the `catalog:` block of `pnpm-workspace.yaml`, and each `package.json` refers to them as `"catalog:"`; add new dependencies with `pnpm add --save-catalog <pkg>`. Workspace packages are linked with `workspace:*`:
 
-- **`apps/web/`** - Main Astro 5 static website application
+- **`apps/web/`** - Main Astro 6 static website application
 - **`packages/`** - Shared workspace packages:
   - `design-system` - Tailwind CSS plugin with custom utilities
   - `tailwind-base` - Base Tailwind preset configuration
-  - `custom-merge` - Object merging utility (lodash wrapper)
+  - `custom-merge` - Tailwind class merging (`twMerge`, `twSort`), built on `tailwind-merge`
   - `data` - Shared content data (personnel, questions)
 
 ### Content Collections System
@@ -146,7 +146,7 @@ Custom `container` component with automatic padding:
 
 ### TypeScript Path Aliases
 
-Configured in `tsconfig.base.json`:
+Configured in `apps/web/tsconfig.json`:
 
 ```json
 {
@@ -181,7 +181,7 @@ Use these aliases in imports rather than relative paths.
 
 **Netlify Deployment** (apps/web/netlify.toml):
 
-- Build command: `npm run build`
+- Build command: `pnpm run build`
 - Publish directory: `apps/web/dist`
 - Redirects from the live site: `[[redirects]]` blocks in `netlify.toml` (301)
 - Lighthouse audits on: /, /services, /services/block-and-estate-management, /who-we-work-with/rmc-and-rtm-directors, /about, /faqs, /contact, /privacy-policy
@@ -204,13 +204,14 @@ Use these aliases in imports rather than relative paths.
 ### Linting & Formatting
 
 - **Prettier** (`.prettierrc.json`): `printWidth: 180`, double quotes, no trailing commas, no semicolons override; uses `prettier-plugin-astro` and `prettier-plugin-tailwindcss` (the Tailwind plugin sorts classes inside `twMerge` and `twSort` helpers).
-- **ESLint** (flat config in `eslint.config.js`): TypeScript + Astro rules plus `simple-import-sort` for `imports`/`exports`. Ignores `dist`, `.astro`, and `*.d.ts`. Run `npm run format` for the combined Prettier + ESLint pass.
+- **ESLint** (flat config in `eslint.config.js`): TypeScript + Astro rules plus `simple-import-sort` for `imports`/`exports`. Ignores `dist`, `.astro`, and `*.d.ts`. Run `pnpm format` for the combined Prettier + ESLint pass.
 
 ## Important Notes
 
-- **Active app**: Root `dev`/`build`/`preview` scripts read `.active-app` (defaults to `web`); to target another app either edit that file or pass `--workspace=@bpm/<name>` explicitly.
-- **Port**: Astro dev server runs on port 4321 (Netlify's `netlify dev` is not wired into npm scripts; use `npx netlify dev` from `apps/web/` if you specifically need its port 8888 proxy).
+- **Active app**: Root `dev`/`build`/`preview` scripts read `.active-app` (defaults to `web`); to target another app either edit that file or pass `--filter @bpm/<name>` explicitly.
+- **Port**: Astro dev server runs on port 4321 (Netlify's `netlify dev` is not wired into package scripts; use `pnpm dlx netlify dev` from `apps/web/` if you specifically need its port 8888 proxy).
 - **Typography**: Use `magicTypography()` for consistent scaling when adding new size scales.
 - **Spacing**: Prefer column-based units (`5c`) over arbitrary values for grid-aligned spacing.
 - **Content**: Add new collections to `content.config.ts` with proper Zod schemas and loaders.
 - **Node Version**: Project requires Node.js 22+ (enforced in `package.json` engines and `.nvmrc`).
+- **Release cooldown**: pnpm refuses any package version published less than 14 days ago (`minimumReleaseAge: 20160` minutes in `pnpm-workspace.yaml`), and `ncu` skips them (`.ncurc.json`). This also covers versions already in the lockfile. pnpm checks the whole lockfile before any install, so to replace a blocked transitive version: remove `minimumReleaseAge`, pin an older version in `overrides`, run `pnpm install`, then restore `minimumReleaseAge`, remove the pin and run `pnpm install` again.

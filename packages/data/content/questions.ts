@@ -150,4 +150,4 @@ const schema = () =>
 
 export default { data, schema };
 
-export type Question = z.input<ReturnType<typeof schema>>;
+type Question = z.input<ReturnType<typeof schema>>;

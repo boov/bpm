@@ -29,4 +29,4 @@ const schema = ({ image }: SchemaContext) =>
 
 export default { data, schema };
 
-export type Person = z.infer<ReturnType<typeof schema>>;
+type Person = z.infer<ReturnType<typeof schema>>;

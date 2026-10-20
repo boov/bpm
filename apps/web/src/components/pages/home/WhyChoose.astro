@@ -1,0 +1,58 @@
+---
+import Heading from "@components/Heading.astro";
+import SubHeading from "@components/SubHeading.astro";
+import Calculator from "@lucide/astro/icons/calculator";
+import MessagesSquare from "@lucide/astro/icons/messages-square";
+import ShieldCheck from "@lucide/astro/icons/shield-check";
+import UserRound from "@lucide/astro/icons/user-round";
+
+const items = [
+  {
+    title: "Transparent accounting",
+    text: "We employ in-house bookkeepers and use the latest finance software. Third-party service charge accountants finalise the year-end accounts in line with the lease and RICS requirements.",
+    icon: Calculator
+  },
+  {
+    title: "Dedicated property managers",
+    text: "Your investment deserves a personal service, with a property manager who knows your building and works alongside a support colleague to ensure continuity of knowledge.",
+    icon: UserRound
+  },
+  {
+    title: "Supportive communication",
+    text: "All telephone calls are answered by our team, emails are responded to within 5 working days, and clients receive regular financial and maintenance updates. Communication is key.",
+    icon: MessagesSquare
+  },
+  {
+    title: "Health and safety compliance",
+    text: "We arrange fire risk, health and safety and asbestos assessments with specialist firms, and check the competence of our contractors. Our software tracks what each building needs.",
+    icon: ShieldCheck
+  }
+];
+---
+
+<div class="flex flex-col gap-10 lg:gap-14">
+  <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-2 md:gap-3">
+      <div class="flex items-center gap-5">
+        <SubHeading class="text-theme-brand-text">Why choose us</SubHeading>
+        <div class="bg-theme-brand h-[2px] w-20 rounded sm:w-24"></div>
+      </div>
+      <Heading as="h2" class="text-h3 sm:text-h2">Built on transparency and trust</Heading>
+    </div>
+    <p class="max-w-7c text-lg">
+      We deliver clear, regular communication, software that keeps us up to date on all requirements, and compliance that protects your assets. Our approach is to treat your home
+      as if it's our own.
+    </p>
+  </div>
+  <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2 xl:grid-cols-4 xl:gap-x-14">
+    {
+      items.map(({ title, text, icon: Icon }) => (
+        <div class="flex flex-col gap-2">
+          <Icon class="text-theme-brand mb-3 size-10" aria-hidden="true" />
+          <Heading as="h3" class="text-h5" set:text={title} />
+          <p set:text={text} />
+        </div>
+      ))
+    }
+  </div>
+</div>

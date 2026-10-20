@@ -8,14 +8,26 @@ interface Props {
 }
 
 const { title, answer } = Astro.props;
+const answerId = `answer-${title
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/^-|-$/g, "")}`;
 ---
 
 <div class="bg-theme-background-highlight rounded-lg shadow-sm" x-data="{ open: false }">
-  <button type="button" class="flex w-full cursor-pointer items-center gap-2.5 px-6 py-5 text-left sm:px-7 sm:py-6" @click="open = !open" :aria-expanded="open">
-    <span class="text-theme-foreground-bold flex-1 leading-normal font-bold" set:text={title} />
-    <ChevronDown class="text-theme-brand size-5 shrink-0 transition-transform duration-200" :class="open && 'rotate-180'" aria-hidden="true" />
-  </button>
-  <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-sm sm:px-7 sm:pb-6">
+  <h3>
+    <button
+      type="button"
+      class="flex w-full cursor-pointer items-center gap-2.5 px-6 py-5 text-left sm:px-7 sm:py-6"
+      @click="open = !open"
+      :aria-expanded="open"
+      aria-controls={answerId}
+    >
+      <span class="text-theme-foreground-bold flex-1 leading-normal font-bold" set:text={title} />
+      <ChevronDown class="text-theme-brand size-5 shrink-0 transition-transform duration-200" :class="open && 'rotate-180'" aria-hidden="true" />
+    </button>
+  </h3>
+  <div id={answerId} x-show="open" x-collapse x-cloak class="px-6 pb-5 text-sm sm:px-7 sm:pb-6">
     <div class="flex flex-col gap-4">
       {answer.map(paragraph => <InlineText text={paragraph} />)}
     </div>

@@ -15,19 +15,16 @@ Work left before the site goes live at `https://www.belgarum-property.co.uk`. Re
 
 ## Launch day: manual steps in Netlify and DNS
 
-1. Set `STRIPE_PAYMENT_URL` to the live Stripe Payment Link (it holds the test link now).
-2. In Stripe, set the Payment Link's after-payment redirect to `https://www.belgarum-property.co.uk/pay-online/success/`.
-3. Set `GOOGLE_TAG_MANAGER_CONTAINER` in Netlify.
-4. Point DNS at Netlify and add the Google Search Console TXT record.
-5. In Netlify domain settings, redirect `belgarum-property.co.uk` to `https://www.belgarum-property.co.uk`.
+1. Invite the client to the Stripe account and finish its setup (directors, payout details). Until then the payment link stays in test mode.
+2. Create the live Stripe Payment Link with its after-payment redirect set to `https://www.belgarum-property.co.uk/pay-online/success/`, then set `STRIPE_PAYMENT_URL` in Netlify to that link (it holds the test link now).
+3. Point DNS at Netlify and add the Google Search Console TXT record. This needs access to the domain, which we do not have yet.
+4. In Netlify domain settings, redirect `belgarum-property.co.uk` to `https://www.belgarum-property.co.uk`.
 
 ## Check on a Netlify deploy
 
-1. The build uses pnpm 12.9.1 (from `packageManager`) and passes. The Lighthouse plugin runs and reports.
-2. Visual check of every page template after the Astro 7 upgrade. Vite 8 minifies and reorders CSS differently from Vite 7.
-3. Contact form: Netlify detects `contact_form` on a production deploy. Send one test submission and confirm the notification email arrives.
-4. Cookie consent: before consent, the page makes no Google Tag Manager requests. After accepting analytics, GTM loads. The footer "Cookie settings" button reopens the banner.
-5. Pay online: the button opens the live Stripe link, and a payment returns to `/pay-online/success/`.
+1. Contact form: Netlify detects `contact_form` on a production deploy. Send one test submission and confirm the notification email arrives.
+2. Cookie consent: before consent, the page makes no Google Tag Manager requests. After accepting analytics, GTM loads. The footer "Cookie settings" button reopens the banner.
+3. Pay online: the button opens the live Stripe link, and a payment returns to `/pay-online/success/`.
 
 ## After the DNS switch
 

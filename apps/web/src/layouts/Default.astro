@@ -20,12 +20,18 @@ const { title, description, cta = "proposal", ctaHeading, ctaText, centered = fa
 <Base title={title} description={description} {...props}>
   <slot name="head" slot="head" />
   <div id="p_site" class="theme-light relative flex min-h-screen flex-col">
+    <a
+      href="#p_main-group"
+      class="bg-theme-background-highlight text-theme-foreground-bold sr-only z-50 rounded-md px-5 py-3 font-bold shadow-xl focus:not-sr-only focus:absolute focus:top-4 focus:left-4"
+    >
+      Skip to content
+    </a>
     <slot name="header">
       <header id="p_header-group">
         <Banner />
       </header>
     </slot>
-    <main id="p_main-group" class:list={[centered ? "my-auto" : "mb-auto"]}>
+    <main id="p_main-group" tabindex="-1" class:list={["outline-none", centered ? "my-auto" : "mb-auto"]}>
       <slot name="default" />
     </main>
     <slot name="footer">

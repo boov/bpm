@@ -51,9 +51,9 @@ const parentPath = pathNames.length ? `/${pathNames[0]}/` : "/";
                       x-on:mouseleave="open = false"
                       x-on:focusin="open = true"
                       x-on:focusout="if (!$el.contains($event.relatedTarget)) open = false"
-                      x-on:keydown.escape="open = false"
+                      x-on:keydown.escape="$refs.trigger.focus(); open = false"
                     >
-                      <a href={link.href} class="group flex flex-col items-center" aria-haspopup="true" x-bind:aria-expanded="open">
+                      <a href={link.href} class="group flex flex-col items-center" x-ref="trigger" x-bind:aria-expanded="open">
                         <span class="text-theme-foreground-bold flex items-center gap-1 py-1 font-bold whitespace-nowrap transition-colors">
                           {link.label}
                           <ChevronDown size={14} class="text-theme-brand stroke-3" />

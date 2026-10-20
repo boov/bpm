@@ -31,9 +31,9 @@ Measured from the computed theme tokens.
 
 | Foreground                     | Background                          | Ratio        | AA normal text                |
 | ------------------------------ | ----------------------------------- | ------------ | ----------------------------- |
-| brand-text light `#8b4223`     | light background `#f6f0ee`          | 6.46         | Pass                          |
-| brand-text light `#8b4223`     | light lowlight `#f1e8e4`            | 6.00         | Pass                          |
-| brand-text light `#8b4223`     | white (cards)                       | 7.26         | Pass                          |
+| brand-text light `#433e3d`     | light background `#f6f0ee`          | 9.34         | Pass                          |
+| brand-text light `#433e3d`     | light lowlight `#f1e8e4`            | 8.69         | Pass                          |
+| brand-text light `#433e3d`     | white (cards)                       | 10.50        | Pass                          |
 | brand-text dark `#f29573`      | dark background `#3c3d3e`           | 4.84         | Pass                          |
 | brand-text dark `#f29573`      | dark lowlight `#2d2e2f`             | 6.06         | Pass                          |
 | brand-text dark `#f29573`      | home hero photo, behind the eyebrow | 4.69 or more | Pass                          |
@@ -43,7 +43,7 @@ Measured from the computed theme tokens.
 | foreground-light `#706966`     | light lowlight                      | 4.46         | Fail (not in use there today) |
 | foreground `#b6b1af`           | dark background                     | 5.13         | Pass                          |
 | foreground `#b6b1af`           | dark highlight `#4b4c4e`            | 4.05         | Fail (not in use there today) |
-| action-foreground `#282524`    | brand (solid buttons)               | 6.04         | Pass                          |
+| action-foreground `#281a15`    | brand (solid buttons)               | 6.66         | Pass                          |
 | placeholder (foreground-light) | white input                         | 5.38         | Pass                          |
 
 ## Should fix
@@ -64,8 +64,8 @@ Measured from the computed theme tokens.
 ## Fine as is
 
 - **Page basics:** `lang="en-GB"`, unique titles, one `h1` per page, no skipped heading levels, `header` / `nav` (labelled) / `main` / `footer` on every page.
-- **Orange text contrast:** orange text uses `--color-theme-brand-text`, which each theme sets: `#8b4223` in light sections and `#f29573` in dark sections. Hover and focus shades (`--color-theme-brand-text-hover`) have more contrast than the normal shade. The brand orange `#f08760` is used only for fills, dividers and icons.
-- **Body text contrast:** light theme body text 9.33:1, dark theme body text 5.13:1, solid orange buttons with dark text 6.04:1, hero intro over the photo at least 4.5:1, hero `h1` at least 8.6:1.
+- **Brand text contrast:** text in the brand role (eyebrows, role labels, step numbers, links, outline buttons) uses `--color-theme-brand-text`, which each theme sets. In light sections it is `#433e3d`, the same dark grey as body text, so links rely on their underline to stand out. In dark sections it is the orange `#f29573`. In dark sections the hover shade (`--color-theme-brand-text-hover`) is lighter, with more contrast. In light sections the hover shade is a lighter grey, `#585250`, which still passes: 6.78:1 on the light background, 6.34:1 on light lowlight and 7.65:1 on white. The brand orange `#f08760` is used only for fills, dividers and icons.
+- **Body text contrast:** light theme body text 9.33:1, dark theme body text 5.13:1, solid orange buttons with dark text 6.66:1, hero intro over the photo at least 4.5:1, hero `h1` at least 8.6:1.
 - **Links in text:** all inline links are underlined, so colour is not the only cue (1.4.1).
 - **Images and icons:** card and hero photos have `alt=""` and are decorative. Page hero photos have meaningful alt text ("Modern brick blocks of flats...", "Board of directors meeting..."). All 44 SVG icons on the home page are `aria-hidden` or have a title. The logo link is named "Belgarum Property Management". Social links have text names.
 - **FAQ accordions:** native `button` elements with `aria-expanded` that changes between `false` and `true`. Enter and Space both toggle the answer. Collapsed answers are `display: none`. The default browser focus outline shows.
@@ -73,7 +73,7 @@ Measured from the computed theme tokens.
 - **Cookie preferences:** a named `dialog`. Escape closes it and returns focus to the button that opened it ("Manage preferences" or the footer "Cookie settings"). Toggles are named checkboxes.
 - **Mobile menu:** below the `xl` breakpoint, "Open menu" has `aria-controls="p_gutter"` and an `aria-expanded` state. The overlay is a named modal `dialog` with a solid background. Opening it moves focus to "Close menu" and makes the rest of the page `inert`, so Tab cycles through the menu only. Escape and "Close menu" close it and return focus to "Open menu". After a menu link loads a new page, the menu is closed. Logic: `assets/scripts/gutter.ts`.
 - **Desktop dropdowns:** open on keyboard focus, `aria-expanded` updates, child links have a visible outline.
-- **Buttons and cards:** `.button` links and buttons show a 2px `brand-text` outline 4px clear of the button on keyboard focus (6.46:1 on light, 4.84:1 on dark). Service cards, audience cards and resident support links show a 2px `brand-text` ring (7.26:1 against the white card, 6.46:1 against the page). The footer "Cookie settings" button shows a current-colour outline. A keyboard pass over 789 focus stops on 10 pages found no stop without a 3:1 indicator.
+- **Buttons and cards:** `.button` links and buttons show a 2px `brand-text` outline 4px clear of the button on keyboard focus (9.34:1 on light, 4.84:1 on dark). Service cards, audience cards and resident support links show a 2px `brand-text` ring (10.50:1 against the white card, 9.34:1 against the page). The footer "Cookie settings" button shows a current-colour outline. A keyboard pass over 789 focus stops on 10 pages found no stop without a 3:1 indicator.
 - **Plain links and other buttons:** visible outline on focus (`a` base rule or browser default). No positive `tabindex` anywhere. Tab order follows the visual order on desktop.
 - **Form fields:** name, email and phone fields have `autocomplete` (`name`, `email`, `tel`) on `/contact/` and `/pay-online/`. Placeholder text uses `foreground-light` at full strength: 5.38:1 on the white field.
 - **Contact form labels:** every visible field has a `<label for>`. Required fields use `required`. Optional fields say "optional" in the label. The hidden Netlify form is `hidden`, so it is not exposed.

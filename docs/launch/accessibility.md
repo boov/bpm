@@ -58,7 +58,6 @@ Measured from the computed theme tokens.
 - **No skip link.** All pages. Landmarks (`header`, `nav`, `main`, `footer`) meet 2.4.1. On `xl` screens the desktop dropdown has 9 service links, and a keyboard user tabs through all of them before reaching the page. A "Skip to content" link would help. WCAG 2.4.1. `layouts/Default.astro`.
 - **Home page `h1` is inside the `header` landmark.** `/`. The hero (with the `h1`) sits in the banner, and `main` starts at "About us". Screen reader users who jump to `main` miss the `h1`. `pages/index.astro`, `layouts/Default.astro`.
 - **FAQ questions are not headings.** `/faqs/` and every FAQ list. The buttons work well (see "Fine as is"). Wrapping each button in an `h3` lets screen reader users move between questions by heading. Add `aria-controls` too. `components/collection/question/Question.astro`.
-- **Mobile sub-menu toggles are small.** Mobile menu, "Show Services pages" and "Show Who we work with pages" buttons are 19 by 19px. They pass 2.5.8 through the spacing exception, but they are hard to tap. `components/global/Gutter.astro`.
 - **Two tokens fail if used in that place.** `foreground-light` on light `background-lowlight` is 4.46:1. Dark `foreground` on dark `background-highlight` is 4.05:1. Neither pair is in use today. Raise them so future use is safe. `assets/styles/main.css`.
 
 ## Fine as is

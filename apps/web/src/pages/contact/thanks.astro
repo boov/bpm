@@ -10,7 +10,7 @@ import ArrowLeft from "@lucide/astro/icons/arrow-left";
 import MailCheck from "@lucide/astro/icons/mail-check";
 
 const title = "Thank you for your enquiry";
-const description = "We've received your enquiry and we'll reply as soon as we can.";
+const description = "We've received your enquiry and we'll reply within 5 working days.";
 const links = [
   { label: "Head back home", href: "/", icon: ArrowLeft },
   { label: "Read our FAQs", href: "/faqs/" },
@@ -25,7 +25,7 @@ const links = [
         <MailCheck class="text-positive-500 size-14 stroke-[1.5] lg:size-18" />
         <div class="flex flex-col items-center gap-4">
           <Heading as="h1" class="text-h3 md:text-h2 lg:text-h1">{title}</Heading>
-          <p class="text-lg">We've received your enquiry and we'll reply as soon as we can. Our office is open {site.hours}.</p>
+          <p class="text-lg">We've received your enquiry and we'll reply within 5 working days. Our office is open {site.hours}.</p>
           <p>If your enquiry is urgent, call us on <a href={site.phoneHref} class="link">{site.phone}</a>.</p>
         </div>
         <div class="flex flex-wrap justify-center gap-x-8 gap-y-2">

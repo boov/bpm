@@ -16,6 +16,7 @@ Where sources disagree, the working decision is in `client-questions.md` and the
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | LIVE   | Current website, https://belgarum-property.co.uk/ (home, services, developers, residential, freeholders, our team, about us, links, contact) | 2026-10-06 |
 | FAQ    | Client-supplied FAQ text, formerly in `packages/data/content/questions.ts` (git history before this commit)                                  | 2026-10-06 |
+| OG     | Olivia Gregory (Operations Director), website content document `docs/website re-writes.docx`                                                 | 2026-10-20 |
 | NEW    | Other new site content in this repository (`apps/web`, `packages/data`), written without client input                                        | 2026-10-06 |
 | CH     | Companies House, company 07580603 and its officer records                                                                                    | 2026-10-06 |
 | TPI    | The Property Institute member directory, South West, page 2                                                                                  | 2026-10-06 |
@@ -69,49 +70,56 @@ Conflicts and decisions:
 
 ## Memberships and protections
 
-| Fact                             | Value                                                                                       | Source   | Status     |
-| -------------------------------- | ------------------------------------------------------------------------------------------- | -------- | ---------- |
-| Trade body                       | The Property Institute (TPI), Full Member (listed without the Associate Member badge)       | TPI      | Sourced    |
-| Former trade body                | ARMA (corporate member, ARMA Q). ARMA and IRPM merged to form TPI                           | LIVE     | Sourced    |
-| Redress scheme                   | The Property Ombudsman (TPO), listed for residential leasehold management                   | TPI, TPO | Sourced    |
-| Professional indemnity insurance | £5 million                                                                                  | LIVE     | Sourced    |
-| Client money                     | Held in designated trust accounts, named for each block or estate                           | LIVE     | Sourced    |
-| RICS service charge code         | The live site says ARMA Q members undertake to comply with it. It is not a direct BPM claim | LIVE     | Unverified |
-| Client money protection scheme   | Unknown                                                                                     |          |            |
+| Fact                             | Value                                                                                 | Source   | Status    |
+| -------------------------------- | ------------------------------------------------------------------------------------- | -------- | --------- |
+| Trade body                       | The Property Institute (TPI), Full Member (listed without the Associate Member badge) | TPI      | Sourced   |
+| Former trade body                | ARMA (corporate member, ARMA Q). ARMA and IRPM merged to form TPI                     | LIVE     | Sourced   |
+| Redress scheme                   | The Property Ombudsman (TPO), listed for residential leasehold management             | TPI, TPO | Sourced   |
+| Professional indemnity insurance | £5 million                                                                            | LIVE     | Sourced   |
+| Client money                     | Held in designated trust accounts, named for each block or estate                     | LIVE     | Sourced   |
+| RICS service charge code         | Year-end accounts are finalised "in line with lease and RICS requirements"            | OG       | Confirmed |
+| Client money protection scheme   | Unknown                                                                               |          |           |
 
 ## Ways of working
 
-| Fact                                                                                                           | Source | Status     |
-| -------------------------------------------------------------------------------------------------------------- | ------ | ---------- |
-| Dedicated property manager per client, office hours Monday to Friday                                           | LIVE   | Sourced    |
-| Regular site inspections; management reports for larger developments                                           | LIVE   | Sourced    |
-| Quarterly site inspections (Senior Property Manager's remit, in a LinkedIn post)                               | LI     | Unverified |
-| Industry-standard management contracts                                                                         | LIVE   | Sourced    |
-| Manages communal areas, including contractors, insurance policies and legislative reports                      | LIVE   | Sourced    |
-| Reserve fund management and planning for major works                                                           | LIVE   | Sourced    |
-| Service charge budgets, set at the start of each financial year; longer-term budgeting to build up reserves    | LIVE   | Sourced    |
-| Bookkeeping service to account for client money                                                                | LIVE   | Sourced    |
-| Year end adjustment of the service charge at the end of each accounting period                                 | LIVE   | Sourced    |
-| Year end service charge accounts, produced by BPM (working decision; confirm with the client, question 9)      | NEW    | Sourced    |
-| Makes sure lease covenants are kept (staff are "well versed" in this)                                          | LIVE   | Sourced    |
-| Organises Companies House accounts submissions for RMCs                                                        | LIVE   | Sourced    |
-| Runs Section 20 projects (Senior Property Manager's remit, in a LinkedIn post)                                 | LI     | Sourced    |
-| In-house credit control; independent solicitors for arrears                                                    | LIVE   | Sourced    |
-| Company secretary duties for RMCs: AGMs, registered office, Companies House returns, share register            | LIVE   | Sourced    |
-| Formal health and safety, asbestos and fire risk assessment surveys                                            | LIVE   | Sourced    |
-| Contractor database and regular tendering; CDM compliance                                                      | LIVE   | Sourced    |
-| Specialists used for asbestos, fire risk, lifts, health and safety, insurance broking                          | LI     | Sourced    |
-| Knowledge of property law, land registration and conveyancing                                                  | LIVE   | Sourced    |
-| Advises developers to involve the managing agent from the planning stage; notes the growth of shared ownership | LIVE   | Sourced    |
-| A voluntary Code of Conduct that includes replying within set time periods. The times are not published        | LIVE   | Sourced    |
-| Day-to-day matters dealt with for clients, including maintenance, tenant queries and vandalism                 | LIVE   | Sourced    |
-| Calls are recorded for training                                                                                | LIVE   | Sourced    |
-| No estate agency or lettings                                                                                   | LIVE   | Sourced    |
-| Online card payments (Stripe)                                                                                  | NEW    | Sourced    |
-| Out-of-hours emergency service                                                                                 |        | Unknown    |
-| Repair reporting route for leaseholders                                                                        |        | Unknown    |
-| Leasehold sale pack cost, turnaround and ordering                                                              |        | Unknown    |
-| Onboarding and switching agent process                                                                         |        | Unknown    |
+| Fact                                                                                                             | Source | Status     |
+| ---------------------------------------------------------------------------------------------------------------- | ------ | ---------- |
+| Dedicated property manager per client, office hours Monday to Friday                                             | LIVE   | Sourced    |
+| Regular site inspections; management reports for larger developments                                             | LIVE   | Sourced    |
+| Quarterly site inspections (Senior Property Manager's remit, in a LinkedIn post)                                 | LI     | Unverified |
+| Industry-standard management contracts                                                                           | LIVE   | Sourced    |
+| Manages communal areas, including contractors, insurance policies and legislative reports                        | LIVE   | Sourced    |
+| Reserve fund management and planning for major works                                                             | LIVE   | Sourced    |
+| Service charge budgets, set at the start of each financial year; longer-term budgeting to build up reserves      | LIVE   | Sourced    |
+| Bookkeeping service to account for client money                                                                  | LIVE   | Sourced    |
+| Year end adjustment of the service charge at the end of each accounting period                                   | LIVE   | Sourced    |
+| In-house bookkeepers and finance software; third-party service charge accountants finalise the year-end accounts | OG     | Confirmed  |
+| Each property manager works with a support colleague, for continuity of knowledge                                | OG     | Confirmed  |
+| All telephone calls are answered by the team                                                                     | OG     | Confirmed  |
+| Emails are replied to within 5 working days                                                                      | OG     | Confirmed  |
+| Regular financial and maintenance updates are sent to clients                                                    | OG     | Confirmed  |
+| Staff attend CPD events and hold qualifications through The Property Institute                                   | OG     | Confirmed  |
+| Contractor competence is checked                                                                                 | OG     | Confirmed  |
+| Software tracks each building's compliance requirements                                                          | OG     | Confirmed  |
+| Makes sure lease covenants are kept (staff are "well versed" in this)                                            | LIVE   | Sourced    |
+| Organises Companies House accounts submissions for RMCs                                                          | LIVE   | Sourced    |
+| Runs Section 20 projects (Senior Property Manager's remit, in a LinkedIn post)                                   | LI     | Sourced    |
+| In-house credit control; independent solicitors for arrears                                                      | LIVE   | Sourced    |
+| Company secretary duties for RMCs: AGMs, registered office, Companies House returns, share register              | LIVE   | Sourced    |
+| Formal health and safety, asbestos and fire risk assessment surveys                                              | LIVE   | Sourced    |
+| Contractor database and regular tendering; CDM compliance                                                        | LIVE   | Sourced    |
+| Specialists used for asbestos, fire risk, lifts, health and safety, insurance broking                            | LI     | Sourced    |
+| Knowledge of property law, land registration and conveyancing                                                    | LIVE   | Sourced    |
+| Advises developers to involve the managing agent from the planning stage; notes the growth of shared ownership   | LIVE   | Sourced    |
+| A voluntary Code of Conduct that includes replying within set time periods. The times are not published          | LIVE   | Sourced    |
+| Day-to-day matters dealt with for clients, including maintenance, tenant queries and vandalism                   | LIVE   | Sourced    |
+| Calls are recorded for training                                                                                  | LIVE   | Sourced    |
+| No estate agency or lettings                                                                                     | LIVE   | Sourced    |
+| Online card payments (Stripe)                                                                                    | NEW    | Sourced    |
+| Out-of-hours emergency service                                                                                   |        | Unknown    |
+| Repair reporting route for leaseholders                                                                          |        | Unknown    |
+| Leasehold sale pack cost, turnaround and ordering                                                                |        | Unknown    |
+| Onboarding and switching agent process                                                                           |        | Unknown    |
 
 ## Team
 

@@ -61,4 +61,4 @@ The draft Commonhold and Leasehold Reform Bill (January 2026) is not law. Do not
 - Do not give legal advice. Explain processes in general terms and suggest readers take advice for their own case.
 - Do not compare BPM with named competitors.
 - Do not use logos for TPI, TPO or RICS unless BPM has the right to use them.
-- Do not say "RICS regulated" or "follows the RICS code". No source shows BPM as an RICS regulated firm, and the live site states the code only as an ARMA Q duty.
+- Do not say "RICS regulated" or "follows the RICS code". No source shows BPM as an RICS regulated firm. The client confirms only that the year-end accounts are finalised "in line with lease and RICS requirements", so state RICS only in that context.

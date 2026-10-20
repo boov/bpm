@@ -161,7 +161,7 @@
 @utility theme-light {
   --color-theme-foreground: hsl(16deg 5% 25%);
   --color-theme-foreground-bold: hsl(16deg 5% 15%);
-  --color-theme-foreground-light: hsl(16deg 5% 42%);
+  --color-theme-foreground-light: hsl(16deg 5% 41%);
 
   --color-theme-background: hsl(16deg 30% 95%);
   --color-theme-background-highlight: hsl(16deg 30% 100%);
@@ -176,7 +176,7 @@
 }
 
 @utility theme-dark {
-  --color-theme-foreground: hsl(16deg 5% 70%);
+  --color-theme-foreground: hsl(16deg 5% 74%);
   --color-theme-foreground-bold: hsl(16deg 5% 100%);
   --color-theme-foreground-light: hsl(16deg 5% 40%);
 

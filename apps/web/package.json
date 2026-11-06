@@ -25,6 +25,7 @@
     "alpinejs": "catalog:",
     "astro": "catalog:",
     "astro-meta-tags": "catalog:",
+    "sharp": "catalog:",
     "tailwind-merge": "catalog:",
     "tailwindcss": "catalog:",
     "vanilla-cookieconsent": "catalog:"

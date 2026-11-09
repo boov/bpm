@@ -3,7 +3,7 @@
   "title": "Service charge accounts",
   "metaTitle": "Service charge accounts",
   "cta": "proposal",
-  "description": "Service charge collection, arrears and year-end accounts from our own accounts team, with each building's money in its own designated trust account.",
+  "description": "Service charge collection, arrears and reporting by our own accounts team, with year-end accounts finalised by third-party accountants to TECH 03/11.",
   "image": "../../assets/images/services/service-charge-accounts.jpg",
   "imageAlt": "Accountant working through figures with a calculator",
   "intro": {
@@ -32,7 +32,7 @@
     },
     {
       "title": "Payments come in",
-      "text": "Payments go into the designated trust account for the block or estate. Leaseholders can pay online by card."
+      "text": "Payments go into the designated trust account for the block or estate."
     },
     {
       "title": "Late payments are chased",
@@ -44,14 +44,13 @@
     },
     {
       "title": "Accounts at the year end",
-      "text": "Third-party service charge accountants finalise the year-end accounts from our books, in line with the lease and RICS requirements. The accounts compare actual spending with the budget. Any difference becomes a balancing charge or a balancing credit for each leaseholder."
+      "text": "Third-party service charge accountants finalise the year-end accounts from our books, in line with the lease, RICS requirements and TECH 03/11 (the guidance for residential service charge accounts). The accounts compare actual spending with the budget. Any difference becomes a balancing charge or a balancing credit for each leaseholder."
     }
   ],
   "proof": [
     "Your books are kept by our own accounts team, including a block accounts specialist who has been with us since 2014.",
     "Your building's money sits in its own trust account, never mixed with ours or with another building's.",
-    "Late payers hear from our own team first, so arrears are chased early and the budget stays on track.",
-    "Leaseholders can pay online by debit or credit card, so paying on time is easy."
+    "Late payers hear from our own team first, so arrears are chased early and the budget stays on track."
   ],
   "faqs": [
     {
@@ -81,9 +80,7 @@
     },
     {
       "question": "How do I pay my service charge?",
-      "answer": [
-        "You can [pay your service charge](/pay-online/) online by debit or credit card. Use the amount on your demand. If you have a question about your demand, contact your property manager."
-      ]
+      "answer": ["Your service charge demand shows the amount due and how to pay. If you have a question about your demand, contact your property manager."]
     }
   ],
   "related": ["service-charge-budgets", "leasehold-sale-packs", "block-and-estate-management"]

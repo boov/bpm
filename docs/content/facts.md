@@ -70,15 +70,15 @@ Conflicts and decisions:
 
 ## Memberships and protections
 
-| Fact                             | Value                                                                                 | Source   | Status    |
-| -------------------------------- | ------------------------------------------------------------------------------------- | -------- | --------- |
-| Trade body                       | The Property Institute (TPI), Full Member (listed without the Associate Member badge) | TPI      | Sourced   |
-| Former trade body                | ARMA (corporate member, ARMA Q). ARMA and IRPM merged to form TPI                     | LIVE     | Sourced   |
-| Redress scheme                   | The Property Ombudsman (TPO), listed for residential leasehold management             | TPI, TPO | Sourced   |
-| Professional indemnity insurance | £5 million                                                                            | LIVE     | Sourced   |
-| Client money                     | Held in designated trust accounts, named for each block or estate                     | LIVE     | Sourced   |
-| RICS service charge code         | Year-end accounts are finalised "in line with lease and RICS requirements"            | OG       | Confirmed |
-| Client money protection scheme   | Unknown                                                                               |          |           |
+| Fact                             | Value                                                                                      | Source   | Status    |
+| -------------------------------- | ------------------------------------------------------------------------------------------ | -------- | --------- |
+| Trade body                       | The Property Institute (TPI), Full Member (listed without the Associate Member badge)      | TPI      | Sourced   |
+| Former trade body                | ARMA (corporate member, ARMA Q). ARMA and IRPM merged to form TPI                          | LIVE     | Sourced   |
+| Redress scheme                   | The Property Ombudsman (TPO), listed for residential leasehold management                  | TPI, TPO | Sourced   |
+| Professional indemnity insurance | £5 million                                                                                 | LIVE     | Sourced   |
+| Client money                     | Held in designated trust accounts, named for each block or estate                          | LIVE     | Sourced   |
+| RICS service charge code         | Year-end accounts are finalised "in line with the lease, RICS requirements and TECH 03/11" | OG       | Confirmed |
+| Client money protection scheme   | Unknown                                                                                    |          |           |
 
 ## Ways of working
 
@@ -94,7 +94,7 @@ Conflicts and decisions:
 | Bookkeeping service to account for client money                                                                  | LIVE   | Sourced    |
 | Year end adjustment of the service charge at the end of each accounting period                                   | LIVE   | Sourced    |
 | In-house bookkeepers and finance software; third-party service charge accountants finalise the year-end accounts | OG     | Confirmed  |
-| Each property manager works with a support colleague, for continuity of knowledge                                | OG     | Confirmed  |
+| Each property manager works with a dedicated support property manager, for continuity of knowledge               | OG     | Confirmed  |
 | All telephone calls are answered by the team                                                                     | OG     | Confirmed  |
 | Emails are replied to within 5 working days                                                                      | OG     | Confirmed  |
 | Regular financial and maintenance updates are sent to clients                                                    | OG     | Confirmed  |
@@ -115,9 +115,11 @@ Conflicts and decisions:
 | Day-to-day matters dealt with for clients, including maintenance, tenant queries and vandalism                   | LIVE   | Sourced    |
 | Calls are recorded for training                                                                                  | LIVE   | Sourced    |
 | No estate agency or lettings                                                                                     | LIVE   | Sourced    |
-| Online card payments (Stripe)                                                                                    | NEW    | Sourced    |
+| Online card payments: not offered. The client asked for pay online to be removed                                 | OG     | Confirmed  |
+| Repairs are reported through the Fixflo portal (belgarumpm.fixflo.com), by phone or by email                     | OG     | Confirmed  |
+| Calls are returned within 24 hours (client wording: "24hrs on phone calls")                                      | OG     | Unverified |
+| Personal data kept for the whole instruction; 1 year after a change of leaseholder; 6 years for tax records      | OG     | Confirmed  |
 | Out-of-hours emergency service                                                                                   |        | Unknown    |
-| Repair reporting route for leaseholders                                                                          |        | Unknown    |
 | Leasehold sale pack cost, turnaround and ordering                                                                |        | Unknown    |
 | Onboarding and switching agent process                                                                           |        | Unknown    |
 
@@ -132,14 +134,12 @@ From LIVE (our team page). Chloe Dixon and Ryan Ashurst's role come from LinkedI
 | Ryan Ashurst    | Senior Property and Team Management Leader | 2015   |
 | Rob Barker      | Property Manager                           | 2011   |
 | Jane Webber     | Property Manager                           | 2024   |
-| Anna Gibbons    | Support Property Manager                   | 2024   |
 | Joanne Savage   | Support Property Manager                   | 2020   |
 | Chloe Dixon     | Support Property Manager                   | 2025   |
 | Peter Colman    | Block Accounts and Bookkeeping             | 2014   |
 | Nicola Culhane  | Company Bookkeeper Consultant              | 2009   |
 | Andrea Scott    | Senior Administrator                       | 2014   |
 | Chantelle Adams | Administrator                              | 2020   |
-| Marium Pirzada  | Administrator                              | 2024   |
 
 Michael Culhane is a director at Companies House but is not on the team page.
 

@@ -6,6 +6,7 @@
 .superpowers/
 .unlighthouse/
 dist/
+docs/correspondence/
 docs/superpowers/
 node_modules/
 

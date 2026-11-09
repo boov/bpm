@@ -10,7 +10,7 @@
     "heading": "What a service charge budget does",
     "paragraphs": [
       "The service charge is the money leaseholders pay, under their lease, towards running, repairing and insuring the building. The service charge budget is the plan for the year's spending. It sets how much each leaseholder pays.",
-      "Belgarum Property Management prepares the budget with whoever manages the building under the leases. That can be the freeholder (the owner of the building and the land), a resident management company (RMC) or a right to manage (RTM) company. A sound budget covers the year's costs and saves for large ones. That way, leaseholders are less likely to face sudden bills."
+      "Belgarum Property Management prepares the budget with whoever manages the building under the leases. That can be the freeholder (the owner of the building and the land), a resident management company (RMC) or a right to manage (RTM) company. A sound budget covers the year's costs, in line with what the lease lets the building recover. We tender work so costs stay competitive, and a planned preventative maintenance (PPM) plan sets what the reserve fund saves for large costs. That way, leaseholders are less likely to face sudden bills."
     ]
   },
   "included": {
@@ -57,14 +57,15 @@
     {
       "question": "Why has my service charge gone up?",
       "answer": [
-        "Usually because the building's costs have risen, or it needs to save more for future works. Insurance, energy, contracts and repairs are common causes.",
-        "Each budget line shows what the money is for, and your property manager can take you through it."
+        "Usually because the building's costs have risen, or it needs to save more for future works. Common causes are the building's age, higher prices for repair and maintenance materials, extra fire safety duties for taller buildings, a larger reserve fund contribution set by a planned preventative maintenance (PPM) or capital expenditure (CAPEX) plan, utilities and other professional fees.",
+        "The Property Institute's research into why budgets are rising is in its [Service Charge Index report 2026](https://www.tpi.org.uk/media/baqpvrie/tpi-service-charge-index-report-2026.pdf).",
+        "We get quotes and test the market, so the building gets value for money from competent contractors and budgets stay as reasonable as possible. Each budget line shows what the money is for, and your property manager can take you through it."
       ]
     },
     {
       "question": "What is a reserve fund?",
       "answer": [
-        "A reserve fund is money collected and saved for large future costs, such as a new roof or external redecoration. It is sometimes called a sinking fund. Saving a little each year means a smaller bill when the work is due. Your lease sets out whether the building can hold a reserve fund."
+        "A reserve fund is money collected and saved for large future costs, such as a new roof or external redecoration. It is sometimes called a sinking fund. Saving a little each year means a smaller bill when the work is due. Your lease sets out whether the building can hold a reserve fund. We commission planned preventative maintenance (PPM) and capital expenditure (CAPEX) reports, so the amount collected will meet future costs."
       ]
     },
     {
@@ -75,7 +76,9 @@
     },
     {
       "question": "Who decides the budget?",
-      "answer": ["The freeholder, RMC or RTM company that manages the building under the leases. We prepare the budget and advise on it. The board or freeholder agrees it."]
+      "answer": [
+        "The freeholder, RMC or RTM company that manages the building under the leases gives the final sign-off. The lease, or the TP1 transfer deed on a freehold estate, sets out what can be collected. We prepare the budget and advise on it."
+      ]
     },
     {
       "question": "What can I do if I think a service charge is unreasonable?",

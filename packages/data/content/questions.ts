@@ -4,22 +4,21 @@ const data = [
   {
     title: "How do I pay my service charge?",
     group: "Paying your service charge",
-    answer: [
-      "You can [pay your service charge](/pay-online/) online by debit or credit card. Enter the amount on your service charge demand. If you have a question about your demand, contact your property manager."
-    ]
+    answer: ["Your service charge demand shows the amount due and how to pay. If you have a question about your demand, contact your property manager."]
   },
   {
     title: "Why has my service charge gone up?",
     group: "Paying your service charge",
     answer: [
-      "The service charge follows the building's costs. If insurance, energy, contracts or repairs cost more, or the building needs to save more for future works, the service charge goes up. Your property manager can take you through the budget. Read more about [service charge budgets](/services/service-charge-budgets/)."
+      "The service charge follows the building's costs. Common causes of a rise are the building's age, higher prices for repair and maintenance materials, extra fire safety duties for taller buildings, a larger reserve fund contribution, utilities and other professional fees.",
+      "We get quotes and test the market, so budgets stay as reasonable as possible. Your property manager can take you through the budget. Read more about [service charge budgets](/services/service-charge-budgets/)."
     ]
   },
   {
     title: "What is a reserve fund?",
     group: "Paying your service charge",
     answer: [
-      "A reserve fund is money collected and saved for large future costs, such as a new roof. It is sometimes called a sinking fund. Saving each year means a smaller bill when the work is due."
+      "A reserve fund is money collected and saved for large future costs, such as a new roof. It is sometimes called a sinking fund. Saving each year means a smaller bill when the work is due. Your lease sets out whether the building can hold one."
     ]
   },
   {
@@ -54,7 +53,7 @@ const data = [
     title: "How do I report a repair?",
     group: "Repairs and your building",
     answer: [
-      "Contact your property manager by phone on [0800 298 0069](tel:+448002980069) or by email at [management@bpmanagement.org](mailto:management@bpmanagement.org). Tell them the address, what the problem is and where it is. Photos help. If you rent your flat, report repairs inside the flat to your landlord or letting agent."
+      "Report it through our [Fixflo repair portal](https://belgarumpm.fixflo.com/), or contact your property manager by phone on [0800 298 0069](tel:+448002980069) or by email at [management@bpmanagement.org](mailto:management@bpmanagement.org). Tell them the address, what the problem is and where it is. Photos help. If you rent your flat, report repairs inside the flat to your landlord or letting agent."
     ]
   },
   {

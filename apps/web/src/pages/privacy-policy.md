@@ -2,7 +2,7 @@
 layout: "@layouts/Text.astro"
 title: Privacy policy
 description: How Belgarum Property Management uses the personal information you give us through this website, by email or by phone, and your rights.
-updated: 2026-10-16
+updated: 2026-11-09
 ---
 
 This policy explains how Belgarum Property Management Limited uses personal information collected through this website, and when you contact us by email or by phone. It also explains your rights.
@@ -26,12 +26,6 @@ If you use our contact form, we collect your name, email address and phone numbe
 
 We use this information to reply to your enquiry and, if you ask, to prepare a management proposal. Our lawful basis is our legitimate interest in answering enquiries, or taking steps at your request before entering into a contract.
 
-### When you pay online
-
-If you pay your service charge online, you enter the amount and your email address on our website. The payment is then taken by Stripe on its own secure payment page. We do not see or store your full card details.
-
-We use the payment information to record your payment against the right account. Our lawful basis is our legitimate interest in recording payments, and our legal obligations, including keeping financial records.
-
 ### When you call us
 
 Calls to our office are recorded for training. Our lawful basis is our legitimate interest in training our staff and keeping the quality of our service high.
@@ -42,15 +36,20 @@ If you agree to analytics cookies, we collect information about how you use this
 
 ## Who we share it with
 
-We use service providers to run this website and take payments:
+We use service providers to run this website:
 
 - **Netlify:** hosts this website and receives contact form submissions
-- **Stripe:** takes online card payments
 - **Google:** provides website analytics, if you agree to analytics cookies
 
 Where we need to, to deal with your enquiry, we may share your information with contractors. We may also share it with the freeholder, resident management company or right to manage company of your building. We do not sell your information.
 
 Some of these providers may process information outside the UK. When they do, they use safeguards recognised by UK data protection law.
+
+## How long we keep it
+
+- We keep your information for as long as we act as managing agent for your building.
+- When a leaseholder changes, we keep the previous leaseholder's details for 1 year.
+- We keep financial records for 6 years, as UK tax law requires.
 
 ## Your rights
 

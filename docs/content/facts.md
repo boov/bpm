@@ -143,6 +143,8 @@ From LIVE (our team page). Chloe Dixon and Ryan Ashurst's role come from LinkedI
 
 Michael Culhane is a director at Companies House but is not on the team page.
 
+Headshots come from Olivia Gregory's WeTransfer of 5 May 2026. Its file names differ from this table for Peter ("Peter Joseph, Service Charge Bookkeeper") and Ryan Ashurst ("Senior Property Manager"). Nicola Culhane has no photo.
+
 ## Proof
 
 | Item                                         | Value                                                                                                          | Source | Status     |

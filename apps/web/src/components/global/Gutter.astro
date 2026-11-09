@@ -4,7 +4,6 @@ import { getNavLinks } from "@assets/scripts/nav-links";
 import { site } from "@assets/scripts/site";
 import Button from "@components/Button.astro";
 import ArrowRight from "@lucide/astro/icons/arrow-right";
-import CreditCard from "@lucide/astro/icons/credit-card";
 import X from "@lucide/astro/icons/x";
 
 const links = await getNavLinks();
@@ -83,9 +82,6 @@ const links = await getNavLinks();
             <div class="flex flex-row flex-wrap gap-3 sm:gap-5">
               <Button label={headerCalls.contact.label} href={headerCalls.contact.href} class="grow text-base sm:grow-0">
                 <ArrowRight slot="suffix" />
-              </Button>
-              <Button label={headerCalls.pay.label} href={headerCalls.pay.href} variant="outline" class="grow text-base sm:grow-0">
-                <CreditCard slot="suffix" />
               </Button>
             </div>
           </div>

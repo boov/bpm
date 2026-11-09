@@ -30,10 +30,6 @@ We use these cookies only if you agree. They tell us how visitors use the websit
 | `_ga`            | Google Analytics | Tells one visitor apart from another      | 2 years  |
 | `_ga_RCT0LF6KVP` | Google Analytics | Keeps track of your visit to this website | 2 years  |
 
-## Payments
-
-When you pay online, you go to a payment page run by Stripe. Stripe sets its own cookies on that page, for security and to prevent fraud. Stripe's cookie policy explains them.
-
 ## How to control cookies
 
 When you first visit this website, a banner asks whether you accept analytics cookies. You can change your choice at any time using the "Cookie settings" link at the foot of each page. If you withdraw your consent, we delete the analytics cookies.

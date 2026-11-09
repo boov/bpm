@@ -5,7 +5,6 @@ import { site } from "@assets/scripts/site";
 import Button from "@components/Button.astro";
 import ArrowRight from "@lucide/astro/icons/arrow-right";
 import ChevronDown from "@lucide/astro/icons/chevron-down";
-import CreditCard from "@lucide/astro/icons/credit-card";
 import Menu from "@lucide/astro/icons/menu";
 
 const links = await getNavLinks();
@@ -115,9 +114,6 @@ const parentPath = pathNames.length ? `/${pathNames[0]}/` : "/";
         <div class="flex gap-2">
           <Button label={headerCalls.contact.label} href={headerCalls.contact.href} class="text-base whitespace-nowrap max-sm:hidden">
             <ArrowRight slot="suffix" />
-          </Button>
-          <Button label={headerCalls.pay.label} href={headerCalls.pay.href} variant="outline" class="text-base whitespace-nowrap max-lg:hidden">
-            <CreditCard slot="suffix" />
           </Button>
         </div>
         <div class="self-stretch xl:hidden" x-data="{ expanded: false }" x-on:gutter-state.window="expanded = $event.detail">

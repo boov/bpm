@@ -3,14 +3,14 @@ import { calls } from "@assets/scripts/calls-to-action";
 import { site } from "@assets/scripts/site";
 import Heading from "@components/Heading.astro";
 import ArrowRight from "@lucide/astro/icons/arrow-right";
-import CreditCard from "@lucide/astro/icons/credit-card";
 import FileText from "@lucide/astro/icons/file-text";
 import MessageSquare from "@lucide/astro/icons/message-square";
 import Phone from "@lucide/astro/icons/phone";
 import Scale from "@lucide/astro/icons/scale";
+import Wrench from "@lucide/astro/icons/wrench";
 
 const links = [
-  { ...calls.pay, icon: CreditCard },
+  { label: "Report a repair", href: "https://belgarumpm.fixflo.com/", icon: Wrench },
   { ...calls.residents, icon: MessageSquare },
   { label: "Order a leasehold sale pack", href: "/services/leasehold-sale-packs/", icon: FileText },
   { label: "Read our complaints procedure", href: "/complaints-procedure/", icon: Scale }
@@ -23,7 +23,7 @@ const links = [
       <p class="subheading text-theme-brand-text">For residents</p>
       <Heading as="h2" class="text-h4 sm:text-h3">Live in a building we manage?</Heading>
     </div>
-    <p>Pay your service charge, contact your property manager or find what you need to sell your flat.</p>
+    <p>Report a repair, contact your property manager or find what you need to sell your flat.</p>
     <div class="mt-2 flex items-center gap-4">
       <div class="bg-theme-brand/10 text-theme-brand flex size-12 shrink-0 items-center justify-center rounded-lg">
         <Phone class="size-6" aria-hidden="true" />

@@ -17,12 +17,7 @@ export default defineConfig({
   integrations: [
     metaTags(),
     sitemap({
-      filter: page =>
-        ![
-          "https://www.belgarum-property.co.uk/contact/thanks/",
-          "https://www.belgarum-property.co.uk/contact/submitting/",
-          "https://www.belgarum-property.co.uk/pay-online/success/"
-        ].some(url => page.startsWith(url))
+      filter: page => !["https://www.belgarum-property.co.uk/contact/thanks/", "https://www.belgarum-property.co.uk/contact/submitting/"].some(url => page.startsWith(url))
     })
   ],
   devToolbar: {

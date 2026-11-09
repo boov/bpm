@@ -57,16 +57,16 @@ Conflicts and decisions:
 
 ## Scale
 
-| Fact                               | Value                                                 | Source    | Status              |
-| ---------------------------------- | ----------------------------------------------------- | --------- | ------------------- |
-| Developments managed               | Over 150                                              | LIVE, NEW | Sourced             |
-| Range                              | Blocks of 4 flats to a 22-floor high rise             | FAQ       | Sourced             |
-| Tenures                            | Leasehold blocks and freehold estate areas            | LIVE      | Sourced             |
-| Client size                        | From several hundred properties to small developments | LIVE      | Sourced             |
-| RMC company secretary appointments | 38 in total, about 15 current                         | CH        | Sourced             |
-| Units managed                      | Unknown                                               |           |                     |
-| Staff                              | 11 to 50 (LinkedIn band); 12 on the live team page    | LI, LIVE  | Sourced             |
-| Combined experience                | Over 150 years                                        | LI        | Sourced, do not use |
+| Fact                               | Value                                                                                                                                                                                                                                                 | Source    | Status              |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------- |
+| Developments managed               | Over 150                                                                                                                                                                                                                                              | LIVE, NEW | Sourced             |
+| Range                              | Blocks of 4 flats to a 22-floor high rise                                                                                                                                                                                                             | FAQ       | Sourced             |
+| Tenures                            | Leasehold blocks and freehold estate areas                                                                                                                                                                                                            | LIVE      | Sourced             |
+| Client size                        | From several hundred properties to small developments                                                                                                                                                                                                 | LIVE      | Sourced             |
+| RMC company secretary appointments | 23 current, 84 in total (Companies House, 9 November 2026, across 21 officer records for name variants such as "Belgarum Property Management Ltd" and "Belgarum Block and Estate Management"). The client says about 40, and the site uses her figure | CH, OG    | Sourced             |
+| Units managed                      | Unknown                                                                                                                                                                                                                                               |           |                     |
+| Staff                              | 11 to 50 (LinkedIn band); 12 on the live team page                                                                                                                                                                                                    | LI, LIVE  | Sourced             |
+| Combined experience                | Over 150 years                                                                                                                                                                                                                                        | LI        | Sourced, do not use |
 
 ## Memberships and protections
 

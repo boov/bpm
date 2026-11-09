@@ -45,7 +45,7 @@ Service charge money is held in a designated trust account for each block or est
 
 RMC and RTM directors give their time for free but carry legal duties. BPM acts as company secretary, arranges the fire, asbestos and health and safety assessments the law requires, runs Section 20 consultations, and enforces the lease covenants. The directors keep their legal duties; BPM does the work that helps them meet them.
 
-- **Proof:** company secretary for about 15 RMCs today (38 appointments in total, Companies House); formal fire, asbestos and health and safety assessment surveys with specialist contractors; reserve fund and major works planning; lease covenant enforcement.
+- **Proof:** company secretary for about 40 RMCs today; formal fire, asbestos and health and safety assessment surveys with specialist contractors; reserve fund and major works planning; lease covenant enforcement.
 - **Beats:** local firms with no compliance or Section 20 content.
 
 ### 5. Plain answers about service charges, Section 20 and major works

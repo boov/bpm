@@ -33,18 +33,16 @@ Olivia Gregory's feedback on the preview site, from her email of 9 November 2026
 ## Complaints and response times
 
 - [ ] Get the internal complaints procedure. Olivia says it is attached, but the email holds only her signature image.
-- [ ] Confirm the complaint times (3 working days to acknowledge, 15 to respond). Olivia did not answer this.
-- [ ] Clarify "24hrs on phone calls". The site says every call is answered; she may mean calls are returned within 24 hours.
+- [ ] Complaint times (3 working days to acknowledge, 15 to respond): take them from the complaints procedure when it arrives.
+- [ ] "24hrs on phone calls": check the complaints procedure for response times when it arrives; ask only if it does not say.
 
 ## Domain
 
 - [ ] Explain "who holds the domain": the company the domain is registered with, and who has the login.
 
-## To raise with Olivia
+## Notes on Olivia's copy
 
-- **RMC count.** Her copy says about 40 RMCs. Companies House shows 38 appointments in total and about 15 current. The site keeps "about 15" until she confirms the figure.
 - **Trust accounts.** She cited the Landlord and Tenant Act 1985 s42. Section 42 is in the Landlord and Tenant Act 1987. The site uses 1987.
-- **TECH 03/11** is joint guidance on residential service charge accounts, led by the accountancy bodies (ICAEW and ICAS). The site names it beside RICS requirements, not as a RICS rule.
 - **TP1** is the Land Registry transfer deed. The site reads it as the deed that sets the estate charge on a freehold estate.
 
 ## Leasehold sale packs

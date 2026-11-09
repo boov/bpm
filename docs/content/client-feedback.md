@@ -6,7 +6,8 @@ Olivia Gregory's feedback on the preview site, from her email of 9 November 2026
 
 - [x] Change "Block and estate management is all we do: no estate agency, no lettings" to say it is our sole focus, with no estate agency or lettings services.
 - [x] Remove pay online. BPM will not offer it, so the page, nav links, calls to action and FAQ answers that point to it must go.
-- [ ] Show Google customer reviews. Needs a method: the Places API, an embed widget, or chosen reviews copied in by hand.
+- [x] Link to Google reviews: a quiet "Read our Google reviews" link in the footer contact details, with no rating.
+- [ ] Show the Google rating. On hold: it is 3.5 from 27 reviews, which would work against BPM. Olivia is asked to build up reviews first, then the rating goes in the trust strip (see `compliance.md`).
 - [x] Why choose us intro: "compliance that protects you and your assets".
 - [x] Transparent accounting: year-end accounts in line with the lease, RICS requirements and TECH 03/11.
 

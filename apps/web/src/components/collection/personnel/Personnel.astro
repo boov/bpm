@@ -11,7 +11,7 @@ const { name, role, since, headshot } = person.data;
   <div class="bg-theme-background-highlight aspect-square w-32 overflow-hidden rounded-full">
     {
       headshot ? (
-        <Image class="size-full object-cover" src={headshot} alt={`${name} headshot`} loading="lazy" decoding="async" width={200} height={200} />
+        <Image class="size-full object-cover" src={headshot} alt={`${name} headshot`} loading="lazy" decoding="async" width={256} height={256} />
       ) : (
         <div class="flex size-full items-center justify-center">
           <UserRound class="stroke-theme-foreground-light size-10 stroke-1" />

@@ -7,6 +7,13 @@ const officeAddress = {
 
 const phoneE164 = "+448002980069";
 
+// Rating and count are copied by hand from the Google profile; update both together.
+const googleReviews: { url: string; rating: number | null; count: number | null } = {
+  url: "https://g.page/r/CecX_dMXFD8vEAI",
+  rating: 3.5,
+  count: 27
+};
+
 export const site = {
   brand: "Belgarum Property Management",
   legalName: "Belgarum Property Management Limited",
@@ -21,6 +28,7 @@ export const site = {
   office: Object.values(officeAddress).join(", "),
   areasServed: ["Hampshire", "Sussex", "Dorset", "London", "Home Counties"],
   hours: "Monday to Thursday, 9am to 5pm; Friday, 9am to 4.30pm",
+  googleReviews,
   companyNumber: "07580603",
   registeredOffice: "Highland House, Mayflower Close, Chandlers Ford, Hampshire, SO53 4AR",
   social: {

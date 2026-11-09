@@ -15,7 +15,7 @@ Olivia Gregory's feedback on the preview site, from her email of 9 November 2026
 
 - [x] Add photos for the 9 people whose photo matches the site (from her WeTransfer of 5 May 2026), cropped around each face.
 - [ ] Peter: the photo is named "Peter Joseph, Service Charge Bookkeeper" but the site lists Peter Colman, Block Accounts and Bookkeeping. Confirm his name and role, then add his photo from the same WeTransfer.
-- [ ] Ryan Ashurst: the photo names him "Senior Property Manager"; the site says "Senior Property and Team Management Leader". Confirm his title.
+- [x] Ryan Ashurst: his title is "Senior Property and Team Management Leader", as on the site. The photo file name has his earlier title.
 - [ ] Nicola Culhane: no photo. Ask for one, or keep the placeholder.
 - [x] Remove Anna Gibbons.
 - [x] Remove Marium Pirzada.

@@ -137,7 +137,7 @@ Use these aliases in imports rather than relative paths.
 
 - **Base components**: `src/components/` (Button, Input, Heading, Section, etc.)
 - **Global components**: `src/components/global/` (Footer, CTA, Banner, Schema, GTM, etc.) used across pages
-- **Page components**: `src/components/pages/<page>/` (per-route building blocks: `home`, `about`, `contact`, `pay-online`)
+- **Page components**: `src/components/pages/<page>/` (per-route building blocks: `home`, `about`, `contact`)
 - **Section components**: `src/components/sections/` (shared page sections: PageHero, IntroBlock, IncludedList, StepList, ProofList, FaqList, ServiceLinks, InlineText)
 - **Collection components**: `src/components/collection/{audience,personnel,question,service}/` rendering content collection entries
 - **Shared constants**: call to action labels and targets live only in `src/assets/scripts/calls-to-action.ts`; business details live only in `src/assets/scripts/site.ts`

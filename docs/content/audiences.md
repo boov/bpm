@@ -9,7 +9,7 @@ The site has two jobs:
 1. **Win new instructions.** The buyers are RMC and RTM directors, freeholders and developers. They choose the managing agent and sign the contract.
 2. **Serve existing residents.** Leaseholders are likely the largest group of visitors (there is no analytics data yet). They come to pay a bill, report a problem, or find out who to contact.
 
-Copy for new business leads on the home page and the service pages. Support content (pay online, contact, FAQs) must be quick to find from every page.
+Copy for new business leads on the home page and the service pages. Support content (repairs, contact, FAQs) must be quick to find from every page.
 
 Other documents use these audience names exactly: RMC and RTM directors, Freeholders, Developers, Private landlords, Leaseholders, Sellers' solicitors.
 
@@ -51,8 +51,8 @@ The live site treats this group like freeholders. It does not need its own page.
 - **Who:** flat owners in buildings BPM manages, and some tenants who rent from them.
 - **Main worries:** the cost of service charges and whether it is fair; repairs not being done; slow replies; surprise major works bills; delays when selling.
 - **Questions they ask:** How do I pay? How do I report a repair? Why has my service charge gone up? What is Section 20? Who is my property manager? How do I get a leasehold sale pack to sell my flat?
-- **What they need from the site:** fast routes to pay, report and contact; plain explanations of service charges, Section 20 and major works; the complaints procedure.
-- **Main call to action:** pay your service charge, or contact your property manager.
+- **What they need from the site:** fast routes to report a repair and to contact us; plain explanations of service charges, Section 20 and major works; the complaints procedure.
+- **Main call to action:** contact your property manager.
 
 ## Sellers' solicitors
 

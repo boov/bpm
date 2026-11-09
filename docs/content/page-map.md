@@ -11,7 +11,6 @@ Every page on the new site, with its job. Use it as the writing checklist. Audie
 | `/services`             | Overview of all services               | RMC and RTM directors, Freeholders, Developers, Private landlords | block management services               | Request a management proposal         |
 | `/faqs`                 | Answer common questions                | Leaseholders, RMC and RTM directors                               |                                         | Contact your property manager         |
 | `/contact`              | Contact details and enquiry form       | All                                                               |                                         | Send your enquiry                     |
-| `/pay-online`           | Pay a service charge by card           | Leaseholders                                                      |                                         | Pay your service charge               |
 | `/complaints-procedure` | How to complain; TPO redress           | Leaseholders, RMC and RTM directors, Freeholders                  |                                         |                                       |
 | `/privacy-policy`       | Legal                                  | All                                                               |                                         |                                       |
 | `/cookie-policy`        | Legal                                  | All                                                               |                                         |                                       |
@@ -43,7 +42,7 @@ Buildings insurance is on hold until BPM confirms its insurance role (question 3
 
 ## Utility pages
 
-`/404`, `/contact/thanks`, `/contact/submitting`, `/pay-online/success`. Short copy only.
+`/404`, `/contact/thanks`, `/contact/submitting`. Short copy only.
 
 ## Redirects from the live site
 
@@ -73,7 +72,7 @@ Sections, in order:
 1. **Hero:** an eyebrow line (the strapline in `messaging.md`), an H1 that speaks to the reader, a lead of 155 characters max, two calls to action ("See how we can help you" and "Get in touch") and the compact trust line (see "Trust strip" in `messaging.md`).
 2. **Audience routes:** 3 cards, one for each "Who we work with" page. Each card has a title, one sentence (25 words max) and a link.
 3. **Intro:** a heading and 60 to 100 words on what BPM does and where, for readers and for search.
-4. **Resident support:** links to pay your service charge, contact your property manager, leasehold sale packs and the complaints procedure, with the phone number and office hours.
+4. **Resident support:** links to report a repair (the Fixflo portal), contact your property manager, leasehold sale packs and the complaints procedure, with the phone number and office hours.
 5. **Services grid:** one card for each live service page: title and the service `description`.
 6. **Trust strip:** the shared block below.
 7. **Call to action band:** heading, one sentence, "Get in touch".

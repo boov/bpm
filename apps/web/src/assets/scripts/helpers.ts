@@ -2,6 +2,9 @@ import { getCollection } from "astro:content";
 
 export const getPersonnel = async () => (await getCollection("personnel")).filter(person => person.data.status === "published");
 
+export const getTestimonials = async () =>
+  (await getCollection("testimonials")).filter(testimonial => testimonial.data.status === "published").sort((a, b) => a.data.order - b.data.order);
+
 export const getQuestions = async () => (await getCollection("questions")).sort((a, b) => a.data.order - b.data.order);
 
 export const getQuestionsByGroup = async () => {

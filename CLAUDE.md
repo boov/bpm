@@ -57,18 +57,18 @@ This is a pnpm workspaces monorepo (`pnpm-workspace.yaml`). pnpm is pinned in th
   - `design-system` - Tailwind CSS plugin with custom utilities
   - `tailwind-base` - Base Tailwind preset configuration
   - `custom-merge` - Tailwind class merging (`twMerge`, `twSort`), built on `tailwind-merge`
-  - `data` - Shared content data (personnel, questions)
+  - `data` - Shared content data (personnel, questions, testimonials)
 
 ### Content Collections System
 
 The site uses Astro's Content Collections API with custom loaders (apps/web/src/content.config.ts):
 
-- **Collections**: `personnel`, `services`, `audiences`, `questions`
+- **Collections**: `personnel`, `services`, `audiences`, `questions`, `testimonials`
 - **Data Sources**:
   - JSON files in `src/content/` (services, audiences)
-  - Shared workspace package `@bpm/data` (personnel, questions)
+  - Shared workspace package `@bpm/data` (personnel, questions, testimonials)
 - **Validation**: All collections use Zod schemas
-- **ID Generation**: `personnel` and `questions` IDs come from the name or title (e.g., "John Doe" → "john-doe"); `services` and `audiences` IDs are the JSON file names
+- **ID Generation**: `personnel` and `questions` IDs come from the name or title (e.g., "John Doe" → "john-doe"); `testimonials` IDs come from their position (`testimonial-1`); `services` and `audiences` IDs are the JSON file names
 
 Read `content.config.ts` for the current fields; it is the only source of truth. Cross-page links are `reference()` fields: `services.related` and `audiences.services` list service IDs (the JSON file names).
 
@@ -139,7 +139,7 @@ Use these aliases in imports rather than relative paths.
 - **Global components**: `src/components/global/` (Footer, CTA, Banner, Schema, GTM, etc.) used across pages
 - **Page components**: `src/components/pages/<page>/` (per-route building blocks: `home`, `about`, `contact`)
 - **Section components**: `src/components/sections/` (shared page sections: PageHero, IntroBlock, IncludedList, StepList, ProofList, FaqList, ServiceLinks, InlineText)
-- **Collection components**: `src/components/collection/{audience,personnel,question,service}/` rendering content collection entries
+- **Collection components**: `src/components/collection/{audience,personnel,question,service,testimonial}/` rendering content collection entries
 - **Shared constants**: call to action labels and targets live only in `src/assets/scripts/calls-to-action.ts`; business details live only in `src/assets/scripts/site.ts`
 - **Layouts**: `src/layouts/` (`Base`, `Default`, `Text`)
 

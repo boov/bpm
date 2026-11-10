@@ -1,5 +1,5 @@
 import { callKeys } from "@assets/scripts/calls-to-action";
-import { personnel as personnelContent, questions as questionsContent } from "@bpm/data";
+import { personnel as personnelContent, questions as questionsContent, testimonials as testimonialsContent } from "@bpm/data";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 import { defineCollection, reference } from "astro:content";
@@ -25,6 +25,11 @@ const questions = defineCollection({
     }));
   },
   schema: questionsContent.schema
+});
+
+const testimonials = defineCollection({
+  loader: async () => testimonialsContent.data.map((testimonial, index) => ({ id: `testimonial-${index + 1}`, order: index, ...testimonial })),
+  schema: context => testimonialsContent.schema(context).extend({ order: z.number() })
 });
 
 const stepSchema = z.object({ title: z.string(), text: z.string() });
@@ -73,6 +78,7 @@ const audiences = defineCollection({
 export const collections = {
   personnel,
   questions,
+  testimonials,
   services,
   audiences
 };

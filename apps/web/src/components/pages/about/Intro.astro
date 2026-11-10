@@ -22,7 +22,7 @@ const paragraphs = [
     </div>
     <Heading as="h1" class="text-h2 sm:text-h1">About Belgarum Property Management</Heading>
   </div>
-  <div class="flex flex-1 flex-col gap-8 lg:pt-12">
+  <div class="flex flex-1 flex-col gap-8">
     <div class="flex flex-col gap-4">
       {paragraphs.map((paragraph, index) => <p class:list={{ "text-lg sm:text-xl": index === 0 }} set:text={paragraph} />)}
     </div>

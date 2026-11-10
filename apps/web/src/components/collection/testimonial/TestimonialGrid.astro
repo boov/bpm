@@ -1,0 +1,38 @@
+---
+import { getTestimonials } from "@helpers";
+import UserRound from "@lucide/astro/icons/user-round";
+import { Image } from "astro:assets";
+
+interface Props {
+  limit?: number;
+  masonry?: boolean;
+}
+
+const { limit, masonry = false } = Astro.props;
+const testimonials = (await getTestimonials()).slice(0, limit);
+---
+
+<div class:list={[masonry ? "gap-6 md:columns-2 xl:columns-3" : "grid gap-6 md:grid-cols-2 xl:grid-cols-3"]}>
+  {
+    testimonials.map(({ data }) => (
+      <figure class:list={["border-theme-border flex flex-col justify-between gap-6 rounded-xl border p-6 sm:p-8", masonry && "mb-6 break-inside-avoid"]}>
+        <blockquote>
+          <p set:text={`“${data.quote}”`} />
+        </blockquote>
+        <figcaption class="flex items-center gap-3">
+          <span class="bg-theme-background-highlight grid size-10 shrink-0 place-items-center overflow-hidden rounded-full">
+            {data.avatar ? (
+              <Image class="size-full object-cover" src={data.avatar} alt="" loading="lazy" decoding="async" width={96} height={96} />
+            ) : (
+              <UserRound class="stroke-theme-foreground-light size-6 stroke-1" aria-hidden="true" />
+            )}
+          </span>
+          <span class="flex flex-col">
+            <span class="text-theme-foreground-bold leading-snug font-bold" set:text={data.name} />
+            <span class="text-sm leading-snug" set:text={[data.role, data.development].filter(Boolean).join(", ")} />
+          </span>
+        </figcaption>
+      </figure>
+    ))
+  }
+</div>

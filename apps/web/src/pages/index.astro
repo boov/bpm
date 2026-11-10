@@ -3,6 +3,7 @@ import AudienceGrid from "@components/collection/audience/AudienceGrid.astro";
 import AudienceIntro from "@components/collection/audience/AudienceIntro.astro";
 import ServicesGrid from "@components/collection/service/ServicesGrid.astro";
 import ServicesIntro from "@components/collection/service/ServicesIntro.astro";
+import Testimonials from "@components/collection/testimonial/Testimonials.astro";
 import Hero from "@components/pages/home/Hero.astro";
 import Intro from "@components/pages/home/Intro.astro";
 import ResidentSupport from "@components/pages/home/ResidentSupport.astro";
@@ -17,19 +18,24 @@ const description = "Block and estate management for RMCs, RTM companies, freeho
 <Default title={title} description={description} ctaHeading="Looking for a managing agent?" ctaText="Tell us about your block or estate, and we'll send you a management proposal.">
   <Hero description={description} />
   <Section>
+    <div class="container">
+      <Intro />
+    </div>
+  </Section>
+  <Section class="bg-theme-background-lowlight">
+    <div class="container">
+      <WhyChoose />
+    </div>
+  </Section>
+  <Section>
     <div class="flex flex-col gap-16 sm:gap-20 md:gap-24 lg:gap-28">
-      <div class="container">
-        <Intro />
-      </div>
-      <div class="container">
-        <WhyChoose />
-      </div>
       <div class="container">
         <div class="flex flex-col gap-10 sm:gap-14">
           <AudienceIntro heading="Find the services for you" />
           <AudienceGrid />
         </div>
       </div>
+      <Testimonials />
       <div class="container-13c">
         <ResidentSupport />
       </div>

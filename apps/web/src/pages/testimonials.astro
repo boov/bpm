@@ -1,0 +1,22 @@
+---
+import ServicesIntro from "@components/collection/service/ServicesIntro.astro";
+import TestimonialGrid from "@components/collection/testimonial/TestimonialGrid.astro";
+import Section from "@components/Section.astro";
+import Default from "@layouts/Default.astro";
+
+const title = "Client testimonials";
+const description = "What RMC and RTM directors, freeholders and landlords say about working with Belgarum Property Management, in their own words.";
+---
+
+<Default title={title} description={description}>
+  <Section>
+    <div class="flex flex-col gap-14 sm:gap-16 md:gap-18 lg:gap-20 xl:gap-24">
+      <div class="container">
+        <ServicesIntro as="h1" eyebrow="Testimonials" heading="What our clients say" lead={description} />
+      </div>
+      <div class="container">
+        <TestimonialGrid masonry />
+      </div>
+    </div>
+  </Section>
+</Default>

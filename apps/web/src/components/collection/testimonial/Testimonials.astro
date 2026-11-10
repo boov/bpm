@@ -1,0 +1,35 @@
+---
+import Button from "@components/Button.astro";
+import TestimonialGrid from "@components/collection/testimonial/TestimonialGrid.astro";
+import Heading from "@components/Heading.astro";
+import SubHeading from "@components/SubHeading.astro";
+import { getTestimonials } from "@helpers";
+import ArrowRight from "@lucide/astro/icons/arrow-right";
+
+const limit = 3;
+const count = (await getTestimonials()).length;
+---
+
+{
+  count > 0 && (
+    <div class="container flex flex-col gap-10 lg:gap-14">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div class="flex flex-col gap-2 md:gap-3">
+          <div class="flex items-center gap-5">
+            <SubHeading class="text-theme-brand-text">Testimonials</SubHeading>
+            <div class="bg-theme-brand h-[2px] w-20 rounded sm:w-24" />
+          </div>
+          <Heading as="h2" class="text-h3 sm:text-h2">
+            What our clients say
+          </Heading>
+        </div>
+        {count > limit && (
+          <Button label="Read all testimonials" href="/testimonials/" variant="text" class="text-base">
+            <ArrowRight slot="suffix" />
+          </Button>
+        )}
+      </div>
+      <TestimonialGrid limit={limit} />
+    </div>
+  )
+}

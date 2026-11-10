@@ -1,4 +1,4 @@
-import { getAudiences, getServices } from "@helpers";
+import { getAudiences, getServices, getTestimonials } from "@helpers";
 
 export type NavLink = {
   label: string;
@@ -7,7 +7,7 @@ export type NavLink = {
 };
 
 export const getNavLinks = async (): Promise<NavLink[]> => {
-  const [services, audiences] = await Promise.all([getServices(), getAudiences()]);
+  const [services, audiences, testimonials] = await Promise.all([getServices(), getAudiences(), getTestimonials()]);
 
   return [
     {
@@ -21,6 +21,7 @@ export const getNavLinks = async (): Promise<NavLink[]> => {
       children: audiences.map(audience => ({ label: audience.data.title, href: `/who-we-work-with/${audience.id}/` }))
     },
     { label: "About", href: "/about/" },
+    ...(testimonials.length > 0 ? [{ label: "Testimonials", href: "/testimonials/" }] : []),
     { label: "FAQs", href: "/faqs/" }
   ];
 };

@@ -25,6 +25,7 @@ export const expectedPages = {
   "/contact/": { title: "Contact our Winchester office - Belgarum Property Management", h1: "Get in touch" },
   "/contact/thanks/": { title: "Thank you for your enquiry - Belgarum Property Management", h1: "Thank you for your enquiry" },
   "/contact/submitting/": { title: "Sending your enquiry - Belgarum Property Management", h1: "Sending your enquiry" },
+  "/testimonials/": { title: "Client testimonials - Belgarum Property Management", h1: "What our clients say" },
   "/about/": { title: "About our Winchester team - Belgarum Property Management", h1: "About Belgarum Property Management" },
   "/complaints-procedure/": { title: "Complaints procedure - Belgarum Property Management", h1: "Complaints procedure" },
   "/privacy-policy/": { title: "Privacy policy - Belgarum Property Management", h1: "Privacy policy" },

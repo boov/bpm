@@ -87,7 +87,7 @@ Public reviews of BPM are poor and mostly old. The site does not mention them, a
 - the complaints procedure and TPO redress
 - what each service includes and how it works
 
-When the client supplies testimonials or response times, add them here and to `facts.md`.
+When the client supplies response times, add them here and to `facts.md`. Testimonials go in `packages/data/content/testimonials.ts`, under the rules in `compliance.md`.
 
 ## Claims we do not make
 
@@ -100,4 +100,5 @@ These have no source, or the source is wrong. Do not use them until `facts.md` s
 - "Client money protection" or "CMP"
 - "No commission" on insurance
 - "Over 25 years", "over 20 years" or "over three decades". Use "since 1989"
-- Any testimonial, case study or named development
+- Any case study or named development
+- Any testimonial that is not in `testimonials.ts` with the client's permission

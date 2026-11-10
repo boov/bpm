@@ -4,16 +4,17 @@ Every page on the new site, with its job. Use it as the writing checklist. Audie
 
 ## Main pages
 
-| Page                    | Purpose                                | Audience                                                          | Working keyword                         | CTA                                   |
-| ----------------------- | -------------------------------------- | ----------------------------------------------------------------- | --------------------------------------- | ------------------------------------- |
-| `/`                     | Say who BPM is and route each audience | All                                                               | block management Winchester / Hampshire | See how we can help you; Get in touch |
-| `/about`                | History, team, memberships             | RMC and RTM directors, Freeholders                                |                                         | Request a management proposal         |
-| `/services`             | Overview of all services               | RMC and RTM directors, Freeholders, Developers, Private landlords | block management services               | Request a management proposal         |
-| `/faqs`                 | Answer common questions                | Leaseholders, RMC and RTM directors                               |                                         | Contact your property manager         |
-| `/contact`              | Contact details and enquiry form       | All                                                               |                                         | Send your enquiry                     |
-| `/complaints-procedure` | How to complain; TPO redress           | Leaseholders, RMC and RTM directors, Freeholders                  |                                         |                                       |
-| `/privacy-policy`       | Legal                                  | All                                                               |                                         |                                       |
-| `/cookie-policy`        | Legal                                  | All                                                               |                                         |                                       |
+| Page                    | Purpose                                     | Audience                                                          | Working keyword                         | CTA                                   |
+| ----------------------- | ------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------- | ------------------------------------- |
+| `/`                     | Say who BPM is and route each audience      | All                                                               | block management Winchester / Hampshire | See how we can help you; Get in touch |
+| `/about`                | History, team, memberships                  | RMC and RTM directors, Freeholders                                |                                         | Request a management proposal         |
+| `/services`             | Overview of all services                    | RMC and RTM directors, Freeholders, Developers, Private landlords | block management services               | Request a management proposal         |
+| `/testimonials`         | Client testimonials, from `testimonials.ts` | RMC and RTM directors, Freeholders                                |                                         | Request a management proposal         |
+| `/faqs`                 | Answer common questions                     | Leaseholders, RMC and RTM directors                               |                                         | Contact your property manager         |
+| `/contact`              | Contact details and enquiry form            | All                                                               |                                         | Send your enquiry                     |
+| `/complaints-procedure` | How to complain; TPO redress                | Leaseholders, RMC and RTM directors, Freeholders                  |                                         |                                       |
+| `/privacy-policy`       | Legal                                       | All                                                               |                                         |                                       |
+| `/cookie-policy`        | Legal                                       | All                                                               |                                         |                                       |
 
 ## Services
 

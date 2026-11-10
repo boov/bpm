@@ -13,23 +13,24 @@ The client is slow to reply, so the copy does not wait for answers. Each conflic
 
 ## Working decisions
 
-| Topic                                            | Decision                                                                           | Basis                                                       |
-| ------------------------------------------------ | ---------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| Company number                                   | 07580603                                                                           | Companies House. 07115618 is a different, dissolved company |
-| Redress scheme                                   | The Property Ombudsman (TPO)                                                       | TPI and TPO directories                                     |
-| Founded                                          | Family firm established in 1989                                                    | Live site, TPI, LinkedIn agree                              |
-| Office hours                                     | Monday to Thursday, 9am to 5pm; Friday, 9am to 4.30pm                              | Live site                                                   |
-| Areas covered                                    | Hampshire, Sussex, Dorset, London and the Home Counties                            | Live site and new site agree                                |
-| Scale                                            | Over 150 developments, from blocks of 4 flats to a 22-floor high rise              | Live site, client FAQ                                       |
-| Services                                         | The service pages in `page-map.md`, described with live site detail                | Live site, new site                                         |
-| Trade body                                       | The Property Institute (TPI), Full Member                                          | TPI directory                                               |
-| RICS service charge code                         | Year-end accounts only: "in line with the lease, RICS requirements and TECH 03/11" | Olivia Gregory's content                                    |
-| Team                                             | Live site team page, plus Chloe Dixon and Ryan Ashurst's role from LinkedIn        | Live site, LinkedIn                                         |
-| Repairs                                          | Leaseholders report repairs through Fixflo, by phone or by email                   | Olivia Gregory's email, 9 November 2026                     |
-| Client money protection, out-of-hours line, fees | Not mentioned                                                                      | No source                                                   |
-| Testimonials, case studies                       | Not used                                                                           | No approved material                                        |
-| Year end service charge accounts                 | BPM keeps the books; third-party service charge accountants finalise the accounts  | Olivia Gregory's content                                    |
-| "How it works" steps on service pages            | Copy describes standard practice                                                   | Client reviews the site before launch; question 10          |
+| Topic                                            | Decision                                                                                                              | Basis                                                       |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Company number                                   | 07580603                                                                                                              | Companies House. 07115618 is a different, dissolved company |
+| Redress scheme                                   | The Property Ombudsman (TPO)                                                                                          | TPI and TPO directories                                     |
+| Founded                                          | Family firm established in 1989                                                                                       | Live site, TPI, LinkedIn agree                              |
+| Office hours                                     | Monday to Thursday, 9am to 5pm; Friday, 9am to 4.30pm                                                                 | Live site                                                   |
+| Areas covered                                    | Hampshire, Sussex, Dorset, London and the Home Counties                                                               | Live site and new site agree                                |
+| Scale                                            | Over 150 developments, from blocks of 4 flats to a 22-floor high rise                                                 | Live site, client FAQ                                       |
+| Services                                         | The service pages in `page-map.md`, described with live site detail                                                   | Live site, new site                                         |
+| Trade body                                       | The Property Institute (TPI), Full Member                                                                             | TPI directory                                               |
+| RICS service charge code                         | Year-end accounts only: "in line with the lease, RICS requirements and TECH 03/11"                                    | Olivia Gregory's content                                    |
+| Team                                             | Live site team page, plus Chloe Dixon and Ryan Ashurst's role from LinkedIn                                           | Live site, LinkedIn                                         |
+| Repairs                                          | Leaseholders report repairs through Fixflo, by phone or by email                                                      | Olivia Gregory's email, 9 November 2026                     |
+| Client money protection, out-of-hours line, fees | Not mentioned                                                                                                         | No source                                                   |
+| Testimonials                                     | Home page section and `/testimonials` page; the section and nav link stay hidden until the first testimonial is added | No approved material yet; question 14                       |
+| Case studies                                     | Not used                                                                                                              | No approved material                                        |
+| Year end service charge accounts                 | BPM keeps the books; third-party service charge accountants finalise the accounts                                     | Olivia Gregory's content                                    |
+| "How it works" steps on service pages            | Copy describes standard practice                                                                                      | Client reviews the site before launch; question 10          |
 
 ## Questions
 
@@ -48,6 +49,7 @@ Optional, except question 13. The copy goes ahead without them, and each answer 
 11. Is 4 flats your minimum building size, or do you manage smaller buildings too? The FAQ "Do you have a minimum or maximum size of development?" and the freeholders page ("from 4 flats up") depend on the answer.
 12. The privacy policy gives general periods: for the whole instruction, 1 year after a change of leaseholder, and 6 years for financial records. How long do you keep website enquiries that do not lead to an instruction, and call recordings?
 13. Do you have a separate privacy notice for leaseholders and the clients of the buildings you manage? If so, we will link to it from the privacy policy.
+14. Can you send 3 to 5 testimonials from clients (RMC or RTM directors, freeholders), each with their written permission and how they want to be named? See `compliance.md`.
 
 ## Gaps on the site
 
@@ -65,6 +67,7 @@ A gap is content the site leaves out because there is no source yet. When the cl
 | How a building signs up or moves from another agent                        | 8        | RMC and RTM directors (the main question for boards); block and estate management; freeholders and private landlords; FAQs; call to action band (proposal variant)                                                                                           |
 | What BPM does for higher-risk buildings under the Building Safety Act 2022 | 10       | Fire and building safety (the page explains the law only)                                                                                                                                                                                                    |
 | Case studies and past projects                                             | 11       | Block and estate management; major works; Section 20 consultation; fire and building safety; about; developers                                                                                                                                               |
+| Testimonials                                                               | 14       | Home                                                                                                                                                                                                                                                         |
 | Retention periods                                                          | 13       | Privacy policy                                                                                                                                                                                                                                               |
 | Separate privacy notice for leaseholders and clients                       | 14       | Privacy policy                                                                                                                                                                                                                                               |
 | How often site inspections happen                                          | None     | Block and estate management (says "regularly"; only a LinkedIn post says quarterly)                                                                                                                                                                          |

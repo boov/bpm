@@ -150,7 +150,7 @@ Headshots come from Olivia Gregory's WeTransfer of 5 May 2026. Its file names di
 | Item                                         | Value                                                                                                          | Source | Status     |
 | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------ | ---------- |
 | Managed developments (possible case studies) | The Peninsula Barracks, Charles House, The Marston Gate (Winchester), One Degree North (Eastleigh)             | SEARCH | Unverified |
-| Testimonials                                 | None                                                                                                           | NEW    |            |
+| Testimonials                                 | None yet. Requested from Olivia Gregory, 9 November 2026                                                       | NEW    |            |
 | Awards                                       | None found                                                                                                     |        |            |
 | Public reviews                               | AllAgents 1.1 out of 5 from 17 reviews; Cylex complaint from Feb 2024 about high charges. Mostly older reviews | SEARCH | Unverified |
 

@@ -30,7 +30,7 @@ const items = [
 ];
 ---
 
-<div class="flex flex-col gap-10 lg:gap-14">
+<div class="grid gap-10 lg:grid-cols-[7fr_13fr] lg:gap-14 xl:gap-20">
   <div class="flex flex-col gap-4">
     <div class="flex flex-col gap-2 md:gap-3">
       <div class="flex items-center gap-5">
@@ -44,7 +44,7 @@ const items = [
       your home as if it's our own.
     </p>
   </div>
-  <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2 xl:grid-cols-4 xl:gap-x-14">
+  <div class="grid gap-x-10 gap-y-12 sm:grid-cols-2 xl:gap-x-14">
     {
       items.map(({ title, text, icon: Icon }) => (
         <div class="flex flex-col gap-2">

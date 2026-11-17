@@ -2,7 +2,7 @@
 layout: "@layouts/Text.astro"
 title: Privacy policy
 description: How Belgarum Property Management uses the personal information you give us through this website, by email or by phone, and your rights.
-updated: 2026-11-09
+updated: 2026-11-17
 ---
 
 This policy explains how Belgarum Property Management Limited uses personal information collected through this website, and when you contact us by email or by phone. It also explains your rights.
@@ -48,6 +48,7 @@ Some of these providers may process information outside the UK. When they do, th
 ## How long we keep it
 
 - We keep your information for as long as we act as managing agent for your building.
+- If your enquiry does not lead to us managing your building, we ask whether we may contact you again. If you agree, we keep your details for 1 year. If not, we delete them.
 - When a leaseholder changes, we keep the previous leaseholder's details for 1 year.
 - We keep financial records for 6 years, as UK tax law requires.
 

@@ -22,8 +22,8 @@ What the site must show by law, and the rules for what copy may claim. This is a
 
 - **Footer:** shows the registered name, place of registration, company number and registered office address.
 
-- **Complaints procedure:** the page names TPO as the redress route. It says the complaint can go to TPO once BPM has sent its final response, or once 8 weeks have passed since the complaint was first made. It must reach TPO within 12 months of BPM's final response (TPO complaints guidance, tpos.co.uk). It gives no response times ("as quickly as we can"). Draft timescales wait for client approval in `docs/launch/legal-drafts.md`.
-- **Privacy policy and cookie policy:** separate pages, both in BPM's voice ("we"). The cookie policy lists the cookies the site sets: `cc_cookie` (stores consent choices, set by `vanilla-cookieconsent`) and the Google Analytics cookies `_ga` and `_ga_RCT0LF6KVP`, which load only after the visitor accepts analytics. The privacy policy has no retention periods yet. Draft periods wait for client approval in `docs/launch/legal-drafts.md`.
+- **Complaints procedure:** the page names TPO as the redress route. It says the complaint can go to TPO once BPM has sent its final response, or once 8 weeks have passed since the complaint was first made. It must reach TPO within 12 months of BPM's final response (TPO complaints guidance, tpos.co.uk). Its two stages and response times (3 working days to acknowledge, 15 working days for the outcome, 15 working days for the final response after a review) come from BPM's own procedure (CP in `facts.md`).
+- **Privacy policy and cookie policy:** separate pages, both in BPM's voice ("we"). The cookie policy lists the cookies the site sets: `cc_cookie` (stores consent choices, set by `vanilla-cookieconsent`) and the Google Analytics cookies `_ga` and `_ga_RCT0LF6KVP`, which load only after the visitor accepts analytics. The privacy policy has retention periods from Olivia Gregory. The period for call recordings is still missing (question 12 in `client-questions.md`).
 
 ## Claims
 

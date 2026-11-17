@@ -1,44 +1,46 @@
 # Client content feedback
 
-Olivia Gregory's feedback on the preview site, from her email of 9 November 2026. Ticked items are on the site.
+Olivia Gregory's feedback on the preview site, from her email of 9 November 2026 and her reply to our questions of 10 November. Ticked items are on the site.
 
 ## Home and about
 
 - [x] Change "Block and estate management is all we do: no estate agency, no lettings" to say it is our sole focus, with no estate agency or lettings services.
 - [x] Remove pay online. BPM will not offer it, so the page, nav links, calls to action and FAQ answers that point to it must go.
 - [x] Link to Google reviews: a quiet "Read our Google reviews" link in the footer contact details, with no rating.
-- [ ] Testimonials instead of copied Google reviews. The home page section and `/testimonials` page are built, and they stay hidden until Olivia sends testimonials with permission (question 14 in `client-questions.md`).
+- [ ] Testimonials instead of copied Google reviews. The home page section and `/testimonials` page are built, and they stay hidden until Olivia sends testimonials with permission (question 14 in `client-questions.md`). She agrees, and will ask clients.
 - [x] Why choose us intro: "compliance that protects you and your assets".
 - [x] Transparent accounting: year-end accounts in line with the lease, RICS requirements and TECH 03/11.
 
 ## Meet the team
 
 - [x] Add photos for the 9 people whose photo matches the site (from her WeTransfer of 5 May 2026), cropped around each face.
-- [ ] Peter: the photo is named "Peter Joseph, Service Charge Bookkeeper" but the site lists Peter Colman, Block Accounts and Bookkeeping. Confirm his name and role, then add his photo from the same WeTransfer.
+- [x] Peter: he is Peter Joseph (he changed his name from Peter Colman). Photo added. His role is "Service Charge Bookkeeper", from the photo file name, which also has his new name.
 - [x] Ryan Ashurst: his title is "Senior Property and Team Management Leader", as on the site. The photo file name has his earlier title.
-- [ ] Nicola Culhane: no photo. Ask for one, or keep the placeholder.
+- [x] Nicola Culhane: photo added, from her reply.
 - [x] Remove Anna Gibbons.
 - [x] Remove Marium Pirzada.
-- [ ] Add a faint line that links each Property Manager to their Support Property Manager. Needs the pairings from Olivia.
+- [x] Give Support Property Managers their own group, with the same faint lines either side of the heading as the other groups.
 
 ## New content
 
-- [ ] Menu of charges. Olivia will send the content.
+- [ ] Menu of charges. Olivia will send the content. No date yet.
 
 ## Privacy policy
 
 - [x] How long we keep personal data: for as long as we are instructed as managing agent, 1 year after a change of leaseholder, 6 years for records UK tax law requires.
-- [ ] Ask how long website enquiries that do not lead to an instruction, and call recordings, are kept. Her answer does not cover them.
+- [x] Enquiries that do not lead to an instruction: kept 1 year if the person agrees to be contacted again, otherwise deleted.
+- [ ] Call recordings: Olivia is checking the retention period with the phone company.
 
 ## Complaints and response times
 
-- [ ] Get the internal complaints procedure. Olivia says it is attached, but the email holds only her signature image.
-- [ ] Complaint times (3 working days to acknowledge, 15 to respond): take them from the complaints procedure when it arrives.
-- [ ] "24hrs on phone calls": check the complaints procedure for response times when it arrives; ask only if it does not say.
+- [x] Get the internal complaints procedure. Saved in `docs/correspondence/`.
+- [x] Complaint times: 3 working days to acknowledge, 15 working days for the outcome, and a review by a senior member of staff with a final response within 15 working days.
+- [ ] "24hrs on phone calls": the complaints procedure does not say. Ask only if the site needs a phone response time.
 
 ## Domain
 
-- [ ] Explain "who holds the domain": the company the domain is registered with, and who has the login.
+- [x] Explain "who holds the domain": the company the domain is registered with (34SP.com), and who has the login.
+- [ ] Get access to the 34SP.com account. Olivia will introduce us by email to the person who built the old website.
 
 ## Notes on Olivia's copy
 

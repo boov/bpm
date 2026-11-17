@@ -18,6 +18,7 @@ Where sources disagree, the working decision is in `client-questions.md` and the
 | FAQ    | Client-supplied FAQ text, formerly in `packages/data/content/questions.ts` (git history before this commit)                                  | 2026-10-06 |
 | OG     | Olivia Gregory (Operations Director), website content document `docs/website re-writes.docx`                                                 | 2026-10-20 |
 | NEW    | Other new site content in this repository (`apps/web`, `packages/data`), written without client input                                        | 2026-10-06 |
+| CP     | BPM in-house complaints handling procedure, dated 29 August 2024, `docs/correspondence/complaints-procedure-2024-08-29.pdf`                  | 2026-11-17 |
 | CH     | Companies House, company 07580603 and its officer records                                                                                    | 2026-10-06 |
 | TPI    | The Property Institute member directory, South West, page 2                                                                                  | 2026-10-06 |
 | TPO    | The Property Ombudsman business search, Belgarum Property Management Ltd (BPM Ltd)                                                           | 2026-10-06 |
@@ -125,7 +126,7 @@ Conflicts and decisions:
 
 ## Team
 
-From LIVE (our team page). Chloe Dixon and Ryan Ashurst's role come from LinkedIn posts, which are newer than the team page. Status: Sourced.
+From LIVE (our team page). Chloe Dixon and Ryan Ashurst's role come from LinkedIn posts, which are newer than the team page. Peter Joseph is listed on the live site as Peter Colman, Block Accounts and Bookkeeping; Olivia Gregory confirmed he changed his name. His role comes from his photo file name, which has his new name, so it is taken as the newer title. Status: Sourced.
 
 | Name            | Role                                       | Joined |
 | --------------- | ------------------------------------------ | ------ |
@@ -136,14 +137,14 @@ From LIVE (our team page). Chloe Dixon and Ryan Ashurst's role come from LinkedI
 | Jane Webber     | Property Manager                           | 2024   |
 | Joanne Savage   | Support Property Manager                   | 2020   |
 | Chloe Dixon     | Support Property Manager                   | 2025   |
-| Peter Colman    | Block Accounts and Bookkeeping             | 2014   |
+| Peter Joseph    | Service Charge Bookkeeper                  | 2014   |
 | Nicola Culhane  | Company Bookkeeper Consultant              | 2009   |
 | Andrea Scott    | Senior Administrator                       | 2014   |
 | Chantelle Adams | Administrator                              | 2020   |
 
 Michael Culhane is a director at Companies House but is not on the team page.
 
-Headshots come from Olivia Gregory's WeTransfer of 5 May 2026. Its file names differ from this table for Peter ("Peter Joseph, Service Charge Bookkeeper") and Ryan Ashurst ("Senior Property Manager", his title before his promotion to Senior Property and Team Management Leader). Nicola Culhane has no photo.
+Headshots come from Olivia Gregory's WeTransfer of 5 May 2026, except Nicola Culhane's, which she sent in November 2026. Its file names differ from this table for Ryan Ashurst ("Senior Property Manager", his title before his promotion to Senior Property and Team Management Leader).
 
 ## Proof
 

@@ -9,6 +9,7 @@ const personnel = (await getPersonnel()).sort((a, b) => dataOrder.indexOf(a.data
 const groups = [
   { key: "directors", heading: "Directors" },
   { key: "property-managers", heading: "Property managers" },
+  { key: "support-property-managers", heading: "Support property managers" },
   { key: "accounts", heading: "Accounts" },
   { key: "administration", heading: "Administration" }
 ] as const;
